@@ -1,0 +1,13 @@
+p {
+  color: #1f1f1f;
+}
+
+#hello {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  margin: 0 auto;
+  transform: translateY(calc((100dvh - 100px) / 2));
+}
+
+/*# sourceMappingURL=login2.css.map */

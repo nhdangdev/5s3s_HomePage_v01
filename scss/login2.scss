@@ -1,0 +1,12 @@
+p {
+    color: #1f1f1f;
+}
+
+#hello {
+    $box-size: 100px;
+    width: $box-size;
+    height: $box-size;
+    text-align: center;
+    margin: 0 auto;
+    transform: translateY(calc((100dvh - $box-size) / 2));
+}
