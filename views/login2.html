@@ -5,11 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout Login 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/grid.css">
     <link rel="stylesheet" href="../css/login2.css">
 </head>
 
 <body>
-    <p id="hello">Hello</p>
+    <div class="form-wrapper">
+        <div class="grid form-modal">
+            <div class="row no-gutters">
+                <div class="col c-0 m-6 l-6">
+                    <div class="form-modal__left-side" style="position: relative;">
+                        <div class="under-bg">
+                        </div>
+                        <img src="../asset/img/wave_top.svg" style="position: absolute; top: 0; left: 0;">
+                        <img src="../asset/img/wave_bottom.svg" style="position: absolute; bottom: 0; left: 0;">
+                        <img src="../asset/img/circle.svg" width="50px"
+                            style="position: absolute; top: 20px; right: 80px;">
+                        <img src="../asset/img/circle.svg" width="30px"
+                            style="position: absolute; top: 100px; left: 20px;"><img src="../asset/img/circle.svg"
+                            width="40px" style="position: absolute; bottom: 50px; right: 100px;">
+                        <img src="../asset/img/circle_line.svg" width="120px"
+                            style="position: absolute; top: 0; right: 140px;">
+                        <img src="../asset/img/circle_line.svg" width="100px"
+                            style="position: absolute; top: 0; right: 100px;">
+                        <img src="../asset/img/circle_line.svg" width="50px"
+                            style="position: absolute; top: 150px; right: 0;">
+                        <img src="../asset/img/circle_line.svg" width="80px"
+                            style="position: absolute; bottom: 50px; left: 0; rotate: 180deg;">
+                        <img src="../asset/img/circle_line.svg" width="50px"
+                            style="position: absolute; bottom: 0; left: 40px; rotate: 180deg;">
+                        <div style="z-index: 2; height: 100%; display: flex;flex-direction: column;justify-content: center;align-items:
+                            center;text-align: center">
+                            <span>Nice to see you again</span>
+                            <h1>Welcome back</h1>
+                            <div class="divider" style="width: 50px;"></div>
+                            <br>
+                            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur omnis,
+                                iure
+                                perspiciatis nisi mollitia error ipsum assumenda ad non labore facere deserunt cum illo
+                                adipisci
+                                molestiae? Doloribus, possimus voluptatem!</small>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col c-12 m-6 l-6">
+                    <div class="form-modal__right-side">
+                        <h2>Login Account</h2>
+                        <small>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam suscipit officiis, hic modi
+                            incidunt quas. Inventore officiis aspernatur, mollitia velit, repellat officia iste
+                            aperiam
+                            tempore natus, earum fuga corporis minus!
+                        </small>
+                        <br>
+                        <form action="#" class="form-login">
+                            <input type="email" name="email" placeholder="Email ID"
+                                class="form-control form-control__input">
+                            <input type="password" name="password" placeholder="Password"
+                                class="form-control form-control__input">
+                            <div style="width: 100%; display: flex; justify-content: space-between;">
+                                <label class="form-control form-control__checkbox" for="keep-sign-in">
+                                    <input type="checkbox" name="keep-sign-in" id="keep-sign-in">
+                                    <span class="checkmark">
+                                        Keep me signed in
+                                    </span>
+                                </label>
+                                <a href="#">Already a menber?</a>
+                            </div>
+                            <button type="submit" class="form-control form-control__button">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
