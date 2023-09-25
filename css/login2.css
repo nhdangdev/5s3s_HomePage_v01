@@ -20,31 +20,6 @@ body {
   background-color: white;
 }
 
-/* HTML: <div class="loader"></div> */
-.loader {
-  width: fit-content;
-  font-weight: bold;
-  font-family: monospace;
-  font-size: 30px;
-  background: linear-gradient(90deg, #000 50%, rgba(0, 0, 0, 0) 0) right/200% 100%;
-  animation: l21 2s infinite linear;
-}
-
-.loader::before {
-  content: "Loading...";
-  color: rgba(0, 0, 0, 0);
-  padding: 0 5px;
-  background: inherit;
-  background-image: linear-gradient(90deg, #fff 50%, #000 0);
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-@keyframes l21 {
-  100% {
-    background-position: left;
-  }
-}
 .form-wrapper {
   background-color: #e8edf9;
   width: 100dvw;
@@ -93,7 +68,7 @@ body {
 .form-modal__right-side h2 {
   color: #087ef4;
 }
-.form-modal__right-side .form-login {
+.form-modal__right-side #login-form {
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
@@ -103,22 +78,40 @@ body {
   align-items: center;
   gap: 1.2rem;
 }
-.form-modal__right-side .form-login .form-control {
+.form-modal__right-side #login-form .form-control {
   width: 100%;
+  position: relative;
 }
-.form-modal__right-side .form-login .form-control__input {
+.form-modal__right-side #login-form .form-control__input {
   background-color: #f1f1f1;
   padding: 0.5rem 1rem;
+  padding-right: 2rem;
   box-sizing: border-box;
   border: none;
   border-left: #087ef4 0.2rem solid;
   outline: none;
 }
-.form-modal__right-side .form-login .form-control__input:focus {
+.form-modal__right-side #login-form .form-control__input:focus {
   background-color: rgba(72, 163, 255, 0.1254901961);
   transition: all 0.2s;
 }
-.form-modal__right-side .form-login .form-control__button {
+.form-modal__right-side #login-form .form-control__field-button {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.2rem;
+  user-select: none;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 0.2rem;
+  top: calc((100% - 1.5rem) / 2);
+  right: 0.25rem;
+  transition: all 0.4s;
+}
+.form-modal__right-side #login-form .form-control__field-button:hover {
+  background-color: rgba(0, 0, 0, 0.0666666667);
+}
+.form-modal__right-side #login-form .form-control__button {
   padding: 0.8rem;
   background-color: #087ef4;
   border-radius: 2rem;
@@ -127,17 +120,17 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
-.form-modal__right-side .form-login .form-control__checkbox {
+.form-modal__right-side #login-form .form-control__checkbox {
   width: fit-content;
 }
-.form-modal__right-side .form-login .form-control__checkbox input[type=checkbox] {
+.form-modal__right-side #login-form .form-control__checkbox input[type=checkbox] {
   display: none;
 }
-.form-modal__right-side .form-login .form-control__checkbox .checkmark {
+.form-modal__right-side #login-form .form-control__checkbox .checkmark {
   margin-left: 1.2rem;
   position: relative;
 }
-.form-modal__right-side .form-login .form-control__checkbox .checkmark::before {
+.form-modal__right-side #login-form .form-control__checkbox .checkmark::before {
   content: "";
   height: 1rem;
   width: 1rem;
@@ -147,7 +140,7 @@ body {
   top: calc((100% - 1rem) / 2);
   left: -1.2rem;
 }
-.form-modal__right-side .form-login .form-control__checkbox .checkmark::after {
+.form-modal__right-side #login-form .form-control__checkbox .checkmark::after {
   content: "";
   height: 1rem;
   width: 0.5rem;
@@ -160,13 +153,13 @@ body {
   top: calc((100% - 1rem) / 2);
   left: -1.2rem;
 }
-.form-modal__right-side .form-login .form-control__checkbox input[type=checkbox]:checked ~ .checkmark::before {
+.form-modal__right-side #login-form .form-control__checkbox input[type=checkbox]:checked ~ .checkmark::before {
   background-color: #e8edf9;
 }
-.form-modal__right-side .form-login .form-control__checkbox input[type=checkbox]:checked ~ .checkmark::after {
+.form-modal__right-side #login-form .form-control__checkbox input[type=checkbox]:checked ~ .checkmark::after {
   border-color: #087ef4;
 }
-.form-modal__right-side .form-login a {
+.form-modal__right-side #login-form a {
   text-decoration: none;
   color: #087ef4;
 }
