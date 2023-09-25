@@ -80,7 +80,7 @@ body {
             color: $color2;
         }
 
-        .form-login {
+        #login-form {
             width: 100%;
             padding: 1rem;
             box-sizing: border-box;
@@ -92,10 +92,13 @@ body {
 
             .form-control {
                 width: 100%;
+                position: relative;
+                $field-button-size: 1.5rem;
 
                 &__input {
                     background-color: $color4;
                     padding: .5rem 1rem;
+                    padding-right: calc($field-button-size + .5rem);
                     box-sizing: border-box;
                     border: none;
                     border-left: $color2 .2rem solid;
@@ -104,6 +107,24 @@ body {
                     &:focus {
                         background-color: #48a3ff20;
                         transition: all .2s;
+                    }
+                }
+
+                &__field-button {
+                    width: $field-button-size;
+                    height: $field-button-size;
+                    padding: .2rem;
+                    user-select: none;
+                    box-sizing: border-box;
+                    position: absolute;
+                    background-color: transparent;
+                    border-radius: .2rem;
+                    top: calc((100% - $field-button-size ) / 2);
+                    right: .25rem;
+                    transition: all .4s;
+
+                    &:hover {
+                        background-color: #0001;
                     }
                 }
 
