@@ -1,0 +1,31 @@
+.template-list {
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.template-list a {
+  text-decoration: none;
+}
+
+.template-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 1px 1px 10px #e1e1e1;
+}
+.template-item__thumb {
+  height: 120px;
+}
+.template-item__thumb img {
+  height: 100%;
+  width: auto;
+}
+.template-item__name {
+  font-size: 1rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/*# sourceMappingURL=select_template.css.map */

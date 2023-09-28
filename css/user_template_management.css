@@ -125,7 +125,7 @@ body {
   color: orange;
 }
 
-button#add-template-button {
+a#add-template-button {
   display: flex;
   gap: 0.2rem;
   justify-content: center;
@@ -135,6 +135,7 @@ button#add-template-button {
   color: white;
   font-weight: bold;
   border-radius: 0.4rem;
+  text-decoration: none;
   border: none;
 }
 

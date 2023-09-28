@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/sidebar.css">
     <script src="../js/main.js"></script>
+    <script src="../js/sidebar.js"></script>
     <title>Sidebar</title>
 </head>
 
@@ -25,87 +26,101 @@
             <div class="loader"></div>
         </div>
     </header>
+    <div class="mobile-header">
+        <button class="mobile-header__menu-btn" onclick="toggleSidebar()">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+        <div class="mobile-header__logo">
+            <img src="../asset/img/logo.png" width="54" height="54" alt="Logo">
+        </div>
+    </div>
     <div class="grid">
         <div class="row no-gutters">
-            <!-- <div class="col c-0 m-0 l-3">
-                Sidebar
-            </div> -->
-            <div style="width: 300px;" class="sidebar">
-                <div class="sidebar__header">
-                    <div class="account">
-                        <div class="account__avatar">
-                            <img src="https://picsum.photos/200" alt="Avatar">
+            <div class="col m-3 l-2">
+                <div class="sidebar sidebar--hidden">
+                    <div class="sidebar__header">
+                        <div class="account">
+                            <div class="account__avatar">
+                                <img src="https://picsum.photos/200" alt="Avatar">
+                            </div>
+                            <div class="account__name">User name</div>
+                            <div class="account__actions">
+                                <button>
+                                    <span class="material-symbols-outlined">
+                                        expand_more
+                                    </span>
+                                </button>
+                            </div>
                         </div>
-                        <div class="account__name">User name</div>
-                        <div class="account__actions">
-                            <button>
-                                <span class="material-symbols-outlined">
-                                    expand_more
-                                </span>
-                            </button>
-                        </div>
+                        <button onclick="toggleSidebar()" class="sidebar__close-btn">
+                            <span class="material-symbols-outlined">
+                                close
+                            </span>
+                        </button>
                     </div>
-                </div>
-                <div class="sidebar__menu">
-                    <div class="sidebar__item sidebar__item--selected">
-                        <span class="material-symbols-outlined">
-                            space_dashboard
-                        </span>
-                        <div class="sidebar-item__text">
-                            Dashboard
+                    <div class="sidebar__menu">
+                        <div class="sidebar__item sidebar__item--selected">
+                            <span class="material-symbols-outlined">
+                                space_dashboard
+                            </span>
+                            <div class="sidebar-item__text">
+                                Dashboard
+                            </div>
                         </div>
-                    </div>
-                    <div class="sidebar__item">
-                        <span class="material-symbols-outlined">
-                            person
-                        </span>
-                        <div class="sidebar-item__text">
-                            Users
+                        <div class="sidebar__item">
+                            <span class="material-symbols-outlined">
+                                person
+                            </span>
+                            <div class="sidebar-item__text">
+                                Users
+                            </div>
                         </div>
-                    </div>
-                    <div class="sidebar__item">
-                        <span class="material-symbols-outlined">
-                            calendar_month
-                        </span>
-                        <div class="sidebar-item__text">
-                            History
+                        <div class="sidebar__item">
+                            <span class="material-symbols-outlined">
+                                calendar_month
+                            </span>
+                            <div class="sidebar-item__text">
+                                History
+                            </div>
                         </div>
-                    </div>
-                    <div class="sidebar__item">
-                        <span class="material-symbols-outlined">
-                            flag
-                        </span>
-                        <div class="sidebar-item__text">
-                            Report
+                        <div class="sidebar__item">
+                            <span class="material-symbols-outlined">
+                                flag
+                            </span>
+                            <div class="sidebar-item__text">
+                                Report
+                            </div>
                         </div>
-                    </div>
-                    <div class="sidebar__item">
-                        <span class="material-symbols-outlined">
-                            settings
-                        </span>
+                        <div class="sidebar__item">
+                            <span class="material-symbols-outlined">
+                                settings
+                            </span>
 
-                        <div class="sidebar-item__text">
-                            Report
+                            <div class="sidebar-item__text">
+                                Report
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="sidebar__footer">
-                    <button id="logout-desktop-btn" style="margin-left: -.5rem;">
-                        <span class="material-symbols-outlined">
-                            move_item
-                        </span>
-                        <span>Log Out</span>
-                    </button>
+                    <div class="sidebar__footer">
+                        <button id="logout-desktop-btn" style="margin-left: -.5rem;">
+                            <span class="material-symbols-outlined">
+                                move_item
+                            </span>
+                            <span>Log Out</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <!-- <div class="col c-12 m-12 l-9">
+            <div class="col c-12 m-9 l-10">
                 <div
                     style="display: flex; justify-content: center; align-items: center; min-height: 100dvh; border: 1px solid #eee; box-sizing: border-box;">
                     <h2>
                         Content
                     </h2>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 </body>
