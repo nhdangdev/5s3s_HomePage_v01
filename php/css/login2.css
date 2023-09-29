@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  min-height: 100dvh;
+}
+
+.form-wrapper {
+  background-color: #e8edf9;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  height: 6px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.form-modal {
+  margin: 1rem;
+  width: 100%;
+  height: 500px;
+  max-width: 800px;
+  background-color: white;
+  box-shadow: 2px 2px 10px #ccc;
+}
+.form-modal .row {
+  height: 100%;
+}
+.form-modal__left-side, .form-modal__right-side {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.form-modal__left-side {
+  background-color: #2a92fa;
+  color: white;
+  background-image: url("../asset/img/login_side_bg.png");
+  background-size: cover;
+}
+.form-modal__right-side {
+  color: #ccc;
+}
+.form-modal__right-side h2 {
+  color: #087ef4;
+}
+.form-modal__right-side #login-form {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+.form-modal__right-side #login-form .form-control {
+  width: 100%;
+  position: relative;
+}
+.form-modal__right-side #login-form .form-control__input {
+  background-color: #f1f1f1;
+  padding: 0.5rem 1rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+  border: none;
+  border-left: #087ef4 0.2rem solid;
+  outline: none;
+}
+.form-modal__right-side #login-form .form-control__input:focus {
+  background-color: rgba(72, 163, 255, 0.1254901961);
+  transition: all 0.2s;
+}
+.form-modal__right-side #login-form .form-control__field-button {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.2rem;
+  user-select: none;
+  box-sizing: border-box;
+  position: absolute;
+  background-color: transparent;
+  border-radius: 0.2rem;
+  top: calc((100% - 1.5rem) / 2);
+  right: 0.25rem;
+  transition: all 0.4s;
+}
+.form-modal__right-side #login-form .form-control__field-button:hover {
+  background-color: rgba(0, 0, 0, 0.0666666667);
+}
+.form-modal__right-side #login-form .form-control__button {
+  padding: 0.8rem;
+  background-color: #087ef4;
+  border-radius: 2rem;
+  border: none;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.form-modal__right-side #login-form .form-control__checkbox {
+  width: fit-content;
+}
+.form-modal__right-side #login-form .form-control__checkbox input[type=checkbox] {
+  display: none;
+}
+.form-modal__right-side #login-form .form-control__checkbox .checkmark {
+  margin-left: 1.2rem;
+  position: relative;
+}
+.form-modal__right-side #login-form .form-control__checkbox .checkmark::before {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  background-color: #f1f1f1;
+  border-radius: 0.1rem;
+  position: absolute;
+  top: calc((100% - 1rem) / 2);
+  left: -1.2rem;
+}
+.form-modal__right-side #login-form .form-control__checkbox .checkmark::after {
+  content: "";
+  height: 1rem;
+  width: 0.5rem;
+  background-color: transparent;
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  transform: rotate(40deg) translate(0, -0.4rem);
+  top: calc((100% - 1rem) / 2);
+  left: -1.2rem;
+}
+.form-modal__right-side #login-form .form-control__checkbox input[type=checkbox]:checked ~ .checkmark::before {
+  background-color: #e8edf9;
+}
+.form-modal__right-side #login-form .form-control__checkbox input[type=checkbox]:checked ~ .checkmark::after {
+  border-color: #087ef4;
+}
+.form-modal__right-side #login-form a {
+  text-decoration: none;
+  color: #087ef4;
+}
+
+/*# sourceMappingURL=login2.css.map */

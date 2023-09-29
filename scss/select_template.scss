@@ -1,33 +1,29 @@
-.template-list {
-    display: flex;
-    padding: 1rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-    a {
-        text-decoration: none;
-    }
-}
-
 .template-item {
     display: flex;
     flex-direction: column;
     gap: .5rem;
     box-shadow: 1px 1px 10px #e1e1e1;
+    text-decoration: none;
+    margin: .5rem;
 
     &__thumb {
-        height: 120px;
 
         img {
-            height: 100%;
-            width: auto;
+            height: 160px;
+            width: 100%;
+            object-fit: cover;
         }
     }
 
     &__name {
         font-size: 1rem;
-        padding: .5rem;
+        padding: 0 .5rem .5rem;
         font-weight: bold;
         color: #333;
+
     }
+}
+
+a.template-item-link {
+    text-decoration: none;
 }
