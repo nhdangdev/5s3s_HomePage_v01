@@ -1,55 +1,219 @@
 /* Reset css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* End reset css */
-
 /* Set font family */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 body {
-    font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 #loading-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100dvw;
-    height: 100dvh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999999;
-    gap: 1rem;
-    flex-direction: column;
-    background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  gap: 1rem;
+  flex-direction: column;
+  background-color: white;
 }
 
 /* HTML: <div class="loader"></div> */
 .loader {
-    width: fit-content;
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 30px;
-    background: linear-gradient(90deg, #000 50%, #0000 0) right/200% 100%;
-    animation: l21 2s infinite linear;
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  background: linear-gradient(90deg, #000 50%, rgba(0, 0, 0, 0) 0) right/200% 100%;
+  animation: l21 2s infinite linear;
 }
 
 .loader::before {
-    content: "Loading...";
-    color: #0000;
-    padding: 0 5px;
-    background: inherit;
-    background-image: linear-gradient(90deg, #fff 50%, #000 0);
-    -webkit-background-clip: text;
-    background-clip: text;
+  content: "Loading...";
+  color: rgba(0, 0, 0, 0);
+  padding: 0 5px;
+  background: inherit;
+  background-image: linear-gradient(90deg, #fff 50%, #000 0);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 @keyframes l21 {
-    100% {
-        background-position: left
-    }
+  100% {
+    background-position: left;
+  }
 }
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+.material-symbols-outlined--fill {
+  font-variation-settings: "FILL" 1;
+}
+
+.sidebar {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
+  border-right: 1px solid #eee;
+  transition: all 0.4s;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.sidebar__header, .sidebar__footer {
+  flex: 0 1;
+}
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.sidebar__menu {
+  flex: 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.sidebar__item {
+  display: flex;
+  gap: 1rem;
+  font-weight: bold;
+  align-items: center;
+  transition: all 0.2s;
+  padding: 0.5rem 0;
+  cursor: default;
+}
+.sidebar__item--selected, .sidebar__item:hover {
+  color: #6cc4c1;
+}
+.sidebar__item--selected .material-symbols-outlined, .sidebar__item:hover .material-symbols-outlined {
+  font-variation-settings: "FILL" 1;
+}
+.sidebar__close-btn {
+  display: none;
+  height: 2rem;
+  width: 2rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  transition: all 0.4s;
+  border: none;
+}
+.sidebar__close-btn:hover {
+  background-color: #eee;
+}
+.sidebar .account {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.sidebar .account__avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  border: 2px solid #eee;
+}
+.sidebar .account__avatar img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.sidebar .account__name {
+  font-weight: bold;
+  flex: 1 0;
+}
+.sidebar .account__actions button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  transition: all 0.4s;
+  border: none;
+}
+.sidebar .account__actions button:hover {
+  background-color: #eee;
+}
+.sidebar #logout-desktop-btn {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: bold;
+  background-color: transparent;
+  transition: all 0.4s;
+  padding: 0.5rem;
+  border: none;
+}
+.sidebar #logout-desktop-btn:hover {
+  color: #6cc4c1;
+}
+
+.mobile-header {
+  padding: 0.5rem 1rem;
+  width: 100dvw;
+  display: none;
+  position: fixed;
+  height: 2rem;
+  background-color: white;
+  z-index: 999;
+}
+.mobile-header__menu-btn {
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  transition: all 0.4s;
+  border: none;
+}
+.mobile-header__menu-btn:hover {
+  background-color: #eee;
+}
+.mobile-header__logo {
+  height: 100%;
+  margin: 0 auto;
+}
+.mobile-header__logo img {
+  height: 100%;
+  width: auto;
+}
+
+.dashboard-content {
+  max-height: 100dvh;
+  overflow-y: auto;
+  width: 100%;
+  padding: 2rem 1rem 1rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    padding: 2rem;
+  }
+  .sidebar--hidden {
+    padding: 0;
+    width: 0 !important;
+    overflow: hidden;
+  }
+  .sidebar__close-btn {
+    display: block;
+  }
+  .mobile-header {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
