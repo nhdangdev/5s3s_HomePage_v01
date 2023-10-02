@@ -19,10 +19,17 @@ for (i = 0; i < l; i++) {
     c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
     c.addEventListener("click", function(e) {
+
         /* When an item is clicked, update the original select box,
         and the selected item: */
         var y, i, k, s, h, sl, yl;
         s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+
+        //this.innerHTML = selected value
+        //pass selected value to filter function
+        //call filter function
+        myFilter(this.innerHTML,s.id);
+
         sl = s.length;
         h = this.parentNode.previousSibling;
         for (i = 0; i < sl; i++) {
@@ -78,3 +85,36 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
+
+function myFilter(value,filterField){
+  var viewItemList = document.querySelectorAll('.list-view .view-item');
+  //display all items
+  viewItemList.forEach((item)=>item.style.display = "flex");
+  //convert item list to array
+  viewItemArr = Array.from(viewItemList);
+  console.log(filterField);
+  switch (filterField){
+    case "filter-ratios":
+      if(value === "All Ratios") break;
+      //get all item that not support the selected ratio
+      var filteredItems = viewItemArr.filter((item) => {
+       let ratiosList =  item.querySelector(".view-item__ratios p").innerText;
+       return !ratiosList.includes(value);
+      })
+      //hide all filtered items
+      filteredItems.forEach((item) => {item.style.display = "none";})
+      break;
+    case "filter-subject":
+      if(value === "All Subjects") break;
+      //get all item that not support the selected ratio
+      var filteredItems = viewItemArr.filter((item) => {
+       let ratiosList =  item.querySelector(".view-item__subject p").innerText;
+       return !ratiosList.includes(value);
+      })
+      //hide all filtered items
+      filteredItems.forEach((item) => {item.style.display = "none";})
+      break;
+    default:
+      break;
+  }
+}
