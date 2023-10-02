@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Template List</title>
     <link rel="stylesheet" href="../css/grid.css" />
-    <link rel="stylesheet" href="/css/template_list.css" />
+    <link rel="stylesheet" href="../css/template_list.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -15,6 +15,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
   </head>
   <body>
     <div class="grid wrapper">
@@ -29,6 +30,8 @@
 
           <!-- begin: view header -->
           <div class="row view-header">
+            
+
             <ul class="view-select">
               <li
                 class="view-select__option view-select__option--active"
@@ -50,14 +53,33 @@
                 placeholder="Search"
               />
             </div>
-
-            <div class="custom-select" style="width: 200px; height: 34px;">
-              <select name="" id="">
-                <option value="1">All</option>
-                <option value="2">4:3</option>
-                <option value="3">16:9</option>
+            <div class="custom-select filter__subject">
+              <select name="" id="filter-subject">
+                <option value="1">All Subjects</option>
+                <option value="2">Nail</option>
+                <option value="3">Pho</option>
+                <option value="4">Restaurant</option>
               </select>
             </div>
+            <div class="custom-select filter__ratios">
+              <select name="" id="filter-ratios">
+                <option value="0">Ratio filter</option>
+                <option value="1">All Ratios</option>
+                <option value="2">4:3</option>
+                <option value="3">16:9</option>
+                <option value="4">16:10</option>
+                <option value="5">21:9</option>
+                <option value="6">32:9</option>
+              </select>
+            </div>
+            <div class="custom-select filter__date">
+              <select name="" id="filter-date">
+                <option value="1">All dates</option>
+                <option value="2">28/9/23</option>
+
+              </select>
+            </div>
+            
           </div>
           <!-- end: view header -->
 
@@ -88,7 +110,7 @@
                   <p>Lorem ispum</p>
                 </div>
                 <div class="view-item__ratios">
-                  <p>4:3 16:9 16:10 21:9 32:9</p>
+                  <p>16:9 16:10 21:9 32:9</p>
                 </div>
                 <div class="view-item__subject">
                   <p>Nail salon</p>
@@ -115,7 +137,7 @@
                   <p>Lorem ispum</p>
                 </div>
                 <div class="view-item__ratios">
-                  <p>4:3 16:9 16:10 21:9 32:9</p>
+                  <p>4:3 16:9 16:10 21:9</p>
                 </div>
                 <div class="view-item__subject">
                   <p>Nail salon</p>
@@ -238,7 +260,8 @@
       </div>
     </div>
     <script src="../js/custom_select_input.js"></script>
-
     <script src="../js/grid_list_view.js"></script>
+    <script src="../js/filter_template_list.js"></script>
+
   </body>
 </html>

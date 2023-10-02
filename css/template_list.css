@@ -53,14 +53,17 @@ h4 {
   color: var(--text-color);
   font-family: "Inter";
   margin: 0;
+  user-select: none;
 }
 
 p {
   font-size: 0.9rem;
   font-family: "Inter";
   color: var(--text-color);
+  user-select: none;
 }
 
+/* header + filter css */
 .view-header {
   align-items: center;
   padding: 0 11px;
@@ -68,8 +71,25 @@ p {
     position: -webkit-sticky;
     top: 10px; */
   position: sticky;
+  justify-content: space-between;
   top: 0;
   background-color: var(--background-color);
+}
+
+.select-view_and_search_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(
+    var(--list-view-thumbnail-width) + 2 * var(--list-view-others-width) + 20px
+  );
+}
+
+.filter__ratios,
+.filter__subject,
+.filter__date {
+  width: var(--list-view-ratios-width);
+  height: 34px;
 }
 
 .view-select {
@@ -99,9 +119,9 @@ p {
 
 /* search bar css */
 .search {
-  width: 40%;
+  width: 30%;
   height: 34px;
-  margin-left: 40px;
+
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ccc;
@@ -115,6 +135,7 @@ p {
   flex: 1;
   border: none;
   background-color: transparent;
+  height: 90%;
 }
 
 /* view css */
@@ -282,7 +303,7 @@ p {
 /* custom select input */
 .custom-select {
   position: relative;
-  font-family: 'Inter';
+  font-family: "Inter";
 }
 
 .custom-select select {
@@ -312,16 +333,45 @@ p {
 }
 
 /* style the items (options), including the selected item: */
-.select-items div,.select-selected {
+.select-items div,
+.select-selected {
   color: black;
-  padding: 8px 16px;
+  padding: 7px 16px;
   border: 1px solid transparent;
   border-color: transparent transparent transparent transparent;
   cursor: pointer;
 }
 
-.select-items div{
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+.select-selected {
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+}
+
+.select-selected:active {
+  border-color: red;
+}
+
+.select-items {
+  margin-top: 4px;
+}
+
+.select-items div {
+  /* border-color: transparent #ccc #ccc #ccc;
+ border-width: 1px; */
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.select-items div:first-child {
+  border-top: 1px solid #ccc;
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+}
+
+.select-items div:last-child {
+  border-bottom: 1px solid #ccc;
+  border-bottom-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
 }
 
 /* Style items (options): */
@@ -339,6 +389,7 @@ p {
   display: none;
 }
 
-.select-items div:hover, .same-as-selected {
+.select-items div:hover,
+.same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
