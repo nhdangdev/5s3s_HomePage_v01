@@ -73,11 +73,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-    padding: 1.5rem 2rem;
+    padding: 2rem;
+    position: absolute;
     box-sizing: border-box;
     border-right: 1px solid #eee;
     transition: all .4s;
-    position: absolute;
     background-color: white;
     top: 0;
     left: 0;
@@ -121,7 +121,7 @@ body {
     }
 
     &__close-btn {
-        display: none;
+        display: block;
         height: 2rem;
         width: 2rem;
         padding: .2rem;
@@ -197,7 +197,7 @@ body {
 .mobile-header {
     padding: .5rem 1rem;
     width: 100dvw;
-    display: none;
+    display: flex;
     position: fixed;
     height: 2rem;
     background-color: white;
@@ -234,30 +234,42 @@ body {
     box-sizing: border-box;
 }
 
+
+.mobile-sidebar--hidden {
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+
 // responsive
-@media (max-width: 1024px) {}
-
-@media(max-width: 768px), (max-width: 930px) and (orientation: landscape) {}
-
-@media (max-width: 767px) {
-
+/* >= Tablet */
+@media (min-width: 740px) {
     .sidebar {
-        padding: 2rem;
-    }
-
-    .sidebar--hidden {
-        padding: 0;
-        width: 0 !important;
-        overflow: hidden;
-    }
-
-    .sidebar__close-btn {
-        display: block;
+        padding: 1.5rem 2rem;
+        position: unset;
     }
 
     .mobile-header {
-        display: flex;
+        display: none;
+    }
+
+    .sidebar__close-btn {
+        display: none;
+    }
+
+    .mobile-sidebar--hidden {
+        width: 100%;
+        padding: 1.5rem 2rem;
+        overflow: auto;
     }
 }
 
-@media (max-width: 930px) and (orientation: landscape) {}
+/* PC medium resolution > */
+@media (min-width: 1113px) {}
+
+/* Tablet - PC low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {}
+
+/* > PC low resolution */
+@media (min-width: 1024px) and (max-width: 1239px) {}

@@ -1,4 +1,4 @@
-<div class="sidebar sidebar--hidden">
+<div class="sidebar mobile-sidebar--hidden">
     <div class="sidebar__header">
         <div class="account">
             <div class="account__avatar">
