@@ -1,6 +1,6 @@
 function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar')
-    const sidebarHiddenClass = 'sidebar--hidden';
+    const sidebarHiddenClass = 'mobile-sidebar--hidden';
 
     if (!sidebar) {
         return console.log('Sidebar not found')

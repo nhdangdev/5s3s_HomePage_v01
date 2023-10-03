@@ -82,8 +82,18 @@
             </div>
         </div>
     </div>
+    <!-- template for logout section -->
+    <template id="logout-template">
+        <div style="display: flex; justify-content: center; align-items: center; min-height: 100dvh; gap: 1rem;">
+            <span>
+                You are logined!
+            </span>
+            <button style="padding: .5rem 1rem; font-weight: bold; color: #1f1f1f;
+            border-radius: .4rem; border: none; background-color: #eee;" onclick="logout()">Log out?</button>
+        </div>
+    </template>
+
     <script>
-        console.l
         function clearEmailInput() {
             const emailInput = document.querySelector('form#login-form input[name="email"]');
             if (emailInput)
@@ -103,6 +113,46 @@
                 passwordInput.setAttribute('type', 'text');
                 togglePasswordIcon && (togglePasswordIcon.innerHTML = 'visibility');
             }
+        }
+
+        window.addEventListener('load', () => {
+            // handle form submit
+            const loginForm = document.querySelector('#login-form')
+            if (loginForm) {
+                loginForm.addEventListener('submit', handleSubmitForm)
+            }
+
+            // check login
+            const email = getCookie('email')
+            if (!!email) {
+                console.log('U are logined')
+                const logoutTemplate = document.querySelector('#logout-template')
+                const logoutSection = logoutTemplate.content.cloneNode(true)
+                document.body.innerHTML = ''
+                document.body.appendChild(logoutSection)
+            }
+        })
+
+        function handleSubmitForm(e) {
+            e.preventDefault()
+            const form = e.target
+            if (!form) { return }
+
+            const emailInput = form.querySelector('input[name="email"]')
+            const passwordInput = form.querySelector('input[name="password"]')
+            const keepSignInCheckbox = form.querySelector('input[name="keep-sign-in"]')
+            const email = emailInput.value
+            const password = passwordInput.value
+            const keepSignIn = keepSignInCheckbox.checked
+            if (!!email && !!password && keepSignIn) {
+                setCookie('email', email)
+                window.location.reload()
+            }
+        }
+
+        function logout() {
+            clearCookie('email')
+            window.location.reload()
         }
     </script>
 </body>
