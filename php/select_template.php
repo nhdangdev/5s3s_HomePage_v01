@@ -31,7 +31,7 @@
                     <div class="grid">
                         <div class="row">
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.html?template=temp_pho_3" class="template-item-link">
+                                <a href="./add_template_data.php?template=temp_pho_3" class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
                                             <img src="../asset/img/temp_pho_3.png">
@@ -43,7 +43,7 @@
                                 </a>
                             </div>
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.html?template=temp_pho_4" class="template-item-link">
+                                <a href="./add_template_data.php?template=temp_pho_4" class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
                                             <img src="../asset/img/temp_pho_4.png">
@@ -55,7 +55,7 @@
                                 </a>
                             </div>
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.html?template=temp_pho_5" class="template-item-link">
+                                <a href="./add_template_data.php?template=temp_pho_5" class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
                                             <img src="../asset/img/temp_pho_5.png">
@@ -67,7 +67,7 @@
                                 </a>
                             </div>
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.html?template=temp_pho_6" class="template-item-link">
+                                <a href="./add_template_data.php?template=temp_pho_6" class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
                                             <img src="../asset/img/temp_pho_3.png">
@@ -79,7 +79,7 @@
                                 </a>
                             </div>
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.html?template=temp_pho_7" class="template-item-link">
+                                <a href="./add_template_data.php?template=temp_pho_7" class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
                                             <img src="../asset/img/temp_pho_4.png">
@@ -91,7 +91,7 @@
                                 </a>
                             </div>
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.html?template=temp_pho_8" class="template-item-link">
+                                <a href="./add_template_data.php?template=temp_pho_8" class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
                                             <img src="../asset/img/temp_pho_5.png">
@@ -103,7 +103,7 @@
                                 </a>
                             </div>
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.html?template=temp_pho_9" class="template-item-link">
+                                <a href="./add_template_data.php?template=temp_pho_9" class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
                                             <img src="../asset/img/temp_pho_3.png">
@@ -115,7 +115,7 @@
                                 </a>
                             </div>
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.html?template=temp_pho_1" class="template-item-link">
+                                <a href="./add_template_data.php?template=temp_pho_1" class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
                                             <img src="../asset/img/temp_pho_4.png">
