@@ -7,12 +7,12 @@
   --border-radius: 6px;
   --box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
-  --view-width: 900px;
+  --view-width: 100%;
   /* grid view variable */
   /* horizontal space between 2 items in grid view mode */
   --grid-item-spacing: 20px;
   /* number of items in a row in grid view mode */
-  --num-item-row-grid: 2;
+  --num-item-row-grid: 3;
 
   /* list view variable */
   --list-view-thumbnail-width: 160px;
@@ -22,14 +22,14 @@
 
 body,
 html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
+  /* overflow: visible; */
 }
+
 
 .wrapper {
   background-color: var(--background-color);
+  overflow-y: hidden
   /* height: 100%; */
 }
 
@@ -38,29 +38,26 @@ html {
     height: 100vh;
 } */
 
-.sidebar {
+/* .sidebar {
   background-color: #fff;
-  min-height: 800px;
-}
+} */
 
 h2 {
   color: var(--text-color);
   font-family: "Inter";
-  margin: 20px 0px 4px 0px;
+  margin: 0px 0px 4px 0px;
 }
 
 h4 {
   color: var(--text-color);
   font-family: "Inter";
   margin: 0;
-  user-select: none;
 }
 
 p {
   font-size: 0.9rem;
   font-family: "Inter";
   color: var(--text-color);
-  user-select: none;
 }
 
 /* header + filter css */
@@ -72,7 +69,7 @@ p {
     top: 10px; */
   position: sticky;
   justify-content: space-between;
-  top: 0;
+  top: -32px;
   background-color: var(--background-color);
 }
 
@@ -119,9 +116,9 @@ p {
 
 /* search bar css */
 .search {
-  width: 30%;
+  width: 40%;
   height: 34px;
-
+  margin-left: 40px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ccc;
@@ -135,20 +132,17 @@ p {
   flex: 1;
   border: none;
   background-color: transparent;
-  height: 90%;
 }
 
 /* view css */
-
 .view-main {
-  width: auto;
-  background-color: #fff;
+  /* background-color: #fff; */
   width: var(--view-width);
   padding: 20px 20px 0px;
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  /* box-shadow: var(--box-shadow); */
   height: calc(100% - 122px);
-  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .view-item__thumbnail img {
@@ -210,6 +204,15 @@ p {
   box-sizing: border-box;
 }
 
+.list-view .view-item__ratios span,
+.list-view .view-item__created span,
+.list-view .view-item__status span,
+.list-view .view-item__subject span,
+.list-view .view-item__title span,
+.list-view .view-item__name span i{
+  display: none;
+}
+
 .list-view .view-item__name,
 .list-view .view-item__title,
 .list-view .view-item__created,
@@ -220,31 +223,51 @@ p {
 
 .list-view .view-item__ratios {
   width: var(--list-view-ratios-width);
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  
+}
+
+.list-view .view-item__ratios .ratio-card {
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+  width: max-content;
+  padding: 5px 0px;
+  min-width: 50px;
+  text-align: center;
 }
 
 /* grid view css */
 
-.grid-view {
-  margin-right: -20px;
-}
+/* .grid-view {
+  margin-right: calc( 0px - var(--grid-item-spacing));
+} */
 
 .grid-view .view-item {
+  box-sizing: border-box;
+  background-color: #fff;
   display: inline-block;
   --grid-item-padding: var(--grid-item-spacing);
   /* caculate proper width to render expected num of items in a row 
     ing grid view mode
     */
-  width: calc(
+  /* width: calc(
     var(--view-width) / var(--num-item-row-grid) -
       (var(--num-item-row-grid) - 1) / var(--num-item-row-grid) *
-      var(--grid-item-spacing) - 2 * var(--grid-item-padding) - 3px
-  );
-  /* width: 230px;  */
+      var(--grid-item-spacing) - 2 * var(--grid-item-padding) - 0px
+  ); */
+  width: calc((var(--view-width) - (var(--num-item-row-grid) * 3px ) - (var(--num-item-row-grid) - 1 ) * var(--grid-item-padding)) / var(--num-item-row-grid));
   border-radius: var(--border-radius);
   padding: var(--grid-item-padding);
   text-align: center;
-  box-shadow: var(--box-shadow);
+  border: 1px solid #ccc;
+  /* box-shadow: var(--box-shadow); */
   margin-right: var(--grid-item-spacing);
+}
+
+.grid-view .view-item:nth-child(3n){
+  margin-right: 0 !important;
 }
 
 .zoom {
@@ -268,9 +291,17 @@ p {
   text-align: left;
 }
 
+.grid-view .view-item__title{
+  margin: 15px 0px;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
 .grid-view .view-item__created,
 .grid-view .view-item__subject,
-.grid-view .view-item__status {
+.grid-view .view-item__status, 
+.grid-view .view-item__name
+{
   color: #666;
   font-size: 0.9rem;
 }
@@ -342,14 +373,14 @@ p {
   cursor: pointer;
 }
 
-.select-selected {
-  border: 1px solid #ccc;
+/* .select-selected {
+  border-bottom: 1px solid #ccc;
   border-radius: var(--border-radius);
-}
+} */
 
-.select-selected:active {
+/* .select-selected:active {
   border-color: red;
-}
+} */
 
 .select-items {
   margin-top: 4px;
@@ -392,4 +423,89 @@ p {
 .select-items div:hover,
 .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+@media (max-width: 767px) {
+
+  .row.view-header{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .filter__ratios,
+  .filter__date,
+  .filter__subject{
+    width: 100%;
+  }
+
+  .search{
+    display: none;
+  }
+
+  .custom-select select option,
+  .select-selected{
+    font-size: 1rem;
+  }
+
+  /* .list-view .view-item__created,
+  .list-view .view-item__status,
+  .list-view .view-item__subject,
+  .list-view .view-item__title, */
+  .list-view__header .header-template,
+  .list-view__header .header-ratios,
+  .list-view__header .header-subject,
+  .list-view__header .header-status,
+  .list-view__header .header-created,
+  .list-view__header .header-title {
+    display: none;
+  }
+
+  .list-view .view-item__name span i{
+    width: 12px;
+    height: 100%;
+    display: inline-block;
+    align-self: center;
+  }
+
+  .list-view .view-item__ratios,
+  .list-view .view-item__created,
+  .list-view .view-item__status,
+  .list-view .view-item__subject,
+  .list-view .view-item__title{
+    width: 100%;
+    display: none;
+    align-items: center;
+  }
+
+  .list-view .view-item__ratios span,
+  .list-view .view-item__created span,
+  .list-view .view-item__status span,
+  .list-view .view-item__subject span,
+  .list-view .view-item__title span{
+    display: block;
+    margin-right: 4px;
+  }
+  
+
+  .list-view .view-item__thumbnail{
+    max-width: 50%;
+  }
+
+  .list-view .view-item__name{
+    width: 30% ;
+    font-size: 1rem;
+  }
+
+  .list-view .view-item{
+    display: flex;
+    flex-wrap: wrap;
+  }
+ 
+  .grid-view .view-item{
+    width: 100%;
+  }
 }
