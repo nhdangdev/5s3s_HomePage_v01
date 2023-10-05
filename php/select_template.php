@@ -2,18 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-    <link rel="stylesheet" href="../css/grid.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/select_template.css">
-    <script src="../js/main.js" defer></script>
-    <script src="../js/sidebar.js"></script>
+    <?php
+        include_once('./config.php');
+        $extend_head = '<link rel="stylesheet" href="../css/select_template.css">';
+        include_once($cms_views_path.'/head.php');
+    ?>
     <title>Select Template</title>
 </head>
 

@@ -88,10 +88,15 @@ body {
                     border: none;
                     border-left: $color2 .2rem solid;
                     outline: none;
+                    transition: all .2s ease;
 
                     &:focus {
                         background-color: #48a3ff20;
-                        transition: all .2s;
+                    }
+
+                    // hide reveal password button of edge browser
+                    &::-ms-reveal {
+                        display: none;
                     }
                 }
 
