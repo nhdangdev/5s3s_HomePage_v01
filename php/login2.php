@@ -2,17 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/grid.css">
-    <link rel="stylesheet" href="../css/login2.css">
-    <script src="../js/main.js"></script>
+    <?php
+        include_once('./config.php');
+        $extend_head = '<link rel="stylesheet" href="../css/login2.css">';
+        include_once($cms_views_path.'/head.php');
+    ?>
     <title>Layout Login 2</title>
 </head>
 
@@ -50,7 +44,7 @@
                                 <input type="email" name="email" placeholder="Email ID"
                                     class="form-control form-control__input">
                                 <div class="form-control__field-button">
-                                    <span class="material-icons" style="font-size: 18px;" onclick="clearEmailInput()">
+                                    <span class="material-symbols-outlined" style="font-size: 18px;" onclick="clearEmailInput()">
                                         clear
                                     </span>
 
@@ -60,7 +54,7 @@
                                 <input type="password" name="password" placeholder="Password"
                                     class="form-control form-control__input">
                                 <div class="form-control__field-button">
-                                    <span class="material-icons" style="font-size: 18px;" id="toggle-password-icon"
+                                    <span class="material-symbols-outlined" style="font-size: 18px;" id="toggle-password-icon"
                                         onclick="togglePassword()">
                                         visibility
                                     </span>
@@ -108,10 +102,10 @@
 
             if (passwordInput.getAttribute('type') === 'text') {
                 passwordInput.setAttribute('type', 'password')
-                togglePasswordIcon && (togglePasswordIcon.innerHTML = 'visibility_off');
+                togglePasswordIcon && (togglePasswordIcon.innerHTML = 'visibility');
             } else {
                 passwordInput.setAttribute('type', 'text');
-                togglePasswordIcon && (togglePasswordIcon.innerHTML = 'visibility');
+                togglePasswordIcon && (togglePasswordIcon.innerHTML = 'visibility_off');
             }
         }
 

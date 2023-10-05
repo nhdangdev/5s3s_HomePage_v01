@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>  
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Template List</title>
-      <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-      
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-      />
-      <link rel="stylesheet" href="../css/grid.css" />
-      <link rel="stylesheet" href="../css/main.css" />
-      <link rel="stylesheet" href="../css/template_list.css" />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-      <script
-        src="https://kit.fontawesome.com/70d145d8f0.js"
-        crossorigin="anonymous"
-      ></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/sidebar.js"></script>
+    <script
+    src="https://kit.fontawesome.com/70d145d8f0.js"
+    crossorigin="anonymous"
+    ></script>
+    <?php
+        include_once('./config.php');
+        $extend_head = '<link rel="stylesheet" href="'.$cms_asset_path.'/css/template_list.css">';
+        include_once($cms_views_path.'/head.php');
+        ?>
+        <title>Template List</title>
   </head>
   <body>
     <?php include_once("./loading_screen.php") ?>
