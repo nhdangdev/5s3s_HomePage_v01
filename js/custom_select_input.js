@@ -1,3 +1,4 @@
+// [102305Tuan] add responsive template list 
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
 x = document.getElementsByClassName("custom-select");
@@ -92,14 +93,18 @@ function myFilter(value,filterField){
   viewItemList.forEach((item)=>item.style.display = "flex");
   //convert item list to array
   viewItemArr = Array.from(viewItemList);
-  console.log(filterField);
   switch (filterField){
     case "filter-ratios":
       if(value === "All Ratios") break;
       //get all item that not support the selected ratio
       var filteredItems = viewItemArr.filter((item) => {
-       let ratiosList =  item.querySelector(".view-item__ratios p").innerText;
-       return !ratiosList.includes(value);
+       let listRatioCard =  item.querySelectorAll(".view-item__ratios .ratio-card");
+       return Array.from(listRatioCard).every((ratioCard) => 
+        {
+          if(ratioCard.innerText.includes(value)) ratioCard.style.border = "1px solid red";
+          return !ratioCard.innerText.includes(value);
+        }
+       );
       })
       //hide all filtered items
       filteredItems.forEach((item) => {item.style.display = "none";})
