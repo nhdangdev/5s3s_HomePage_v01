@@ -1,0 +1,88 @@
+.template-data-item {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    // padding: 0 .5rem .5rem;
+    padding: 0 1rem 1rem .5rem;
+
+    &__img {
+        height: 160px;
+        display: block;
+        position: relative;
+
+        &-preview {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: .5rem;
+            cursor: pointer;
+        }
+
+        &-file {
+            display: none;
+        }
+
+        &-picker {
+            border: 2px solid #eee;
+            border-radius: 2rem;
+            padding: .2rem;
+            height: 2rem;
+            width: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: -.5rem;
+            bottom: -.5rem;
+            background-color: white;
+            transition: all .4s;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                box-shadow: 1px 1px 5px #ccc;
+            }
+        }
+    }
+
+    &__control {
+        display: flex;
+        flex-direction: column;
+        gap: .2rem;
+
+        input {
+            padding: .5rem 0;
+            border: none;
+            border-bottom: 2px solid #eee;
+            outline: none;
+            transition: all .4s;
+            box-sizing: border-box;
+
+            &:hover,
+            &:focus {
+                border-color: #000;
+            }
+        }
+    }
+
+
+    &__key {
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+#add-template-data-btn {
+    display: flex;
+    gap: .2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #4b5aff;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-weight: bold;
+    border-radius: .4rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
