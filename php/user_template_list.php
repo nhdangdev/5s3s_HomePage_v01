@@ -4,8 +4,8 @@
 <head>
     <?php
         include_once('./config.php');
-        $extend_head = '<link rel="stylesheet" href="'.$cms_asset_path.'/css/user_template_management.css">';
-        $extend_head .= '<script src="'.$cms_asset_path.'/js/user_template_management.js" type="module"></script>';
+        $extend_head = '<link rel="stylesheet" href="'.$cms_asset_path.'/css/user_template_list.css">';
+        $extend_head .= '<script src="'.$cms_asset_path.'/js/user_template_list.js" type="module"></script>';
         include_once($cms_views_path.'/head.php');
     ?>
     <title>User Template Management</title>

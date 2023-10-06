@@ -28,6 +28,7 @@ function getCookie(name, fallback = '') {
 }
 
 function setCookie(name, value, expireMs) {
+    if (typeof name !== 'string' || !name) { return }
 
     let newCookie = `${name}=${value}`
 
