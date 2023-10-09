@@ -44,13 +44,13 @@
 
             <div class="search">
               <i class="fa-solid fa-magnifying-glass search__icon"></i>
-              <input type="search" id="search__input" name="search-input" placeholder="Search" />
+              <input type="search" onkeyup="search_view_item()" id="search__input" name="search-input" placeholder="Search" />
             </div>
             <div class="custom-select filter__subject">
               <select name="" id="filter-subject">
                 <option value="0">Subjects</option>
                 <option value="1">All Subjects</option>
-                <option value="2">Nail</option>
+                <option value="2">Nail salon</option>
                 <option value="3">Pho</option>
                 <option value="4">Restaurant</option>
               </select>
@@ -104,279 +104,51 @@
                   <h4>Created</h4>
                 </div>
               </div>
-
-              <div class="view-item">
-                <div class="view-item__thumbnail">
-                  <img src="../asset/img/temp_nail_1_ratio_16_9.jpg" alt="thumbnail" />
-                </div>
-                <div class="view-item__name">
-                  <p>Nail 1 <span><i class="fa-solid fa-caret-down fa-lg"></i> </span></p>
-                </div>
-                <div class="view-item__title">
-                  <span>Title: </span>
-                  <p>Lorem ispum</p>
-                </div>
-                <div class="view-item__ratios">
-                  <span>Ratios: </span>
-                  <div class="ratio-card">4:3</div>
-                  <div class="ratio-card">16:9</div>
-
-                </div>
-                <div class="view-item__subject">
-                  <span>Subject: </span>
-                  <p>Nail salon</p>
-                </div>
-                <div class="view-item__status">
-                  <span>Status: </span>
-                  <p>OK</p>
-                </div>
-                <div class="view-item__created">
-                  <span>Created date: </span>
-                  <p>26/09/23</p>
-                </div>
-              </div>
-
-              <div class="view-item">
-                <div class="view-item__thumbnail">
-                  <img src="../asset/img/temp_nail_2_ratio_16_9.jpg" alt="thumbnail" />
-                </div>
-                <div class="view-item__name">
-                  <p>Nail 2 <span><i class="fa-solid fa-caret-down fa-lg"></i> </span></p>
-                </div>
-                <div class="view-item__title">
-                  <span>Title: </span>
-                  <p>nail 2 title</p>
-                </div>
-                <div class="view-item__ratios">
-                  <span>Ratios: </span>
-                  <div class="ratio-card">4:3</div>
-                  <div class="ratio-card">16:9</div>
-                  <div class="ratio-card">32:9</div>
-
-                </div>
-                <div class="view-item__subject">
-                  <span>Subject: </span>
-                  <p>Nail salon</p>
-                </div>
-                <div class="view-item__status">
-                  <span>Status: </span>
-                  <p>OK</p>
-                </div>
-                <div class="view-item__created">
-                  <span>Created date: </span>
-                  <p>26/09/23</p>
-                </div>
-              </div>
-
-              <div class="view-item">
-                <div class="view-item__thumbnail">
-                  <img src="../asset/img/temp_nail_3_ratio_16_9.jpg" alt="thumbnail" />
-                </div>
-                <div class="view-item__name">
-                  <p>Nail 3 <span><i class="fa-solid fa-caret-down fa-lg"></i> </span></p>
-                </div>
-                <div class="view-item__title">
-                  <span>Title: </span>
-                  <p>Lorem ispum</p>
-                </div>
-                <div class="view-item__ratios">
-                  <span>Ratios: </span>
-                  <div class="ratio-card">4:3</div>
-                  <div class="ratio-card">16:9</div>
-                  <div class="ratio-card">32:9</div>
-
-                </div>
-                <div class="view-item__subject">
-                  <span>Subject: </span>
-                  <p>Nail salon</p>
-                </div>
-                <div class="view-item__status">
-                  <span>Status: </span>
-                  <p>OK</p>
-                </div>
-                <div class="view-item__created">
-                  <span>Created date: </span>
-                  <p>26/09/23</p>
-                </div>
-              </div>
-
-              <div class="view-item">
-                <div class="view-item__thumbnail">
-                  <img src="../asset/img/temp_nail_4_ratio_16_9.jpg" alt="thumbnail" />
-                </div>
-                <div class="view-item__name">
-                  <p>Nail 4 <span><i class="fa-solid fa-caret-down fa-lg"></i> </span></p>
-                </div>
-                <div class="view-item__title">
-                  <span>Title: </span>
-                  <p>Lorem ispum</p>
-                </div>
-                <div class="view-item__ratios">
-                  <span>Ratios: </span>
-                  <div class="ratio-card">4:3</div>
-                  <div class="ratio-card">16:10</div>
-                  <div class="ratio-card">32:9</div>
-                  <div class="ratio-card">21:9</div>
-
-                </div>
-                <div class="view-item__subject">
-                  <span>Subject: </span>
-                  <p>Nail salon</p>
-                </div>
-                <div class="view-item__status">
-                  <span>Status: </span>
-                  <p>OK</p>
-                </div>
-                <div class="view-item__created">
-                  <span>Created date: </span>
-                  <p>26/09/23</p>
-                </div>
-              </div>
-
-              <div class="view-item">
-                <div class="view-item__thumbnail">
-                  <img src="../asset/img/temp_pho_4.png" alt="thumbnail" />
-                </div>
-                <div class="view-item__name">
-                  <p>Pho 1</p>
-                </div>
-                <div class="view-item__title">
-                  <p>Lorem ispum</p>
-                </div>
-                <div class="view-item__ratios">
-                  <div class="ratio-card">16:9</div>
-                  <div class="ratio-card">16:10</div>
-                  <div class="ratio-card">32:9</div>
-                </div>
-                <div class="view-item__subject">
-                  <p>Pho</p>
-                </div>
-                <div class="view-item__status">
-                  <p>OK</p>
-                </div>
-                <div class="view-item__created">
-                  <p>26/09/23</p>
-                </div>
-              </div>
-
-              <div class="view-item">
-                <div class="view-item__thumbnail">
-                  <img src="../asset/img/temp_pho_3.png" alt="thumbnail" />
-                </div>
-                <div class="view-item__name">
-                  <p>Pho 2</p>
-                </div>
-                <div class="view-item__title">
-                  <p>Lorem ispum</p>
-                </div>
-                <div class="view-item__ratios">
-                  <div class="ratio-card">16:9</div>
-                  <div class="ratio-card">16:10</div>
-                  <div class="ratio-card">4:3</div>
-                </div>
-                <div class="view-item__subject">
-                  <p>Pho</p>
-                </div>
-                <div class="view-item__status">
-                  <p>OK</p>
-                </div>
-                <div class="view-item__created">
-                  <p>26/09/23</p>
-                </div>
-              </div>
-
-              <div class="view-item">
-                <div class="view-item__thumbnail">
-                  <img src="../asset/img/temp_pho_5.png" alt="thumbnail" />
-                </div>
-                <div class="view-item__name">
-                  <p>Pho 3</p>
-                </div>
-                <div class="view-item__title">
-                  <p>Lorem ispum</p>
-                </div>
-                <div class="view-item__ratios">
-                <div class="ratio-card">21:9</div>
-                  <div class="ratio-card">16:9</div>
-                  <div class="ratio-card">16:10</div>
-                  <div class="ratio-card">4:3</div>
-                </div>
-                <div class="view-item__subject">
-                  <p>Pho</p>
-                </div>
-                <div class="view-item__status">
-                  <p>OK</p>
-                </div>
-                <div class="view-item__created">
-                  <p>26/09/23</p>
-                </div>
-              </div>
+              <!-- [102309Tuan] detach view item into separate module -->
+              <?php 
+                $availabeRatios = array("4:3","16:9","16:10","21:9","32:9");
+                require_once('./view_item.php');
+                // random generate view item data
+                for($i=1;$i<=15; $i+=1){
+                  $ranNum1 = rand(0,4);
+                  $ranNum2 = rand(0,1);
+                  $name = "Template ".$i;
+                  $thumbnail = $ranNum2 == 0 ? "../asset/img/temp_nail_".rand(1,4)."_ratio_16_9.jpg"
+                  :'../asset/img/temp_pho_'.rand(3,5).'.png';
+                  $title = "Template title ".$i;
+                  $subject = $ranNum2 == 0 ? "Nail salon" : "Pho";
+                  $ratios = array_slice($availabeRatios, $ranNum1, 4);
+                  $status = "OK";
+                  $date = "26/09/23";
+                  $viewItem = new ViewItem($name, $thumbnail, $title, $ratios, $subject, $status, $date);
+                  $viewItem->buildListViewItem();
+                }
+              ?>
             </div>
             <!-- end: list view -->
 
             <!-- begin: grid view -->
             <div class="view-wrap grid-view" style="display: none">
-              <div class="view-item">
-                <div class="view-item__thumbnail">
-                  <img src="../asset/img/temp_nail_1_ratio_16_9.jpg" alt="thumbnail" />
-                </div>
-                <div class="view-item__title">Tempnail 1 Title</div>
-                <div class="view-item__name">Nail 1 </div>
-                <div class="view-item__ratios">
-                  <div class="ratio-card">4:3</div>
-                  <div class="ratio-card">16:9</div>
-                  <div class="ratio-card">16:10</div>
-                  <div class="ratio-card">21:9</div>
-                  <div class="ratio-card">32:9</div>
-                </div>
-
-                <div class="row no-gutters">
-                  <div class="col c-6 view-item__created">26/09/23</div>
-                  <div class="col c-6 view-item__subject">Nail salon</div>
-                  <!-- <div class="col view-item__status"> Run OK</div> -->
-                </div>
-              </div>
-
-              <div class="view-item">
-                <div class="view-item__thumbnail">
-                  <img src="../asset/img/temp_nail_2_ratio_16_9.jpg" alt="thumbnail" />
-                </div>
-                <div class="view-item__title">Tempnail 2 Title</div>
-                <div class="view-item__name">Nail 2</div>
-                <div class="view-item__ratios">
-                  <div class="ratio-card">4:3</div>
-                  <div class="ratio-card">16:9</div>
-                  <div class="ratio-card">16:10</div>
-                  <div class="ratio-card">21:9</div>
-                  <div class="ratio-card">32:9</div>
-                </div>
-
-                <div class="row no-gutters">
-                  <div class="col c-6 view-item__created">26/09/23</div>
-                  <div class="col c-6 view-item__subject">Nail salon</div>
-                  <!-- <div class="col view-item__status"> Run OK</div> -->
-                </div>
-              </div>
-
-              <div class="view-item">
-                <div class="view-item__thumbnail">
-                  <img src="../asset/img/temp_nail_3_ratio_16_9.jpg" alt="thumbnail" />
-                </div>
-                <div class="view-item__title">Tempnail 3 Title</div>
-                <div class="view-item__name">Nail 3</div>
-                <div class="view-item__ratios">
-                  <div class="ratio-card">4:3</div>
-                  <div class="ratio-card">16:9</div>
-                  <div class="ratio-card">16:10</div>
-                  <div class="ratio-card">21:9</div>
-                </div>
-
-                <div class="row no-gutters">
-                  <div class="col c-6 view-item__created">26/09/23</div>
-                  <div class="col c-6 view-item__subject">Nail salon</div>
-                  <!-- <div class="col view-item__status"> Run OK</div> -->
-                </div>
-              </div>
+              <!-- [102309Tuan] detach view item into separate module -->
+              <?php 
+                $availabeRatios = array("4:3","16:9","16:10","21:9","32:9");
+                require_once('./view_item.php');
+                // random generate view item data
+                for($i=1;$i<=15; $i+=1){
+                  $ranNum1 = rand(0,4);
+                  $ranNum2 = rand(0,1);
+                  $name = "Template ".$i;
+                  $thumbnail = $ranNum2 == 0 ? "../asset/img/temp_nail_".rand(1,4)."_ratio_16_9.jpg"
+                  :'../asset/img/temp_pho_'.rand(3,5).'.png';
+                  $title = "Template title ".$i;
+                  $subject = $ranNum2 == 0 ? "Nail salon" : "Pho";
+                  $ratios = array_slice($availabeRatios, $ranNum1, 4);
+                  $status = "OK";
+                  $date = "26/09/23";
+                  $viewItem = new ViewItem($name, $thumbnail, $title, $ratios, $subject, $status, $date);
+                  $viewItem->buildGridViewItem();
+                }
+              ?>
             </div>
             <!-- end: grid view -->
           </div>
@@ -389,7 +161,8 @@
   <script src="../js/custom_select_input.js"></script>
   <script src="../js/grid_list_view.js"></script>
   <script src="../js/template_list_mobile.js"></script>
-
+  <script src="../js/template_list_search_bar.js"></script>
+  
 </body>
 
 </html>

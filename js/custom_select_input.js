@@ -103,9 +103,9 @@ document.addEventListener("click", closeAllSelect);
 // }
 
 function myFilter2(value, filterField) {
-  var viewItemList = document.querySelectorAll(".list-view .view-item");
+  var viewItemList = document.querySelectorAll(".view-item");
   //display all items
-  viewItemList.forEach((item) => (item.style.display = "none"));
+  viewItemList.forEach((item) => (item.classList.add("hidden")));
   viewItemArr = Array.from(viewItemList);
 
   document.querySelectorAll(".custom-select").forEach((filterDiv) => {
@@ -118,19 +118,18 @@ function myFilter2(value, filterField) {
     else {viewItemArr = switchFilter2(selectId, viewItemArr, currentSelectValue); };
   });
   viewItemArr.forEach((item) => {
-    item.style.display = "flex";
+    item.classList.remove("hidden")
   });
 }
 
 function switchFilter2(filterField, viewItemArr, value) {
-  console.count('filter-ratios');
   switch (filterField) {
     case "filter-ratios":
       if (value === "All Ratios" || value === "Ratios") {
         viewItemArr.forEach((item) => {
           item.querySelectorAll(".view-item__ratios .ratio-card").forEach(
             (ratioCard) => {
-              ratioCard.style.border = "1px solid #ccc";
+              ratioCard.classList.remove("ratio-card--alert")
             }
           );
         });
@@ -141,9 +140,9 @@ function switchFilter2(filterField, viewItemArr, value) {
         let listRatioCard = item.querySelectorAll(".view-item__ratios .ratio-card");
         let flag = false;
         Array.from(listRatioCard).forEach((ratioCard) => {
-            ratioCard.style.border = "1px solid #ccc";
+          ratioCard.classList.remove("ratio-card--alert")
             if (ratioCard.innerText === value)
-              {ratioCard.style.border = "1px solid red"; flag = true;}
+              {ratioCard.classList.add("ratio-card--alert"); flag = true;}
         })
         return flag;
       });
@@ -151,11 +150,12 @@ function switchFilter2(filterField, viewItemArr, value) {
 
       break;
       case "filter-subject":
+        console.log(value);
         if (value === "All Subjects" || value === "Subjects") break;
         //get all item that support the selected subject
         viewItemArr = viewItemArr.filter((item) => {
-        let ratiosList = item.querySelector(".view-item__subject p").innerText;
-        return ratiosList.includes(value);
+        let subject = item.querySelector(".view-item__subject p")?.innerHTML;
+        return subject === value;
       });
       // console.log('after filter subjects',viewItemArr);
       break;
