@@ -29,7 +29,7 @@ html {
 
 .wrapper {
   background-color: var(--background-color);
-  overflow-y: hidden
+  overflow-y: hidden;
   /* height: 100%; */
 }
 
@@ -143,6 +143,8 @@ p {
   /* box-shadow: var(--box-shadow); */
   height: calc(100% - 122px);
   box-sizing: border-box;
+  min-height: 500px;
+
 }
 
 .view-item__thumbnail img {
@@ -177,7 +179,7 @@ p {
   width: var(--list-view-ratios-width);
 }
 
-.list-view__header .header-template,
+.list-view__header .header-template-name,
 .list-view__header .header-title,
 .list-view__header .header-subject,
 .list-view__header .header-status,
@@ -455,7 +457,6 @@ p {
   .list-view .view-item__status,
   .list-view .view-item__subject,
   .list-view .view-item__title, */
-  .list-view__header .header-template,
   .list-view__header .header-ratios,
   .list-view__header .header-subject,
   .list-view__header .header-status,
@@ -491,13 +492,16 @@ p {
   }
   
 
-  .list-view .view-item__thumbnail{
+  .list-view .view-item__thumbnail,
+  .list-view__header .header-thumbnail {
     max-width: 50%;
   }
 
-  .list-view .view-item__name{
-    width: 30% ;
+  .list-view .view-item__name,
+  .list-view__header .header-template-name{
+    width: 40% ;
     font-size: 1rem;
+    text-align: center;
   }
 
   .list-view .view-item{

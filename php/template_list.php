@@ -3,16 +3,19 @@
 <html lang="en">
 
 <head>
-  <script src="https://kit.fontawesome.com/70d145d8f0.js" crossorigin="anonymous"></script>
-  <?php
-    include_once('./config.php');
-    $extend_head = '<link rel="stylesheet" href="'.$cms_asset_path.'/css/template_list.css">';
-    $extend_head .= '<script src="'.$cms_asset_path.'/js/custom_select_input.js" defer></script>';
-    $extend_head .= '<script src="'.$cms_asset_path.'/js/grid_list_view.js" defer></script>';
-    $extend_head .= '<script src="'.$cms_asset_path.'/js/template_list_mobile.js" defer></script>';
-    include_once($cms_views_path.'/head.php');
-  ?>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Template List</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/grid.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet"  type="text/css"  href="../css/template_list.css?v=1" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/70d145d8f0.js" crossorigin="anonymous"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/sidebar.js"></script>
 </head>
 
 <body>
@@ -21,7 +24,8 @@
     <div class="row no-gutters">
       <!-- sidebar take 20% screen width -->
       <!-- <div class="col m-4 l-2">
-          <?php //include_once("./sidebar.php") ?>
+          <?php //include_once("./sidebar.php") 
+          ?>
         </div> -->
       <!-- content -->
       <div class="col c-12 m-12 l-12">
@@ -44,6 +48,7 @@
             </div>
             <div class="custom-select filter__subject">
               <select name="" id="filter-subject">
+                <option value="0">Subjects</option>
                 <option value="1">All Subjects</option>
                 <option value="2">Nail</option>
                 <option value="3">Pho</option>
@@ -52,7 +57,7 @@
             </div>
             <div class="custom-select filter__ratios">
               <select name="" id="filter-ratios">
-                <option value="0">Ratio filter</option>
+                <option value="0">Ratios</option>
                 <option value="1">All Ratios</option>
                 <option value="2">4:3</option>
                 <option value="3">16:9</option>
@@ -63,6 +68,7 @@
             </div>
             <div class="custom-select filter__date">
               <select name="" id="filter-date">
+                <option value="0">Dates</option>
                 <option value="1">All dates</option>
                 <option value="2">28/9/23</option>
 
@@ -79,7 +85,7 @@
                 <div class="header-thumbnail">
                   <h4>Thumbnail</h4>
                 </div>
-                <div claass="header-template-name">
+                <div class="header-template-name">
                   <h4>Temp name</h4>
                 </div>
                 <div class="header-title">
@@ -145,6 +151,7 @@
                   <span>Ratios: </span>
                   <div class="ratio-card">4:3</div>
                   <div class="ratio-card">16:9</div>
+                  <div class="ratio-card">32:9</div>
 
                 </div>
                 <div class="view-item__subject">
@@ -176,6 +183,7 @@
                   <span>Ratios: </span>
                   <div class="ratio-card">4:3</div>
                   <div class="ratio-card">16:9</div>
+                  <div class="ratio-card">32:9</div>
 
                 </div>
                 <div class="view-item__subject">
@@ -206,7 +214,9 @@
                 <div class="view-item__ratios">
                   <span>Ratios: </span>
                   <div class="ratio-card">4:3</div>
-                  <div class="ratio-card">16:9</div>
+                  <div class="ratio-card">16:10</div>
+                  <div class="ratio-card">32:9</div>
+                  <div class="ratio-card">21:9</div>
 
                 </div>
                 <div class="view-item__subject">
@@ -225,7 +235,7 @@
 
               <div class="view-item">
                 <div class="view-item__thumbnail">
-                  <img src="../asset/img/temp_nail_3_ratio_16_9.jpg" alt="thumbnail" />
+                  <img src="../asset/img/temp_pho_4.png" alt="thumbnail" />
                 </div>
                 <div class="view-item__name">
                   <p>Pho 1</p>
@@ -237,6 +247,59 @@
                   <div class="ratio-card">16:9</div>
                   <div class="ratio-card">16:10</div>
                   <div class="ratio-card">32:9</div>
+                </div>
+                <div class="view-item__subject">
+                  <p>Pho</p>
+                </div>
+                <div class="view-item__status">
+                  <p>OK</p>
+                </div>
+                <div class="view-item__created">
+                  <p>26/09/23</p>
+                </div>
+              </div>
+
+              <div class="view-item">
+                <div class="view-item__thumbnail">
+                  <img src="../asset/img/temp_pho_3.png" alt="thumbnail" />
+                </div>
+                <div class="view-item__name">
+                  <p>Pho 2</p>
+                </div>
+                <div class="view-item__title">
+                  <p>Lorem ispum</p>
+                </div>
+                <div class="view-item__ratios">
+                  <div class="ratio-card">16:9</div>
+                  <div class="ratio-card">16:10</div>
+                  <div class="ratio-card">4:3</div>
+                </div>
+                <div class="view-item__subject">
+                  <p>Pho</p>
+                </div>
+                <div class="view-item__status">
+                  <p>OK</p>
+                </div>
+                <div class="view-item__created">
+                  <p>26/09/23</p>
+                </div>
+              </div>
+
+              <div class="view-item">
+                <div class="view-item__thumbnail">
+                  <img src="../asset/img/temp_pho_5.png" alt="thumbnail" />
+                </div>
+                <div class="view-item__name">
+                  <p>Pho 3</p>
+                </div>
+                <div class="view-item__title">
+                  <p>Lorem ispum</p>
+                </div>
+                <div class="view-item__ratios">
+                <div class="ratio-card">21:9</div>
+                  <div class="ratio-card">16:9</div>
+                  <div class="ratio-card">16:10</div>
+                  <div class="ratio-card">4:3</div>
                 </div>
                 <div class="view-item__subject">
                   <p>Pho</p>
@@ -323,6 +386,10 @@
       <!-- content -->
     </div>
   </div>
+  <script src="../js/custom_select_input.js"></script>
+  <script src="../js/grid_list_view.js"></script>
+  <script src="../js/template_list_mobile.js"></script>
+
 </body>
 
 </html>
