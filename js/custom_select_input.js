@@ -103,9 +103,9 @@ document.addEventListener("click", closeAllSelect);
 // }
 
 function myFilter2(value, filterField) {
-  var viewItemList = document.querySelectorAll(".list-view .view-item");
+  var viewItemList = document.querySelectorAll(".view-item");
   //display all items
-  viewItemList.forEach((item) => (item.style.display = "none"));
+  viewItemList.forEach((item) => (item.classList.add("hidden")));
   viewItemArr = Array.from(viewItemList);
 
   document.querySelectorAll(".custom-select").forEach((filterDiv) => {
@@ -118,7 +118,7 @@ function myFilter2(value, filterField) {
     else {viewItemArr = switchFilter2(selectId, viewItemArr, currentSelectValue); };
   });
   viewItemArr.forEach((item) => {
-    item.style.display = "flex";
+    item.classList.remove("hidden")
   });
 }
 
@@ -129,7 +129,7 @@ function switchFilter2(filterField, viewItemArr, value) {
         viewItemArr.forEach((item) => {
           item.querySelectorAll(".view-item__ratios .ratio-card").forEach(
             (ratioCard) => {
-              ratioCard.style.border = "1px solid #ccc";
+              ratioCard.classList.remove("ratio-card--alert")
             }
           );
         });
@@ -140,9 +140,9 @@ function switchFilter2(filterField, viewItemArr, value) {
         let listRatioCard = item.querySelectorAll(".view-item__ratios .ratio-card");
         let flag = false;
         Array.from(listRatioCard).forEach((ratioCard) => {
-            ratioCard.style.border = "1px solid #ccc";
+          ratioCard.classList.remove("ratio-card--alert")
             if (ratioCard.innerText === value)
-              {ratioCard.style.border = "1px solid red"; flag = true;}
+              {ratioCard.classList.add("ratio-card--alert"); flag = true;}
         })
         return flag;
       });
