@@ -155,7 +155,6 @@ function switchFilter2(filterField, viewItemArr, value) {
         //get all item that support the selected subject
         viewItemArr = viewItemArr.filter((item) => {
         let subject = item.querySelector(".view-item__subject p")?.innerHTML;
-        console.log(subject);
         return subject === value;
       });
       // console.log('after filter subjects',viewItemArr);

@@ -90,6 +90,7 @@ p {
 }
 
 .view-select {
+  cursor: pointer;
   display: flex;
   list-style: none;
   justify-content: space-around;
