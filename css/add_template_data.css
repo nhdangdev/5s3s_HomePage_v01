@@ -32,6 +32,7 @@
   bottom: -0.5rem;
   background-color: white;
   transition: all 0.4s;
+  cursor: pointer;
 }
 .template-data-item__img-picker:hover, .template-data-item__img-picker:focus {
   box-shadow: 1px 1px 5px #ccc;
@@ -65,6 +66,7 @@
   border-radius: 0.4rem;
   text-decoration: none;
   border: none;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=add_template_data.css.map */

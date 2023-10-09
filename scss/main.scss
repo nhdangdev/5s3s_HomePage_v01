@@ -108,7 +108,7 @@ body {
         align-items: center;
         transition: all .2s;
         padding: .5rem 0;
-        cursor: default;
+        cursor: pointer;
 
         &--selected,
         &:hover {
@@ -129,6 +129,7 @@ body {
         background-color: transparent;
         transition: all .4s;
         border: none;
+        cursor: pointer;
 
         &:hover {
             background-color: #eee;
@@ -170,6 +171,7 @@ body {
                 background-color: transparent;
                 transition: all .4s;
                 border: none;
+                cursor: pointer;
 
                 &:hover {
                     background-color: #eee;
@@ -187,6 +189,7 @@ body {
         transition: all .4s;
         padding: .5rem;
         border: none;
+        cursor: pointer;
 
         &:hover {
             color: #6cc4c1;

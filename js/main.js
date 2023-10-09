@@ -68,3 +68,8 @@ function copyToClipboard(text) {
     navigator.clipboard.writeText(text)
     alert(`Coppied "${text}"`);
 }
+
+function logout(logoutLink) {
+    clearCookie('email')
+    window.location.href = logoutLink
+}

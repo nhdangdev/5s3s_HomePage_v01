@@ -95,6 +95,7 @@ body {
   top: calc((100% - 1.5rem) / 2);
   right: 0.25rem;
   transition: all 0.4s;
+  cursor: pointer;
 }
 .form-modal__right-side #login-form .form-control__field-button:hover {
   background-color: rgba(0, 0, 0, 0.0666666667);
@@ -107,9 +108,11 @@ body {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .form-modal__right-side #login-form .form-control__checkbox {
   width: fit-content;
+  cursor: pointer;
 }
 .form-modal__right-side #login-form .form-control__checkbox input[type=checkbox] {
   display: none;
