@@ -123,7 +123,6 @@ function myFilter2(value, filterField) {
 }
 
 function switchFilter2(filterField, viewItemArr, value) {
-  console.count('filter-ratios');
   switch (filterField) {
     case "filter-ratios":
       if (value === "All Ratios" || value === "Ratios") {
@@ -151,11 +150,13 @@ function switchFilter2(filterField, viewItemArr, value) {
 
       break;
       case "filter-subject":
+        console.log(value);
         if (value === "All Subjects" || value === "Subjects") break;
         //get all item that support the selected subject
         viewItemArr = viewItemArr.filter((item) => {
-        let ratiosList = item.querySelector(".view-item__subject p").innerText;
-        return ratiosList.includes(value);
+        let subject = item.querySelector(".view-item__subject p")?.innerHTML;
+        console.log(subject);
+        return subject === value;
       });
       // console.log('after filter subjects',viewItemArr);
       break;
