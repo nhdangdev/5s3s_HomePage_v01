@@ -15,14 +15,24 @@ const SHOW_SUGGESTION_CLASS = 'searchbox__suggestion--show'
 let currentLayoutIndex = 0
 
 function nextLayout() {
-    const nextLayoutIndex = currentLayoutIndex >= layoutFilePaths.length - 1 ? 0 : currentLayoutIndex + 1
+    // const nextLayoutIndex = currentLayoutIndex >= layoutFilePaths.length - 1 ? 0 : currentLayoutIndex + 1
+    // prevent goto index 0
+    if (currentLayoutIndex >= layoutFilePaths.length - 1) {
+        return
+    }
+    const nextLayoutIndex = currentLayoutIndex + 1
     sliderFrame.src = layoutFilePaths[nextLayoutIndex]
     currentLayoutIndex = nextLayoutIndex
     searchboxInput.value = sliderFrame.src
 }
 
 function prevLayout() {
-    const prevLayoutIndex = currentLayoutIndex === 0 ? layoutFilePaths.length - 1 : currentLayoutIndex - 1
+    // const prevLayoutIndex = currentLayoutIndex === 0 ? layoutFilePaths.length - 1 : currentLayoutIndex - 1
+    // prevent goto last index
+    if (currentLayoutIndex === 0) {
+        return
+    }
+    const prevLayoutIndex = currentLayoutIndex - 1
     sliderFrame.src = layoutFilePaths[prevLayoutIndex]
     currentLayoutIndex = prevLayoutIndex
     searchboxInput.value = sliderFrame.src
@@ -73,12 +83,12 @@ searchboxInput.addEventListener('keydown', (e) => {
 })
 
 window.addEventListener('load', () => {
-    const currentPage = getCookie('currentPage')
-    if (!!currentPage) {
-        gotoLayout(currentPage)
-    }
+    // const currentPage = getCookie('currentPage')
+    // if (!!currentPage) {
+    //     gotoLayout(currentPage)
+    // }
 
-    // sliderFrame.src = layoutFilePaths.at(0)
+    sliderFrame.src = layoutFilePaths.at(0)
     searchboxInput.value = sliderFrame.src
     let suggestionItemHtmls = ''
     for (let layoutFilePath of layoutFilePaths) {
@@ -94,6 +104,6 @@ window.addEventListener('load', () => {
     suggestionSection.innerHTML = suggestionItemHtmls
 })
 
-window.addEventListener('beforeunload', (e) => {
-    setCookie('currentPage', sliderFrame.src, 24 * 3600 * 1000)
-})
+// window.addEventListener('beforeunload', (e) => {
+//     setCookie('currentPage', sliderFrame.src, 24 * 3600 * 1000)
+// })

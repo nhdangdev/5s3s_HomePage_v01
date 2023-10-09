@@ -23,11 +23,95 @@
                     <h2>Choose your template</h2>
                     <div class="grid">
                         <div class="row">
-                            <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.php?template=temp_pho_3" class="template-item-link">
+                        <div class="col c-6 m-6 l-3">
+                                <a href="./add_template_data.html?template=temp_nail_1" class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
-                                            <img src="../asset/img/temp_pho_3.png">
+                                            <img src="../asset/img/template_screenshot/temp_nail_1.png">
+                                        </div>
+                                        <div class="template-item__name">
+                                            Template Nail 1
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col c-6 m-6 l-3">
+                                <a href="./add_template_data.html?template=temp_nail_2" class="template-item-link">
+                                    <div class="template-item">
+                                        <div class="template-item__thumb">
+                                            <img src="../asset/img/template_screenshot/temp_nail_2.png">
+                                        </div>
+                                        <div class="template-item__name">
+                                            Template Nail 2
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col c-6 m-6 l-3">
+                                <a href="./add_template_data.html?template=temp_nail_3" class="template-item-link">
+                                    <div class="template-item">
+                                        <div class="template-item__thumb">
+                                            <img src="../asset/img/template_screenshot/temp_nail_3.png">
+                                        </div>
+                                        <div class="template-item__name">
+                                            Template Nail 3
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col c-6 m-6 l-3">
+                                <a href="./add_template_data.html?template=temp_nail_4" class="template-item-link">
+                                    <div class="template-item">
+                                        <div class="template-item__thumb">
+                                            <img src="../asset/img/template_screenshot/temp_nail_4.png">
+                                        </div>
+                                        <div class="template-item__name">
+                                            Template Nail 4
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col c-6 m-6 l-3">
+                                <a href="./add_template_data.html?template=temp_nail_5" class="template-item-link">
+                                    <div class="template-item">
+                                        <div class="template-item__thumb">
+                                            <img src="../asset/img/template_screenshot/temp_nail_5.png">
+                                        </div>
+                                        <div class="template-item__name">
+                                            Template Nail 5
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col c-6 m-6 l-3">
+                                <a href="./add_template_data.html?template=temp_pho_1" class="template-item-link">
+                                    <div class="template-item">
+                                        <div class="template-item__thumb">
+                                            <img src="../asset/img/template_screenshot/temp_pho_1.png">
+                                        </div>
+                                        <div class="template-item__name">
+                                            Template Pho 1
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col c-6 m-6 l-3">
+                                <a href="./add_template_data.html?template=temp_pho_2" class="template-item-link">
+                                    <div class="template-item">
+                                        <div class="template-item__thumb">
+                                            <img src="../asset/img/template_screenshot/temp_pho_2.png">
+                                        </div>
+                                        <div class="template-item__name">
+                                            Template Pho 2
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col c-6 m-6 l-3">
+                                <a href="./add_template_data.html?template=temp_pho_3" class="template-item-link">
+                                    <div class="template-item">
+                                        <div class="template-item__thumb">
+                                            <img src="../asset/img/template_screenshot/temp_pho_3.png">
                                         </div>
                                         <div class="template-item__name">
                                             Template Pho 3
@@ -36,10 +120,10 @@
                                 </a>
                             </div>
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.php?template=temp_pho_4" class="template-item-link">
+                                <a href="./add_template_data.html?template=temp_pho_4" class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
-                                            <img src="../asset/img/temp_pho_4.png">
+                                            <img src="../asset/img/template_screenshot/temp_pho_4.png">
                                         </div>
                                         <div class="template-item__name">
                                             Template Pho 4
@@ -48,10 +132,10 @@
                                 </a>
                             </div>
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.php?template=temp_pho_5" class="template-item-link">
+                                <a href="./add_template_data.html?template=temp_pho_5" class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
-                                            <img src="../asset/img/temp_pho_5.png">
+                                            <img src="../asset/img/template_screenshot/temp_pho_5.png">
                                         </div>
                                         <div class="template-item__name">
                                             Template Pho 5
@@ -60,61 +144,66 @@
                                 </a>
                             </div>
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.php?template=temp_pho_6" class="template-item-link">
+                                <a href="./add_template_data.html?template=temp_restaurant_1"
+                                    class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
-                                            <img src="../asset/img/temp_pho_3.png">
+                                            <img src="../asset/img/template_screenshot/temp_restaurant_1.png">
                                         </div>
                                         <div class="template-item__name">
-                                            Template Pho 6
+                                            Template Restaurant 1
                                         </div>
                                     </div>
                                 </a>
                             </div>
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.php?template=temp_pho_7" class="template-item-link">
+                                <a href="./add_template_data.html?template=temp_restaurant_2"
+                                    class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
-                                            <img src="../asset/img/temp_pho_4.png">
+                                            <img src="../asset/img/template_screenshot/temp_restaurant_2.png">
                                         </div>
                                         <div class="template-item__name">
-                                            Template Pho 7
+                                            Template Restaurant 2
                                         </div>
                                     </div>
                                 </a>
                             </div>
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.php?template=temp_pho_8" class="template-item-link">
+                                <a href="./add_template_data.html?template=temp_restaurant_3"
+                                    class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
-                                            <img src="../asset/img/temp_pho_5.png">
+                                            <img src="../asset/img/template_screenshot/template_restaurant_3.png">
                                         </div>
                                         <div class="template-item__name">
-                                            Template Pho 8
+                                            Template Restaurant 3
                                         </div>
                                     </div>
                                 </a>
                             </div>
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.php?template=temp_pho_9" class="template-item-link">
+                                <a href="./add_template_data.html?template=temp_restaurant_4"
+                                    class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
-                                            <img src="../asset/img/temp_pho_3.png">
+                                            <img src="../asset/img/template_screenshot/template_restaurant_4.png">
                                         </div>
                                         <div class="template-item__name">
-                                            Template Pho 9
+                                            Template Restaurant 4
                                         </div>
                                     </div>
                                 </a>
                             </div>
                             <div class="col c-6 m-6 l-3">
-                                <a href="./add_template_data.php?template=temp_pho_1" class="template-item-link">
+                                <a href="./add_template_data.html?template=temp_restaurant_5"
+                                    class="template-item-link">
                                     <div class="template-item">
                                         <div class="template-item__thumb">
-                                            <img src="../asset/img/temp_pho_4.png">
+                                            <img src="../asset/img/template_screenshot/template_restaurant_5.png">
                                         </div>
                                         <div class="template-item__name">
-                                            Template Pho 1
+                                            Template Restaurant 5
                                         </div>
                                     </div>
                                 </a>

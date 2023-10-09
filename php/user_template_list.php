@@ -21,7 +21,7 @@
             </div>
             <div class="col c-12 m-8 l-10">
                 <div class="dashboard-content">
-                    <h1>User Template Management</h1>
+                    <h1>User Template List</h1>
                     <!-- template table -->
                     <div class="data-table" id="template-table">
                     </div>

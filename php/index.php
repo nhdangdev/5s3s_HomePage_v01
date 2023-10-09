@@ -61,13 +61,12 @@
     </div>
     <script>
         layoutFilePaths = [
-            './add_template_data2.php',
-            './add_template_data.php',
             './login1.php',
             './login2.php',
-            './select_template.php',
             './template_list.php',
             './user_template_list.php',
+            './select_template.php',
+            './add_template_data2.php'
         ]
     </script>
 </body>
