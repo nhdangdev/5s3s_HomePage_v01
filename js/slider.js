@@ -1,11 +1,10 @@
 let layoutFilePaths = window.layoutFilePaths || [
-    './add_template_data.html',
     './login1.html',
     './login2.html',
-    './select_template.html',
     './template_list.html',
     './user_template_list.html',
-    './user_template_list.html',
+    './select_template.html',
+    // './add_template_data.html',
     './add_template_data2.html',
 ]
 
@@ -79,6 +78,7 @@ window.addEventListener('load', () => {
         gotoLayout(currentPage)
     }
 
+    // sliderFrame.src = layoutFilePaths.at(0)
     searchboxInput.value = sliderFrame.src
     let suggestionItemHtmls = ''
     for (let layoutFilePath of layoutFilePaths) {

@@ -57,6 +57,7 @@
 .template-data-item__key {
   text-align: center;
   font-weight: bold;
+  color: #ccc;
 }
 
 #add-template-data-btn {

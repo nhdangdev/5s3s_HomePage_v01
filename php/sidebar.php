@@ -33,7 +33,7 @@
                 person
             </span>
             <div class="sidebar-item__text">
-                Users
+                Comming Soon
             </div>
         </div>
         <div class="sidebar__item">
@@ -41,7 +41,7 @@
                 calendar_month
             </span>
             <div class="sidebar-item__text">
-                History
+                Comming Soon
             </div>
         </div>
         <div class="sidebar__item">
@@ -49,7 +49,7 @@
                 flag
             </span>
             <div class="sidebar-item__text">
-                Report
+                Comming Soon
             </div>
         </div>
         <div class="sidebar__item">
@@ -58,12 +58,12 @@
             </span>
 
             <div class="sidebar-item__text">
-                Report
+                Comming Soon
             </div>
         </div>
     </div>
     <div class="sidebar__footer">
-        <button id="logout-desktop-btn" style="margin-left: -.5rem;">
+        <button id="logout-desktop-btn" style="margin-left: -.5rem;" onclick="logout('./login2.php')">
             <span class="material-symbols-outlined">
                 move_item
             </span>

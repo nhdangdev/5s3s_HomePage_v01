@@ -34,6 +34,7 @@
             bottom: -.5rem;
             background-color: white;
             transition: all .4s;
+            cursor: pointer;
 
             &:hover,
             &:focus {
@@ -75,4 +76,5 @@
     border-radius: .4rem;
     text-decoration: none;
     border: none;
+    cursor: pointer;
 }

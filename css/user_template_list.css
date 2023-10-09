@@ -72,6 +72,7 @@ body {
   box-sizing: border-box;
   transition: all 0.4s;
   border: none;
+  cursor: pointer;
 }
 .data-table__act-btn:hover {
   background-color: #eee;
@@ -91,6 +92,7 @@ body {
   border-color: #eee;
   border-style: solid;
   transition: all 0.4s;
+  cursor: pointer;
 }
 .data-table .pagination__prev-btn:hover, .data-table .pagination__next-btn:hover {
   background-color: #eee;
