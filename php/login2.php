@@ -4,7 +4,7 @@
 <head>
     <?php
         include_once('./config.php');
-        $extend_head = '<link rel="stylesheet" href="../css/login2.css">';
+        $extend_head = '<link rel="stylesheet" href="'.$cms_asset_path.'/css/login2.css">';
         include_once($cms_views_path.'/head.php');
     ?>
     <title>Layout Login 2</title>
@@ -120,10 +120,11 @@
             const email = getCookie('email')
             if (!!email) {
                 console.log('U are logined')
-                const logoutTemplate = document.querySelector('#logout-template')
-                const logoutSection = logoutTemplate.content.cloneNode(true)
-                document.body.innerHTML = ''
-                document.body.appendChild(logoutSection)
+                window.location.href = './user_template_list.php'
+                // const logoutTemplate = document.querySelector('#logout-template')
+                // const logoutSection = logoutTemplate.content.cloneNode(true)
+                // document.body.innerHTML = ''
+                // document.body.appendChild(logoutSection)
             }
         })
 

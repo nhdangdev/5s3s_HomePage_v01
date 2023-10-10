@@ -114,6 +114,10 @@ body {
             &:hover {
                 background-color: #eee;
             }
+
+            &:disabled {
+                background-color: white;
+            }
         }
 
         &__prev-btn {
@@ -162,4 +166,17 @@ a#add-template-button {
     border-radius: .4rem;
     text-decoration: none;
     border: none;
+}
+
+.ratios {
+    display: flex;
+    gap: .7rem;
+    flex-wrap: wrap;
+
+    &__item {
+        padding: .2rem .5rem;
+        color: #4b5aff;
+        background-color: #4b5aff30;
+        border-radius: 1rem;
+    }
 }

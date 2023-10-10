@@ -83,6 +83,18 @@ body {
     left: 0;
     z-index: 999;
 
+    &--compact {
+        align-items: center;
+        width: 90px;
+        padding: 2rem 0;
+
+        .account__name,
+        .sidebar-item__text,
+        #logout-desktop-btn>span:last-child {
+            display: none;
+        }
+    }
+
     &__header,
     &__footer {
         flex: 0 1;
@@ -108,7 +120,8 @@ body {
         align-items: center;
         transition: all .2s;
         padding: .5rem 0;
-        cursor: pointer;
+        text-decoration: none;
+        color: black;
 
         &--selected,
         &:hover {
@@ -177,6 +190,27 @@ body {
                     background-color: #eee;
                 }
             }
+        }
+    }
+
+    #toggle_compact-sidebar-btn {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: .2rem;
+        border-radius: 1rem;
+        background-color: #eee;
+        transition: all .4s;
+        border: none;
+        position: absolute;
+        right: -.7rem;
+        top: 2rem;
+        z-index: 9;
+        font-size: 1rem;
+        cursor: pointer;
+
+        .material-symbols-outlined {
+            font-size: 1rem;
         }
     }
 
@@ -250,7 +284,11 @@ body {
 @media (min-width: 740px) {
     .sidebar {
         padding: 1.5rem 2rem;
-        position: unset;
+        position: relative;
+
+        #toggle_compact-sidebar-btn {
+            display: flex;
+        }
     }
 
     .mobile-header {
@@ -264,8 +302,9 @@ body {
     .mobile-sidebar--hidden {
         width: 100%;
         padding: 1.5rem 2rem;
-        overflow: auto;
+        overflow: unset;
     }
+
 }
 
 /* PC medium resolution > */

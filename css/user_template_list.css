@@ -97,6 +97,9 @@ body {
 .data-table .pagination__prev-btn:hover, .data-table .pagination__next-btn:hover {
   background-color: #eee;
 }
+.data-table .pagination__prev-btn:disabled, .data-table .pagination__next-btn:disabled {
+  background-color: white;
+}
 .data-table .pagination__prev-btn {
   border-width: 2px 0 2px 2px;
   border-radius: 0.5rem 0 0 0.5rem;
@@ -139,6 +142,18 @@ a#add-template-button {
   border-radius: 0.4rem;
   text-decoration: none;
   border: none;
+}
+
+.ratios {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+.ratios__item {
+  padding: 0.2rem 0.5rem;
+  color: #4b5aff;
+  background-color: rgba(75, 90, 255, 0.1882352941);
+  border-radius: 1rem;
 }
 
 /*# sourceMappingURL=user_template_list.css.map */

@@ -5,9 +5,24 @@
     text-decoration: none;
     margin: .5rem;
 
+    &__label {
+        border-radius: .2rem;
+        border: 2px solid #4b5aff50;
+        transition: all .2s;
 
-    &:hover {
-        box-shadow: 1px 1px 10px #e1e1e1;
+        &:hover {
+            border-color: #4b5aff;
+            transform: translate(-.2rem, -.2rem);
+        }
+    }
+
+    &__radio {
+        display: none;
+    }
+
+    &__radio:checked+&__label {
+        border-color: #4b5aff;
+        box-shadow: 0 0 0 1px #4b5aff;
     }
 
     &__thumb {
@@ -28,6 +43,13 @@
     }
 }
 
-a.template-item-link {
+button#next-step {
+    background-color: #4b5aff;
+    padding: .5rem 1rem;
+    color: white;
+    font-weight: bold;
     text-decoration: none;
+    border-radius: .2rem;
+    border: none;
+    cursor: pointer;
 }

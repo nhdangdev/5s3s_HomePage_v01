@@ -77,24 +77,32 @@
                         </td>
                         <td>{{template.name}}</td>
                         <td>{{template.title}}</td>
-                        <td>{{template.ratios.join(' / ')}}</td>
+                        <td>
+                            <div class="ratios">
+                                <div v-for="ratio of template.ratios" class="ratios__item">
+                                    {{ratio}}
+                                </div>
+                            </div>
+                        </td>
                         <td>{{template.subject}}</td>
                         <td>{{template.status}}</td>
                         <td>{{template.created}}</td>
                         <td>
-                            <button class="data-table__act-btn">
+                            <button class="data-table__act-btn" title="Delete template">
                                 <span class="material-symbols-outlined delete-btn">
                                     delete
                                 </span>
                             </button>
-                            <button class="data-table__act-btn">
+                            <button class="data-table__act-btn" title="Edit template">
                                 <span class="material-symbols-outlined">
                                     edit
                                 </span>
-                            </button><button class="data-table__act-btn"
-                                @click="copyToClipboard(`https:\/\/template.com/${template.id}`)">
+                            </button>
+                            <button class="data-table__act-btn"
+                                @click="copyToClipboard(`https:\/\/template.com/${template.id}`)"
+                                title="Copy template link">
                                 <span class="material-symbols-outlined">
-                                    content_copy
+                                    link
                                 </span>
                             </button>
                         </td>

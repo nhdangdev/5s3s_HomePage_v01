@@ -5,8 +5,21 @@
   text-decoration: none;
   margin: 0.5rem;
 }
-.template-item:hover {
-  box-shadow: 1px 1px 10px #e1e1e1;
+.template-item__label {
+  border-radius: 0.2rem;
+  border: 2px solid rgba(75, 90, 255, 0.3137254902);
+  transition: all 0.2s;
+}
+.template-item__label:hover {
+  border-color: #4b5aff;
+  transform: translate(-0.2rem, -0.2rem);
+}
+.template-item__radio {
+  display: none;
+}
+.template-item__radio:checked + .template-item__label {
+  border-color: #4b5aff;
+  box-shadow: 0 0 0 1px #4b5aff;
 }
 .template-item__thumb img {
   height: 160px;
@@ -20,8 +33,15 @@
   color: #333;
 }
 
-a.template-item-link {
+button#next-step {
+  background-color: #4b5aff;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: bold;
   text-decoration: none;
+  border-radius: 0.2rem;
+  border: none;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=select_template.css.map */

@@ -73,6 +73,16 @@ body {
   left: 0;
   z-index: 999;
 }
+.sidebar--compact {
+  align-items: center;
+  width: 90px;
+  padding: 2rem 0;
+}
+.sidebar--compact .account__name,
+.sidebar--compact .sidebar-item__text,
+.sidebar--compact #logout-desktop-btn > span:last-child {
+  display: none;
+}
 .sidebar__header, .sidebar__footer {
   flex: 0 1;
 }
@@ -94,7 +104,8 @@ body {
   align-items: center;
   transition: all 0.2s;
   padding: 0.5rem 0;
-  cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 .sidebar__item--selected, .sidebar__item:hover {
   color: #6cc4c1;
@@ -150,6 +161,25 @@ body {
 }
 .sidebar .account__actions button:hover {
   background-color: #eee;
+}
+.sidebar #toggle_compact-sidebar-btn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  border-radius: 1rem;
+  background-color: #eee;
+  transition: all 0.4s;
+  border: none;
+  position: absolute;
+  right: -0.7rem;
+  top: 2rem;
+  z-index: 9;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.sidebar #toggle_compact-sidebar-btn .material-symbols-outlined {
+  font-size: 1rem;
 }
 .sidebar #logout-desktop-btn {
   display: flex;
@@ -212,7 +242,10 @@ body {
 @media (min-width: 740px) {
   .sidebar {
     padding: 1.5rem 2rem;
-    position: unset;
+    position: relative;
+  }
+  .sidebar #toggle_compact-sidebar-btn {
+    display: flex;
   }
   .mobile-header {
     display: none;
@@ -223,7 +256,7 @@ body {
   .mobile-sidebar--hidden {
     width: 100%;
     padding: 1.5rem 2rem;
-    overflow: auto;
+    overflow: unset;
   }
 }
 /* PC medium resolution > */
