@@ -297,7 +297,7 @@ function handleChangeSubjectFilter(e) {
 }
 
 
-const templateRows = createApp({
+const templateTable = createApp({
     setup() {
         return {
             filteredTemplates: filteredTemplatesRef,
@@ -318,7 +318,7 @@ const templateRows = createApp({
     template: templateTableTemplate
 })
 
-templateRows.mount("#template-table")
+templateTable.mount("#template-table")
 
 getTemplateData().then(fetchedTemplates => {
     templatesRef.value = fetchedTemplates

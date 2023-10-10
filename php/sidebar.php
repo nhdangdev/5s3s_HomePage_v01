@@ -6,11 +6,11 @@
             </div>
             <div class="account__name">User name</div>
             <div class="account__actions">
-                <button>
+                <!-- <button>
                     <span class="material-symbols-outlined">
                         expand_more
                     </span>
-                </button>
+                </button> -->
             </div>
         </div>
         <button onclick="toggleSidebar()" class="sidebar__close-btn">
@@ -20,47 +20,46 @@
         </button>
     </div>
     <div class="sidebar__menu">
-        <div class="sidebar__item sidebar__item--selected">
+        <a class="sidebar__item sidebar__item--selected" href="./user_template_list.php">
             <span class="material-symbols-outlined">
                 space_dashboard
             </span>
             <div class="sidebar-item__text">
                 Dashboard
             </div>
-        </div>
-        <div class="sidebar__item">
+        </a>
+        <a class="sidebar__item" href="./coming_soon.php?selectedItem=User">
             <span class="material-symbols-outlined">
                 person
             </span>
             <div class="sidebar-item__text">
-                Comming Soon
+                User
             </div>
-        </div>
-        <div class="sidebar__item">
+        </a>
+        <a class="sidebar__item" href="./coming_soon.php?selectedItem=History">
             <span class="material-symbols-outlined">
                 calendar_month
             </span>
             <div class="sidebar-item__text">
-                Comming Soon
+                History
             </div>
-        </div>
-        <div class="sidebar__item">
+        </a>
+        <a class="sidebar__item" href="./coming_soon.php?selectedItem=Report">
             <span class="material-symbols-outlined">
                 flag
             </span>
             <div class="sidebar-item__text">
-                Comming Soon
+                Report
             </div>
-        </div>
-        <div class="sidebar__item">
+        </a>
+        <a class="sidebar__item" href="./coming_soon.php?selectedItem=Setting">
             <span class="material-symbols-outlined">
                 settings
             </span>
-
             <div class="sidebar-item__text">
-                Comming Soon
+                Setting
             </div>
-        </div>
+        </a>
     </div>
     <div class="sidebar__footer">
         <button id="logout-desktop-btn" style="margin-left: -.5rem;" onclick="logout('./login2.php')">

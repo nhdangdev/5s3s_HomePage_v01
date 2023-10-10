@@ -136,10 +136,11 @@
             const email = getCookie('email')
             if (!!email) {
                 console.log('U are logined')
-                const logoutTemplate = document.querySelector('#logout-template')
-                const logoutSection = logoutTemplate.content.cloneNode(true)
-                document.body.innerHTML = ''
-                document.body.appendChild(logoutSection)
+                window.location.href = './user_template_list.html'
+                // const logoutTemplate = document.querySelector('#logout-template')
+                // const logoutSection = logoutTemplate.content.cloneNode(true)
+                // document.body.innerHTML = ''
+                // document.body.appendChild(logoutSection)
             }
         })
 

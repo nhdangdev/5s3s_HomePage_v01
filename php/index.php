@@ -27,6 +27,11 @@
                 <input type="text" name="search" id="searchbox" class="searchbox__input" placeholder="Search ...">
                 <div class="searchbox__suggestion" tabindex="-1">
                 </div>
+                <a href="#" id="open_in_new" target="_blank">
+                    <span class="material-symbols-outlined searchbox__icon" style="left:calc(100% - 1.4rem)">
+                        open_in_new
+                    </span>
+                </a>
             </div>
             <div class="slider-nav__button-wrap">
                 <button class="slider-nav__btn" onclick="prevLayout()">
@@ -61,9 +66,9 @@
     </div>
     <script>
         layoutFilePaths = [
+            './template_list.php',
             './login1.php',
             './login2.php',
-            './template_list.php',
             './user_template_list.php',
             './select_template.php',
             './add_template_data2.php'

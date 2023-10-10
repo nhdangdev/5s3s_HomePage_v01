@@ -1,7 +1,7 @@
 let layoutFilePaths = window.layoutFilePaths || [
+    './template_list.html',
     './login1.html',
     './login2.html',
-    './template_list.html',
     './user_template_list.html',
     './select_template.html',
     // './add_template_data.html',
@@ -11,6 +11,7 @@ let layoutFilePaths = window.layoutFilePaths || [
 const sliderFrame = document.querySelector('#slider-frame')
 const suggestionSection = document.querySelector('.searchbox__suggestion')
 const searchboxInput = document.querySelector('#searchbox')
+const openInNewTabButton = document.querySelector('a#open_in_new')
 const SHOW_SUGGESTION_CLASS = 'searchbox__suggestion--show'
 let currentLayoutIndex = 0
 
@@ -24,6 +25,7 @@ function nextLayout() {
     sliderFrame.src = layoutFilePaths[nextLayoutIndex]
     currentLayoutIndex = nextLayoutIndex
     searchboxInput.value = sliderFrame.src
+    openInNewTabButton.href = searchboxInput.value
 }
 
 function prevLayout() {
@@ -36,6 +38,7 @@ function prevLayout() {
     sliderFrame.src = layoutFilePaths[prevLayoutIndex]
     currentLayoutIndex = prevLayoutIndex
     searchboxInput.value = sliderFrame.src
+    openInNewTabButton.href = searchboxInput.value
 }
 
 function gotoLayout(path) {
@@ -46,6 +49,8 @@ function gotoLayout(path) {
     }
     suggestionSection.classList.remove(SHOW_SUGGESTION_CLASS)
     searchboxInput.value = sliderFrame.src
+    openInNewTabButton.href = searchboxInput.value
+
 }
 
 function reloadSliderFrame() {
@@ -90,6 +95,7 @@ window.addEventListener('load', () => {
 
     sliderFrame.src = layoutFilePaths.at(0)
     searchboxInput.value = sliderFrame.src
+    openInNewTabButton.href = searchboxInput.value
     let suggestionItemHtmls = ''
     for (let layoutFilePath of layoutFilePaths) {
         suggestionItemHtmls += `
