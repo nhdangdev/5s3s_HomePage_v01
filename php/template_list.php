@@ -4,6 +4,7 @@
 $rest_api_url = 'http://localhost:3000/templates'; 
 $json_data = file_get_contents($rest_api_url);
 $response_data = json_decode($json_data);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -167,7 +168,8 @@ $response_data = json_decode($json_data);
                 foreach ($response_data as &$template){
                   $thumbnail = rand(0,1) == 0 ? "../asset/img/temp_nail_".rand(1,4)."_ratio_16_9.jpg"
                   :'../asset/img/temp_pho_'.rand(3,5).'.png';
-                  $viewItem = new ViewItem($template->name, $thumbnail, $template->id, $template->ratios, $template->category,$template->status, $template->date);
+                  $arrayRatios = explode("/",$template->ratios);
+                  $viewItem = new ViewItem($template->name, $thumbnail, $template->id,  $arrayRatios, $template->category, $template->status, $template->created);
                   $viewItem->buildGridViewItem();
                 }
               ?>

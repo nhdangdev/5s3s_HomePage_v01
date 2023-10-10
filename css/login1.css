@@ -14,9 +14,11 @@ a {
 .container {
   width: 600px;
   height: 100vh;
-  border: solid 1px #000;
   padding: 50px;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form__group {

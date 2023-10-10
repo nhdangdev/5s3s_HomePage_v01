@@ -3,7 +3,6 @@ var view_wraps = document.querySelectorAll(".view-wrap");
 
 li_links.forEach(function (link) {
   link.addEventListener("click", function () {
-    console.log('click clicked'); 
     //inactive all icon
     li_links.forEach(function (item) {
       item.classList.remove("view-select__option--active");

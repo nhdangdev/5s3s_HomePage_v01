@@ -1,0 +1,160 @@
+/* [102310Tuan] create prcing page*/
+:root{
+    --background-color: #f4f7fe;
+    --primary-color: #2353f6;
+    --border-radius: 16px;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+
+body,
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper{
+    box-sizing: border-box;
+    padding: 32px 16px;
+    background-color: var(--background-color);
+}
+
+h1, h3, h4, h5, p{
+    font-family: sans-serif;
+}
+
+
+
+h1{
+    font-weight: bold;
+}
+
+h4 {
+    
+    margin: 0;
+    color: var(--primary-color);
+}
+
+/* header css */
+.header{
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.header p{
+    color: #8b8f99;
+}
+
+.container{
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+/* price-item css */
+.price-item{
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    width: 22%;
+    background-color: #fefefe;
+    padding: 16px;
+    min-height: 500px;
+}
+
+.price-item__price p{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.price-item__price span{
+    color: #8b8f99;
+}
+
+.price-item__price{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.price-item button{
+    border-radius: 20px;
+    border: 1px solid #6e7792;
+    background-color: #fefefe;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.price-item--popular{
+    position: relative;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, blue, #53c7ed) border-box;
+}
+
+
+
+.price-item--popular::before{
+    display: block;
+    content: "Most popular";
+    position: absolute;
+    top: 0;
+    right: 16px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: linear-gradient(45deg,blue,#53c7ed);
+    color: #fefefe;
+    padding: 4px 8px;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+}
+
+.price-item--popular button {
+    background-color: #2253f2;
+    color: #fefefe;
+    border: none;
+    cursor: pointer;
+
+}
+
+.price-item .price-item--popular{
+    
+}
+
+.price-item__feature{
+    padding-left: 0;
+    list-style: none;
+}
+
+.price-item__feature .check-icon {
+    display: inline-block;
+    font-size: 10px;
+    border-radius: 50%;
+    background-color: #d0f6ff;
+    color: #67898f;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 1rem;
+    margin-right: 6px;
+  }
+
+.price-item__feature li{
+    display: flex;
+    align-items: center;
+    
+  }
+
+  .price-item__feature li + li{
+    margin-top: 10px;
+  }
+
+.price-item__feature li p{
+    margin: 0;
+    flex: 1;
+  }
