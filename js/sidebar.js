@@ -1,4 +1,4 @@
-const SIDEBAR_HIDDEN_CLASS = 'mobile-sidebar--hidden';
+const SIDEBAR_HIDDEN_CLASS = 'sidebar--mobile-hidden';
 const SIDEBAR_COMPACT_CLASS = 'sidebar--compact';
 
 function toggleSidebar() {
@@ -24,16 +24,12 @@ function toggleCompactSidebar() {
         return console.log('Sidebar not found')
     }
 
-    if (toggleIcon.innerText === 'chevron_right') {
-        toggleIcon.innerText = 'chevron_left'
-    } else {
-        toggleIcon.innerText = 'chevron_right'
-    }
-
     if (sidebar.classList.contains(SIDEBAR_COMPACT_CLASS)) {
+        toggleIcon.innerText = 'chevron_left'
         sidebar.classList.remove(SIDEBAR_COMPACT_CLASS)
     } else {
         sidebar.classList.add(SIDEBAR_COMPACT_CLASS)
         sidebar.classList.remove(SIDEBAR_HIDDEN_CLASS)
+        toggleIcon.innerText = 'chevron_right'
     }
 }

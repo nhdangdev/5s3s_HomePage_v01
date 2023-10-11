@@ -35,129 +35,126 @@
             <img src="../asset/img/logo.png" width="54" height="54" alt="Logo">
         </div>
     </div>
-    <div class="grid">
-        <div class="row no-gutters">
-            <div class="col m-4 l-2">
-                <div class="sidebar mobile-sidebar--hidden">
-                    <div class="sidebar__header">
-                        <div class="account">
-                            <div class="account__avatar">
-                                <img src="https://picsum.photos/200" alt="Avatar">
-                            </div>
-                            <div class="account__name">User name</div>
-                            <!-- <div class="account__actions">
-                                <button>
+    <div class="dashboard">
+        <div class="dashboard__sidebar">
+            <div class="sidebar sidebar--mobile-hidden">
+                <div class="sidebar__header">
+                    <div class="account">
+                        <div class="account__avatar">
+                            <img src="https://picsum.photos/200" alt="Avatar">
+                        </div>
+                        <div class="account__name">User name</div>
+                        <div class="account__actions">
+                            <!-- <button>
                                     <span class="material-symbols-outlined">
                                         expand_more
                                     </span>
-                                </button>
-                            </div> -->
+                                </button> -->
                         </div>
-                        <button onclick="toggleSidebar()" class="sidebar__close-btn">
-                            <span class="material-symbols-outlined">
-                                close
-                            </span>
-                        </button>
                     </div>
-                    <div class="sidebar__menu">
-                        <a class="sidebar__item sidebar__item--selected" href="./user_template_list.html">
-                            <span class="material-symbols-outlined">
-                                space_dashboard
-                            </span>
-                            <div class="sidebar-item__text">
-                                Dashboard
-                            </div>
-                        </a>
-                        <a class="sidebar__item" href="./coming_soon.html?selectedItem=User">
-                            <span class="material-symbols-outlined">
-                                person
-                            </span>
-                            <div class="sidebar-item__text">
-                                User
-                            </div>
-                        </a>
-                        <a class="sidebar__item" href="./coming_soon.html?selectedItem=History">
-                            <span class="material-symbols-outlined">
-                                calendar_month
-                            </span>
-                            <div class="sidebar-item__text">
-                                History
-                            </div>
-                        </a>
-                        <a class="sidebar__item" href="./coming_soon.html?selectedItem=Report">
-                            <span class="material-symbols-outlined">
-                                flag
-                            </span>
-                            <div class="sidebar-item__text">
-                                Report
-                            </div>
-                        </a>
-                        <a class="sidebar__item" href="./coming_soon.html?selectedItem=Setting">
-                            <span class="material-symbols-outlined">
-                                settings
-                            </span>
-                            <div class="sidebar-item__text">
-                                Setting
-                            </div>
-                        </a>
-                    </div>
-                    <div class="sidebar__footer">
-                        <button id="logout-desktop-btn" style="margin-left: -.5rem;" onclick="logout('./login2.html')">
-                            <span class="material-symbols-outlined">
-                                move_item
-                            </span>
-                            <span>Log Out</span>
-                        </button>
-                    </div>
-                    <button id="toggle_compact-sidebar-btn" onclick="toggleCompactSidebar()">
+                    <button onclick="toggleSidebar()" class="sidebar__close-btn">
                         <span class="material-symbols-outlined">
-                            chevron_left
+                            close
                         </span>
                     </button>
                 </div>
-            </div>
-            <div class="col c-12 m-8 l-10">
-                <div class="dashboard-content">
-                    <h2>Choose your template</h2>
-                    <div style="display: flex; justify-content: space-between; align-items: start;">
-                        <h5>Choose a template and your data</h5>
-                        <button type="button" id="next-step" onclick="nextStep()">Next step</button>
-                    </div>
-                    <div class="grid">
-                        <div class="row" id="template-item-list">
+                <div class="sidebar__menu">
+                    <a class="sidebar__item sidebar__item--selected" href="./user_template_list.html">
+                        <span class="material-symbols-outlined">
+                            space_dashboard
+                        </span>
+                        <div class="sidebar-item__text">
+                            Dashboard
                         </div>
-                    </div>
+                    </a>
+                    <a class="sidebar__item" href="./coming_soon.html?selectedItem=User">
+                        <span class="material-symbols-outlined">
+                            person
+                        </span>
+                        <div class="sidebar-item__text">
+                            User
+                        </div>
+                    </a>
+                    <a class="sidebar__item" href="./coming_soon.html?selectedItem=History">
+                        <span class="material-symbols-outlined">
+                            calendar_month
+                        </span>
+                        <div class="sidebar-item__text">
+                            History
+                        </div>
+                    </a>
+                    <a class="sidebar__item" href="./coming_soon.html?selectedItem=Report">
+                        <span class="material-symbols-outlined">
+                            flag
+                        </span>
+                        <div class="sidebar-item__text">
+                            Report
+                        </div>
+                    </a>
+                    <a class="sidebar__item" href="./coming_soon.html?selectedItem=Setting">
+                        <span class="material-symbols-outlined">
+                            settings
+                        </span>
+                        <div class="sidebar-item__text">
+                            Setting
+                        </div>
+                    </a>
+                </div>
+                <div class="sidebar__footer">
+                    <button id="logout-desktop-btn" style="margin-left: -.5rem;" onclick="logout('./login2.html')">
+                        <span class="material-symbols-outlined">
+                            move_item
+                        </span>
+                        <span>Log Out</span>
+                    </button>
+                </div>
+                <button id="toggle_compact-sidebar-btn" onclick="toggleCompactSidebar()">
+                    <span class="material-symbols-outlined">
+                        chevron_left
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="dashboard__content">
+            <h2>Choose your template</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h5>Choose a template and your data</h5>
+                <button type="button" id="next-step" onclick="nextStep()">Next step</button>
+            </div>
+            <div class="grid">
+                <div class="row no-gutters" id="template-item-list">
                 </div>
             </div>
         </div>
+    </div>
 
-        <template id="template-item-template">
-            <div v-for="(template, index) of templates" class="col c-6 m-6 l-3">
-                <div class="template-item">
-                    <input type="radio" name="select_template" :id="template.id" class="template-item__radio"
-                        :checked="index===0">
-                    <label :for="template.id" class="template-item__label">
-                        <div class="template-item__thumb">
-                            <img :src="template.thumb">
-                        </div>
-                        <div class="template-item__name">
-                            {{template.name}}
-                        </div>
-                    </label>
-                </div>
+    <template id="template-item-template">
+        <div v-for="(template, index) of templates" class="col c-6 m-6 l-3">
+            <div class="template-item">
+                <input type="radio" name="select_template" :id="template.id" class="template-item__radio"
+                    :checked="index===0">
+                <label :for="template.id" class="template-item__label">
+                    <div class="template-item__thumb">
+                        <img :src="template.thumb">
+                    </div>
+                    <div class="template-item__name">
+                        {{template.name}}
+                    </div>
+                </label>
             </div>
-        </template>
-        <script>
-            function nextStep() {
-                const nextStepUrl = new URL('http://localhost:5500/views/add_template_data2.html')
-                const selectedTemplae = document.querySelector('.template-item__radio:checked')
-                const selectedTemplaeId = selectedTemplae?.id || ''
-                if (!selectedTemplaeId) { return }
+        </div>
+    </template>
+    <script>
+        function nextStep() {
+            const nextStepUrl = new URL('http://localhost:5500/views/add_template_data2.html')
+            const selectedTemplae = document.querySelector('.template-item__radio:checked')
+            const selectedTemplaeId = selectedTemplae?.id || ''
+            if (!selectedTemplaeId) { return }
 
-                nextStepUrl.searchParams.set('template', selectedTemplaeId)
-                window.location.href = nextStepUrl.href
-            }
-        </script>
+            nextStepUrl.searchParams.set('template', selectedTemplaeId)
+            window.location.href = nextStepUrl.href
+        }
+    </script>
 </body>
 
 </html>
