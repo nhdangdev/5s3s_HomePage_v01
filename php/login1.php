@@ -71,7 +71,7 @@
           <!-- submit button -->
           <div class="row">
             <input 
-            class="form__input submit-btn btn3"
+            class="form__input submit-btn "
             type="submit" />
           </div>
 

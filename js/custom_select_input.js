@@ -110,9 +110,10 @@ function myFilter2(value, filterField) {
 
   document.querySelectorAll(".custom-select").forEach((filterDiv) => {
     var selectId = filterDiv.querySelector("select").id;
+    
     var currentSelectValue =
       filterDiv.querySelector(".select-selected").innerText;
-    if(selectId === filterField)
+    if (selectId === filterField)
     {viewItemArr = switchFilter2(selectId, viewItemArr, value);}
 
     else {viewItemArr = switchFilter2(selectId, viewItemArr, currentSelectValue); };
@@ -141,7 +142,7 @@ function switchFilter2(filterField, viewItemArr, value) {
         let flag = false;
         Array.from(listRatioCard).forEach((ratioCard) => {
           ratioCard.classList.remove("ratio-card--alert")
-            if (ratioCard.innerText === value)
+            if (ratioCard.innerText.trim() === value)
               {ratioCard.classList.add("ratio-card--alert"); flag = true;}
         })
         return flag;
@@ -150,7 +151,6 @@ function switchFilter2(filterField, viewItemArr, value) {
 
       break;
       case "filter-subject":
-        console.log(value);
         if (value === "All Subjects" || value === "Subjects") break;
         //get all item that support the selected subject
         viewItemArr = viewItemArr.filter((item) => {
