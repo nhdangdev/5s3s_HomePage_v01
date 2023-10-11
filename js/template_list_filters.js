@@ -1,5 +1,7 @@
 // [102305Tuan] add responsive template list
 // [102306Tuan] fix bug filter
+// [102311Tuan] version 2 template list
+
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
 x = document.getElementsByClassName("custom-select");
@@ -93,21 +95,26 @@ function closeAllSelect(elmnt) {
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
 
-// function myFilter(value, filterField) {
-//   var viewItemList = document.querySelectorAll(".list-view .view-item");
-//   //display all items
-//   viewItemList.forEach((item) => (item.style.display = "flex"));
-//   //convert item list to array
-//   viewItemArr = Array.from(viewItemList);
-//   switchFilter(filterField, viewItemArr, value);
-// }
-
 function myFilter2(value, filterField) {
+
   var viewItemList = document.querySelectorAll(".view-item");
-  //display all items
+  //hidden all items
   viewItemList.forEach((item) => (item.classList.add("hidden")));
   viewItemArr = Array.from(viewItemList);
 
+  //call fulter function for subject
+  var val;
+  if(filterField == "filter-subject"){
+    val = value;
+  }
+  else{
+    val = document.querySelector('.nav-link--active').getAttribute("data-view");
+    console.log(val);
+  }
+  
+  viewItemArr = switchFilter2("filter-subject", viewItemArr, val);
+
+  // call filter function for ratios, date
   document.querySelectorAll(".custom-select").forEach((filterDiv) => {
     var selectId = filterDiv.querySelector("select").id;
     
@@ -118,6 +125,8 @@ function myFilter2(value, filterField) {
 
     else {viewItemArr = switchFilter2(selectId, viewItemArr, currentSelectValue); };
   });
+ 
+
   viewItemArr.forEach((item) => {
     item.classList.remove("hidden")
   });
@@ -151,7 +160,7 @@ function switchFilter2(filterField, viewItemArr, value) {
 
       break;
       case "filter-subject":
-        if (value === "All Subjects" || value === "Subjects") break;
+        if (value === "All Subjects" || value === "Home") break;
         //get all item that support the selected subject
         viewItemArr = viewItemArr.filter((item) => {
         let subject = item.querySelector(".view-item__subject p")?.innerHTML;
@@ -165,40 +174,11 @@ function switchFilter2(filterField, viewItemArr, value) {
   return viewItemArr;
 }
 
-// function switchFilter(filterField, viewItemArr, value) {
-//   switch (filterField) {
-//     case "filter-ratios":
-//       if (value === "All Ratios" || value === "Raios") break;
-//       //get all item that not support the selected ratio
-//       var filteredItems = viewItemArr.filter((item) => {
-//         let listRatioCard = item.querySelectorAll(
-//           ".view-item__ratios .ratio-card"
-//         );
-//         return Array.from(listRatioCard).every((ratioCard) => {
-//           if (ratioCard.innerText.includes(value))
-//             ratioCard.style.border = "1px solid red";
-//           else ratioCard.style.border = "1px solid #ccc";
-//           return !ratioCard.innerText.includes(value);
-//         });
-//       });
-//       //hide all filtered items
-//       filteredItems.forEach((item) => {
-//         item.style.display = "none";
-//       });
-//       break;
-//     case "filter-subject":
-//       if (value === "All Subjects" || value === "Subjects") break;
-//       //get all item that not support the selected ratio
-//       var filteredItems = viewItemArr.filter((item) => {
-//         let ratiosList = item.querySelector(".view-item__subject p").innerText;
-//         return !ratiosList.includes(value);
-//       });
-//       //hide all filtered items
-//       filteredItems.forEach((item) => {
-//         item.style.display = "none";
-//       });
-//       break;
-//     default:
-//       break;
-//   }
-// }
+var navLinks = document.querySelectorAll(".nav-link");
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click",function(){
+    navLinks.forEach((navLink) => {navLink.classList.remove("nav-link--active");});
+    navLink.classList.add("nav-link--active");
+    myFilter2(navLink.getAttribute("data-view"),'filter-subject');
+  });
+})

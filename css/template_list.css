@@ -31,6 +31,11 @@ html {
   background-color: var(--background-color);
   overflow-y: hidden;
   height: 100%;
+
+}
+
+.dashboard-content{
+  padding-top: 32px;
 }
 
 /* .wrapper{
@@ -148,7 +153,6 @@ p {
 .view-main {
   /* background-color: #fff; */
   width: var(--view-width);
-  padding: 20px 0px;
   border-radius: var(--border-radius);
   /* box-shadow: var(--box-shadow); */
   height: calc(100% - 122px);
@@ -442,7 +446,7 @@ p {
 /* Style items (options): */
 .select-items {
   position: absolute;
-  background-color: var(--background-color);
+  background-color: #fefefe;
   top: 100%;
   left: 0;
   right: 0;

@@ -1,0 +1,141 @@
+/* [102311Tuan]  create sidebar for template list  */
+:root{
+    --border-radius: 6px;
+    --secondary-color: #f7f8fd;
+}
+hr{
+    width: 100%;
+}
+
+.user-select--none{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    user-select:none;
+}
+
+.sidebar-templatelist{
+    background-color: #fefefe;
+    height: 100vh;
+    padding: 32px 8px;
+    font-family: "Inter";
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.sidebar-templatelist p{
+    color: rgba(22, 24, 35, .5);
+    line-height: 21px;
+    font-size: 16px;
+}
+
+/* scroll container css */
+.sidebar__scroll-container{
+    overflow-y: auto;
+    height: 50%;
+}
+
+.sidebar__scroll-container .nav-link{
+    padding: 8px;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: Inter;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar__scroll-container .nav-link i{
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+}
+
+.sidebar__scroll-container .nav-link nav{
+    margin-left: 8px;
+}
+
+.sidebar__scroll-container .nav-link:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.nav-link--active{
+    color: #005b96 !important;
+}
+
+
+/* button css */
+.sidebar-templatelist button{
+    border-radius: var(--border-radius);
+    border: solid 1.5px #0d2752;
+    padding: 8px 0px;
+    min-height: 48px;
+    width: 100%;
+    background-color: transparent;
+    color: #0d2752;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: "Inter";
+
+}
+
+.sidebar-templatelist button:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.sidebar-templatelist button i{
+    display: none;
+}
+
+/* footer css */
+.footer__link{
+    font-size: 12px;
+    line-height: 16px;
+    color: #888;
+    text-decoration: none;
+}
+
+.footer__link:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 930px) and (orientation: portrait){
+    .sidebar__scroll-container .nav-link nav,
+    .sidebar-templatelist button span,
+    .sidebar-templatelist p{
+        display: none;
+    }
+
+    .sidebar-templatelist button i{
+        display: block;
+    }
+
+    .sidebar-templatelist button {
+        min-height: 30px;
+    }
+
+    .sidebar__footer div{
+        font-size: 12px;
+    }
+    
+    .sidebar-templatelist button{
+        border-width: 1px;
+    }
+}
+
+@media (max-width: 767px){
+    .sidebar__scroll-container .nav-link nav,
+    .sidebar-templatelist button span,
+    .sidebar-templatelist p
+    {
+        display: none;
+    }
+    .sidebar-templatelist button i{
+        display: block;
+    }
+
+    .sidebar-templatelist button{
+        border-width: 1px;
+    }
+}
