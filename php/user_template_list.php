@@ -14,18 +14,12 @@
 <body>
     <?php include_once("./loading_screen.php") ?>
     <?php include_once("./mobile_header.php") ?>
-    <div class="grid">
-        <div class="row no-gutters">
-            <div class="col m-4 l-2">
-                <?php include_once("./sidebar.php") ?>
-            </div>
-            <div class="col c-12 m-8 l-10">
-                <div class="dashboard-content">
-                    <h1>User Template List</h1>
-                    <!-- template table -->
-                    <div class="data-table" id="template-table">
-                    </div>
-                </div>
+    <div class="dashboard">
+        <?php include_once("./sidebar.php") ?>
+        <div class="dashboard__content">
+            <h1>User Template List</h1>
+            <!-- template table -->
+            <div class="data-table" id="template-table">
             </div>
         </div>
     </div>

@@ -3,11 +3,11 @@
     flex-direction: column;
     gap: .5rem;
     text-decoration: none;
-    margin: .5rem;
+    margin: 0 1rem 1rem 0;
 
     &__label {
         border-radius: .2rem;
-        border: 2px solid #4b5aff50;
+        border: 1px solid #4b5aff50;
         transition: all .2s;
 
         &:hover {
