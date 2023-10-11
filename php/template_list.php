@@ -1,5 +1,5 @@
 <!-- [102305Tuan] add responsive template list -->
-
+<!-- [102310Tuan] version 2 template list -->
 <?php
 $rest_api_url = 'http://localhost:3000/templates'; 
 $json_data = file_get_contents($rest_api_url);
@@ -18,6 +18,8 @@ $response_data = json_decode($json_data);
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/grid.css" />
   <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/components/sidebar_template_list.css" />
+
   <link rel="stylesheet"  type="text/css"  href="../css/template_list.css?v=1" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/70d145d8f0.js" crossorigin="anonymous"></script>
@@ -30,14 +32,14 @@ $response_data = json_decode($json_data);
   <div class="grid wrapper">
     <div class="row no-gutters">
       <!-- sidebar take 20% screen width -->
-      <!-- <div class="col m-4 l-2">
-          <?php //include_once("./sidebar.php") 
+      <div class="col c-2 m-1 l-2">
+          <?php 
+          include_once("./components/sidebar_template_list.php") 
           ?>
-        </div> -->
+        </div>
       <!-- content -->
-      <div class="col c-12 m-12 l-12">
+      <div class="col c-10 m-11 l-10">
         <div class="dashboard-content">
-          <h2>Templates</h2>
           <!-- begin: view header -->
           <div class="row view-header">
             <ul class="view-select">
@@ -53,7 +55,7 @@ $response_data = json_decode($json_data);
               <i class="fa-solid fa-magnifying-glass search__icon"></i>
               <input type="search" onkeyup="search_view_item()" id="search__input" name="search-input" placeholder="Search" />
             </div>
-            <div class="custom-select filter__subject">
+            <!-- <div class="custom-select filter__subject">
               <select name="" id="filter-subject">
                 <option value="0">Subjects</option>
                 <option value="1">All Subjects</option>
@@ -61,7 +63,7 @@ $response_data = json_decode($json_data);
                 <option value="3">Pho</option>
                 <option value="4">Restaurant</option>
               </select>
-            </div>
+            </div> -->
             <div class="custom-select filter__ratios">
               <select name="" id="filter-ratios">
                 <option value="0">Ratios</option>
@@ -182,7 +184,7 @@ $response_data = json_decode($json_data);
       <!-- content -->
     </div>
   </div>
-  <script src="../js/custom_select_input.js"></script>
+  <script src="../js/template_list_filters.js"></script>
   <script src="../js/grid_list_view.js"></script>
   <script src="../js/template_list_mobile.js"></script>
   <script src="../js/template_list_search_bar.js"></script>
