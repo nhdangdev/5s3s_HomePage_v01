@@ -1,9 +1,11 @@
 <!-- [102305Tuan] add responsive template list -->
 <!-- [102310Tuan] version 2 template list -->
 <?php
-$rest_api_url = 'http://localhost:3000/templates'; 
-$json_data = file_get_contents($rest_api_url);
+$api_url = 'http://localhost:3000/templates'; 
+$json_data = file_get_contents($api_url);
 $response_data = json_decode($json_data);
+
+if(count($response_data) > 5) 
 
 ?>
 <!DOCTYPE html>
@@ -116,24 +118,7 @@ $response_data = json_decode($json_data);
               <!-- [102309Tuan] detach view item into separate module -->
               <?php 
                 $availabeRatios = array("4:3","16:9","16:10","21:9","32:9");
-                require_once('./view_item.php');
-                // random generate view item data
-                // for($i=1;$i<=15; $i+=1){
-                //   $ranNum1 = rand(0,4);
-                //   $ranNum2 = rand(0,1);
-                //   $name = "Template ".$i;
-                //   $thumbnail = $ranNum2 == 0 ? "../asset/img/temp_nail_".rand(1,4)."_ratio_16_9.jpg"
-                //   :'../asset/img/temp_pho_'.rand(3,5).'.png';
-                //   $title = "Template ".$i;
-                //   $subject = $ranNum2 == 0 ? "Nail salon" : "Pho";
-                //   $ratios = array_slice($availabeRatios, $ranNum1, 4);
-                //   $status = "OK";
-                //   $date = "26/09/23";
-                //   $viewItem = new ViewItem($name, $thumbnail, $title, $ratios, $subject, $status, $date);
-                //   $viewItem->buildListViewItem();
-                // }
-
-                
+                require_once('./components/view_item.php');
                 foreach ($response_data as &$template){
                   $thumbnail = rand(0,1) == 0 ? "../asset/img/temp_nail_".rand(1,4)."_ratio_16_9.jpg"
                   :'../asset/img/temp_pho_'.rand(3,5).'.png';
@@ -150,23 +135,7 @@ $response_data = json_decode($json_data);
               <!-- [102309Tuan] detach view item into separate module -->
               <?php 
                 // $availabeRatios = array("4:3","16:9","16:10","21:9","32:9");
-                require_once('./view_item.php');
-                // random generate view item data
-                // for($i=1;$i<=15; $i+=1){
-                //   $ranNum1 = rand(0,4);
-                //   $ranNum2 = rand(0,1);
-                //   $name = "Template ".$i;
-                //   $thumbnail = $ranNum2 == 0 ? "../asset/img/temp_nail_".rand(1,4)."_ratio_16_9.jpg"
-                //   :'../asset/img/temp_pho_'.rand(3,5).'.png';
-                //   $title = "Template title ".$i;
-                //   $subject = $ranNum2 == 0 ? "Nail salon" : "Pho";
-                //   $ratios = array_slice($availabeRatios, $ranNum1, 4);
-                //   $status = "OK";
-                //   $date = "26/09/23";
-                //   $viewItem = new ViewItem($name, $thumbnail, $title, $ratios, $subject, $status, $date);
-                //   $viewItem->buildGridViewItem();
-                // };
-                
+                require_once('./components/view_item.php');              
                 foreach ($response_data as &$template){
                   $thumbnail = rand(0,1) == 0 ? "../asset/img/temp_nail_".rand(1,4)."_ratio_16_9.jpg"
                   :'../asset/img/temp_pho_'.rand(3,5).'.png';
@@ -177,6 +146,8 @@ $response_data = json_decode($json_data);
               ?>
             </div>
             <!-- end: grid view -->
+
+            <button>Load more...</button>
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 <!-- [102309Tuan] create class ViewItem -->
+<!-- [102312Tuan] add lazy loading template list -->
 <?php
 class ViewItem
 {
@@ -25,7 +26,7 @@ class ViewItem
         echo '
         <div class="view-item">
             <div class="view-item__thumbnail">
-                <img src="'. $this->thumbnail .'" alt="thumbnail" />
+                <img src="'. $this->thumbnail .'" alt="thumbnail" loading="lazy" />
             </div>
             <div class="view-item__name">
                 <p> ' . $this->name . '  <span><i class="fa-solid fa-caret-down fa-lg"></i> </span></p>
@@ -62,7 +63,7 @@ class ViewItem
         echo'
         <div class="view-item">
             <div class="view-item__thumbnail">
-                <img src="'.$this->thumbnail.'" alt="thumbnail" />
+                <img src="'.$this->thumbnail.'" alt="thumbnail" loading="lazy"/>
             </div>
             <div class="view-item__title">'.$this->title.'</div>
             <div class="view-item__name">'.$this->name.' </div>

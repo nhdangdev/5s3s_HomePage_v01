@@ -1,5 +1,4 @@
 <!-- [102311Tuan]  create sidebar for template list -->
-
 <div class="sidebar-templatelist">
     <div class="sidebar__scroll-container">
         <!-- nav link used to choose subject -->
@@ -18,7 +17,8 @@
     </div>
     <hr>
     <p class="user-select--none">Login if you have already bought our package and provided an account.</p>
-    <button> <span>Login</span> <i class="fa-solid fa-right-to-bracket"></i></button>
+    <!-- [102312Tuan] add cookie login page-->
+    <a class="button" href="./login1.php"> <span>Login</span> <i class="fa-solid fa-right-to-bracket"></i></a>
     <hr>
     <div class="sidebar__footer">
         <a href="/" class="footer__link">Pricing</a>

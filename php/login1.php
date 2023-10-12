@@ -20,7 +20,7 @@
     <div class="grid" style="background-image: linear-gradient(#E56C67, #56336D,#273067, #0F1434);">
       <div class="container">
         <!-- begin: login form -->
-        <form class="col">
+        <form id="login-form" class="col">
             <div class="row" style="margin-bottom: var(--margin-bottom);">
                 <div class="col" style="flex:1;display: flex; align-items: center;"><hr style="width: 100%"></div>
                 <div class="col">
@@ -47,7 +47,7 @@
                 </svg>
                 </i>
             </div>
-            <input class="form__input" type="text" placeholder="USERNAME" />
+            <input class="form__input" name="username" type="text" placeholder="USERNAME" />
           </div>
 
           <!-- password input -->
@@ -63,6 +63,7 @@
             </div>
             <input
               class="form__input"
+              name="password"
               type="password"
               placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;"
             />
@@ -70,22 +71,25 @@
 
           <!-- submit button -->
           <div class="row">
-            <input 
-            class="form__input submit-btn "
-            type="submit" />
+            <button 
+              type="submit" 
+              class="form__input submit-btn "
+              >
+                Submit
+              </button>
           </div>
 
           <!-- remember me check box and forget password -->
           <div class="row" style = "margin-bottom: var(--margin-bottom);">
             <div class="col l-6 c-6" style="padding-left: 0; display: flex; align-items: center;">
               <div class="checkbox-custom">
-                <input type="checkbox" id="checkbox" />
+                <input type="checkbox" id="checkbox" name="keep-sign-in" />
                 <label for="checkbox"></label>
               </div>
               <span class= "text" style="margin-left: 30px;">Remember me</span>
             </div>
             <div class="col l-6 c-6" style="text-align: right; padding-right: 0; line-height: 24px;">
-              <a><i>Forgot your password?</i></a>
+              <a style="text-decoration:none" href="/"><i>Forgot your password?</i></a>
             </div>
           </div>          
         </form>
@@ -93,5 +97,49 @@
         <hr>
       </div>
     </div>
+
+    <script>
+      window.addEventListener('load', () => {
+            // handle form submit
+            const loginForm = document.querySelector('#login-form')
+            if (loginForm) {
+                loginForm.addEventListener('submit', handleSubmitForm)
+            }
+
+            // check login
+            const username = getCookie('username','not found');
+            console.log(username)
+            if (!!username) {
+                console.log('Logined!!!')
+                window.location.href = './user_template_list.php'
+            }
+        }
+      );
+
+      function handleSubmitForm(e) {
+          e.preventDefault()
+          const form = e.target
+          if (!form) { return }
+
+          const keepSignInCheckbox = form.querySelector('input[name="keep-sign-in"]')
+          const username = form.querySelector('input[name="username"]').value
+          const password = form.querySelector('input[name="password"]').value
+          const keepSignIn = keepSignInCheckbox.checked
+
+          if (!!username && !!password && keepSignIn) {
+              setCookie('username', username)
+              window.location.reload()
+          }
+          else if (!!username && !!password){
+              window.location.href = './user_template_list.php'
+          }
+      }
+
+      function logout() {
+          clearCookie('email')
+          window.location.reload()
+      }
+
+    </script>
   </body>
 </html>
