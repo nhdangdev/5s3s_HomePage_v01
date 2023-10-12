@@ -67,6 +67,7 @@
     <script>
         layoutFilePaths = [
             './template_list.php',
+            './pricing.php',
             './login1.php',
             './login2.php',
             './user_template_list.php',

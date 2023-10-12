@@ -157,7 +157,7 @@
             const keepSignIn = keepSignInCheckbox.checked
             if (!!email && !!password && keepSignIn) {
                 setCookie('email', email)
-                window.location.reload()
+                window.location.href = './user_template_list.html'
             }
         }
     </script>
