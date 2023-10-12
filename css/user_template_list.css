@@ -25,7 +25,7 @@ body {
   color: #aaa;
 }
 .data-table td {
-  color: #333;
+  color: #4AC29A;
 }
 .data-table tr td:last-child {
   border-radius: 0 0.5rem 0.5rem 0;
@@ -59,6 +59,7 @@ body {
 }
 .data-table__table {
   overflow-y: auto;
+  display: none;
 }
 .data-table__act-btn {
   font-weight: bold;
@@ -76,6 +77,84 @@ body {
 }
 .data-table__act-btn:hover {
   background-color: #eee;
+}
+.data-table-card-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.data-table-card {
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 0.4rem;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  color: #4AC29A;
+}
+.data-table-card__title {
+  font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 0.5rem;
+}
+.data-table-card__name {
+  font-size: 16px;
+  font-style: italic;
+}
+.data-table-card__ratios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.data-table-card__buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.data-table-card__button {
+  border: 1px solid #ccc;
+  font-weight: bold;
+  display: flex;
+  flex-grow: 1;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  transition: all 0.2s;
+  background-color: white;
+  cursor: pointer;
+}
+.data-table-card__button:hover {
+  background-color: #eee;
+}
+.data-table-card__button:active {
+  transform: scale(0.9);
+}
+.data-table-card__button span:last-child {
+  margin-right: 1rem;
+}
+.data-table-card__link-button {
+  border: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.4rem;
+  background-color: white;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.data-table-card__link-button:hover {
+  background-color: #eee;
+}
+.data-table-card__link-button:active {
+  transform: scale(0.9);
 }
 .data-table .pagination {
   display: flex;
@@ -154,6 +233,16 @@ a#add-template-button {
   color: #4b5aff;
   background-color: rgba(75, 90, 255, 0.1882352941);
   border-radius: 1rem;
+}
+
+/* > PC low resolution */
+@media (min-width: 1024px) {
+  .data-table-card-wrap {
+    display: none;
+  }
+  .data-table__table {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=user_template_list.css.map */

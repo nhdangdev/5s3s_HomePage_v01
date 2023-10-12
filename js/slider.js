@@ -1,5 +1,6 @@
 let layoutFilePaths = window.layoutFilePaths || [
     './template_list.html',
+    './pricing.html',
     './login1.html',
     './login2.html',
     './user_template_list.html',

@@ -84,6 +84,7 @@ body {
 .mobile-header__logo img {
   height: 100%;
   width: auto;
+  margin-right: 3.5rem;
 }
 
 .dashboard-content {

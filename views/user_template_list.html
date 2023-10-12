@@ -203,6 +203,43 @@
                 </tbody>
             </table>
         </div>
+        <div class="data-table-card-wrap" style="margin-top: 1.5rem;">
+            <div class="data-table-card" v-for="template of paginatedTemplates">
+                <div class="data-table-card__title">
+                    {{template.title}}
+                    <button class="data-table-card__link-button"
+                        @click="copyToClipboard(`https:\/\/template.com/${template.id}`)" title="Copy template link">
+                        <span class="material-symbols-outlined">
+                            link
+                        </span>
+                    </button>
+                </div>
+                <div class="data-table-card__name">Name: {{template.name}}</div>
+                <div class="data-table-card__id">ID: {{template.id}}</div>
+                <div class="data-table-card__subject">Subject: {{template.subject}}</div>
+                <div class="data-table-card__status">Status: {{template.status}}</div>
+                <div class="data-table-card__created">Created: {{template.created}}</div>
+                <div class="ratios">
+                    <div class="ratios__item" v-for="ratio of template.ratios">
+                        {{ratio}}
+                    </div>
+                </div>
+                <div class="data-table-card__buttons">
+                    <button class="data-table-card__button" title="Delete template">
+                        <span class="material-symbols-outlined delete-btn">
+                            delete
+                        </span>
+                        <span>Delete</span>
+                    </button>
+                    <button class="data-table-card__button" title="Edit template">
+                        <span class="material-symbols-outlined">
+                            edit
+                        </span>
+                        <span>Edit</span>
+                    </button>
+                </div>
+            </div>
+        </div>
         <div class="data-table__footer">
             <div class="data-table__items-per-page">
                 <select name="items-per-page" class="select-box" v-model="paginationConfig.itemsPerPage"
