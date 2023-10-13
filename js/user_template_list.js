@@ -251,12 +251,12 @@ function markChangePaginationConfig() {
     }
 }
 
-function handleChangeItemsPerPage(e) {
-    const selectedItemsPerPage = Number(e.target.value)
-    paginationConfigRef.value.itemsPerPage = selectedItemsPerPage
-    paginationConfigRef.value.page = DEFAULT_PAGE
-    markChangePaginationConfig()
-}
+// function handleChangeItemsPerPage(e) {
+//     const selectedItemsPerPage = Number(e.target.value)
+//     paginationConfigRef.value.itemsPerPage = selectedItemsPerPage
+//     paginationConfigRef.value.page = DEFAULT_PAGE
+//     markChangePaginationConfig()
+// }
 
 function handlePrevPage() {
     if (paginationConfigRef.value.page > 1) {
@@ -273,20 +273,49 @@ function handleNextPage() {
     }
 }
 
-function handleChangeRatioFilter(e) {
-    const selectedRatio = String(e.target.value)
-    filterRef.value.ratio = selectedRatio
-    paginationConfigRef.value.page = DEFAULT_PAGE
-    markChangeFilter()
-    markChangePaginationConfig()
+// function handleChangeRatioFilter(e) {
+//     const selectedRatio = String(e.target.value)
+//     filterRef.value.ratio = selectedRatio
+//     paginationConfigRef.value.page = DEFAULT_PAGE
+//     markChangeFilter()
+//     markChangePaginationConfig()
+// }
+
+// function handleChangeSubjectFilter(e) {
+//     const selectedSubject = String(e.target.value)
+//     filterRef.value.subject = selectedSubject
+//     paginationConfigRef.value.page = DEFAULT_PAGE
+//     markChangeFilter()
+//     markChangePaginationConfig()
+// }
+
+function handleSelectSubject(e) {
+    if (e.target.checked) {
+        const selectedSubject = String(e.target.value)
+        filterRef.value.subject = selectedSubject
+        paginationConfigRef.value.page = DEFAULT_PAGE
+        markChangeFilter()
+        markChangePaginationConfig()
+    }
 }
 
-function handleChangeSubjectFilter(e) {
-    const selectedSubject = String(e.target.value)
-    filterRef.value.subject = selectedSubject
-    paginationConfigRef.value.page = DEFAULT_PAGE
-    markChangeFilter()
-    markChangePaginationConfig()
+function handleSelectRatio(e) {
+    if (e.target.checked) {
+        const selectedRatio = String(e.target.value)
+        filterRef.value.ratio = selectedRatio
+        paginationConfigRef.value.page = DEFAULT_PAGE
+        markChangeFilter()
+        markChangePaginationConfig()
+    }
+}
+
+function handleSelectItemsPerPage(e) {
+    if (e.target.checked) {
+        const selectedItemsPerPage = Number(e.target.value)
+        paginationConfigRef.value.itemsPerPage = selectedItemsPerPage
+        paginationConfigRef.value.page = DEFAULT_PAGE
+        markChangePaginationConfig()
+    }
 }
 
 
@@ -301,11 +330,14 @@ const templateTable = createApp({
             copyToClipboard,
             startTemplateIndex: startTemplateIndexRef,
             endTemplateIndex: endTemplateIndexRef,
-            handleChangeItemsPerPage,
+            // handleChangeItemsPerPage,
             handleNextPage,
             handlePrevPage,
-            handleChangeRatioFilter,
-            handleChangeSubjectFilter,
+            // handleChangeRatioFilter,
+            // handleChangeSubjectFilter,
+            handleSelectSubject,
+            handleSelectRatio,
+            handleSelectItemsPerPage,
         }
     },
     template: templateTableTemplate

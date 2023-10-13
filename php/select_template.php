@@ -17,14 +17,15 @@
     <div class="dashboard">
         <?php include_once("./sidebar.php") ?>
         <div class="dashboard__content">
-            <h2>Choose your template</h2>
-            <h4>Choose a template and your data</h4>
+            <h2 style="margin-bottom: 0;">Choose your template</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h5 style="margin: 0;">Choose a template and your data</h5>
+                <button type="button" id="next-step" onclick="nextStep()">Next step</button>
+            </div>
             <div class="grid">
                 <div class="row no-gutters" id="template-item-list">
                 </div>
             </div>
-            <br>
-            <button type="button" id="next-step" onclick="nextStep()">Next step</button>
 
         </div>
     </div>

@@ -1,7 +1,3 @@
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
 .data-table {
     padding: 1.5rem;
     border: 2px solid #eee;
@@ -25,10 +21,12 @@ body {
 
     th {
         color: #aaa;
+        white-space: nowrap;
     }
 
     td {
         color: #4AC29A;
+        white-space: nowrap;
     }
 
     tr td:last-child {
@@ -92,6 +90,14 @@ body {
         &:hover {
             background-color: #eee;
         }
+    }
+
+    &__items-per-page {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: .2rem;
+
     }
 
     &-card-wrap {
@@ -237,10 +243,18 @@ body {
 
 .select-box {
     padding: 0.5rem 1rem;
+    padding-right: 1.5rem;
+    // appearance: none;
+    // -moz-appearance: none;
+    // -webkit-appearance: none;
     font-size: .75rem;
     font-weight: bold;
     border-radius: .4rem;
     border: 2px solid #eee;
+
+    // &::-ms-expand {
+    //     display: none;
+    // }
 }
 
 .delete-btn {
@@ -252,13 +266,18 @@ a#add-template-button {
     gap: .2rem;
     justify-content: center;
     align-items: center;
-    background-color: #4b5aff;
+    background-color: #6cc4c1;
     padding: 0.5rem 1rem .5rem .5rem;
     color: white;
     font-weight: bold;
     border-radius: .4rem;
     text-decoration: none;
     border: none;
+    transition: all .2s;
+
+    &:hover {
+        background-color: #45adaa;
+    }
 }
 
 .ratios {
@@ -268,9 +287,17 @@ a#add-template-button {
 
     &__item {
         padding: .2rem .5rem;
-        color: #4b5aff;
-        background-color: #4b5aff30;
+        color: #8a6d3b;
+        background: #fcf8e3;
+        border: 1px solid #faebcc;
         border-radius: 1rem;
+
+
+        &--selected {
+            color: #4b5aff;
+            background-color: #4b5aff30;
+            border: 1px solid #4b5aff90;
+        }
     }
 }
 
@@ -284,5 +311,75 @@ a#add-template-button {
         &__table {
             display: block;
         }
+    }
+}
+
+.dropdown {
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    &__label-btn {
+        width: 100%;
+        padding: .5rem 1rem;
+        padding-right: 1.5rem;
+        font-size: 0.75rem;
+        font-weight: bold;
+        border-radius: 0.4rem;
+        border: 2px solid #eee;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        gap: .5rem;
+        box-sizing: border-box;
+        text-transform: capitalize;
+    }
+
+    &__expand {
+        font-size: 1rem;
+        margin-right: -1rem;
+    }
+
+    &__item-wrap {
+        width: 100%;
+        display: none;
+        border: 2px solid #eee;
+        background-color: white;
+        border-radius: .4rem;
+        box-sizing: border-box;
+        padding: .5rem 0;
+        position: absolute;
+        top: calc(100% + .2rem);
+        box-shadow: 1px 1px 15px 10px #eee5;
+
+        &--reverse {
+            top: unset;
+            bottom: calc(100% + .2rem);
+        }
+    }
+
+    &__item {
+        input[type="radio"] {
+            display: none;
+        }
+
+        label {
+            display: block;
+            padding: .5rem 1rem;
+            cursor: pointer;
+        }
+
+        label:hover {
+            background-color: #eee;
+        }
+    }
+
+    &__label-btn:focus+&__item-wrap {
+        display: block;
+    }
+
+    &__item-wrap:hover {
+        display: block;
     }
 }

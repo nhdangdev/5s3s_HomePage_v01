@@ -34,12 +34,12 @@
                 </a>
             </div>
             <div class="slider-nav__button-wrap">
-                <button class="slider-nav__btn" onclick="prevLayout()">
+                <button class="slider-nav__btn" onclick="prevLayout()" id="prev-btn">
                     <span class="material-symbols-outlined">
                         arrow_back
                     </span>
                 </button>
-                <button class="slider-nav__btn" onclick="nextLayout()">
+                <button class="slider-nav__btn" onclick="nextLayout()" id="next-btn">
                     <span class="material-symbols-outlined">
                         arrow_forward
                     </span>

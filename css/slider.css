@@ -86,6 +86,7 @@ body {
 }
 .slider-nav__btn:disabled {
   color: #aaa;
+  background-color: transparent;
 }
 .slider-nav .searchbox {
   display: flex;

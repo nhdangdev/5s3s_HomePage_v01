@@ -323,7 +323,7 @@ body {
                 }
 
                 &--mobile-hidden {
-                    width: 100%;
+                    width: $siderbar-width;
                     padding: 1.5rem 2rem;
                     overflow: unset;
                 }

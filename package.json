@@ -6,7 +6,7 @@
   "scripts": {
     "sass:build": "sass scss:css",
     "sass:watch": "sass scss:css --watch",
-    "surge:deloy": "surge . something_vn.surge.sh"
+    "surge:deploy": "surge . something_vn.surge.sh"
   },
   "keywords": [],
   "author": "",

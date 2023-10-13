@@ -7,24 +7,26 @@
 }
 .template-item__label {
   border-radius: 0.2rem;
-  border: 1px solid rgba(75, 90, 255, 0.3137254902);
+  border: 1px solid rgba(108, 196, 193, 0.3137254902);
   transition: all 0.2s;
 }
 .template-item__label:hover {
-  border-color: #4b5aff;
-  transform: translate(-0.2rem, -0.2rem);
+  border-color: #6cc4c1;
+  transform: translateY(-0.2rem);
+  box-shadow: 0px 2px 15px 2px #ccc;
 }
 .template-item__radio {
   display: none;
 }
 .template-item__radio:checked + .template-item__label {
-  border-color: #4b5aff;
-  box-shadow: 0 0 0 1px #4b5aff;
+  border-color: #6cc4c1;
+  box-shadow: 0 0 0 1px #6cc4c1, 0px 2px 15px 2px #ccc;
 }
 .template-item__thumb img {
   height: 160px;
   width: 100%;
   object-fit: cover;
+  border-radius: 0.2rem;
 }
 .template-item__name {
   font-size: 1rem;
@@ -34,7 +36,7 @@
 }
 
 button#next-step {
-  background-color: #4b5aff;
+  background-color: #6cc4c1;
   padding: 0.5rem 1rem;
   color: white;
   font-weight: bold;
@@ -42,6 +44,10 @@ button#next-step {
   border-radius: 0.2rem;
   border: none;
   cursor: pointer;
+  transition: all 0.2s;
+}
+button#next-step:hover {
+  background-color: #45adaa;
 }
 
 /*# sourceMappingURL=select_template.css.map */
