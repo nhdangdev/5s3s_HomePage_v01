@@ -13,6 +13,8 @@ const sliderFrame = document.querySelector('#slider-frame')
 const suggestionSection = document.querySelector('.searchbox__suggestion')
 const searchboxInput = document.querySelector('#searchbox')
 const openInNewTabButton = document.querySelector('a#open_in_new')
+const prevButton = document.querySelector('#prev-btn')
+const nextButton = document.querySelector('#next-btn')
 const SHOW_SUGGESTION_CLASS = 'searchbox__suggestion--show'
 let currentLayoutIndex = 0
 
@@ -25,8 +27,9 @@ function nextLayout() {
     const nextLayoutIndex = currentLayoutIndex + 1
     sliderFrame.src = layoutFilePaths[nextLayoutIndex]
     currentLayoutIndex = nextLayoutIndex
-    searchboxInput.value = sliderFrame.src
-    openInNewTabButton.href = searchboxInput.value
+    // searchboxInput.value = sliderFrame.src
+    // openInNewTabButton.href = searchboxInput.value
+    markNavigatedLayout()
 }
 
 function prevLayout() {
@@ -38,8 +41,9 @@ function prevLayout() {
     const prevLayoutIndex = currentLayoutIndex - 1
     sliderFrame.src = layoutFilePaths[prevLayoutIndex]
     currentLayoutIndex = prevLayoutIndex
-    searchboxInput.value = sliderFrame.src
-    openInNewTabButton.href = searchboxInput.value
+    // searchboxInput.value = sliderFrame.src
+    // openInNewTabButton.href = searchboxInput.value
+    markNavigatedLayout()
 }
 
 function gotoLayout(path) {
@@ -49,14 +53,32 @@ function gotoLayout(path) {
         currentLayoutIndex = 0
     }
     suggestionSection.classList.remove(SHOW_SUGGESTION_CLASS)
-    searchboxInput.value = sliderFrame.src
-    openInNewTabButton.href = searchboxInput.value
+    // searchboxInput.value = sliderFrame.src
+    // openInNewTabButton.href = searchboxInput.value
+    markNavigatedLayout()
 
 }
 
 function reloadSliderFrame() {
     const frame = document.querySelector('#slider-frame')
     frame.src += ''
+}
+
+function markNavigatedLayout() {
+    searchboxInput.value = sliderFrame.src
+    openInNewTabButton.href = sliderFrame.src
+
+    if (currentLayoutIndex === 0 && !!prevButton) {
+        prevButton.disabled = true
+    } else {
+        prevButton.disabled = false
+    }
+
+    if (currentLayoutIndex >= layoutFilePaths.length - 1 && !!nextButton) {
+        nextButton.disabled = true
+    } else {
+        nextButton.disabled = false
+    }
 }
 
 searchboxInput.addEventListener('click', () => {
@@ -109,6 +131,7 @@ window.addEventListener('load', () => {
     }
 
     suggestionSection.innerHTML = suggestionItemHtmls
+    markNavigatedLayout()
 })
 
 // window.addEventListener('beforeunload', (e) => {
