@@ -18,8 +18,10 @@ hr{
     height: 100vh;
     padding: 32px 8px;
     font-family: "Inter";
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    box-sizing: border-box;
 }
 
 .sidebar-templatelist p{
@@ -30,8 +32,9 @@ hr{
 
 /* scroll container css */
 .sidebar__scroll-container{
-    overflow-y: auto;
-    height: 50%;
+    /* overflow-y: auto; */
+    /* flex: 6; */
+    flex: auto;
 }
 
 .sidebar__scroll-container .nav-link{
@@ -53,7 +56,7 @@ hr{
 }
 
 .sidebar__scroll-container .nav-link nav{
-    margin-left: 8px;
+    margin-left: 16px;
 }
 
 .sidebar__scroll-container .nav-link:hover{
@@ -66,6 +69,19 @@ hr{
 
 
 /* .button css */
+
+.sidebar__login{
+    /* flex-grow: 2; */
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* .sidebar__login hr{
+    margin: 10px 0px;
+} */
+
 .sidebar-templatelist .button{
     border-radius: var(--border-radius);
     border: solid 1.5px #0d2752;
@@ -92,11 +108,26 @@ hr{
 }
 
 /* footer css */
+
+/* .footer{
+    flex-grow: 2;
+} */
+.footer__links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
 .footer__link{
     font-size: 12px;
     line-height: 16px;
     color: #888;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .footer__link:hover{

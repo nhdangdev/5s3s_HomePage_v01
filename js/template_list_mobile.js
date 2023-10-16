@@ -12,6 +12,21 @@ listItem.forEach((item) => {
     }
 });
 
+// [102316Tuan]
+// trigger click on first list-view item to open drop down menu while using mobile
+
+// check if user are using mobile device
+var x = window.matchMedia("(max-width:767px)");
+
+if(x.matches){
+    window.addEventListener("load", (event) => {
+        var firstListViewItem = document.querySelector('.list-view .view-item .view-item__name span');
+        firstListViewItem?.click();
+      });
+}
+
+
+
 function myFN(event) {
     // console.log(event.currentTarget.attributeNeedtoDisplay);
     event.currentTarget.attributeNeedtoDisplay.forEach(

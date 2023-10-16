@@ -15,17 +15,33 @@
         <i class="fa-solid fa-utensils"></i> <nav>Restaurant</nav>
         </div>
     </div>
+    <div class="sidebar__login">
     <hr>
     <p class="user-select--none">Login if you have already bought our package and provided an account.</p>
     <!-- [102312Tuan] add cookie login page-->
-    <a class="button" href="./login1.php"> <span>Login</span> <i class="fa-solid fa-right-to-bracket"></i></a>
+    <a class="button"> <span>Login</span> <i class="fa-solid fa-right-to-bracket"></i></a>
     <hr>
     <div class="sidebar__footer">
-        <a href="/" class="footer__link">Pricing</a>
-        <a href="/" class="footer__link">Contact</a>
+        <ul class="footer__links">
+            <li data-view="pricing" class="footer__link">Pricing</li>
+            <li class="footer__link">Contact</li>
+        </ul>
         <div class="user-select--none"><small>&copy; Copyright <span id="year"></span>, 5s3s</small></div>
     </div>
+    </div>
+    
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
+
+        var loginBtn = document.querySelector(".sidebar__login .button");
+        loginBtn.addEventListener("click", function(){
+            window.location.replace("/php/login2.php");
+        });
+
+        var footerLinks = document.querySelectorAll(".footer__link");
+        footerLinks[0].addEventListener("click", function(){
+            
+            window.location.replace("/php/pricing.php");
+        })
     </script>
 </div>

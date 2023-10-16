@@ -182,3 +182,10 @@ navLinks.forEach((navLink) => {
     myFilter2(navLink.getAttribute("data-view"),'filter-subject');
   });
 })
+
+
+var searchBar = document.querySelector(".search");
+console.log(searchBar);
+searchBar.addEventListener("search", function(event){
+  myFilter2('','');
+});
