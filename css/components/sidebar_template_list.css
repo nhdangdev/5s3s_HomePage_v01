@@ -21,6 +21,7 @@ hr{
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
+    box-sizing: border-box;
 }
 
 .sidebar-templatelist p{
@@ -33,6 +34,7 @@ hr{
 .sidebar__scroll-container{
     /* overflow-y: auto; */
     /* flex: 6; */
+    flex: auto;
 }
 
 .sidebar__scroll-container .nav-link{
@@ -76,6 +78,10 @@ hr{
     justify-content: flex-end;
 }
 
+/* .sidebar__login hr{
+    margin: 10px 0px;
+} */
+
 .sidebar-templatelist .button{
     border-radius: var(--border-radius);
     border: solid 1.5px #0d2752;
@@ -106,12 +112,22 @@ hr{
 /* .footer{
     flex-grow: 2;
 } */
+.footer__links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+}
 
 .footer__link{
     font-size: 12px;
     line-height: 16px;
     color: #888;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .footer__link:hover{

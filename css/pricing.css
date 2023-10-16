@@ -1,24 +1,30 @@
 /* [102310Tuan] create prcing page*/
+/* [102316Tuan] add responsive */
 :root{
     --background-color: #f4f7fe;
     --primary-color: #2353f6;
     --border-radius: 16px;
+    --container-width: 100%;
 }
-body{
+
+*{
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-body,
-.wrapper{
-    width: 100%;
-    height: 100%;
+
+body{
+    height: 100vh;
+    background-color: var(--background-color);
+
 }
 
+
 .wrapper{
-    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
     padding: 32px 16px;
-    background-color: var(--background-color);
 }
 
 h1, h3, h4, h5, p{
@@ -48,7 +54,7 @@ h4 {
 }
 
 .container{
-    
+    width: var(--container-width);
     display: flex;
     justify-content: space-around;
 }
@@ -122,12 +128,13 @@ h4 {
 
 }
 
-.price-item .price-item--popular{
+/* .price-item .price-item--popular{
     
-}
+} */
 
 .price-item__feature{
     padding-left: 0;
+    margin-top: 16px;
     list-style: none;
 }
 
@@ -157,4 +164,24 @@ h4 {
 .price-item__feature li p{
     margin: 0;
     flex: 1;
+  }
+
+  /* tablet */
+  @media (max-width: 930px) and (orientation: portrait){
+
+    .container{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 32px;
+    }
+
+    .price-item{
+        width: calc((var(--container-width) - 64px)/2);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .price-item{
+        width: 100%;
+    }
   }
