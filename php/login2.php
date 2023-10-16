@@ -13,7 +13,7 @@
 <body>
     <?php include_once("./loading_screen.php") ?>
     <div class="form-wrapper">
-        <div class="grid form-modal">
+    <div class="grid form-modal">
             <div class="row no-gutters">
                 <div class="col c-0 m-6 l-6">
                     <div class="form-modal__left-side">
@@ -42,9 +42,10 @@
                         <form action="#" id="login-form">
                             <div class="form-control">
                                 <input type="email" name="email" placeholder="Email ID"
-                                    class="form-control form-control__input">
+                                    class="form-control form-control__input" autofocus required>
                                 <div class="form-control__field-button">
-                                    <span class="material-symbols-outlined" style="font-size: 18px;" onclick="clearEmailInput()">
+                                    <span class="material-symbols-outlined" style="font-size: 18px;"
+                                        onclick="clearEmailInput()">
                                         clear
                                     </span>
 
@@ -52,10 +53,10 @@
                             </div>
                             <div class="form-control">
                                 <input type="password" name="password" placeholder="Password"
-                                    class="form-control form-control__input">
+                                    class="form-control form-control__input" required>
                                 <div class="form-control__field-button">
-                                    <span class="material-symbols-outlined" style="font-size: 18px;" id="toggle-password-icon"
-                                        onclick="togglePassword()">
+                                    <span class="material-symbols-outlined" style="font-size: 18px;"
+                                        id="toggle-password-icon" onclick="togglePassword()">
                                         visibility
                                     </span>
                                 </div>
@@ -67,9 +68,11 @@
                                         Keep me signed in
                                     </span>
                                 </label>
-                                <a href="#">Already a menber?</a>
+                                <a href="./forgot_password.php">Forgot password?</a>
                             </div>
-                            <button type="submit" class="form-control form-control__button">Subscribe</button>
+                            <button type="submit" class="form-control form-control__button">Log in</button>
+                            <span>Don't have a account? <a href="#">Register here</a>
+                            </span>
                         </form>
                     </div>
                 </div>

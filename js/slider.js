@@ -3,6 +3,8 @@ let layoutFilePaths = window.layoutFilePaths || [
     './pricing.html',
     './login1.html',
     './login2.html',
+    './forgot_password.html',
+    './get_tips_earlier.html',
     './user_template_list.html',
     './select_template.html',
     // './add_template_data.html',

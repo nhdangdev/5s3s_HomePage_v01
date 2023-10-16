@@ -70,6 +70,8 @@
             './pricing.php',
             './login1.php',
             './login2.php',
+            './forgot_password.php',
+            './get_tips_earlier.php',
             './user_template_list.php',
             './select_template.php',
             './add_template_data2.php'
