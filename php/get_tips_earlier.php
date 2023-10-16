@@ -2,53 +2,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/grid.css">
-    <link rel="stylesheet" href="../css/login2.css">
-    <script src="../js/main.js"></script>
-    <title>Layout Login 2</title>
+    <?php
+        include_once('./config.php');
+        $extend_head = '<link rel="stylesheet" href="'.$cms_asset_path.'/css/get_tips_earlier.css">';
+        $extend_head .= '<script src="'.$cms_asset_path.'/js/select_template.js" type="module"></script>';
+        include_once($cms_views_path.'/head.php');
+    ?>
+    <title>GET_TIPS_EARLIER</title>
 </head>
 
 <body>
-    <header>
-        <div id="loading-screen">
-            <img src="../asset/img/logo.png" width="54" height="54" alt="Logo">
-            <div class="loader"></div>
-        </div>
-    </header>
+    <?php include_once("./loading_screen.php") ?>
     <div class="form-wrapper">
         <div class="grid form-modal">
             <div class="row no-gutters">
                 <div class="col c-0 m-6 l-6">
                     <div class="form-modal__left-side">
-                        <span>Nice to see you again</span>
-                        <h1>Welcome back</h1>
-                        <div class="divider" style="width: 50px;"></div>
-                        <br>
-                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur omnis,
-                            iure
-                            perspiciatis nisi mollitia error ipsum assumenda ad non labore facere deserunt cum illo
-                            adipisci
-                            molestiae? Doloribus, possimus voluptatem!</small>
-
+                        <img src="../asset/img/mail_notification2.svg" alt="">
                     </div>
                 </div>
                 <div class="col c-12 m-6 l-6">
                     <div class="form-modal__right-side">
-                        <h2>Login Account</h2>
+                        <h2>GET TIPS EARLIER</h2>
                         <small>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam suscipit officiis, hic modi
-                            incidunt quas. Inventore officiis aspernatur, mollitia velit, repellat officia iste
-                            aperiam
-                            tempore natus, earum fuga corporis minus!
+                            Register your email, and we will provide you with an account.
                         </small>
                         <br>
                         <form action="#" id="login-form">
@@ -63,7 +40,7 @@
 
                                 </div>
                             </div>
-                            <div class="form-control">
+                            <!-- <div class="form-control">
                                 <input type="password" name="password" placeholder="Password"
                                     class="form-control form-control__input" required>
                                 <div class="form-control__field-button">
@@ -72,19 +49,17 @@
                                         visibility
                                     </span>
                                 </div>
-                            </div>
-                            <div style="width: 100%; display: flex; justify-content: space-between;">
+                            </div> -->
+                            <!-- <div style="width: 100%; display: flex; justify-content: space-between;">
                                 <label class="form-control form-control__checkbox" for="keep-sign-in">
                                     <input type="checkbox" name="keep-sign-in" id="keep-sign-in">
                                     <span class="checkmark">
                                         Keep me signed in
                                     </span>
                                 </label>
-                                <a href="./forgot_password.html">Forgot password?</a>
-                            </div>
-                            <button type="submit" class="form-control form-control__button">Log in</button>
-                            <span>Don't have a account? <a href="#">Register here</a>
-                            </span>
+                                <a href="#">Already a menber?</a>
+                            </div> -->
+                            <button type="submit" class="form-control form-control__button">Subscriber</button>
                         </form>
                     </div>
                 </div>
