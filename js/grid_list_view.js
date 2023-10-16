@@ -18,7 +18,7 @@ li_links.forEach(function (link) {
         view_wrap.style.display = "none";
     });
     //show selected view mode
-    document.querySelector("." + view_mode).style.display = "block";
+    document.querySelector("." + view_mode).style.display = view_mode === "list-view" ? "block" : "flex" ;
 
     // switch (view_mode) {
     //     case "list-view":

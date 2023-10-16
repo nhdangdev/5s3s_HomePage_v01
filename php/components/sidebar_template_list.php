@@ -15,6 +15,7 @@
         <i class="fa-solid fa-utensils"></i> <nav>Restaurant</nav>
         </div>
     </div>
+    <div class="sidebar__login">
     <hr>
     <p class="user-select--none">Login if you have already bought our package and provided an account.</p>
     <!-- [102312Tuan] add cookie login page-->
@@ -25,6 +26,8 @@
         <a href="/" class="footer__link">Contact</a>
         <div class="user-select--none"><small>&copy; Copyright <span id="year"></span>, 5s3s</small></div>
     </div>
+    </div>
+    
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>

@@ -1,3 +1,4 @@
+/* [102316Tuan] fix some bugs in reponsive */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --background-color: #f7f8fd;
@@ -22,15 +23,20 @@
 
 body,
 html {
-  overflow-y: hidden;
+  height: 100dvh;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
   /* overflow: visible; */
+  margin: 0;
+  padding: 0;
 }
 
 
 .wrapper {
   background-color: var(--background-color);
   overflow-y: hidden;
-  height: 100%;
+  height: 100dvh;
+  overflow-x: hidden;
 
 }
 
@@ -81,6 +87,7 @@ p {
   justify-content: space-between;
   top: -32px;
   background-color: var(--background-color);
+  z-index: 99;
 }
 
 .select-view_and_search_bar {
@@ -158,6 +165,7 @@ p {
   height: calc(100% - 122px);
   box-sizing: border-box;
   min-height: 500px;
+  overflow-x: hidden;
 
 }
 
@@ -282,35 +290,37 @@ p {
 
 /* grid view css */
 
-/* .grid-view {
-  margin-right: calc( 0px - var(--grid-item-spacing));
-} */
+.grid-view {
+  flex-wrap: wrap ;
+  gap:var(--grid-item-spacing);
+}
 
 .grid-view .view-item {
   box-sizing: border-box;
   background-color: #fff;
-  display: inline-block;
+  display: block;
   --grid-item-padding: var(--grid-item-spacing);
-  /* caculate proper width to render expected num of items in a row 
-    ing grid view mode
-    */
-  /* width: calc(
-    var(--view-width) / var(--num-item-row-grid) -
-      (var(--num-item-row-grid) - 1) / var(--num-item-row-grid) *
-      var(--grid-item-spacing) - 2 * var(--grid-item-padding) - 0px
-  ); */
   width: calc((var(--view-width) - (var(--num-item-row-grid) * 3px ) - (var(--num-item-row-grid) - 1 ) * var(--grid-item-padding)) / var(--num-item-row-grid));
   border-radius: var(--border-radius);
   padding: var(--grid-item-padding);
   text-align: center;
   border: 1px solid #ccc;
   /* box-shadow: var(--box-shadow); */
-  margin-right: var(--grid-item-spacing);
+  /* margin-right: var(--grid-item-spacing); */
+  opacity: 0;
+  transition: 150ms;
+  transform: translateX(100px);
+  margin: 0;
 }
 
-.grid-view .view-item:nth-child(3n){
-  margin-right: 0;
+.grid-view .view-item.show{
+  transform: translateX(0);
+  opacity: 1;
 }
+
+/* .grid-view .view-item:nth-child(3n){
+  margin-right: 0;
+} */
 
 .zoom {
   transition: transform 0.2s;
@@ -356,6 +366,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 4px;
 }
 
 .grid-view .view-item__ratios .ratio-card {
@@ -385,10 +396,14 @@ p {
 
 .custom-select select {
   display: none; /*hide original SELECT element: */
+  border: 1px solid #ccc;
+
 }
 
 .select-selected {
-  background-color: transparent;
+  background-color: #fefefe;
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc !important;
 }
 
 /* Style the arrow inside the select element: */
@@ -479,17 +494,18 @@ p {
 
 @media (max-width: 930px) and (orientation: portrait){
   .grid-view .view-item{
+    /* height: 360px; */
     --num-item-row-grid :2;
     width: calc((var(--view-width) - (var(--num-item-row-grid) * 3px ) - (var(--num-item-row-grid) - 1 ) * var(--grid-item-padding)) / var(--num-item-row-grid));
   }
 
-  .grid-view .view-item:nth-child(3n){
+  /* .grid-view .view-item:nth-child(3n){
     margin-right: var(--grid-item-spacing);
-  }
+  } */
 
-  .grid-view .view-item:nth-child(2n){
+  /* .grid-view .view-item:nth-child(2n){
     margin-right: 0;
-  }
+  } */
 
   .search{
     width: 30%;
@@ -500,6 +516,29 @@ p {
     /* padding: 7px 16px 7px 0px; */
     margin-left: -7px;
   }
+
+  .list-view__header .header-status,
+  .list-view .view-item__status{
+    display: none;
+  }
+
+  .list-view__header .header-ratios,
+  .list-view .view-item__ratios{
+    width: 20%;
+  }
+
+  .list-view__header .header-ratios{
+    text-align: center;
+  }
+
+  .list-view .view-item__ratios{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+
 }
 
 @media (max-width: 767px) {
@@ -586,6 +625,14 @@ p {
 
   .select-selected{
     /* padding: 7px 16px 7px 0px; */
-    margin-left: -14px;
+    margin-left: 0px;
+  }
+
+  .custom-select{
+    margin-bottom: 8px;
+  }
+
+  .list-view .view-item__ratios{
+    justify-content: flex-start;
   }
 }

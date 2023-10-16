@@ -5,7 +5,6 @@ $api_url = 'http://localhost:3000/templates';
 $json_data = file_get_contents($api_url);
 $response_data = json_decode($json_data);
 
-if(count($response_data) > 5) 
 
 ?>
 <!DOCTYPE html>
@@ -22,11 +21,13 @@ if(count($response_data) > 5)
   <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="../css/components/sidebar_template_list.css" />
 
-  <link rel="stylesheet"  type="text/css"  href="../css/template_list.css?v=1" />
+  <link rel="stylesheet"  type="text/css"  href="../css/template_list.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/70d145d8f0.js" crossorigin="anonymous"></script>
   <script src="../js/main.js"></script>
   <script src="../js/sidebar.js"></script>
+  <script src="../js/lazy_loading.js" defer></script>
+
 </head>
 
 <body>
@@ -147,7 +148,7 @@ if(count($response_data) > 5)
             </div>
             <!-- end: grid view -->
 
-            <button>Load more...</button>
+            <!-- <button>Load more...</button> -->
           </div>
         </div>
 
