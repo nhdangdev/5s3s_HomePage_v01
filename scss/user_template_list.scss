@@ -350,6 +350,7 @@ a#add-template-button {
         box-sizing: border-box;
         padding: .5rem 0;
         position: absolute;
+        z-index: 9;
         top: calc(100% + .2rem);
         box-shadow: 1px 1px 15px 10px #eee5;
 
