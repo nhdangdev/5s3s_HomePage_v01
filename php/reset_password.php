@@ -2,29 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/grid.css">
-    <link rel="stylesheet" href="../css/forgot_password.css">
-    <script src="../js/main.js"></script>
-    <script src="../js/reset_password.js" type="module"></script>
+    <?php
+        include_once('./config.php');
+        $extend_head = '<link rel="stylesheet" href="'.$cms_asset_path.'/css/forgot_password.css">';
+        $extend_head .= '<script src="'.$cms_asset_path.'/js/reset_password.js" type="module"></script>';
+        include_once($cms_views_path.'/head.php');
+    ?>
     <title>Reset password</title>
 </head>
 
 <body>
-    <header>
-        <div id="loading-screen">
-            <img src="../asset/img/logo.png" width="54" height="54" alt="Logo">
-            <div class="loader"></div>
-        </div>
-    </header>
+    <?php include_once("./loading_screen.php") ?>
     <div class="forgot-password" id="reset-password-section">
         <!-- <div class="forgot-password__wrap">
             <div class="forgot-password__illustration">
@@ -48,7 +36,7 @@
                 </div>
                 </input>
                 <button class="forgot-password__submit" type="submit">Reset password</button>
-                <a href="./login2.html" id="back-to-login">
+                <a href="./login2.php" id="back-to-login">
                     <span class="material-symbols-outlined">
                         arrow_back
                     </span>
@@ -80,7 +68,7 @@
                 </div>
                 </input>
                 <button class="forgot-password__submit" type="submit">Reset password</button>
-                <a href="./login2.html" id="back-to-login">
+                <a href="./login2.php" id="back-to-login">
                     <span class="material-symbols-outlined">
                         arrow_back
                     </span>
@@ -103,7 +91,7 @@
             <br>
             <button class="forgot-password__submit" style="width: 100%;">Continute</button>
             <br>
-            <a href="./login2.html" id="back-to-login">
+            <a href="./login2.php" id="back-to-login">
                 <span class="material-symbols-outlined">
                     arrow_back
                 </span>
