@@ -59,7 +59,7 @@
                 </div>
                 </input>
                 <button class="forgot-password__submit" type="submit">Reset password</button>
-                <a href="./login2.html" id="back-to-login">
+                <a href="./login2.php" id="back-to-login">
                     <span class="material-symbols-outlined">
                         arrow_back
                     </span>
@@ -84,7 +84,7 @@
                 Did'nt receive the email?
                 <a href="#" class="forgot-password__link">Click to resend</a>
             </p>
-            <a href="./login2.html" id="back-to-login">
+            <a href="./login2.php" id="back-to-login">
                 <span class="material-symbols-outlined">
                     arrow_back
                 </span>
