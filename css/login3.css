@@ -1,12 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   min-height: 100dvh;
 }
 
 .form-wrapper {
-  background-color: #e8edf9;
+  background-color: white;
   width: 100dvw;
   height: 100dvh;
   display: flex;
@@ -23,19 +22,17 @@ body {
 .form-modal {
   margin: 1rem;
   width: 100%;
-  /*  height: 500px;*/
-  /* max-width: 400px; */
+  height: 500px;
   max-width: 800px;
   background-color: white;
-  box-shadow: 2px 2px 10px #ccc;
+  box-shadow: 1px 1px 15px #eee;
+  border-radius: 1rem;
+  overflow: hidden;
 }
-
 .form-modal .row {
   height: 100%;
 }
-
-.form-modal__left-side,
-.form-modal__right-side {
+.form-modal__left-side, .form-modal__right-side {
   height: 100%;
   box-sizing: border-box;
   padding: 1rem;
@@ -45,22 +42,23 @@ body {
   align-items: center;
   text-align: center;
 }
-
 .form-modal__left-side {
-  background-color: #83c1ff;
-  color: white;
+  background-color: #9acffa;
+  color: #087ef4;
   background-image: url("../asset/img/login_side_bg.png");
   background-size: cover;
 }
-
-.form-modal__right-side {
-  color: #ccc;
+.form-modal__left-side h1 {
+  font-size: 32px;
 }
-
+.form-modal__right-side {
+  color: rgba(51, 51, 51, 0.6);
+  font-size: 16px;
+}
 .form-modal__right-side h2 {
   color: #087ef4;
+  font-size: 24px;
 }
-
 .form-modal__right-side #login-form {
   width: 100%;
   padding: 1rem;
@@ -71,31 +69,31 @@ body {
   align-items: center;
   gap: 1.2rem;
 }
-
 .form-modal__right-side #login-form .form-control {
   width: 100%;
   position: relative;
+  display: flex;
 }
-
 .form-modal__right-side #login-form .form-control__input {
-  background-color: #f1f1f1;
-  padding: 0.5rem 1rem;
-  padding-right: 2rem;
+  width: 100%;
+  padding: 0.75rem;
+  padding-right: 2.25rem;
   box-sizing: border-box;
-  border: none;
-  border-left: #087ef4 0.2rem solid;
+  border: 1px solid #eee;
   outline: none;
   transition: all 0.2s ease;
+  border-radius: 0.4rem;
 }
-
+.form-modal__right-side #login-form .form-control__input:hover {
+  border-color: #087ef4;
+}
 .form-modal__right-side #login-form .form-control__input:focus {
-  background-color: rgba(72, 163, 255, 0.1254901961);
+  border-color: #087ef4;
+  box-shadow: 0 0 0 1px #087ef4;
 }
-
 .form-modal__right-side #login-form .form-control__input::-ms-reveal {
   display: none;
 }
-
 .form-modal__right-side #login-form .form-control__field-button {
   width: 1.5rem;
   height: 1.5rem;
@@ -110,36 +108,43 @@ body {
   transition: all 0.4s;
   cursor: pointer;
 }
-
 .form-modal__right-side #login-form .form-control__field-button:hover {
-  background-color: rgba(0, 0, 0, 0.0666666667);
+  color: #087ef4;
 }
-
 .form-modal__right-side #login-form .form-control__button {
   padding: 0.8rem;
-  background-color: #087ef4;
-  border-radius: 2rem;
+  background-color: #2196F3;
+  border-radius: 0.4rem;
   border: none;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
+  transition: all 0.2s;
   cursor: pointer;
+  outline: none;
+  width: 100%;
 }
-
+.form-modal__right-side #login-form .form-control__button:hover {
+  background-color: #087ef4;
+}
+.form-modal__right-side #login-form .form-control__button:focus {
+  background-color: #087ef4;
+  box-shadow: 0 0 0 1px #087ef4, 0 0 0 3px rgba(8, 126, 244, 0.5);
+}
+.form-modal__right-side #login-form .form-control__button:active {
+  transform: scale(0.95);
+}
 .form-modal__right-side #login-form .form-control__checkbox {
   width: fit-content;
   cursor: pointer;
 }
-
 .form-modal__right-side #login-form .form-control__checkbox input[type=checkbox] {
   display: none;
 }
-
 .form-modal__right-side #login-form .form-control__checkbox .checkmark {
   margin-left: 1.2rem;
   position: relative;
 }
-
 .form-modal__right-side #login-form .form-control__checkbox .checkmark::before {
   content: "";
   height: 1rem;
@@ -150,7 +155,6 @@ body {
   top: calc((100% - 1rem) / 2);
   left: -1.2rem;
 }
-
 .form-modal__right-side #login-form .form-control__checkbox .checkmark::after {
   content: "";
   height: 1rem;
@@ -164,18 +168,15 @@ body {
   top: calc((100% - 1rem) / 2);
   left: -1.2rem;
 }
-
-.form-modal__right-side #login-form .form-control__checkbox input[type=checkbox]:checked~.checkmark::before {
-  background-color: #e8edf9;
+.form-modal__right-side #login-form .form-control__checkbox input[type=checkbox]:checked ~ .checkmark::before {
+  background-color: #f1f1f1;
 }
-
-.form-modal__right-side #login-form .form-control__checkbox input[type=checkbox]:checked~.checkmark::after {
+.form-modal__right-side #login-form .form-control__checkbox input[type=checkbox]:checked ~ .checkmark::after {
   border-color: #087ef4;
 }
-
 .form-modal__right-side #login-form a {
   text-decoration: none;
   color: #087ef4;
 }
 
-/*# sourceMappingURL=login2.css.map */
+/*# sourceMappingURL=login3.css.map */

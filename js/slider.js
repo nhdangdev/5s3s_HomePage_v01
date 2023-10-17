@@ -3,13 +3,16 @@ let layoutFilePaths = window.layoutFilePaths || [
     './pricing.html',
     './login1.html',
     './login2.html',
+    './login3.html',
     './get_tips_earlier.html',
+    './register.html',
     './forgot_password.html',
     './reset_password.html',
     './user_template_list.html',
     './select_template.html',
     // './add_template_data.html',
     './add_template_data2.html',
+    './dialog.html'
 ]
 
 const sliderFrame = document.querySelector('#slider-frame')

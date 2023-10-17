@@ -1,0 +1,219 @@
+@import "color";
+@import "variable";
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100dvh;
+}
+
+.form-wrapper {
+    background-color: white;
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider {
+    height: 6px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.form-modal {
+    margin: 1rem;
+    width: 100%;
+    height: 500px;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 1px 1px 15px #eee;
+    border-radius: $border-radius-4;
+    overflow: hidden;
+
+    .row {
+        height: 100%;
+    }
+
+    &__left-side,
+    &__right-side {
+        height: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__left-side {
+        background-color: lighten($color: $color1, $amount: 25%);
+        color: $color2;
+        background-image: url('../asset/img/login_side_bg.png');
+        background-size: cover;
+
+        h1 {
+            font-size: 32px;
+        }
+    }
+
+    &__right-side {
+        color: #3339;
+        font-size: 16px;
+
+        h2 {
+            color: $color2;
+            font-size: 24px;
+        }
+
+        #login-form {
+            width: 100%;
+            padding: 1rem;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+
+            .form-control {
+                width: 100%;
+                position: relative;
+                $field-button-size: 1.5rem;
+                display: flex;
+
+                &__input {
+                    width: 100%;
+                    padding: .75rem;
+                    padding-right: calc($field-button-size + .75rem);
+                    box-sizing: border-box;
+                    border: 1px solid #eee;
+                    outline: none;
+                    transition: all .2s ease;
+                    border-radius: $border-radius-1;
+
+                    &:hover {
+                        border-color: $color2;
+                    }
+
+                    &:focus {
+                        border-color: $color2;
+                        box-shadow: 0 0 0 1px $color2;
+                    }
+
+                    // hide reveal password button of edge browser
+                    &::-ms-reveal {
+                        display: none;
+                    }
+                }
+
+                &__field-button {
+                    width: $field-button-size;
+                    height: $field-button-size;
+                    padding: .2rem;
+                    user-select: none;
+                    box-sizing: border-box;
+                    position: absolute;
+                    background-color: transparent;
+                    border-radius: .2rem;
+                    top: calc((100% - $field-button-size ) / 2);
+                    right: .25rem;
+                    transition: all .4s;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $color2;
+                    }
+                }
+
+                &__button {
+                    padding: .8rem;
+                    background-color: $color1;
+                    border-radius: .4rem;
+                    border: none;
+                    color: white;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    transition: all .2s;
+                    cursor: pointer;
+                    outline: none;
+                    width: 100%;
+
+                    &:hover {
+                        background-color: $color2;
+                    }
+
+                    &:focus {
+                        background-color: $color2;
+                        box-shadow: 0 0 0 1px $color2,
+                            0 0 0 3px rgba($color: $color2, $alpha: .5);
+                    }
+
+                    &:active {
+                        transform: scale(.95);
+                    }
+                }
+
+                &__checkbox {
+                    width: fit-content;
+                    $checkbox-size: 1rem;
+                    $checkbox-offset: .2rem;
+                    cursor: pointer;
+
+                    input[type="checkbox"] {
+                        display: none;
+                    }
+
+                    .checkmark {
+                        margin-left: calc($checkbox-size + $checkbox-offset);
+                        position: relative;
+                    }
+
+                    .checkmark::before {
+                        content: "";
+                        height: $checkbox-size;
+                        width: $checkbox-size;
+                        background-color: #f1f1f1;
+                        border-radius: .1rem;
+                        position: absolute;
+                        top: calc((100% - $checkbox-size) / 2);
+                        left: calc(-1 * ($checkbox-size + $checkbox-offset));
+                    }
+
+                    .checkmark::after {
+                        $check-sign-size: 2px;
+                        content: "";
+                        height: 1rem;
+                        width: .5rem;
+                        background-color: transparent;
+                        position: absolute;
+                        border-color: transparent;
+                        border-style: solid;
+                        border-width: 0 $check-sign-size $check-sign-size 0;
+                        transform: rotate(40deg) translate(0, -.4rem);
+                        top: calc((100% - $checkbox-size) / 2);
+                        left: calc(-1 * ($checkbox-size + $checkbox-offset));
+                    }
+
+                    input[type="checkbox"]:checked~.checkmark {
+                        &::before {
+                            background-color: #f1f1f1;
+                        }
+
+                        &::after {
+                            border-color: $color2;
+                        }
+                    }
+
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: $color2;
+            }
+        }
+    }
+}

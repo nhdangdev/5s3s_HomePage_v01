@@ -1,4 +1,4 @@
-.forgot-password {
+.user-form {
   padding: 0;
   margin: 0;
   min-height: 100dvh;
@@ -7,56 +7,56 @@
   align-items: center;
   color: #333;
 }
-.forgot-password__wrap {
+.user-form__wrap {
   width: calc(100dvw - 2rem);
   max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.forgot-password__illustration {
+.user-form__illustration {
   width: 100%;
   max-width: 300px;
 }
-.forgot-password__title {
+.user-form__title {
   font-size: 24px;
   font-weight: 700;
   text-align: center;
 }
-.forgot-password__subtitle {
+.user-form__subtitle {
   color: rgba(51, 51, 51, 0.6);
   text-align: center;
 }
-.forgot-password__form {
+.user-form__form {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 1.5rem;
 }
-.forgot-password__field-label {
+.user-form__field-label {
   font-weight: 600;
 }
-.forgot-password__field-control {
+.user-form__field-control {
   padding: 0.75rem;
-  border: 1px solid #eee;
+  border: 1px solid #ccc;
   border-radius: 0.4rem;
   outline: none;
   transition: all 0.2s;
 }
-.forgot-password__field-control:hover {
+.user-form__field-control:hover {
   border-color: #087ef4;
 }
-.forgot-password__field-control:focus {
+.user-form__field-control:focus {
   border-color: #087ef4;
   box-shadow: 0 0 0 1px #087ef4;
 }
-.forgot-password__text-field {
+.user-form__text-field {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.forgot-password__submit {
+.user-form__submit {
   padding: 0.75rem;
   border-radius: 0.4rem;
   background-color: #2196F3;
@@ -67,26 +67,26 @@
   outline: none;
   cursor: pointer;
 }
-.forgot-password__submit:hover {
+.user-form__submit:hover {
   background-color: #087ef4;
 }
-.forgot-password__submit:focus {
+.user-form__submit:focus {
   background-color: #087ef4;
   box-shadow: 0 0 0 1px #087ef4, 0 0 0 3px rgba(8, 126, 244, 0.5);
 }
-.forgot-password__submit:active {
+.user-form__submit:active {
   background-color: #087ef4;
   transform: scale(0.95);
 }
-.forgot-password__user-mail {
+.user-form__user-mail {
   font-weight: 600;
 }
-.forgot-password__link {
+.user-form__link {
   text-decoration: none;
   color: #087ef4;
   font-weight: 500;
 }
-.forgot-password #back-to-login {
+.user-form #back-to-login {
   text-decoration: none;
   font-weight: 500;
   text-align: center;
@@ -97,4 +97,4 @@
   align-items: center;
 }
 
-/*# sourceMappingURL=forgot_password.css.map */
+/*# sourceMappingURL=user_form.css.map */

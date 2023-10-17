@@ -155,7 +155,7 @@ body {
   color: black;
 }
 .dashboard__sidebar .sidebar__item--selected, .dashboard__sidebar .sidebar__item:hover {
-  color: #6cc4c1;
+  color: #2196F3;
 }
 .dashboard__sidebar .sidebar__item--selected .material-symbols-outlined, .dashboard__sidebar .sidebar__item:hover .material-symbols-outlined {
   font-variation-settings: "FILL" 1;
@@ -240,7 +240,7 @@ body {
   cursor: pointer;
 }
 .dashboard__sidebar .sidebar #logout-desktop-btn:hover {
-  color: #6cc4c1;
+  color: #2196F3;
 }
 .dashboard__content {
   flex-grow: 1;
