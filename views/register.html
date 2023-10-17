@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/user_form.css">
+    <script src="../js/main.js"></script>
+    <title>Registor</title>
+</head>
+
+<body>
+    <header>
+        <div id="loading-screen">
+            <img src="../asset/img/logo.png" width="54" height="54" alt="Logo">
+            <div class="loader"></div>
+        </div>
+    </header>
+    <div class="user-form">
+        <div class="user-form__wrap">
+
+            <div class="user-form__illustration" style="height: 200px; text-align: center;">
+                <img src="../asset/img/registor_illustration.svg" alt="Registor illustration"
+                    style="height: 100%; object-fit: contain;">
+            </div>
+            <br>
+            <div class="user-form__title">Complete register</div>
+            <div class="user-form__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ea.
+            </div>
+            <br>
+            <br>
+            <form action="#" class="user-form__form">
+                <div class="user-form__text-field">
+                    <label for="username" class="user-form__field-label">User name</label>
+                    <input type="text" class="user-form__field-control" id="username" placeholder="Enter user name"
+                        required autofocus>
+                </div>
+                <div class="user-form__text-field">
+                    <label for="password" class="user-form__field-label">Password</label>
+                    <input type="password" class="user-form__field-control" id="password"
+                        placeholder="Enter your password" required autofocus>
+                </div>
+                <div class="user-form__text-field">
+                    <label for="confirm-password" class="user-form__field-label">Confirm password</label>
+                    <input type="password" class="user-form__field-control" id="confirm-password"
+                        placeholder="Enter your password again" required>
+                </div>
+                <button class="user-form__submit" type="submit">Complete</button>
+                <a href="#" id="back-to-login">
+                    <span class="material-symbols-outlined">
+                        arrow_back
+                    </span>
+                    <span>Back to home</span>
+                </a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/dialog.css">
+    <script src="../js/main.js"></script>
+    <script src="../js/dialog.js"></script>
+    <title>Dialog</title>
+</head>
+
+<body>
+    <header>
+        <div id="loading-screen">
+            <img src="../asset/img/logo_small.png" width="54" height="54" alt="Logo">
+            <div class="loader"></div>
+        </div>
+    </header>
+    <div style="position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);">
+        <button onclick="showDialog()"
+            style="padding: .5rem 1rem; border: 1px solid #eee; border-radius: .4rem; font-weight: 600; cursor: pointer;">Show
+            dialog</button>
+    </div>
+    <div class="dialog" style="width: 500px;">
+        <div class="dialog__header">
+            <div class="dialog__title">Dialog title</div>
+            <button class="dialog__close-btn" onclick="hideDialog()">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+        </div>
+        <div class="dialog__body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo eius totam facilis iusto saepe officia,
+            eos nisi reiciendis molestiae hic. Optio ullam unde fuga sunt, aspernatur nisi aut fugit magnam?
+        </div>
+        <div class="dialog__footer">
+            <button class="dialog__action-btn" onclick="hideDialog()">
+                Cancle
+            </button>
+            <button class="dialog__action-btn dialog__action-btn--primary">
+                Submit
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

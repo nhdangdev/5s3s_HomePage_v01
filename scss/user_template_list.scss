@@ -1,7 +1,20 @@
+@import "color";
+@import "variable";
+@import "responsive";
+
 .data-table {
     padding: 1.5rem;
     border: 2px solid #eee;
     border-radius: 1rem;
+    color: #333;
+
+    @include tablet {
+        padding: .5rem 1.5rem 1.5rem;
+    }
+
+    @include mobile {
+        padding: .5rem 1.5rem 1.5rem;
+    }
 
     table {
         background-color: white;
@@ -25,7 +38,10 @@
     }
 
     td {
-        color: #4AC29A;
+        // color: #1E88E5;
+        // color: #1A237E;
+        font-weight: 500;
+        font-size: 14px;
         white-space: nowrap;
     }
 
@@ -62,6 +78,14 @@
 
     &__header {
         padding: 0 1rem;
+
+        @include mobile {
+            padding: 0;
+        }
+
+        @include tablet {
+            padding: 0;
+        }
     }
 
     &__footer {
@@ -70,7 +94,15 @@
 
     &__table {
         overflow-y: auto;
-        display: none;
+        display: block;
+
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            display: none;
+        }
     }
 
     &__act-btn {
@@ -107,14 +139,20 @@
     }
 
     &-card {
-        padding: 1rem;
+        // padding: 1rem;
+        padding-bottom: 1rem;
         box-sizing: border-box;
-        border-radius: .4rem;
-        border: 1px solid #eee;
+        // border-radius: .4rem;
+        // border: 1px solid #eee;
+        border-bottom: 1px solid #eee;
         display: flex;
         flex-direction: column;
         gap: .7rem;
-        color: #4AC29A;
+        // color: #4AC29A;
+
+        @include desktop {
+            display: none;
+        }
 
         &__title {
             font-weight: bold;
@@ -128,6 +166,15 @@
         &__name {
             font-size: 16px;
             font-style: italic;
+        }
+
+        &__field {
+            display: flex;
+            gap: .5rem;
+        }
+
+        &__field-name {
+            font-weight: 600;
         }
 
         &__ratios {
@@ -266,7 +313,7 @@ a#add-template-button {
     gap: .2rem;
     justify-content: center;
     align-items: center;
-    background-color: #6cc4c1;
+    background-color: $color1;
     padding: 0.5rem 1rem .5rem .5rem;
     color: white;
     font-weight: bold;
@@ -276,7 +323,7 @@ a#add-template-button {
     transition: all .2s;
 
     &:hover {
-        background-color: #45adaa;
+        background-color: $color2;
     }
 }
 
@@ -291,28 +338,29 @@ a#add-template-button {
         background: #fcf8e3;
         border: 1px solid #faebcc;
         border-radius: 1rem;
-
+        min-width: 42px;
+        text-align: center;
 
         &--selected {
-            color: #4b5aff;
-            background-color: #4b5aff30;
-            border: 1px solid #4b5aff90;
+            color: $color2;
+            background-color: rgba($color: $color2, $alpha: 0.1);
+            border: 1px solid rgba($color: $color2, $alpha: 0.9);
         }
     }
 }
 
-/* > PC low resolution */
-@media (min-width: 1024px) {
-    .data-table {
-        &-card-wrap {
-            display: none;
-        }
+// /* > PC low resolution */
+// @media (min-width: 1024px) {
+//     .data-table {
+//         &-card-wrap {
+//             display: none;
+//         }
 
-        &__table {
-            display: block;
-        }
-    }
-}
+//         &__table {
+//             display: block;
+//         }
+//     }
+// }
 
 .dropdown {
     padding: 0;

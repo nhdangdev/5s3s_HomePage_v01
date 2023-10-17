@@ -1,6 +1,6 @@
 @import "color";
 
-.forgot-password {
+.user-form {
     padding: 0;
     margin: 0;
     min-height: 100dvh;
@@ -47,7 +47,7 @@
 
     &__field-control {
         padding: .75rem;
-        border: 1px solid #eee;
+        border: 1px solid #ccc;
         border-radius: .4rem;
         outline: none;
         transition: all .2s;

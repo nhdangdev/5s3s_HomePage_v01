@@ -65,7 +65,7 @@
   gap: 0.2rem;
   justify-content: center;
   align-items: center;
-  background-color: #6cc4c1;
+  background-color: #2196F3;
   padding: 0.5rem 1rem;
   color: white;
   font-weight: bold;
@@ -76,7 +76,7 @@
   transition: all 0.2s;
 }
 #add-template-data-btn:hover {
-  background-color: #45adaa;
+  background-color: #087ef4;
 }
 
 /*# sourceMappingURL=add_template_data2.css.map */

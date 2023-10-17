@@ -296,11 +296,31 @@
                         </span>
                     </button>
                 </div>
-                <div class="data-table-card__name">Name: {{template.name}}</div>
+                <div class="data-table-card__field">
+                    <div class="data-table-card__field-name">Name:</div>
+                    <div class="data-table-card__field-value">{{template.name}}</div>
+                </div>
+                <div class="data-table-card__field">
+                    <div class="data-table-card__field-name">ID:</div>
+                    <div class="data-table-card__field-value">{{template.id}}</div>
+                </div>
+                <div class="data-table-card__field">
+                    <div class="data-table-card__field-name">Subject:</div>
+                    <div class="data-table-card__field-value">{{template.subject}}</div>
+                </div>
+                <div class="data-table-card__field">
+                    <div class="data-table-card__field-name">Status:</div>
+                    <div class="data-table-card__field-value">{{template.status}}</div>
+                </div>
+                <div class="data-table-card__field">
+                    <div class="data-table-card__field-name">Created:</div>
+                    <div class="data-table-card__field-value">{{template.created}}</div>
+                </div>
+                <!-- <div class="data-table-card__name">Name: {{template.name}}</div>
                 <div class="data-table-card__id">ID: {{template.id}}</div>
                 <div class="data-table-card__subject">Subject: {{template.subject}}</div>
                 <div class="data-table-card__status">Status: {{template.status}}</div>
-                <div class="data-table-card__created">Created: {{template.created}}</div>
+                <div class="data-table-card__created">Created: {{template.created}}</div> -->
                 <div class="ratios">
                     <template v-for="ratio of template.ratios">
                         <div class="ratios__item" :class="{'ratios__item--selected': filter.ratio === ratio}">

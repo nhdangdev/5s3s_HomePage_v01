@@ -1,3 +1,5 @@
+@import "color";
+
 .template-item {
     display: flex;
     flex-direction: column;
@@ -7,11 +9,11 @@
 
     &__label {
         border-radius: .2rem;
-        border: 1px solid #6cc4c150;
+        border: 1px solid rgba($color: $color1, $alpha: 0.5);
         transition: all .2s;
 
         &:hover {
-            border-color: #6cc4c1;
+            border-color: $color1;
             transform: translateY(-0.2rem);
             box-shadow: 0px 2px 15px 2px #ccc;
         }
@@ -22,8 +24,8 @@
     }
 
     &__radio:checked+&__label {
-        border-color: #6cc4c1;
-        box-shadow: 0 0 0 1px #6cc4c1, 0px 2px 15px 2px #ccc;
+        border-color: $color1;
+        box-shadow: 0 0 0 1px $color1, 0px 2px 15px 2px #ccc;
     }
 
     &__thumb {
@@ -46,7 +48,7 @@
 }
 
 button#next-step {
-    background-color: #6cc4c1;
+    background-color: $color1;
     padding: .5rem 1rem;
     color: white;
     font-weight: bold;
@@ -57,6 +59,6 @@ button#next-step {
     transition: all .2s;
 
     &:hover {
-        background-color: #45adaa;
+        background-color: $color2;
     }
 }

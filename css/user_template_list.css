@@ -2,6 +2,17 @@
   padding: 1.5rem;
   border: 2px solid #eee;
   border-radius: 1rem;
+  color: #333;
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .data-table {
+    padding: 0.5rem 1.5rem 1.5rem;
+  }
+}
+@media (max-width: 479px) {
+  .data-table {
+    padding: 0.5rem 1.5rem 1.5rem;
+  }
 }
 .data-table table {
   background-color: white;
@@ -22,7 +33,8 @@
   white-space: nowrap;
 }
 .data-table td {
-  color: #4AC29A;
+  font-weight: 500;
+  font-size: 14px;
   white-space: nowrap;
 }
 .data-table tr td:last-child {
@@ -52,12 +64,32 @@
 .data-table__header {
   padding: 0 1rem;
 }
+@media (max-width: 479px) {
+  .data-table__header {
+    padding: 0;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .data-table__header {
+    padding: 0;
+  }
+}
 .data-table__footer {
   margin-top: 1rem;
 }
 .data-table__table {
   overflow-y: auto;
-  display: none;
+  display: block;
+}
+@media (max-width: 479px) {
+  .data-table__table {
+    display: none;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .data-table__table {
+    display: none;
+  }
 }
 .data-table__act-btn {
   font-weight: bold;
@@ -88,14 +120,17 @@
   gap: 1rem;
 }
 .data-table-card {
-  padding: 1rem;
+  padding-bottom: 1rem;
   box-sizing: border-box;
-  border-radius: 0.4rem;
-  border: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-  color: #4AC29A;
+}
+@media (min-width: 1024px) {
+  .data-table-card {
+    display: none;
+  }
 }
 .data-table-card__title {
   font-weight: bold;
@@ -108,6 +143,13 @@
 .data-table-card__name {
   font-size: 16px;
   font-style: italic;
+}
+.data-table-card__field {
+  display: flex;
+  gap: 0.5rem;
+}
+.data-table-card__field-name {
+  font-weight: 600;
 }
 .data-table-card__ratios {
   display: flex;
@@ -219,7 +261,7 @@ a#add-template-button {
   gap: 0.2rem;
   justify-content: center;
   align-items: center;
-  background-color: #6cc4c1;
+  background-color: #2196F3;
   padding: 0.5rem 1rem 0.5rem 0.5rem;
   color: white;
   font-weight: bold;
@@ -229,7 +271,7 @@ a#add-template-button {
   transition: all 0.2s;
 }
 a#add-template-button:hover {
-  background-color: #45adaa;
+  background-color: #087ef4;
 }
 
 .ratios {
@@ -243,22 +285,15 @@ a#add-template-button:hover {
   background: #fcf8e3;
   border: 1px solid #faebcc;
   border-radius: 1rem;
+  min-width: 42px;
+  text-align: center;
 }
 .ratios__item--selected {
-  color: #4b5aff;
-  background-color: rgba(75, 90, 255, 0.1882352941);
-  border: 1px solid rgba(75, 90, 255, 0.5647058824);
+  color: #087ef4;
+  background-color: rgba(8, 126, 244, 0.1);
+  border: 1px solid rgba(8, 126, 244, 0.9);
 }
 
-/* > PC low resolution */
-@media (min-width: 1024px) {
-  .data-table-card-wrap {
-    display: none;
-  }
-  .data-table__table {
-    display: block;
-  }
-}
 .dropdown {
   padding: 0;
   margin: 0;
