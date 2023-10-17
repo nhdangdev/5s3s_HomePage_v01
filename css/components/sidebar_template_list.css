@@ -57,6 +57,7 @@ hr{
 
 .sidebar__scroll-container .nav-link nav{
     margin-left: 16px;
+    font-size: 1rem;
 }
 
 .sidebar__scroll-container .nav-link:hover{
@@ -115,7 +116,7 @@ hr{
 .footer__links{
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 16px;
     list-style: none;
     justify-content: flex-start;
     padding: 0;
@@ -123,10 +124,10 @@ hr{
 }
 
 .footer__link{
-    font-size: 12px;
-    line-height: 16px;
-    color: #888;
-    text-decoration: none;
+
+    color: #0d2752;
+    font-size: 18px;
+    text-decoration: underline;
     cursor: pointer;
 }
 
