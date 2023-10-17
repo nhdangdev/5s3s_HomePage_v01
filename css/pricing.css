@@ -1,5 +1,6 @@
 /* [102310Tuan] create prcing page*/
 /* [102316Tuan] add responsive */
+/* [102317Tuan] adjust pricing page according to feedbacks */
 :root{
     --background-color: #f4f7fe;
     --primary-color: #2353f6;
@@ -34,19 +35,19 @@ h1, h3, h4, h5, p{
 
 
 h1{
-    font-weight: bold;
+    font-weight: 400 ;
+    margin-bottom: 16px;
 }
 
 h4 {
-    
-    margin: 0;
+    margin: 16px 0px;
     color: var(--primary-color);
 }
 
 /* header css */
 .header{
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 56px;
 }
 
 .header p{
@@ -68,6 +69,17 @@ h4 {
     background-color: #fefefe;
     padding: 16px;
     min-height: 500px;
+}
+
+.price-item__name{
+    margin-bottom: 8px;
+}
+
+.price-item__description{
+    margin-bottom: 24px;
+    color: #8b8f99;
+    line-height: 18px;
+    min-height: 36px;
 }
 
 .price-item__price p{
@@ -93,6 +105,33 @@ h4 {
     padding: 10px 16px;
     margin-bottom: 16px;
     cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.price-item button span{
+    transition: all 0.3s;
+    transform: scale(1, 1);
+}
+
+.price-item button::before, .price-item button::after {
+content: '';
+position: absolute;
+transition: all 0.3s;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+}
+
+
+
+.price-item button:hover{
+    transform:translateY(-2px); 
+    transition-duration: 500ms;
+    background-color:#1c1c1c;
+    color: #fefefe;
 }
 
 .price-item--popular{
@@ -127,6 +166,17 @@ h4 {
     cursor: pointer;
 
 }
+
+.price-item--popular button:hover{
+    box-sizing: border-box;
+
+    /* color: #2253f2; */
+    background: linear-gradient(45deg,blue,#53c7ed);
+    /* border: 1px solid #2253f2; */
+    transform:translateY(-2px); 
+    transition-duration: 500ms;
+}
+
 
 /* .price-item .price-item--popular{
     
@@ -185,3 +235,46 @@ h4 {
         width: 100%;
     }
   }
+
+
+  /* custom buttom hover effect */
+
+  .btn-two::before, .btn-two::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  @keyframes rotatecw {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes rotateccw {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
+  
+  .btn-two:hover::after {
+    animation-name: rotatecw;
+    animation-duration: 2s;
+  }
+  .btn-two:hover::before {
+    animation-name: rotateccw; 
+    animation-duration: 3s;
+  }
+  .btn-two:hover::after, .btn-two:hover::before {
+    left: 37.5%;
+    width: 25%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+
+  
