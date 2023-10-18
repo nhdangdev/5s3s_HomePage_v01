@@ -22,10 +22,10 @@
     <a class="button"> <span>Login</span> <i class="fa-solid fa-right-to-bracket"></i></a>
     <hr>
     <div class="sidebar__footer">
-        <ul class="footer__links">
+        <!-- <ul class="footer__links">
             <li data-view="pricing" class="footer__link">Pricing</li>
             <li class="footer__link">Contact</li>
-        </ul>
+        </ul> -->
         <div class="user-select--none"><small>&copy; Copyright <span id="year"></span>, 5s3s</small></div>
     </div>
     </div>

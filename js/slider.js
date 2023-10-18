@@ -122,8 +122,9 @@ window.addEventListener('load', () => {
     // if (!!currentPage) {
     //     gotoLayout(currentPage)
     // }
-
-    sliderFrame.src = layoutFilePaths.at(0)
+    if (sliderFrame.scr !== layoutFilePaths.at(0)) {
+        sliderFrame.src = layoutFilePaths.at(0)
+    }
     searchboxInput.value = sliderFrame.src
     openInNewTabButton.href = searchboxInput.value
     let suggestionItemHtmls = ''

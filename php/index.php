@@ -68,14 +68,17 @@
         layoutFilePaths = [
             './template_list.php',
             './pricing.php',
-            './login1.php',
-            './login2.php',
-            './get_tips_earlier.php',
+            // './login1.php',
+            // './login2.php',
+            './login3.php',
+            './get_tips_earlier2.php',
+            './complete_register.php',
             './forgot_password.php',
             './reset_password.php',
             './user_template_list.php',
             './select_template.php',
-            './add_template_data2.php'
+            './add_template_data2.php',
+            './dialog.php'
         ]
     </script>
 </body>

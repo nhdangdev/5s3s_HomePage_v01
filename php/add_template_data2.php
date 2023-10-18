@@ -17,10 +17,9 @@
     <div class="dashboard">
         <?php include_once("./sidebar.php") ?>
         <div class="dashboard__content">
-            <h2>Add your template data</h2>
-            <br>
+            <h2 style="margin-bottom: 0;">Add your template data</h2>
             <form action="#" method="post" id="template-data-form">
-                <h3>Category</h3>
+                <h4>Category</h4>
                 <div class="grid">
                     <div class="row no-gutters">
                         <div class="col c-6 m-6 l-3">
@@ -119,7 +118,7 @@
                     </div>
                 </div>
                 <br>
-                <h3>Product</h3>
+                <h4>Product</h4>
                 <div class="grid">
                     <div class="row no-gutters">
                         <div class="col c-6 m-6 l-3">
@@ -258,7 +257,7 @@
                     </div>
                 </div>
                 <br>
-                <h3>Image</h3>
+                <h4>Image</h4>
                 <div class="grid">
                     <div class="row no-gutters">
                         <div class="col c-6 m-6 l-3">
@@ -345,7 +344,7 @@
                     </div>
                 </div>
                 <br>
-                <button type="submit" id="add-template-data-btn">Add template data</button>
+                <button type="submit" class="primary-btn" id="add-template-data-btn">Add template data</button>
             </form>
         </div>
     </div>

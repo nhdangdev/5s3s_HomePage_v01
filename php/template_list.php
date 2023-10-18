@@ -1,9 +1,147 @@
 <!-- [102305Tuan] add responsive template list -->
 <!-- [102310Tuan] version 2 template list -->
 <?php
-$api_url = 'http://localhost:3000/templates'; 
-$json_data = file_get_contents($api_url);
-$response_data = json_decode($json_data);
+// $api_url = 'http://localhost:3000/templates'; 
+// $json_data = file_get_contents($api_url);
+// $response_data = json_decode($json_data);
+$response_data = [
+  [
+      "id"=> "restaurant_1",
+      "name"=> "Restaurant 1",
+      "ratios"=> "16:9 / 16:10 / 4:3 / 32:9",
+      "category"=> "Restaurant",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/restaurant_1"
+  ],[
+      "id"=> "restaurant_2",
+      "name"=> "Restaurant 2",
+      "ratios"=> "16:9 / 16:10 / 4:3 / 21:9",
+      "category"=> "Restaurant",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/restaurant_2"
+  ],[
+      "id"=> "restaurant_3",
+      "name"=> "Restaurant 3",
+      "ratios"=> "16:9 / 16:10 / 4:3",
+      "category"=> "Restaurant",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/restaurant_3"
+  ],[
+      "id"=> "restaurant_4",
+      "name"=> "Restaurant 4",
+      "ratios"=> "16:9 / 16:10 / 4:3 / 21:9 / 32:9",
+      "category"=> "Restaurant",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/restaurant_4"
+  ],[
+      "id"=> "restaurant_5",
+      "name"=> "Restaurant 5",
+      "ratios"=> "16:9 / 16:10 / 4:3",
+      "category"=> "Restaurant",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/restaurant_5"
+  ],[
+      "id"=> "pho_1",
+      "name"=> "Pho 1",
+      "ratios"=> "16:9 / 16:10 / 4:3",
+      "category"=> "Pho",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/pho_1"
+  ],[
+      "id"=> "pho_2",
+      "name"=> "Pho 2",
+      "ratios"=> "16:9 / 16:10 / 4:3",
+      "category"=> "Pho",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/pho_2"
+  ],[
+      "id"=> "pho_3",
+      "name"=> "Pho 3",
+      "ratios"=> "16:9 / 16:10 / 4:3",
+      "category"=> "Pho",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/pho_3"
+  ],[
+      "id"=> "pho_4",
+      "name"=> "Pho 4",
+      "ratios"=> "16:9 / 16:10 / 4:3",
+      "category"=> "Pho",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/pho_4"
+  ],[
+      "id"=> "pho_5",
+      "name"=> "Pho 5",
+      "ratios"=> "16:9 / 16:10 / 4:3",
+      "category"=> "Pho",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/pho_5"
+  ],[
+      "id"=> "nail_1",
+      "name"=> "Nail 1",
+      "ratios"=> "16:9 / 16:10",
+      "category"=> "Nail salon",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/nail_1"
+  ],[
+      "id"=> "nail_2",
+      "name"=> "Nail 2",
+      "ratios"=> "16:9 / 16:10 / 4:3",
+      "category"=> "Nail salon",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/nail_2"
+  ],[
+      "id"=> "nail_3",
+      "name"=> "Nail 3",
+      "ratios"=> "16:9 / 16:10 / 4:3",
+      "category"=> "Nail salon",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/nail_3"
+  ],[
+      "id"=> "nail_4",
+      "name"=> "Nail 4",
+      "ratios"=> "16:9 / 16:10 / 4:3 / 32:9",
+      "category"=> "Nail salon",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/nail_4"
+  ],[
+      "id"=> "nail_5",
+      "name"=> "Nail 5",
+      "ratios"=> " 16:10 / 4:3 / 21:9",
+      "category"=> "Nail salon",
+      "created"=> "26/09/23",
+      "modified"=> "26/09/23",
+      "status"=> "Active",
+      "slug"=> "https:\/\/template.com/nail_5"
+  ]
+]
 
 
 ?>
@@ -43,6 +181,20 @@ $response_data = json_decode($json_data);
       <!-- content -->
       <div class="col c-10 m-11 l-10">
         <div class="dashboard-content">
+        <div style="display: flex; justify-content: end; gap: 1rem; margin-bottom: 1rem;">
+            <ul class="footer__links">
+              <li data-view="pricing" class="footer__link">
+                <a href="./pricing.html">Pricing</a>
+              </li>
+              <li class="footer__link">
+                <a href="#">Contact</a>
+              </li>
+              <li class="footer__link">
+                <a href="./login3.html">Login</a>
+              </li>
+            </ul>
+          </div>
+          <h2>Templates</h2>
           <!-- begin: view header -->
           <div class="row view-header">
             <ul class="view-select">
@@ -123,8 +275,10 @@ $response_data = json_decode($json_data);
                 foreach ($response_data as &$template){
                   $thumbnail = rand(0,1) == 0 ? "../asset/img/temp_nail_".rand(1,4)."_ratio_16_9.jpg"
                   :'../asset/img/temp_pho_'.rand(3,5).'.png';
-                  $arrayRatios = explode("/",$template->ratios);
-                  $viewItem = new ViewItem($template->name, $thumbnail, $template->id,  $arrayRatios, $template->category, $template->status, $template->created);
+                  // $arrayRatios = explode("/",$template->ratios);
+                  $arrayRatios = explode("/",$template['ratios']);
+                  // $viewItem = new ViewItem($template->name, $thumbnail, $template->id,  $arrayRatios, $template->category, $template->status, $template->created);
+                  $viewItem = new ViewItem($template['name'], $thumbnail, $template['id'],  $arrayRatios, $template['category'], $template['status'], $template['created']);
                   $viewItem->buildListViewItem();
                 }
               ?>
@@ -140,8 +294,10 @@ $response_data = json_decode($json_data);
                 foreach ($response_data as &$template){
                   $thumbnail = rand(0,1) == 0 ? "../asset/img/temp_nail_".rand(1,4)."_ratio_16_9.jpg"
                   :'../asset/img/temp_pho_'.rand(3,5).'.png';
-                  $arrayRatios = explode("/",$template->ratios);
-                  $viewItem = new ViewItem($template->name, $thumbnail, $template->id,  $arrayRatios, $template->category, $template->status, $template->created);
+                  // $arrayRatios = explode("/",$template->ratios);
+                  $arrayRatios = explode("/",$template['ratios']);
+                  // $viewItem = new ViewItem($template->name, $thumbnail, $template->id,  $arrayRatios, $template->category, $template->status, $template->created);
+                  $viewItem = new ViewItem($template['name'], $thumbnail, $template['id'],  $arrayRatios, $template['category'], $template['status'], $template['created']);
                   $viewItem->buildGridViewItem();
                 }
               ?>
