@@ -1,4 +1,5 @@
 @import "color";
+@import "responsive";
 
 .template-item {
     display: flex;
@@ -11,6 +12,7 @@
         border-radius: .2rem;
         border: 1px solid rgba($color: $color1, $alpha: 0.5);
         transition: all .2s;
+        cursor: pointer;
 
         &:hover {
             border-color: $color1;
@@ -33,32 +35,28 @@
         img {
             height: 160px;
             width: 100%;
-            object-fit: cover;
+            // object-fit: cover;
             border-radius: .2rem;
+            height: auto;
+            object-fit: contain;
+
+            // @include tablet {
+            //     height: auto;
+            //     object-fit: contain;
+            // }
+
+            // @include mobile {
+            //     height: auto;
+            //     object-fit: contain;
+            // }
         }
     }
 
     &__name {
-        font-size: 1rem;
+        font-size: 14px;
         padding: 0 .5rem .5rem;
         font-weight: bold;
         color: #333;
 
-    }
-}
-
-button#next-step {
-    background-color: $color1;
-    padding: .5rem 1rem;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: .2rem;
-    border: none;
-    cursor: pointer;
-    transition: all .2s;
-
-    &:hover {
-        background-color: $color2;
     }
 }

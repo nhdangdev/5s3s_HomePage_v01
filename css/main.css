@@ -272,5 +272,26 @@ body {
     display: none;
   }
 }
+.primary-btn {
+  display: flex;
+  gap: 0.2rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #2196F3;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  border: none;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.primary-btn:hover {
+  background-color: #087ef4;
+}
+.primary-btn--with-icon {
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+}
 
 /*# sourceMappingURL=main.css.map */

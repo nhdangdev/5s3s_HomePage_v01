@@ -1,19 +1,20 @@
 /* [102311Tuan]  create sidebar for template list  */
-:root{
+:root {
     --border-radius: 6px;
     --secondary-color: #f7f8fd;
 }
-hr{
+
+hr {
     width: 100%;
 }
 
-.user-select--none{
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    user-select:none;
+.user-select--none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
-.sidebar-templatelist{
+.sidebar-templatelist {
     background-color: #fefefe;
     height: 100vh;
     padding: 32px 8px;
@@ -24,20 +25,20 @@ hr{
     box-sizing: border-box;
 }
 
-.sidebar-templatelist p{
+.sidebar-templatelist p {
     color: rgba(22, 24, 35, .5);
     line-height: 21px;
     font-size: 16px;
 }
 
 /* scroll container css */
-.sidebar__scroll-container{
+.sidebar__scroll-container {
     /* overflow-y: auto; */
     /* flex: 6; */
     flex: auto;
 }
 
-.sidebar__scroll-container .nav-link{
+.sidebar__scroll-container .nav-link {
     padding: 8px;
     cursor: pointer;
     border-radius: var(--border-radius);
@@ -48,30 +49,30 @@ hr{
     align-items: center;
 }
 
-.sidebar__scroll-container .nav-link i{
+.sidebar__scroll-container .nav-link i {
     width: 32px;
     height: 32px;
     text-align: center;
     line-height: 32px;
 }
 
-.sidebar__scroll-container .nav-link nav{
+.sidebar__scroll-container .nav-link nav {
     margin-left: 16px;
     font-size: 1rem;
 }
 
-.sidebar__scroll-container .nav-link:hover{
-    background-color: rgba(0,0,0,0.1);
+.sidebar__scroll-container .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.nav-link--active{
+.nav-link--active {
     color: #005b96 !important;
 }
 
 
 /* .button css */
 
-.sidebar__login{
+.sidebar__login {
     /* flex-grow: 2; */
     flex: 4;
     display: flex;
@@ -83,7 +84,7 @@ hr{
     margin: 10px 0px;
 } */
 
-.sidebar-templatelist .button{
+.sidebar-templatelist .button {
     border-radius: var(--border-radius);
     border: solid 1.5px #0d2752;
     padding: 8px 0px;
@@ -100,11 +101,11 @@ hr{
     text-decoration: none;
 }
 
-.sidebar-templatelist .button:hover{
-    background-color: rgba(0,0,0,0.1);
+.sidebar-templatelist .button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.sidebar-templatelist .button i{
+.sidebar-templatelist .button i {
     display: none;
 }
 
@@ -113,7 +114,7 @@ hr{
 /* .footer{
     flex-grow: 2;
 } */
-.footer__links{
+.footer__links {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
@@ -123,26 +124,34 @@ hr{
     margin: 0;
 }
 
-.footer__link{
+.footer__link {
 
     color: #0d2752;
     font-size: 18px;
     text-decoration: underline;
     cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.footer__link:hover{
+.footer__link a {
+    color: #0d2752;
+    font-size: 14px;
+}
+
+.footer__link:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 930px) and (orientation: portrait){
+@media (max-width: 930px) and (orientation: portrait) {
+
     .sidebar__scroll-container .nav-link nav,
     .sidebar-templatelist .button span,
-    .sidebar-templatelist p{
+    .sidebar-templatelist p {
         display: none;
     }
 
-    .sidebar-templatelist .button i{
+    .sidebar-templatelist .button i {
         display: block;
     }
 
@@ -150,27 +159,28 @@ hr{
         min-height: 30px;
     }
 
-    .sidebar__footer div{
+    .sidebar__footer div {
         font-size: 12px;
     }
-    
-    .sidebar-templatelist .button{
+
+    .sidebar-templatelist .button {
         border-width: 1px;
     }
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
+
     .sidebar__scroll-container .nav-link nav,
     .sidebar-templatelist .button span,
-    .sidebar-templatelist p
-    {
+    .sidebar-templatelist p {
         display: none;
     }
-    .sidebar-templatelist .button i{
+
+    .sidebar-templatelist .button i {
         display: block;
     }
 
-    .sidebar-templatelist .button{
+    .sidebar-templatelist .button {
         border-width: 1px;
     }
 }
