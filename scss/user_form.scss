@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     color: #333;
+    $field-button-size: 1.5rem;
 
     &__wrap {
         width: calc(100dvw - 2rem);
@@ -15,6 +16,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-size: 14px;
     }
 
     &__illustration {
@@ -26,6 +28,7 @@
         font-size: 24px;
         font-weight: 700;
         text-align: center;
+        margin: 1.5rem 0;
     }
 
     &__subtitle {
@@ -47,18 +50,46 @@
 
     &__field-control {
         padding: .75rem;
-        border: 1px solid #ccc;
+        border: 1px solid #eee;
         border-radius: .4rem;
         outline: none;
         transition: all .2s;
 
         &:hover {
-            border-color: $color2;
+            border-color: $darken-primary-color;
         }
 
         &:focus {
-            border-color: $color2;
-            box-shadow: 0 0 0 1px $color2;
+            border-color: $darken-primary-color;
+            box-shadow: 0 0 0 1px $darken-primary-color;
+        }
+
+        &::-ms-reveal {
+            display: none;
+        }
+    }
+
+    &__field-button {
+        width: $field-button-size;
+        height: $field-button-size;
+        padding: .2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        box-sizing: border-box;
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        border-radius: .2rem;
+        // height of field-control is 40px
+        bottom: calc((40px - $field-button-size) / 2);
+        right: .25rem;
+        transition: all .4s;
+        cursor: pointer;
+
+        &:hover {
+            color: $color2;
         }
     }
 
@@ -66,12 +97,13 @@
         display: flex;
         flex-direction: column;
         gap: .5rem;
+        position: relative;
     }
 
     &__submit {
         padding: .75rem;
         border-radius: .4rem;
-        background-color: $color1;
+        background-color: $primary-color;
         border: none;
         color: white;
         font-weight: 700;
@@ -80,17 +112,17 @@
         cursor: pointer;
 
         &:hover {
-            background-color: $color2;
+            background-color: $darken-primary-color;
         }
 
         &:focus {
-            background-color: $color2;
-            box-shadow: 0 0 0 1px $color2,
-                0 0 0 3px rgba($color: $color2, $alpha: 0.5);
+            background-color: $darken-primary-color;
+            box-shadow: 0 0 0 1px $darken-primary-color,
+                0 0 0 3px rgba($color: $darken-primary-color, $alpha: 0.5);
         }
 
         &:active {
-            background-color: $color2;
+            background-color: $darken-primary-color;
             transform: scale(.95);
         }
     }
@@ -101,7 +133,7 @@
 
     &__link {
         text-decoration: none;
-        color: $color2;
+        color: $darken-primary-color;
         font-weight: 500;
     }
 

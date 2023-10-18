@@ -1,8 +1,9 @@
 .data-table {
   padding: 1.5rem;
-  border: 2px solid #eee;
+  border: 1px solid #eee;
   border-radius: 1rem;
   color: #333;
+  font-size: 14px;
 }
 @media (min-width: 740px) and (max-width: 1023px) {
   .data-table {
@@ -114,6 +115,15 @@
   align-items: center;
   gap: 0.2rem;
 }
+.data-table__no-item {
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+@media (min-width: 1024px) {
+  .data-table__no-item {
+    margin: 0.5rem 1rem;
+  }
+}
 .data-table-card-wrap {
   display: flex;
   flex-direction: column;
@@ -126,6 +136,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: 1024px) {
   .data-table-card {
@@ -134,7 +145,7 @@
 }
 .data-table-card__title {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -190,8 +201,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.4rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.2rem;
   background-color: white;
   transition: all 0.2s;
   cursor: pointer;
@@ -201,6 +212,9 @@
 }
 .data-table-card__link-button:active {
   transform: scale(0.9);
+}
+.data-table-card__link-button span.material-symbols-outlined {
+  font-size: 14px;
 }
 .data-table .pagination {
   display: flex;
@@ -226,15 +240,15 @@
   background-color: white;
 }
 .data-table .pagination__prev-btn {
-  border-width: 2px 0 2px 2px;
+  border-width: 1px 0 1px 1px;
   border-radius: 0.5rem 0 0 0.5rem;
 }
 .data-table .pagination__next-btn {
-  border-width: 2px 2px 2px 0;
+  border-width: 1px 1px 1px 0;
   border-radius: 0 0.5rem 0.5rem 0;
 }
 .data-table .pagination__page-count {
-  border: 2px solid #eee;
+  border: 1px solid #eee;
   box-sizing: border-box;
   display: flex;
   padding: 0.5rem 1rem;
@@ -254,24 +268,6 @@
 
 .delete-btn {
   color: orange;
-}
-
-a#add-template-button {
-  display: flex;
-  gap: 0.2rem;
-  justify-content: center;
-  align-items: center;
-  background-color: #2196F3;
-  padding: 0.5rem 1rem 0.5rem 0.5rem;
-  color: white;
-  font-weight: bold;
-  border-radius: 0.4rem;
-  text-decoration: none;
-  border: none;
-  transition: all 0.2s;
-}
-a#add-template-button:hover {
-  background-color: #087ef4;
 }
 
 .ratios {
@@ -306,7 +302,7 @@ a#add-template-button:hover {
   font-size: 0.75rem;
   font-weight: bold;
   border-radius: 0.4rem;
-  border: 2px solid #eee;
+  border: 1px solid #eee;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -322,7 +318,7 @@ a#add-template-button:hover {
 .dropdown__item-wrap {
   width: 100%;
   display: none;
-  border: 2px solid #eee;
+  border: 1px solid #eee;
   background-color: white;
   border-radius: 0.4rem;
   box-sizing: border-box;

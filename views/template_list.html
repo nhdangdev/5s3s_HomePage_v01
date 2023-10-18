@@ -57,12 +57,16 @@
           <a class="button" href="./login1.php"> <span>Login</span> <i class="fa-solid fa-right-to-bracket"></i></a>
           <hr>
           <div class="sidebar__footer">
-            <ul class="footer__links">
-                <li data-view="pricing" class="footer__link">Pricing</li>
-                <li class="footer__link">Contact</li>
-            </ul>
+            <!-- <ul class="footer__links">
+              <li data-view="pricing" class="footer__link">
+                <a href="./pricing.html">Pricing</a>
+              </li>
+              <li class="footer__link">
+                <a href="#">Contact</a>
+              </li>
+            </ul> -->
             <div class="user-select--none"><small>&copy; Copyright <span id="year"></span>, 5s3s</small></div>
-        </div>
+          </div>
           <script>
             document.getElementById("year").innerHTML = new Date().getFullYear();
           </script>
@@ -71,6 +75,19 @@
       <!-- content -->
       <div class="col c-10 m-11 l-10">
         <div class="dashboard-content">
+          <div style="display: flex; justify-content: end; gap: 1rem; margin-bottom: 1rem;">
+            <ul class="footer__links">
+              <li data-view="pricing" class="footer__link">
+                <a href="./pricing.html">Pricing</a>
+              </li>
+              <li class="footer__link">
+                <a href="#">Contact</a>
+              </li>
+              <li class="footer__link">
+                <a href="./login3.html">Login</a>
+              </li>
+            </ul>
+          </div>
           <h2>Templates</h2>
           <!-- begin: view header -->
           <div class="row view-header">

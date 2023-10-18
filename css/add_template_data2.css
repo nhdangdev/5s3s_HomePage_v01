@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 0.5rem;
   padding: 0 1rem 1rem 0.5rem;
+  font-size: 14px;
 }
 .template-data-item__img {
   height: 160px;
@@ -58,25 +59,6 @@
   text-align: center;
   font-weight: bold;
   color: #ccc;
-}
-
-#add-template-data-btn {
-  display: flex;
-  gap: 0.2rem;
-  justify-content: center;
-  align-items: center;
-  background-color: #2196F3;
-  padding: 0.5rem 1rem;
-  color: white;
-  font-weight: bold;
-  border-radius: 0.4rem;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-#add-template-data-btn:hover {
-  background-color: #087ef4;
 }
 
 /*# sourceMappingURL=add_template_data2.css.map */

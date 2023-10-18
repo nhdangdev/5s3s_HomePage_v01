@@ -1,11 +1,12 @@
 let layoutFilePaths = window.layoutFilePaths || [
     './template_list.html',
     './pricing.html',
-    './login1.html',
-    './login2.html',
+    // './login1.html',
+    // './login2.html',
     './login3.html',
-    './get_tips_earlier.html',
-    './register.html',
+    // './get_tips_earlier.html',
+    './get_tips_earlier2.html',
+    './complete_register.html',
     './forgot_password.html',
     './reset_password.html',
     './user_template_list.html',
@@ -121,8 +122,9 @@ window.addEventListener('load', () => {
     // if (!!currentPage) {
     //     gotoLayout(currentPage)
     // }
-
-    sliderFrame.src = layoutFilePaths.at(0)
+    if (sliderFrame.scr !== layoutFilePaths.at(0)) {
+        sliderFrame.src = layoutFilePaths.at(0)
+    }
     searchboxInput.value = sliderFrame.src
     openInNewTabButton.href = searchboxInput.value
     let suggestionItemHtmls = ''

@@ -9,6 +9,7 @@
   border-radius: 0.2rem;
   border: 1px solid rgba(33, 150, 243, 0.5);
   transition: all 0.2s;
+  cursor: pointer;
 }
 .template-item__label:hover {
   border-color: #2196F3;
@@ -25,29 +26,15 @@
 .template-item__thumb img {
   height: 160px;
   width: 100%;
-  object-fit: cover;
   border-radius: 0.2rem;
+  height: auto;
+  object-fit: contain;
 }
 .template-item__name {
-  font-size: 1rem;
+  font-size: 14px;
   padding: 0 0.5rem 0.5rem;
   font-weight: bold;
   color: #333;
-}
-
-button#next-step {
-  background-color: #2196F3;
-  padding: 0.5rem 1rem;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 0.2rem;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-button#next-step:hover {
-  background-color: #087ef4;
 }
 
 /*# sourceMappingURL=select_template.css.map */

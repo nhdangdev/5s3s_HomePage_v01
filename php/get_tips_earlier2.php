@@ -2,19 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/grid.css">
-    <link rel="stylesheet" href="../css/login3.css">
-    <script src="../js/main.js"></script>
-    <title>Login 3</title>
+    <?php
+        include_once('./config.php');
+        $extend_head = '<link rel="stylesheet" href="'.$cms_asset_path.'/css/get_tips_earlier2.css">';
+        include_once($cms_views_path.'/head.php');
+    ?>
+    <title>GET_TIPS_EARLIER</title>
 </head>
 
 <body>
@@ -28,62 +21,49 @@
         <div class="grid form-modal">
             <div class="row no-gutters">
                 <div class="col c-0 m-6 l-6">
-                    <div class="form-modal__left-side" style="padding: 2rem;">
-                        <!-- <h1>Welcome back</h1> -->
-                        <!-- <div class="divider" style="width: 50px;"></div> -->
-                        <!-- <br>
-                            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat consequuntur omnis,
-                                iure
-                                perspiciatis nisi mollitia error ipsum assumenda ad non labore facere deserunt cum illo
-                                adipisci
-                                molestiae? Doloribus, possimus voluptatem!</small> -->
-                        <img src="../asset/img/login_illustration.svg" alt="Log in illustration">
+                    <div class="form-modal__left-side">
+                        <img src="../asset/img/mail_notification2.svg" alt="">
                     </div>
                 </div>
                 <div class="col c-12 m-6 l-6">
                     <div class="form-modal__right-side">
-                        <h2>Login Account</h2>
+                        <h2>GET TIPS EARLIER</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam suscipit officiis, hic modi
-                            incidunt quas.
+                            Register your email, and we will provide you with an account.
                         </p>
                         <br>
                         <form action="#" id="login-form">
                             <div class="form-control">
-                                <!-- <div class="form-control__label">Email</div> -->
-                                <input type="email" name="email" placeholder="Email ID" class="form-control__input"
-                                    autofocus required>
+                                <input type="email" name="email" placeholder="Email ID"
+                                    class="form-control form-control__input" autofocus required>
                                 <div class="form-control__field-button">
                                     <span class="material-symbols-outlined" style="font-size: 18px;"
                                         onclick="clearEmailInput()">
                                         clear
                                     </span>
+
                                 </div>
                             </div>
-                            <div class="form-control">
-                                <!-- <div class="form-control__label">Password</div> -->
+                            <!-- <div class="form-control">
                                 <input type="password" name="password" placeholder="Password"
-                                    class="form-control__input" required>
+                                    class="form-control form-control__input" required>
                                 <div class="form-control__field-button">
                                     <span class="material-symbols-outlined" style="font-size: 18px;"
                                         id="toggle-password-icon" onclick="togglePassword()">
                                         visibility
                                     </span>
                                 </div>
-                            </div>
-                            <div
-                                style="width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem;">
-                                <label class="form-control__checkbox" for="keep-sign-in">
+                            </div> -->
+                            <!-- <div style="width: 100%; display: flex; justify-content: space-between;">
+                                <label class="form-control form-control__checkbox" for="keep-sign-in">
                                     <input type="checkbox" name="keep-sign-in" id="keep-sign-in">
                                     <span class="checkmark">
                                         Keep me signed in
                                     </span>
                                 </label>
-                                <a href="./forgot_password.html">Forgot password?</a>
-                            </div>
-                            <button type="submit" class="form-control__button">Log in</button>
-                            <span>Don't have a account? <a href="#">Register here</a>
-                            </span>
+                                <a href="#">Already a menber?</a>
+                            </div> -->
+                            <button type="submit" class="form-control__button">Subscriber</button>
                         </form>
                     </div>
                 </div>

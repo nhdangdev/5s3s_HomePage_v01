@@ -7,9 +7,20 @@ const DEFAULT_SUBJECT_FILTER = 'all'
 const filteredTemplatesRef = ref([])
 const paginatedTemplatesRef = ref([])
 const templatesRef = ref([])
+const isLoadTemplateDataRef = ref(true)
 const startTemplateIndexRef = ref(0)
 const endTemplateIndexRef = ref(0)
 const templateTableTemplate = document.querySelector('template#template-table-template')?.innerHTML || ''
+
+// for dialog
+const isOpenDialogRef = ref(false)
+const dialogDataRef = ref({
+    title: 'Untitle',
+    content: '',
+    cancelButtonText: 'Cancel',
+    submitButtonText: 'Submit'
+})
+const dialogTemplate = document.querySelector('template#dialog-template')?.innerHTML || ''
 
 const filterRef = ref({
     ratio: DEFAULT_RATIO_FILTER,
@@ -349,6 +360,7 @@ function handleSelectItemsPerPage(e) {
 
 const templateTable = createApp({
     setup() {
+        initData()
         return {
             filteredTemplates: filteredTemplatesRef,
             templates: templatesRef,
@@ -358,6 +370,7 @@ const templateTable = createApp({
             copyToClipboard,
             startTemplateIndex: startTemplateIndexRef,
             endTemplateIndex: endTemplateIndexRef,
+            isLoadTemplateData: isLoadTemplateDataRef,
             // handleChangeItemsPerPage,
             handleNextPage,
             handlePrevPage,
@@ -366,6 +379,7 @@ const templateTable = createApp({
             handleSelectSubject,
             handleSelectRatio,
             handleSelectItemsPerPage,
+            openDeleteDialog,
         }
     },
     template: templateTableTemplate
@@ -373,8 +387,41 @@ const templateTable = createApp({
 
 templateTable.mount("#template-table")
 
-getTemplateData().then(fetchedTemplates => {
-    templatesRef.value = fetchedTemplates
-    markChangeFilter()
-    markChangePaginationConfig()
+function initData() {
+    getTemplateData().then(fetchedTemplates => {
+        templatesRef.value = fetchedTemplates
+        // templatesRef.value = []
+        markChangeFilter()
+        markChangePaginationConfig()
+        isLoadTemplateDataRef.value = false
+    })
+}
+
+const dialog = createApp({
+
+    setup() {
+        function handleCloseDialog() {
+            isOpenDialogRef.value = false
+        }
+
+        return {
+            dialogData: dialogDataRef,
+            isOpen: isOpenDialogRef,
+            handleCloseDialog: handleCloseDialog,
+            handleCancelDialog: handleCloseDialog,
+        }
+    }
 })
+
+function openDeleteDialog(templateData) {
+    dialogDataRef.value = {
+        ...dialogDataRef.value,
+        title: 'Delete template',
+        content: `You want delete template '${templateData.name}'`,
+        cancelButtonText: `No, I don't`,
+        submitButtonText: `Yes, I do`,
+    }
+    isOpenDialogRef.value = true
+}
+
+dialog.mount('#dialog')

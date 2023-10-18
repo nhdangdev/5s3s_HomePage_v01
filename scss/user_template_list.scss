@@ -4,9 +4,10 @@
 
 .data-table {
     padding: 1.5rem;
-    border: 2px solid #eee;
+    border: 1px solid #eee;
     border-radius: 1rem;
     color: #333;
+    font-size: 14px;
 
     @include tablet {
         padding: .5rem 1.5rem 1.5rem;
@@ -132,6 +133,15 @@
 
     }
 
+    &__no-item {
+        margin-top: 1.5rem;
+        font-weight: 500;
+
+        @include desktop {
+            margin: .5rem 1rem;
+        }
+    }
+
     &-card-wrap {
         display: flex;
         flex-direction: column;
@@ -148,6 +158,7 @@
         display: flex;
         flex-direction: column;
         gap: .7rem;
+        margin-bottom: 1rem;
         // color: #4AC29A;
 
         @include desktop {
@@ -156,7 +167,7 @@
 
         &__title {
             font-weight: bold;
-            font-size: 24px;
+            font-size: 14px;
             display: flex;
             justify-content: space-between;
             align-items: start;
@@ -222,8 +233,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: .2rem .5rem;
-            border-radius: .4rem;
+            padding: .1rem .4rem;
+            border-radius: .2rem;
             background-color: white;
             transition: all .2s;
             cursor: pointer;
@@ -234,6 +245,10 @@
 
             &:active {
                 transform: scale(.9);
+            }
+
+            span.material-symbols-outlined {
+                font-size: 14px;
             }
         }
     }
@@ -267,17 +282,17 @@
         }
 
         &__prev-btn {
-            border-width: 2px 0 2px 2px;
+            border-width: 1px 0 1px 1px;
             border-radius: .5rem 0 0 .5rem;
         }
 
         &__next-btn {
-            border-width: 2px 2px 2px 0;
+            border-width: 1px 1px 1px 0;
             border-radius: 0 .5rem .5rem 0;
         }
 
         &__page-count {
-            border: 2px solid #eee;
+            border: 1px solid #eee;
             box-sizing: border-box;
             display: flex;
             padding: .5rem 1rem;
@@ -308,24 +323,24 @@
     color: orange;
 }
 
-a#add-template-button {
-    display: flex;
-    gap: .2rem;
-    justify-content: center;
-    align-items: center;
-    background-color: $color1;
-    padding: 0.5rem 1rem .5rem .5rem;
-    color: white;
-    font-weight: bold;
-    border-radius: .4rem;
-    text-decoration: none;
-    border: none;
-    transition: all .2s;
+// a#add-template-button {
+//     display: flex;
+//     gap: .2rem;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: $color1;
+//     padding: 0.5rem 1rem .5rem .5rem;
+//     color: white;
+//     font-weight: bold;
+//     border-radius: .4rem;
+//     text-decoration: none;
+//     border: none;
+//     transition: all .2s;
 
-    &:hover {
-        background-color: $color2;
-    }
-}
+//     &:hover {
+//         background-color: $color2;
+//     }
+// }
 
 .ratios {
     display: flex;
@@ -349,19 +364,6 @@ a#add-template-button {
     }
 }
 
-// /* > PC low resolution */
-// @media (min-width: 1024px) {
-//     .data-table {
-//         &-card-wrap {
-//             display: none;
-//         }
-
-//         &__table {
-//             display: block;
-//         }
-//     }
-// }
-
 .dropdown {
     padding: 0;
     margin: 0;
@@ -374,7 +376,7 @@ a#add-template-button {
         font-size: 0.75rem;
         font-weight: bold;
         border-radius: 0.4rem;
-        border: 2px solid #eee;
+        border: 1px solid #eee;
         background-color: white;
         display: flex;
         justify-content: space-between;
@@ -392,7 +394,7 @@ a#add-template-button {
     &__item-wrap {
         width: 100%;
         display: none;
-        border: 2px solid #eee;
+        border: 1px solid #eee;
         background-color: white;
         border-radius: .4rem;
         box-sizing: border-box;
