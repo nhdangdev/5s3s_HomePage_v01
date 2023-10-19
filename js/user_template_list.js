@@ -398,7 +398,6 @@ function initData() {
 }
 
 const dialog = createApp({
-
     setup() {
         function handleCloseDialog() {
             isOpenDialogRef.value = false
@@ -409,8 +408,10 @@ const dialog = createApp({
             isOpen: isOpenDialogRef,
             handleCloseDialog: handleCloseDialog,
             handleCancelDialog: handleCloseDialog,
+            handleSubmitDialog: handleCloseDialog,
         }
-    }
+    },
+    template: dialogTemplate,
 })
 
 function openDeleteDialog(templateData) {
