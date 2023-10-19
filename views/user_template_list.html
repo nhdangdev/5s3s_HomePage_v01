@@ -248,9 +248,7 @@
                     </thead>
                     <tbody>
                         <tr v-for="template of paginatedTemplates">
-                            <td>
-                                {{template.id}}
-                            </td>
+                            <td>{{template.id}}</td>
                             <td>{{template.name}}</td>
                             <td>{{template.title}}</td>
                             <td>
@@ -267,7 +265,8 @@
                             <td>{{template.status}}</td>
                             <td>{{template.created}}</td>
                             <td>
-                                <button class="data-table__act-btn" title="Delete template">
+                                <button class="data-table__act-btn" title="Delete template"
+                                    @click="openDeleteDialog(template)">
                                     <span class="material-symbols-outlined delete-btn">
                                         delete
                                     </span>
@@ -426,7 +425,7 @@
         </template>
     </template>
     <template id="dialog-template">
-        <div class="dialog" style="width: 500px;">
+        <div class="dialog" :class="{'dialog--show': isOpen, 'dialog--hide': !isOpen}" style="width: 500px;">
             <div class="dialog__header">
                 <div class="dialog__title">{{dialogData.title}}</div>
                 <button class="dialog__close-btn" @click="handleCloseDialog()">

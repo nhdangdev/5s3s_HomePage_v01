@@ -5,6 +5,7 @@
     <?php
         include_once('./config.php');
         $extend_head = '<link rel="stylesheet" href="'.$cms_asset_path.'/css/user_template_list.css">';
+        $extend_head .= '<link rel="stylesheet" href="'.$cms_asset_path.'/css/dialog.css">';
         $extend_head .= '<script src="'.$cms_asset_path.'/js/user_template_list.js" type="module"></script>';
         include_once($cms_views_path.'/head.php');
     ?>
@@ -149,9 +150,7 @@
                     </thead>
                     <tbody>
                         <tr v-for="template of paginatedTemplates">
-                            <td>
-                                {{template.id}}
-                            </td>
+                            <td>{{template.id}}</td>
                             <td>{{template.name}}</td>
                             <td>{{template.title}}</td>
                             <td>
@@ -168,7 +167,8 @@
                             <td>{{template.status}}</td>
                             <td>{{template.created}}</td>
                             <td>
-                                <button class="data-table__act-btn" title="Delete template">
+                                <button class="data-table__act-btn" title="Delete template"
+                                    @click="openDeleteDialog(template)">
                                     <span class="material-symbols-outlined delete-btn">
                                         delete
                                     </span>
@@ -327,7 +327,7 @@
         </template>
     </template>
     <template id="dialog-template">
-        <div class="dialog" style="width: 500px;">
+        <div class="dialog" :class="{'dialog--show': isOpen, 'dialog--hide': !isOpen}" style="width: 500px;">
             <div class="dialog__header">
                 <div class="dialog__title">{{dialogData.title}}</div>
                 <button class="dialog__close-btn" @click="handleCloseDialog()">

@@ -38,105 +38,191 @@
 
     <div class="container">
       <div class="price-item">
-        <h3 class="price-item__name">Light</h3>
-        <p class="price-item__description">
-          The basic of starting a bussiness
-        </p>
+        <h3 class="price-item__name">Free</h3>
+        <!-- <p class="price-item__description">
+
+        </p> -->
         <div class="price-item__price">
-          <p>R$ 4.99</p><span>/month</span>
+          <p>$0</p>
+          <!-- <span>/month</span> -->
         </div>
-        <button class="btn-two"><span>Choose Light</span> <i class="fa-solid fa-angle-right"></i></button>
+        <button class="btn-two"><span>Create an account</span> <i class="fa-solid fa-angle-right"></i></button>
         <hr>
         <ul class="price-item__feature">
           <li> <span class="check-icon">✓</span>
-            <p>transparent 1-page checkout</p>
+            <p>Templates Menu to use</p><b>3</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Checkout and online store customizations</p>
+            <p>Custom user permissions</p><b>1 user</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>1-click upsell</p>
+            <p>Max file size upload</p><b>30MB</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Order Bump</p>
+            <p>On multiple display size</p><b>Limit</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p><b>2</b> Team Account</p>
+            <p>Upload image files</p>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p><b>2.5%</b> Transaction Fees</p>
+            <p>Free stock media library</p>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>In-app Image Editor</p>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>
+              Custom user permissions
+            </p>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>
+              Playlist, Schedule
+            </p>
           </li>
         </ul>
       </div>
       <div class="price-item ">
-        <h3 class="price-item__name">Starter</h3>
+        <h3 class="price-item__name">Pro</h3>
         <p class="price-item__description">
-          It's time to scale sales
+          For growing business
         </p>
         <div class="price-item__price">
-          <p>R$ 4.99</p><span>/month</span>
+          <p>$25/monthly ($270/annual, discount 10%)</p>
         </div>
-        <button class="btn-two"><span>Choose Starter</span> <i class="fa-solid fa-angle-right"></i></button>
+        <button class="btn-two"><span>Go Pro</span> <i class="fa-solid fa-angle-right"></i></button>
         <hr>
         <ul class="price-item__feature">
           <li> <span class="check-icon">✓</span>
-            <p>transparent 1-page checkout</p>
+            <p>Templates Menu to use</p><b>Up to 50</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Checkout and online store customizations</p>
+            <p>Custom user permissions</p><b>Up to 3 user</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>1-click upsell</p>
+            <p>Max file size upload</p><b>Up to 300MB</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Order Bump</p>
+            <p>On multiple display size</p>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p><b>3</b> Team Account</p>
+            <p>Upload image and video files</p>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p><b>2%</b> Transaction Fees</p>
+            <p>Free stock media library</p>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Priority in Support</p>
+            <p>In-app Image Editor</p>
+          </li>
+          <li><span class="check-icon">✓</span>
+            <p>
+              Offline functionality
+            </p>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>
+              Canvas - content creator
+            </p>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>
+              Audit logs
+            </p>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>
+              Advanced reports
+            </p>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>
+              Custom user permissions
+            </p>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>
+              Playlist, Schedule
+            </p>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>
+              Assign hierarchical access to content and screens
+            </p>
           </li>
         </ul>
       </div>
       <div class="price-item price-item--popular">
-        <h3 class="price-item__name">Premium</h3>
+        <h3 class="price-item__name">Enterprise</h3>
         <p class="price-item__description">
-          Everything you need for a growing bussiness
+          For long-term growth
         </p>
         <div class="price-item__price">
-          <p>R$ 4.99</p><span>/month</span>
+          <p>Custom</p>
         </div>
-        <button class="btn-two"><span>Choose Premium</span><i class="fa-solid fa-angle-right"></i></button>
+        <button class="btn-two"><span>Chat with us for a quote</span><i class="fa-solid fa-angle-right"></i></button>
         <hr>
         <ul class="price-item__feature">
           <li> <span class="check-icon">✓</span>
-            <p>transparent 1-page checkout</p>
+            <p>Templates Menu to use</p><b>Unlimited</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Checkout and online store customizations</p>
+            <p>Custom user permissions</p><b>3 plus</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>1-click upsell</p>
+            <p>Max file size upload</p><b>Up to 5GB</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Order Bump</p>
+            <p>Upload image and video files</p>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p><b>2</b> Team Account</p>
+            <p>Free stock media library</p>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p><b>2%</b> Transaction Fees</p>
+            <p>In-app Image Editor</p>
+          </li>
+          <li><span class="check-icon">✓</span>
+            <p>
+              Offline functionality
+            </p>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Priority in Support</p>
+            <p>
+              Canvas - content creator
+            </p>
+          </li>
+          <li><span class="check-icon">✓</span>
+            <p>
+              Custom fonts
+            </p>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>
+              Audit logs
+            </p>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>
+              Advanced reports
+            </p>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>
+              Custom user permissions
+            </p>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>
+              Playlist, Schedule
+            </p>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>
+              Assign hierarchical access to content and screens
+            </p>
           </li>
         </ul>
       </div>
-      <div class="price-item">
+      <!-- <div class="price-item">
         <h3 class="price-item__name">Advanced</h3>
         <p class="price-item__description">
           The basic of starting a bussiness
@@ -178,8 +264,9 @@
 
 
         </ul>
-      </div>
+      </div> -->
     </div>
+    <br>
   </div>
 </body>
 

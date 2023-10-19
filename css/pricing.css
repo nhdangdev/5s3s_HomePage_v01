@@ -1,41 +1,45 @@
 /* [102310Tuan] create prcing page*/
 /* [102316Tuan] add responsive */
 /* [102317Tuan] adjust pricing page according to feedbacks */
-:root{
+:root {
     --background-color: #f4f7fe;
     --primary-color: #2353f6;
     --border-radius: 16px;
     --container-width: 100%;
 }
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
 
-body{
+body {
     height: 100vh;
     background-color: var(--background-color);
 
 }
 
 
-.wrapper{
+.wrapper {
     height: 100%;
     width: 100%;
     padding: 32px 16px;
 }
 
-h1, h3, h4, h5, p{
+h1,
+h3,
+h4,
+h5,
+p {
     font-family: sans-serif;
 }
 
 
 
-h1{
-    font-weight: 400 ;
+h1 {
+    font-weight: 400;
     margin-bottom: 16px;
 }
 
@@ -45,60 +49,61 @@ h4 {
 }
 
 /* header css */
-.header{
+.header {
     text-align: center;
     margin-bottom: 56px;
 }
 
-.header p{
+.header p {
     color: #8b8f99;
 }
 
-.container{
+.container {
     width: var(--container-width);
     display: flex;
     justify-content: space-around;
+    gap: 1rem;
 }
 
 /* price-item css */
-.price-item{
+.price-item {
     border: 1px solid #ccc;
     border-radius: var(--border-radius);
     box-sizing: border-box;
-    width: 22%;
+    width: 30%;
     background-color: #fefefe;
     padding: 16px;
     min-height: 500px;
 }
 
-.price-item__name{
+.price-item__name {
     margin-bottom: 8px;
 }
 
-.price-item__description{
+.price-item__description {
     margin-bottom: 24px;
     color: #8b8f99;
     line-height: 18px;
     min-height: 36px;
 }
 
-.price-item__price p{
+.price-item__price p {
     font-size: 1.8rem;
     font-weight: 600;
     margin: 0;
 }
 
-.price-item__price span{
+.price-item__price span {
     color: #8b8f99;
 }
 
-.price-item__price{
+.price-item__price {
     display: flex;
     align-items: center;
     margin-bottom: 16px;
 }
 
-.price-item button{
+.price-item button {
     border-radius: 20px;
     border: 1px solid #6e7792;
     background-color: #fefefe;
@@ -109,42 +114,43 @@ h4 {
     transition: all 0.3s;
 }
 
-.price-item button span{
+.price-item button span {
     transition: all 0.3s;
     transform: scale(1, 1);
 }
 
-.price-item button::before, .price-item button::after {
-content: '';
-position: absolute;
-transition: all 0.3s;
-bottom: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 1;
+.price-item button::before,
+.price-item button::after {
+    content: '';
+    position: absolute;
+    transition: all 0.3s;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 
 
-.price-item button:hover{
-    transform:translateY(-2px); 
+.price-item button:hover {
+    transform: translateY(-2px);
     transition-duration: 500ms;
-    background-color:#1c1c1c;
+    background-color: #1c1c1c;
     color: #fefefe;
 }
 
-.price-item--popular{
+.price-item--popular {
     position: relative;
     border-radius: 16px;
     border: 2px solid transparent;
     background: linear-gradient(white, white) padding-box,
-    linear-gradient(to right, blue, #53c7ed) border-box;
+        linear-gradient(to right, blue, #53c7ed) border-box;
 }
 
 
 
-.price-item--popular::before{
+.price-item--popular::before {
     display: block;
     content: "Most popular";
     position: absolute;
@@ -152,7 +158,7 @@ z-index: 1;
     right: 16px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    background: linear-gradient(45deg,blue,#53c7ed);
+    background: linear-gradient(45deg, blue, #53c7ed);
     color: #fefefe;
     padding: 4px 8px;
     font-family: sans-serif;
@@ -167,13 +173,13 @@ z-index: 1;
 
 }
 
-.price-item--popular button:hover{
+.price-item--popular button:hover {
     box-sizing: border-box;
 
     /* color: #2253f2; */
-    background: linear-gradient(45deg,blue,#53c7ed);
+    background: linear-gradient(45deg, blue, #53c7ed);
     /* border: 1px solid #2253f2; */
-    transform:translateY(-2px); 
+    transform: translateY(-2px);
     transition-duration: 500ms;
 }
 
@@ -182,7 +188,7 @@ z-index: 1;
     
 } */
 
-.price-item__feature{
+.price-item__feature {
     padding-left: 0;
     margin-top: 16px;
     list-style: none;
@@ -199,47 +205,50 @@ z-index: 1;
     text-align: center;
     line-height: 1rem;
     margin-right: 6px;
-  }
+}
 
-.price-item__feature li{
+.price-item__feature li {
     display: flex;
     align-items: center;
-    
-  }
 
-  .price-item__feature li + li{
+}
+
+.price-item__feature li+li {
     margin-top: 10px;
-  }
+}
 
-.price-item__feature li p{
+.price-item__feature li p {
     margin: 0;
     flex: 1;
-  }
+}
 
-  /* tablet */
-  @media (max-width: 930px) and (orientation: portrait){
+/* tablet */
+@media (max-width: 930px) and (orientation: portrait) {
 
-    .container{
+    .container {
         flex-wrap: wrap;
-        justify-content: space-around;
+        /* justify-content: space-around; */
+        justify-content: space-between;
         gap: 32px;
     }
 
-    .price-item{
-        width: calc((var(--container-width) - 64px)/2);
+    .price-item {
+        /* width: calc((var(--container-width) - 64px)/2); */
+        width: calc((var(--container-width) - 32px)/2);
     }
-  }
+}
 
-  @media (max-width: 767px) {
-    .price-item{
+@media (max-width: 767px) {
+    .price-item {
         width: 100%;
     }
-  }
+}
 
 
-  /* custom buttom hover effect */
+/* custom buttom hover effect */
 
-  .btn-two::before, .btn-two::after {
+.btn-two::before,
+.btn-two::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -249,32 +258,42 @@ z-index: 1;
     z-index: 1;
     transition: all 0.3s;
     border: 1px solid rgba(255, 255, 255, 0.5);
-  }
+}
 
-  @keyframes rotatecw {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+@keyframes rotatecw {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes rotateccw {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(-360deg);}
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
 }
-  
-  .btn-two:hover::after {
+
+.btn-two:hover::after {
     animation-name: rotatecw;
     animation-duration: 2s;
-  }
-  .btn-two:hover::before {
-    animation-name: rotateccw; 
+}
+
+.btn-two:hover::before {
+    animation-name: rotateccw;
     animation-duration: 3s;
-  }
-  .btn-two:hover::after, .btn-two:hover::before {
+}
+
+.btn-two:hover::after,
+.btn-two:hover::before {
     left: 37.5%;
     width: 25%;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-  }
-
-
-  
+}
