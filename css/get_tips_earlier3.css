@@ -75,6 +75,14 @@ body {
   width: 100%;
   position: relative;
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: start;
+}
+.form-modal__right-side #login-form .form-control__label,
+.form-modal__right-side #get-tips-form .form-control__label {
+  font-weight: 600;
+  color: #333;
 }
 .form-modal__right-side #login-form .form-control__input,
 .form-modal__right-side #get-tips-form .form-control__input {
@@ -110,7 +118,7 @@ body {
   position: absolute;
   background-color: transparent;
   border-radius: 0.2rem;
-  top: calc((100% - 1.5rem) / 2);
+  top: calc((44px + 1.5rem) / 2);
   right: 0.25rem;
   transition: all 0.4s;
   cursor: pointer;
@@ -199,4 +207,4 @@ body {
   color: #087ef4;
 }
 
-/*# sourceMappingURL=get_tips_earlier2.css.map */
+/*# sourceMappingURL=get_tips_earlier3.css.map */

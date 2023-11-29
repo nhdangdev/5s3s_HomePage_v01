@@ -26,6 +26,7 @@
         }
 
         &-picker {
+            color: $color-gray-900;
             border: 2px solid #eee;
             border-radius: 2rem;
             padding: .2rem;
@@ -64,6 +65,38 @@
             &:hover,
             &:focus {
                 border-color: #000;
+            }
+        }
+
+        &-message {
+            font-size: 12px;
+            font-weight: 500;
+            display: none;
+        }
+
+        &--primary {
+            color: $primary-color;
+
+            input {
+                border-color: $primary-color;
+
+                &:hover,
+                &:focus {
+                    border-color: $darken-primary-color;
+                }
+            }
+        }
+
+        &--error {
+            color: $color-red-600;
+
+            input {
+                border-color: $color-red-300;
+
+                &:hover,
+                &:focus {
+                    border-color: $color-red-600;
+                }
             }
         }
     }

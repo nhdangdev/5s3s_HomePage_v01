@@ -212,8 +212,9 @@ function reshapeTemplateData(templateDatas) {
             "subject": templateData['categoryName'],
             "created": templateData['created'].split(' ').at(0),
             "modified": templateData['modified'] || null,
-            "status": "Active",
-            "slug": 'https:\/\/template.com/' + templateData['']
+            "status": Math.random() > 0.5 ? "Active" : 'Inactive',
+            "slug": 'https:\/\/template.com/' + templateData[''],
+            "image": templateData['image'],
         })
     }
     return reshapedTemplateDatas
