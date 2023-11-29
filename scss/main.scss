@@ -302,6 +302,15 @@ body {
         width: 100%;
         padding: 2rem 1rem 1rem;
         box-sizing: border-box;
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
     }
 }
 
@@ -358,5 +367,136 @@ body {
 
     &--with-icon {
         padding: 0.5rem 1rem .5rem .5rem;
+    }
+}
+
+.payment-form {
+    color: #333;
+    font-size: 16px;
+
+    &__wrap {
+        background-color: white;
+        width: 85vw;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 1.5rem;
+        box-sizing: border-box;
+        border-radius: .5rem;
+        transform: translateY(calc((100vh - 100%) / 2));
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    &__field {
+        display: flex;
+        gap: .5rem;
+        flex-direction: column;
+        flex-grow: 1;
+
+        &-label {
+            font-weight: 500;
+        }
+
+        &-control {
+            padding: .5rem;
+            box-sizing: border-box;
+            border: 1px solid transparent;
+            background-color: #f8fafb;
+            border-radius: .4rem;
+            outline: none;
+            transition: all .2s;
+
+            &:hover,
+            &:focus {
+                border-color: $darken-primary-color;
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 1px $darken-primary-color;
+            }
+        }
+
+        &-group {
+            display: flex;
+            gap: 1rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__divider {
+        height: 1px;
+        background-color: #eee;
+    }
+
+    &__heading {
+        font-size: 20px;
+        font-weight: 600;
+        margin: .5rem 0;
+    }
+
+    &__footer {
+        margin-top: 2rem;
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__btn {
+        padding: .5rem 1rem;
+        box-sizing: border-box;
+        font-weight: bold;
+        border-radius: .4rem;
+        text-decoration: none;
+        border: none;
+        transition: all .2s;
+        background-color: white;
+        border: 1px solid #eee;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #eee;
+        }
+
+        &--primary {
+            background-color: $color1;
+            color: white;
+            border-color: $color1;
+
+            &:hover {
+                background-color: $color2;
+            }
+        }
+    }
+
+    .payment-method {
+        &__wrap {
+            display: flex;
+            gap: 1rem;
+
+            &>* {
+                flex-grow: 1;
+            }
+
+            & input[type="radio"] {
+                display: none;
+            }
+
+            &>label:has(> input[type="radio"]:checked)>.payment-method__block {
+                background-color: white;
+                border: 1px solid $darken-primary-color;
+                box-shadow: 0 0 0 1px $darken-primary-color;
+            }
+        }
+
+        &__block {
+            background-color: #eee;
+            border-radius: .4rem;
+            padding: 1rem;
+            box-sizing: border-box;
+            transition: all .2s;
+            border: 1px solid transparent;
+        }
+
     }
 }

@@ -8,11 +8,13 @@
 @media (min-width: 740px) and (max-width: 1023px) {
   .data-table {
     padding: 0.5rem 1.5rem 1.5rem;
+    border: none;
   }
 }
 @media (max-width: 479px) {
   .data-table {
-    padding: 0.5rem 1.5rem 1.5rem;
+    padding: 0.5rem 0;
+    border: none;
   }
 }
 .data-table table {
@@ -34,9 +36,9 @@
   white-space: nowrap;
 }
 .data-table td {
-  font-weight: 500;
   font-size: 14px;
   white-space: nowrap;
+  font-weight: 600;
 }
 .data-table tr td:last-child {
   border-radius: 0 0.5rem 0.5rem 0;
@@ -55,6 +57,9 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+}
+.data-table__filter-group > * {
+  flex-grow: 1;
 }
 .data-table__header, .data-table__footer {
   display: flex;
@@ -109,6 +114,21 @@
 .data-table__act-btn:hover {
   background-color: #eee;
 }
+.data-table__act-btn .material-symbols-outlined {
+  font-size: 18px;
+}
+.data-table__act-btn--delete {
+  color: #FFA726;
+}
+.data-table__act-btn--edit {
+  color: #03A9F4;
+}
+.data-table__image {
+  height: 60px;
+  width: auto;
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 0.2rem;
+}
 .data-table__items-per-page {
   display: flex;
   justify-content: start;
@@ -125,31 +145,115 @@
   }
 }
 .data-table-card-wrap {
-  display: flex;
-  flex-direction: column;
+  display: none;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
+@media (max-width: 479px) {
+  .data-table-card-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .data-table-card-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .data-table-card {
-  padding-bottom: 1rem;
+  overflow: hidden;
+  font-size: 12px;
   box-sizing: border-box;
-  border-bottom: 1px solid #eee;
+  border-radius: 1.2rem;
+  border: 1px solid #eee;
+  background-color: white;
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
   margin-bottom: 1rem;
+  box-shadow: 0 0 4px 0 #eee;
 }
 @media (min-width: 1024px) {
   .data-table-card {
     display: none;
   }
 }
-.data-table-card__title {
-  font-weight: bold;
-  font-size: 14px;
+.data-table-card__image {
+  width: 100%;
+  padding: 0.8rem;
+  box-sizing: border-box;
+}
+.data-table-card__image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.4rem;
+}
+.data-table-card__body {
+  padding: 0 0.8rem 0.8rem;
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
+}
+.data-table-card__footer {
+  padding: 0 1rem;
+}
+.data-table-card__main-content {
+  display: flex;
+  gap: 0.5rem;
   justify-content: space-between;
   align-items: start;
+  flex-grow: 1;
+}
+.data-table-card__more-content {
+  display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.data-table-card__more-content > * {
+  flex-grow: 1;
+}
+.data-table-card__block {
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
+  font-size: 12px;
+  border: 1px solid #eee;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+}
+.data-table-card__block-label {
+  font-weight: 600;
+}
+.data-table-card__copy-link-button {
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0 2px 0 #ccc;
+  border: none;
+}
+.data-table-card__copy-link-button:hover {
+  background-color: #eee;
+}
+.data-table-card__copy-link-button:active {
+  box-shadow: 0 0 0 #ccc;
+}
+.data-table-card__title {
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.data-table-card__sub-title {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  opacity: 0.8;
 }
 .data-table-card__name {
   font-size: 16px;
@@ -157,7 +261,12 @@
 }
 .data-table-card__field {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.2rem;
+  flex-direction: column;
+  font-size: 14px;
+  border: 1px solid #eee;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
 }
 .data-table-card__field-name {
   font-weight: 600;
@@ -169,18 +278,20 @@
 }
 .data-table-card__buttons {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   justify-content: center;
+  align-items: end;
 }
 .data-table-card__button {
-  border: 1px solid #ccc;
-  font-weight: bold;
+  border: 1px solid #eee;
+  font-weight: 600;
+  font-size: 12px;
   display: flex;
   flex-grow: 1;
   gap: 0.5rem;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 0.4rem;
   transition: all 0.2s;
   background-color: white;
@@ -194,6 +305,9 @@
 }
 .data-table-card__button span:last-child {
   margin-right: 1rem;
+}
+.data-table-card__button span.material-symbols-outlined {
+  font-size: 16px;
 }
 .data-table-card__link-button {
   border: none;
@@ -215,6 +329,29 @@
 }
 .data-table-card__link-button span.material-symbols-outlined {
   font-size: 14px;
+}
+.data-table .status {
+  border: 1px solid rgb(209, 213, 219);
+  font-size: 14px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 1.4rem;
+  display: flex;
+  gap: 0.4rem;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+.data-table .status__dot {
+  width: 4px;
+  height: 4px;
+  background-color: rgb(55, 65, 81);
+  border-radius: 0.4rem;
+}
+.data-table .status__dot--active {
+  background-color: rgb(59, 130, 246);
+}
+.data-table .status__dot--inactive {
+  background-color: rgb(239, 68, 68);
 }
 .data-table .pagination {
   display: flex;
@@ -266,28 +403,26 @@
   border: 2px solid #eee;
 }
 
-.delete-btn {
-  color: orange;
-}
-
 .ratios {
   display: flex;
-  gap: 0.7rem;
+  gap: 0.4rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 .ratios__item {
-  padding: 0.2rem 0.5rem;
-  color: #8a6d3b;
-  background: #fcf8e3;
-  border: 1px solid #faebcc;
-  border-radius: 1rem;
-  min-width: 42px;
-  text-align: center;
+  padding: 0.2rem;
 }
 .ratios__item--selected {
   color: #087ef4;
   background-color: rgba(8, 126, 244, 0.1);
-  border: 1px solid rgba(8, 126, 244, 0.9);
+  padding: 0.2rem;
+  border-radius: 0.4rem;
+}
+.ratios__divider {
+  width: 4px;
+  height: 4px;
+  background-color: #81c784;
+  border-radius: 4px;
 }
 
 .dropdown {

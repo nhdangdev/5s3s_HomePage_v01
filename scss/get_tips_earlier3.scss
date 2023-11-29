@@ -85,6 +85,14 @@ body {
                 position: relative;
                 $field-button-size: 1.5rem;
                 display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                align-items: start;
+
+                &__label {
+                    font-weight: 600;
+                    color: #333;
+                }
 
                 &__input {
                     width: 100%;
@@ -120,7 +128,7 @@ body {
                     position: absolute;
                     background-color: transparent;
                     border-radius: .2rem;
-                    top: calc((100% - $field-button-size ) / 2);
+                    top: calc((44px + $field-button-size) / 2);
                     right: .25rem;
                     transition: all .4s;
                     cursor: pointer;

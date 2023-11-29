@@ -37,6 +37,7 @@
             <br>
             <br>
             <form action="#" class="user-form__form">
+                <p style="color: #dc3545; transition: all .2s; display: none; margin: 0;" id="form-message"></p>
                 <div class="user-form__text-field">
                     <label for="username" class="user-form__field-label">User name</label>
                     <input type="text" class="user-form__field-control" id="username" placeholder="Enter user name"
@@ -104,6 +105,26 @@
                 toggleConfirmPasswordIcon && (toggleConfirmPasswordIcon.innerHTML = 'visibility_off');
             }
         }
+
+        function handleForm(e) {
+            e.preventDefault()
+            const form = e.target
+            const passwordInput = form.querySelector('#password');
+            const confirmPasswordInput = form.querySelector('#confirm-password');
+            const formMessageElement = document.querySelector('#form-message');
+            if (!passwordInput || !confirmPasswordInput) { return }
+            if (passwordInput.value !== confirmPasswordInput.value) {
+                formMessageElement.innerHTML = 'Password and confirm password do not match'
+                formMessageElement.style.display = 'block'
+            } else {
+                window.location.href = './login'
+            }
+        }
+
+        window.addEventListener('load', () => {
+            const form = document.querySelector('form.user-form__form')
+            form.addEventListener('submit', handleForm)
+        })
     </script>
 </body>
 

@@ -13,7 +13,7 @@
   <script src="../js/main.js"></script>
   <title>Pricing</title>
 </head>
-
+<!-- [102320TIN] update body code from html file -->
 <body>
   <header>
     <div id="loading-screen">
@@ -39,9 +39,8 @@
     <div class="container">
       <div class="price-item">
         <h3 class="price-item__name">Free</h3>
-        <!-- <p class="price-item__description">
-
-        </p> -->
+        <p class="price-item__description">For starting
+        </p>
         <div class="price-item__price">
           <p>$0</p>
           <!-- <span>/month</span> -->
@@ -70,7 +69,8 @@
           <li> <span class="check-icon">✓</span>
             <p>In-app Image Editor</p>
           </li>
-          <li> <span class="check-icon">✓</span>
+          <!-- [102320TIN] comment unused code -->
+          <!-- <li> <span class="check-icon">✓</span>
             <p>
               Custom user permissions
             </p>
@@ -79,7 +79,7 @@
             <p>
               Playlist, Schedule
             </p>
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="price-item ">
@@ -144,11 +144,12 @@
               Playlist, Schedule
             </p>
           </li>
-          <li> <span class="check-icon">✓</span>
+          <!-- [102320TIN] comment unused code -->
+          <!-- <li> <span class="check-icon">✓</span>
             <p>
               Assign hierarchical access to content and screens
             </p>
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="price-item price-item--popular">
@@ -215,11 +216,12 @@
               Playlist, Schedule
             </p>
           </li>
-          <li> <span class="check-icon">✓</span>
+          <!-- [102320TIN] comment unused code -->
+          <!-- <li> <span class="check-icon">✓</span>
             <p>
               Assign hierarchical access to content and screens
             </p>
-          </li>
+          </li> -->
         </ul>
       </div>
       <!-- <div class="price-item">

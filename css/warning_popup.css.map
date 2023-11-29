@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/warning_popup.scss","../scss/color.scss"],"names":[],"mappings":"AAEA;EACI;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;;AAGJ;EACI;EACA;EACA;EACA;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;EACA,OCeY;EDdZ;;AAGJ;EACI;EACA;;AAGJ;EACI;EACA,OCxCQ;EDyCR;EACA;EACA;EACA;EACA;;AAEA;EACI,OC/CW","file":"warning_popup.css"}

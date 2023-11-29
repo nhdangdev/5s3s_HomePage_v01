@@ -116,9 +116,27 @@
             </div>
         </div>
         <div class="dashboard__content">
-            <h2 style="margin-bottom: 0;">Add your template data</h2>
+            <div class="dashboard__content-header">
+                <h2 style="margin-bottom: 0;">Add your template data</h2>
+                <button type="submit" class="primary-btn" form="template-data-form">Add template data</button>
+            </div>
             <br>
-            <form action="#" method="post" id="template-data-form">
+            <form action="#" method="post" id="template-data-form" name="template-data-form">
+                <h4>Template Information</h4>
+                <div class="grid">
+                    <div class="row no-gutters">
+                        <div class="col c-12 m-6 l-3 template-data-item" id="output-container" style="min-width: 80%;">
+                            <div class="template-data-item">
+                                <div class="template-data-item__control">
+                                    <input type="text" name="template-title" id="template-title"
+                                        placeholder="Title of template" style="text-transform: capitalize;">
+                                    <div class="template-data-item__control-message">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <h4>Category</h4>
                 <div class="grid">
                     <div class="row no-gutters">
@@ -142,6 +160,7 @@
                                 <div class="template-data-item__control">
                                     <input type="text" name="category-name[]" id="category-name-1"
                                         placeholder="Category name 1">
+                                    <div class="template-data-item__control-message"></div>
                                 </div>
                             </div>
                         </div>
@@ -165,6 +184,7 @@
                                 <div class="template-data-item__control">
                                     <input type="text" name="category-name[]" id="category-name-2"
                                         placeholder="Category name 2">
+                                    <div class="template-data-item__control-message"></div>
                                 </div>
                             </div>
                         </div>
@@ -188,6 +208,8 @@
                                 <div class="template-data-item__control">
                                     <input type="text" name="category-name[]" id="category-name-3"
                                         placeholder="Category name 3">
+                                    <div class="template-data-item__control-message"></div>
+
                                 </div>
                             </div>
                         </div>
@@ -211,6 +233,7 @@
                                 <div class="template-data-item__control">
                                     <input type="text" name="category-name[]" id="category-name-4"
                                         placeholder="Category name 4">
+                                    <div class="template-data-item__control-message"></div>
                                 </div>
                             </div>
                         </div>
@@ -240,6 +263,8 @@
                                 <div class="template-data-item__control">
                                     <input type="text" name="product-name[]" id="product-name-1"
                                         placeholder="Product name 1">
+                                    <div class="template-data-item__control-message"></div>
+
                                 </div>
                                 <div class="template-data-item__control">
                                     <!-- <label for="product-price-1">
@@ -247,6 +272,7 @@
                                     </label> -->
                                     <input type="text" name="product-price[]" id="product-price-1"
                                         placeholder="Product price 1">
+                                    <div class="template-data-item__control-message"></div>
                                 </div>
 
                             </div>

@@ -21,6 +21,7 @@
   display: none;
 }
 .template-data-item__img-picker {
+  color: rgb(17, 24, 39);
   border: 2px solid #eee;
   border-radius: 2rem;
   padding: 0.2rem;
@@ -54,6 +55,29 @@
 }
 .template-data-item__control input:hover, .template-data-item__control input:focus {
   border-color: #000;
+}
+.template-data-item__control-message {
+  font-size: 12px;
+  font-weight: 500;
+  display: none;
+}
+.template-data-item__control--primary {
+  color: #2196F3;
+}
+.template-data-item__control--primary input {
+  border-color: #2196F3;
+}
+.template-data-item__control--primary input:hover, .template-data-item__control--primary input:focus {
+  border-color: #087ef4;
+}
+.template-data-item__control--error {
+  color: rgb(220, 38, 38);
+}
+.template-data-item__control--error input {
+  border-color: rgb(252, 165, 165);
+}
+.template-data-item__control--error input:hover, .template-data-item__control--error input:focus {
+  border-color: rgb(220, 38, 38);
 }
 .template-data-item__key {
   text-align: center;

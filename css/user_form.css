@@ -56,6 +56,26 @@
 .user-form__field-control::-ms-reveal {
   display: none;
 }
+.user-form__field-message {
+  font-size: 12px;
+  margin: 0;
+  transition: all 0.2s;
+}
+.user-form__field-message--info {
+  color: #31708f;
+}
+.user-form__field-message--sub-warning {
+  color: #383d41;
+}
+.user-form__field-message--success {
+  color: #3c763d;
+}
+.user-form__field-message--danger {
+  color: #a94442;
+}
+.user-form__field-message--warning {
+  color: #8a6d3b;
+}
 .user-form__field-button {
   width: 1.5rem;
   height: 1.5rem;
@@ -69,7 +89,7 @@
   background-color: transparent;
   border: none;
   border-radius: 0.2rem;
-  bottom: calc((40px - 1.5rem) / 2);
+  top: calc((44px + 1.5rem) / 2);
   right: 0.25rem;
   transition: all 0.4s;
   cursor: pointer;

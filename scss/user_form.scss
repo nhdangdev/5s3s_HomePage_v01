@@ -69,6 +69,33 @@
         }
     }
 
+    // [102327TIN] colors for field message
+    &__field-message {
+        font-size: 12px;
+        margin: 0;
+        transition: all .2s;
+
+        &--info {
+            color: #31708f;
+        }
+
+        &--sub-warning {
+            color: #383d41;
+        }
+
+        &--success {
+            color: #3c763d;
+        }
+
+        &--danger {
+            color: #a94442;
+        }
+
+        &--warning {
+            color: #8a6d3b;
+        }
+    }
+
     &__field-button {
         width: $field-button-size;
         height: $field-button-size;
@@ -82,8 +109,7 @@
         background-color: transparent;
         border: none;
         border-radius: .2rem;
-        // height of field-control is 40px
-        bottom: calc((40px - $field-button-size) / 2);
+        top: calc((44px + $field-button-size) / 2);
         right: .25rem;
         transition: all .4s;
         cursor: pointer;

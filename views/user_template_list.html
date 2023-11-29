@@ -127,7 +127,9 @@
     <template id="template-table-template">
         <template v-if="!isLoadTemplateData">
             <div class="data-table__header">
-                <h4 class="data-table__title">Templates</h4>
+                <!-- [112304TIN] makeup -->
+                <!-- <h4 class="data-table__title">Templates</h4> -->
+                <h2 class="data-table__title">Templates</h2>
                 <div class="data-table__filter-group" v-if="templates.length > 0">
                     <!-- <select name="ratio" class="select-box" v-model="filter.ratio" @change.self="handleChangeRatioFilter">
                                     <option value="all" selected>All ratio</option>
@@ -236,7 +238,7 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>Image</th>
                             <th>Template Name</th>
                             <th>Title</th>
                             <th>Ratios</th>
@@ -248,30 +250,45 @@
                     </thead>
                     <tbody>
                         <tr v-for="template of paginatedTemplates">
-                            <td>{{template.id}}</td>
+                            <!-- [112304TIN] change id to image -->
+                            <td>
+                                <img class="data-table__image" :src="template.image" :alt="template.title">
+                            </td>
                             <td>{{template.name}}</td>
                             <td>{{template.title}}</td>
                             <td>
+                                <!-- [112304TIN] makeup -->
                                 <div class="ratios">
                                     <template v-for="ratio of template.ratios">
                                         <div class="ratios__item"
                                             :class="{'ratios__item--selected': filter.ratio === ratio}">
                                             {{ratio}}
                                         </div>
+                                        <div v-if="template.ratios.at(-1) !== ratio" class="ratios__divider"></div>
                                     </template>
                                 </div>
                             </td>
                             <td>{{template.subject}}</td>
-                            <td>{{template.status}}</td>
+                            <td>
+                                <!-- [112304TIN] makeup -->
+                                <div class="status">
+                                    <div class="status__dot"
+                                        :class="{'status__dot--active': template.status === 'Active', 'status__dot--inactive': template.status === 'Inactive'}">
+                                    </div>
+                                    <span>
+                                        {{template.status}}
+                                    </span>
+                                </div>
+                            </td>
                             <td>{{template.created}}</td>
                             <td>
-                                <button class="data-table__act-btn" title="Delete template"
+                                <button class="data-table__act-btn data-table__act-btn--delete" title="Delete template"
                                     @click="openDeleteDialog(template)">
                                     <span class="material-symbols-outlined delete-btn">
                                         delete
                                     </span>
                                 </button>
-                                <button class="data-table__act-btn" title="Edit template">
+                                <button class="data-table__act-btn data-table__act-btn--edit" title="Edit template">
                                     <span class="material-symbols-outlined">
                                         edit
                                     </span>
@@ -290,7 +307,88 @@
             </div>
             <div class="data-table-card-wrap" style="margin-top: 1.5rem;" v-if="paginatedTemplates.length > 0">
                 <div class="data-table-card" v-for="template of paginatedTemplates">
-                    <div class="data-table-card__title">
+                    <div class="data-table-card__image">
+                        <img :src="template.image" :alt="template.title">
+                    </div>
+                    <div class="data-table-card__body">
+                        <div class="data-table-card__main-content">
+                            <div>
+                                <div class="data-table-card__title">{{template.title}}</div>
+                                <div class="data-table-card__sub-title">{{template.name}}</div>
+                            </div>
+                            <button title="Copy template link" class="data-table-card__copy-link-button">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">
+                                    link
+                                </span>
+                            </button>
+                        </div>
+                        <div class="data-table-card__more-content">
+                            <div class="data-table-card__block">
+                                <div class="data-table-card__block-label">Subject</div>
+                                <div class="data-table-card__block-value">{{template.subject}}</div>
+                            </div>
+                            <div class="data-table-card__block">
+                                <div class="data-table-card__block-label">Status</div>
+                                <div class="data-table-card__block-value">{{template.status}}</div>
+                            </div>
+                            <div class="data-table-card__block">
+                                <div class="data-table-card__block-label">Created</div>
+                                <div class="data-table-card__block-value">{{template.created}}</div>
+                            </div>
+                            <div v-if="template.ratios.length > 0" class="data-table-card__block">
+                                <div class="data-table-card__block-label">Ratios</div>
+                                <div class="data-table-card__block-value">
+                                    <div class="ratios">
+                                        <template v-for="ratio of template.ratios">
+                                            <div class="ratios__item"
+                                                :class="{'ratios__item--selected': filter.ratio === ratio}">
+                                                {{ratio}}
+                                            </div>
+                                            <div v-if="template.ratios.at(-1) !== ratio" class="ratios__divider">
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <button style="display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: .5rem;
+                        background-color: transparent;
+                        border: none;
+                        padding: 0;
+                        color: #5C6BC0;"> -->
+                        <!-- <span style="font-weight: 14px;">
+                                See more
+                            </span>
+                            <span class="material-symbols-outlined" style="font-size: 20px;">
+                                expand_more
+                            </span> -->
+                        <!-- <span style="font-weight: 14px;">
+                                See less
+                            </span>
+                            <span class="material-symbols-outlined">
+                                expand_less
+                            </span>
+                        </button> -->
+                        <div class="data-table-card__buttons">
+                            <button class="data-table-card__button" title="Delete template"
+                                @click.prevent="openDeleteDialog(template)" style="color: #FFA726;">
+                                <span class="material-symbols-outlined delete-btn">
+                                    delete
+                                </span>
+                                <span>Delete</span>
+                            </button>
+                            <button class="data-table-card__button" title="Edit template" style="color: #03A9F4;">
+                                <span class="material-symbols-outlined">
+                                    edit
+                                </span>
+                                <span>Edit</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- <div class="data-table-card__title">
                         {{template.title}}
                         <button class="data-table-card__link-button"
                             @click="copyToClipboard(`https:\/\/template.com/${template.id}`)"
@@ -299,8 +397,8 @@
                                 link
                             </span>
                         </button>
-                    </div>
-                    <div class="data-table-card__field">
+                    </div> -->
+                    <!-- <div class="data-table-card__field">
                         <div class="data-table-card__field-name">Name:</div>
                         <div class="data-table-card__field-value">{{template.name}}</div>
                     </div>
@@ -319,34 +417,27 @@
                     <div class="data-table-card__field">
                         <div class="data-table-card__field-name">Created:</div>
                         <div class="data-table-card__field-value">{{template.created}}</div>
-                    </div>
+                    </div> -->
                     <!-- <div class="data-table-card__name">Name: {{template.name}}</div>
                                 <div class="data-table-card__id">ID: {{template.id}}</div>
                                 <div class="data-table-card__subject">Subject: {{template.subject}}</div>
                                 <div class="data-table-card__status">Status: {{template.status}}</div>
                                 <div class="data-table-card__created">Created: {{template.created}}</div> -->
-                    <div class="ratios">
-                        <template v-for="ratio of template.ratios">
-                            <div class="ratios__item" :class="{'ratios__item--selected': filter.ratio === ratio}">
-                                {{ratio}}
+                    <!-- [112304TIN] makeup -->
+                    <!-- <div v-if="template.ratios.length > 0">
+                        Ratios: <br> <br>
+                        <div class="data-table-card__field-value">
+                            <div class="ratios">
+                                <template v-for="ratio of template.ratios">
+                                    <div class="ratios__item"
+                                        :class="{'ratios__item--selected': filter.ratio === ratio}">
+                                        {{ratio}}
+                                    </div>
+                                    <div v-if="template.ratios.at(-1) !== ratio" class="ratios__divider"></div>
+                                </template>
                             </div>
-                        </template>
-                    </div>
-                    <div class="data-table-card__buttons">
-                        <button class="data-table-card__button" title="Delete template"
-                            @click.prevent="openDeleteDialog(template)">
-                            <span class="material-symbols-outlined delete-btn">
-                                delete
-                            </span>
-                            <span>Delete</span>
-                        </button>
-                        <button class="data-table-card__button" title="Edit template">
-                            <span class="material-symbols-outlined">
-                                edit
-                            </span>
-                            <span>Edit</span>
-                        </button>
-                    </div>
+                        </div>
+                    </div> -->
                 </div>
             </div>
             <div class="data-table__no-item" v-if="paginatedTemplates.length <= 0">

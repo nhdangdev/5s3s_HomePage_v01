@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="../css/grid.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/dialog.css">
-    <link rel="stylesheet" href="../css/get_tips_earlier2.css">
+    <link rel="stylesheet" href="../css/get_tips_earlier3.css">
+    <link rel="stylesheet" href="../css/user_form.css">
     <script src="../js/main.js"></script>
-    <script src="../js/dialog.js"></script>
     <title>GET_TIPS_EARLIER</title>
 </head>
 
@@ -37,15 +37,17 @@
                 </div>
                 <div class="col c-12 m-6 l-6">
                     <div class="form-modal__right-side">
-                        <h2>GET TIPS EARLIER</h2>
+                        <h2>Stay in touch!</h2>
                         <p>
-                            Register your email, and we will provide you with an account.
+                            Be the first to hear about our latest arrivals, exclusive deals, and newest content.
                         </p>
                         <br>
                         <!-- [102324TIN] edit form id -->
-                        <form action="#" id="get-tips-form">
+                        <form action="#" id="get-tips-form" onsubmit="handleSubscribe()">
                             <div class="form-control">
-                                <input type="email" name="email" placeholder="Email ID"
+                                <label for="email" class="form-control form-control__label">Sign up for our
+                                    newsletter:</label>
+                                <input type="email" name="email" placeholder="Email ID" is="email"
                                     class="form-control form-control__input" autofocus required>
                                 <div class="form-control__field-button">
                                     <span class="material-symbols-outlined" style="font-size: 18px;"
@@ -74,31 +76,33 @@
                                 </label>
                                 <a href="#">Already a menber?</a>
                             </div> -->
-                            <button type="submit" class="form-control__button"
-                                onclick="showDialog('.dialog')">SUBCRIBE</button>
+                            <button type="submit" class="form-control__button">SUBCRIBE</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="dialog dialog--hide" style="width: 400px; box-shadow: 1px 1px 15px 2px #3333;">
-        <div class="dialog__body">
-            <div style="display: flex; flex-direction: column; gap: .5rem; align-items: center;">
-                <div style="text-align: center; font-size: 24px; margin: 24px 0;">
-                    Thank You for Subscribing
-                </div>
-                <button class="dialog__action-btn dialog__action-btn" style="padding: .5rem 2rem;"
-                    onclick="hideDialog('.dialog')">
-                    OK
-                </button>
+    <div class="user-form" id="notification-screen" style="display: none;">
+        <div class="user-form__wrap">
+            <div class="user-form__illustration">
+                <img src="../asset/img/email_illustration.svg" alt="Forgot password illustration">
             </div>
+            <br>
+            <div class="user-form__title">Thank You For Subscribing</div>
+            <div class="user-form__subtitle">
+                Check your mail to get complete register
+            </div>
+            <br>
+            <a href="#" id="back-to-login">
+                <span class="material-symbols-outlined">
+                    arrow_back
+                </span>
+                <span>Back to home</span>
+            </a>
         </div>
     </div>
-
     <script>
-
         function clearEmailInput() {
             const emailInput = document.querySelector('form#get-tips-form input[name="email"]');
             if (emailInput)
@@ -156,6 +160,18 @@
             }
 
             window.location.href = './user_template_list.html'
+        }
+
+        function handleSubscribe() {
+            const subscribeForm = document.querySelector('.form-wrapper')
+            const notificationScreen = document.querySelector('#notification-screen')
+            if (!!subscribeForm) {
+                subscribeForm.style.display = 'none'
+            }
+
+            if (!!notificationScreen) {
+                notificationScreen.style.display = 'flex'
+            }
         }
     </script>
 </body>

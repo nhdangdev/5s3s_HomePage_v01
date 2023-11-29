@@ -1,0 +1,47 @@
+.warning-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.warning-popup__modal {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(10, 10, 10, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.warning-popup__popup {
+  max-width: 90vw;
+  background-color: white;
+  border-radius: 1rem;
+  text-align: center;
+}
+.warning-popup__title {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 2rem 2rem 1rem;
+}
+.warning-popup__content {
+  font-size: 16px;
+  color: rgb(115, 115, 115);
+  margin-bottom: 2rem;
+}
+.warning-popup__footer {
+  border-top: 1px solid rgb(229, 229, 229);
+  padding: 1rem;
+}
+.warning-popup__button {
+  border: none;
+  color: #2196F3;
+  transition: all 0.2s;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: transparent;
+  cursor: pointer;
+}
+.warning-popup__button:hover {
+  color: #087ef4;
+}
+
+/*# sourceMappingURL=warning_popup.css.map */

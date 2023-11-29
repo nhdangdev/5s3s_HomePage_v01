@@ -1,0 +1,54 @@
+@import 'color';
+
+.warning-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &__modal {
+        min-width: 100vw;
+        min-height: 100vh;
+        background-color: rgba($color: $color-neutral-950, $alpha: .1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__popup {
+        max-width: 90vw;
+        background-color: white;
+        border-radius: 1rem;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        padding: 2rem 2rem 1rem;
+    }
+
+    &__content {
+        font-size: 16px;
+        color: $color-neutral-500;
+        margin-bottom: 2rem;
+    }
+
+    &__footer {
+        border-top: 1px solid $color-neutral-200;
+        padding: 1rem;
+    }
+
+    &__button {
+        border: none;
+        color: $primary-color;
+        transition: all .2s;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+            color: $darken-primary-color;
+        }
+    }
+}
