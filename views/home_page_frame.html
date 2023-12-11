@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/main.js"></script>
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <div id="loading-screen">
+            <img src="../asset/img/logo.png" width="54" height="54" alt="Logo">
+            <div class="loader"></div>
+        </div>
+    </header>
+    <div class="page-header">
+        <div class="page-row">
+            <div class="page-header__wrap">
+                <div class="page-header__logo">
+                    <img src="https://5s3s.ca/wp-content/uploads/2021/06/5s3s-Logo-07.png" alt="Logo">
+                </div>
+                <div class="page-header__desktop-menu">
+                    <div class="page-header__desktop-menu-item page-header__desktop-menu-item">
+                        <a class="page-header__desktop-menu-link page-header__desktop-menu-link--active"
+                            href="#template">
+                            Template
+                        </a>
+                    </div>
+                    <div class="page-header__desktop-menu-item">
+                        <a class="page-header__desktop-menu-link" href="#services">
+                            Services
+                        </a>
+                    </div>
+                    <div class="page-header__desktop-menu-item">
+                        <a class="page-header__desktop-menu-link" href="#pos">
+                            POS
+                        </a>
+                    </div>
+                    <div class="page-header__desktop-menu-item">
+                        <a class="page-header__desktop-menu-link" href="#odering-and-delivery">
+                            Odering and Delivery
+                        </a>
+                    </div>
+                    <div class="page-header__desktop-menu-item">
+                        <a class="page-header__desktop-menu-link" href="#website-services">
+                            Website Services
+                        </a>
+                    </div>
+                </div>
+                <div class="page-header__menu-button">
+                    <button type="button" onclick="toggleMobileMenu()">
+                        <span class="material-symbols-outlined">
+                            menu
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="page-header__mobile-menu">
+                <div class="page-header__mobile-menu-item page-header__mobile-menu-item">
+                    <a class="page-header__mobile-menu-link page-header__mobile-menu-link--active" href="#template">
+                        Template
+                    </a>
+                </div>
+                <div class="page-header__mobile-menu-item">
+                    <a class="page-header__mobile-menu-link" href="#services">
+                        Services
+                    </a>
+                </div>
+                <div class="page-header__mobile-menu-item">
+                    <a class="page-header__mobile-menu-link" href="#pos">
+                        POS
+                    </a>
+                </div>
+                <div class="page-header__mobile-menu-item">
+                    <a class="page-header__mobile-menu-link" href="#odering-and-delivery">
+                        Odering and Delivery
+                    </a>
+                </div>
+                <div class="page-header__mobile-menu-item">
+                    <a class="page-header__mobile-menu-link" href="#website-services">
+                        Website Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="observer-root">
+        <!-- banner -->
+        <section class="page-row">
+            <div style="margin: 2rem 0; height: 400px;">
+                <img src="../asset/img/banner.png"
+                    style="height: 100%; width: 100%; object-fit: cover; border-radius: .4rem;">
+            </div>
+        </section>
+
+        <section class="page-row" id="template">
+            <div class="page-section">
+                <div class="page-section__heading">
+                    FoodieMenu Template
+                </div>
+                <div class="page-section__row">
+                    <div class="page-section__column">
+                        <p style="font-size: 16px; letter-spacing: 1px; line-height: 24px;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores maxime qui, laboriosam
+                            veritatis
+                            consequatur odit sed voluptatum et nesciunt quidem iusto temporibus nemo perferendis
+                            corrupti
+                            quaerat hic
+                            dolorum ullam voluptatem?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet inventore recusandae
+                            maxime,
+                            nulla,
+                            impedit enim, porro voluptates tempora aut ab eaque voluptatum quae. Soluta, architecto! Cum
+                            distinctio atque quae assumenda.
+                        </p>
+                        <button
+                            style="border: none; border-radius: 2rem; padding: 1rem; font-size: 14px; font-weight: 600;">Get
+                            started</button>
+                    </div>
+                    <div class="page-section__column" style="height: 300px;">
+                        <img src="../asset/img/banner.png"
+                            style="height: 100%; width: 100%; object-fit: cover; border-radius: .4rem;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-row" id="services">
+            <div class="page-section">
+                <div class="page-section__heading">
+                    Services
+                </div>
+                <div class="page-section__row">
+                    <div class="page-section__column">
+                        <div class="service-card">Service 1</div>
+                    </div>
+                    <div class="page-section__column">
+                        <div class="service-card">Service 2</div>
+                    </div>
+                    <div class="page-section__column">
+                        <div class="service-card">Service 3</div>
+                    </div>
+                </div>
+                <div class="page-section__row">
+                    <div class="page-section__column">
+                        <div class="service-card">Service 4</div>
+                    </div>
+                    <div class="page-section__column">
+                        <div class="service-card">Service 5</div>
+                    </div>
+                    <div class="page-section__column">
+                        <div class="service-card">Service 6</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-row" id="pos">
+            <div class="page-section">
+                <div class="page-section__heading">
+                    POS
+                </div>
+                <div class="page-section__row">
+                    <div class="page-section__column">
+                        <div class="feature-card">
+                            <div class="feature-card__image"><img
+                                    src="https://static.vecteezy.com/system/resources/previews/015/097/745/original/pos-machine-icon-outline-cash-register-vector.jpg"
+                                    alt=""></div>
+                            <div class="feature-card__content">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem veniam commodi magni
+                                pariatur,
+                                quasi ipsa voluptates odit, tempora
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-section__column">
+                        <div class="feature-card">
+                            <div class="feature-card">
+                                <div class="feature-card__image"><img
+                                        src="https://static.vecteezy.com/system/resources/previews/015/097/745/original/pos-machine-icon-outline-cash-register-vector.jpg"
+                                        alt=""></div>
+                                <div class="feature-card__content">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem veniam commodi magni
+                                    pariatur,
+                                    quasi ipsa voluptates odit, tempora
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-section__column">
+                        <div class="feature-card">
+                            <div class="feature-card">
+                                <div class="feature-card__image"><img
+                                        src="https://static.vecteezy.com/system/resources/previews/015/097/745/original/pos-machine-icon-outline-cash-register-vector.jpg"
+                                        alt=""></div>
+                                <div class="feature-card__content">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem veniam commodi magni
+                                    pariatur,
+                                    quasi ipsa voluptates odit, tempora
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-row" id="odering-and-delivery">
+            <div class="page-section">
+                <div class="page-section__heading">
+                    Odering and Delivery
+                </div>
+                <div style="text-align: center;">
+                    <button
+                        style="border: none; border-radius: 2rem; padding: 1rem; font-size: 14px; font-weight: 600;">Explore
+                        now</button>
+                </div>
+            </div>
+        </section>
+        <section class="page-row" id="website-services">
+            <div class="page-section">
+                <div class="page-section__heading">
+                    Website Services
+                </div>
+                <div class="page-section__row">
+                    <div class="page-section__column">
+                        <div class="service-card">Service 1</div>
+                    </div>
+                    <div class="page-section__column">
+                        <div class="service-card">Service 2</div>
+                    </div>
+                    <div class="page-section__column">
+                        <div class="service-card">Service 3</div>
+                    </div>
+                    <div class="page-section__column">
+                        <div class="service-card">Service 4</div>
+                    </div>
+                    <div class="page-section__column">
+                        <div class="service-card">Service 5</div>
+                    </div>
+                    <div class="page-section__column">
+                        <div class="service-card">Service 6</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- content -->
+    <div>
+
+    </div>
+    <!-- content - end -->
+    <div class="page-footer">
+        <div class="page-row">
+            <div class="page-footer__content">
+                <div class="footer-menu">
+                    <div class="footer-menu__column">
+                        <div class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">
+                                Products
+                            </a>
+                        </div>
+                        <div class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">
+                                Solutions
+                            </a>
+                        </div>
+                        <div class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">
+                                Blog
+                            </a>
+                        </div>
+                        <div class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">
+                                Trust
+                            </a>
+                        </div>
+                        <div class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">
+                                Pricing
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-menu__column">
+                        <div class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">
+                                Terms and conditions
+                            </a>
+                        </div>
+                        <div class="footer-menu__item">
+                            <a href="#" class="footer-menu__link">
+                                Privacy policy
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-form">
+                    <div class="footer-form__label">
+                        Trying to reach out?
+                    </div>
+                    <span>
+                        Get in touch today, and let's create a seamless experience together.
+                    </span>
+                    <form class="footer-form__form" action="#">
+                        <div class="footer-form__control">
+                            <input type="email" name="email" placeholder="Your Email Address">
+                        </div>
+                        <div class="footer-form__submit">
+                            <button type="submit">Get</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="page-row">
+            <div class="page-footer__copyright">
+                <span>
+                    @ 2023 FoodieMenu. All right reserved.
+                </span>
+                <span style="display: flex; gap: 1.5rem; align-items: end;">
+                    <a href="#" class="social-link">
+                        <img src="../asset/img/instagram-logo.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="../asset/img/facebook-logo.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="../asset/img/twitter-logo.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="social-link" style="width: 38px; height: 38px; margin-bottom: -6px;">
+                        <img src="../asset/img/github-logo.svg" alt="Gitub">
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

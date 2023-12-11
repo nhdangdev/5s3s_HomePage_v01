@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Choose Payment Method</title>
+    <style>
+        body {
+            background-color: #f7f8f9;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="payment-form">
+        <div class="payment-form__wrap">
+            <div class="payment-form__heading">
+                Review your plan
+            </div>
+            <div class="payment-form__review">
+                <div class="plan-review__package">
+                    <div class="plan-review__row" style="align-items: end;">
+                        <div class="plan-review__package-name">Basic</div>
+                        <div class="plan-review__package-price">Free</div>
+                    </div>
+                    <div class="plan-review__row">
+                        <span>1 Free account</span>
+                        <span>For 1 month</span>
+                    </div>
+                </div>
+                <div class="plan-review__extra">
+                    <div class="plan-review__row">
+                        <div style="font-size: 16px; font-weight: 600;">
+                            Free month starts
+                        </div>
+                        <div style="font-size: 16px; font-weight: 600;">
+                            Today
+                        </div>
+                    </div>
+                    <div class="plan-review__row">
+                        <div style="font-size: 16px; font-weight: 600;">
+                            Paid subscription starts
+                        </div>
+                        <div style="font-size: 16px; font-weight: 600;">
+                            January 5, 2024
+                        </div>
+                    </div>
+                    <ul class="plan-review__list">
+                        <li>Only $9.99 tax/month after 1 month free.</li>
+                        <li>Cancel anytime. Offer terms apply.</li>
+                        <li>You'll be charged monthly, starting January 5, 2024.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="payment-form__divider"></div>
+            <div class="payment-form__heading">
+                Choose How To Pay
+                <br>
+                <span style="font-size: 14px; font-weight: 400;">You can pay for this plan through Strip, Paypal, Momo,
+                    VNPay</span>
+            </div>
+            <div class="payment-method__wrap">
+                <label for="payment-method-1">
+                    <input type="radio" name="payment-method" value="value1" id="payment-method-1" checked>
+                    <div class="payment-method__block">
+                        <div class="payment-method__image" style="margin-bottom: 8px;">
+                            <img src="../asset/img/stripe-logo.png" alt="Stripe">
+                        </div>
+                        <div class="payment-method__label">Stripe</div>
+                    </div>
+                </label>
+                <label for="payment-method-2">
+                    <input type="radio" name="payment-method" value="value2" id="payment-method-2">
+                    <div class="payment-method__block">
+                        <div class="payment-method__image" style="margin-bottom: 8px;">
+                            <img src="../asset/img/paypal-logo.png" alt="Paypal">
+                        </div>
+                        <div class="payment-method__label">Paypal</div>
+                    </div>
+                </label>
+                <label for="payment-method-3">
+                    <input type="radio" name="payment-method" value="value3" id="payment-method-3">
+                    <div class="payment-method__block">
+                        <div class="payment-method__image" style="margin-bottom: 8px;">
+                            <img src="../asset/img/momo-logo.png" alt="Momo">
+                        </div>
+                        <div class="payment-method__label">Momo</div>
+                    </div>
+                </label>
+                <label for="payment-method-4">
+                    <input type="radio" name="payment-method" value="value3" id="payment-method-4">
+                    <div class="payment-method__block">
+                        <div class="payment-method__image" style="margin-bottom: 8px;">
+                            <img src="../asset/img/vnpay-logo.png" alt="VNPay">
+                        </div>
+                        <div class="payment-method__label">VNPay</div>
+                    </div>
+                </label>
+            </div>
+            <div class="payment-form__footer" style="justify-content: end;">
+                <button class="payment-form__btn payment-form__btn--primary">Continue</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
