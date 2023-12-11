@@ -38,7 +38,7 @@ nav {
 }
 
 ul.nav-tabs>li {
-    padding: 15px 40px;
+    padding: 15px 25px;
     width: 100%;
 }
 
@@ -47,7 +47,7 @@ ul.nav-tabs>li:not(:last-child) {
 }
 
 ul.nav-tabs>li a {
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--grey);
@@ -61,7 +61,7 @@ ul.nav-tabs>li a:hover {
 }
 
 ul.nav-tabs>li a i {
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 .tab-content {
