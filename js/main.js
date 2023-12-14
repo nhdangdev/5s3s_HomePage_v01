@@ -179,7 +179,7 @@ function activeMenuLink(clickedMenuLink, normalClassName, activeClassName) {
 function scrollToElement(selector) {
     const selectedElement = document.querySelector(selector)
     if (!selectedElement) { return }
-    selectedElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    selectedElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 // [122305TIN] add below script - end
 
