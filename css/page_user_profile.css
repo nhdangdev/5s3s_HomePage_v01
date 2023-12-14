@@ -313,8 +313,10 @@ button.bank-btn .bank-info {
     font-weight: 300;
 }
 button.re-order{
-    margin-bottom: 0;
     margin-top: 10px;
+}
+#wishlist .card-body {
+    padding: 1rem 1rem 0 5rem;
 }
 
 @media (max-width: 1024px) {}
