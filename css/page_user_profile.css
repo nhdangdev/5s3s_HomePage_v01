@@ -245,7 +245,7 @@ button:hover{
 #address_book .flag{
     color: var(--primary-color);
 }
-button.add-address, button.add-bank, .modal-footer > button, button.re-order {
+button.add-address, button.add-bank, .modal-footer > button, button.re-order, button.save-button {
     width: fit-content;
     background-color: var(--primary-color);
     color: #fff;
