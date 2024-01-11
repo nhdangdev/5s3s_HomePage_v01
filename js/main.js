@@ -233,3 +233,46 @@ function createDebounce(func, delay = 400) {
 
     return debouncedFunc
 }
+
+// [112401TIN] define time unit
+const SECOND = 1
+const MINUTE = SECOND * 60
+const HOUR = MINUTE * 60
+const DAY = HOUR * 24
+// [112401TIN] add get relative time function
+function getRelativeTime(date, locales = ['en']) {
+    const relativeTimeFormatter = new Intl.RelativeTimeFormat(locales, { numeric: 'auto' })
+    const dateFormatter = new Intl.DateTimeFormat(locales, { dateStyle: 'medium' })
+    const dateTime = (new Date(date)).getTime()
+    const currentDateTime = Date.now()
+    const timeDifference = Math.abs(dateTime - currentDateTime)
+    const timeDifferenceSign = dateTime - currentDateTime > 0 ? 1 : -1
+    // if valueDifference = -1 return date with none relative format
+    let valueDifference = Math.floor(timeDifference / (7 * DAY))
+    let timeUnit = 'week'
+
+    if (timeDifference >= 7 * DAY) {
+        valueDifference = -1
+        timeUnit = 'week'
+    } else if (timeDifference >= DAY) {
+        valueDifference = Math.floor(timeDifference / DAY)
+        timeUnit = 'day'
+    } else if (timeDifference >= HOUR) {
+        valueDifference = Math.floor(timeDifference / HOUR)
+        timeUnit = 'hour'
+    } else if (timeDifference >= MINUTE) {
+        valueDifference = Math.floor(timeDifference / MINUTE)
+        timeUnit = 'minute'
+    } else if (timeDifference >= SECOND) {
+        valueDifference = Math.floor(timeDifference / SECOND)
+        timeUnit = 'second'
+    } else {
+        valueDifference = timeDifference
+        timeUnit = 'second'
+    }
+
+    return valueDifference != -1
+        ? relativeTimeFormatter.format(timeDifferenceSign * valueDifference, timeUnit)
+        : dateFormatter.format(new Date(date))
+}
+

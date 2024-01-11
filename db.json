@@ -1,801 +1,801 @@
 [
     {
         "id": "0001",
-        "time": "2024-01-11T05:05:43.567Z",
+        "time": "2024-01-11T08:53:19.221Z",
         "customer": "Darin Hayes",
-        "price": "$95.1868409013204",
+        "price": 95.1868409013204,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0002",
-        "time": "2024-01-11T02:09:11.054Z",
+        "time": "2024-01-11T09:03:42.814Z",
         "customer": "Mrs. Phyllis Skiles-Kertzmann",
-        "price": "$69.52489858716082",
+        "price": 69.52489858716082,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0003",
-        "time": "2024-01-11T00:19:16.221Z",
+        "time": "2024-01-11T08:53:35.390Z",
         "customer": "Mr. Raul Watsica",
-        "price": "$38.599063661336984",
+        "price": 38.599063661336984,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0004",
-        "time": "2024-01-11T04:26:58.879Z",
+        "time": "2024-01-11T08:59:44.349Z",
         "customer": "Roberto Conn I",
-        "price": "$92.34113008106439",
+        "price": 92.34113008106439,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0005",
-        "time": "2024-01-10T20:58:37.946Z",
+        "time": "2024-01-11T09:23:50.107Z",
         "customer": "Lois Tremblay",
-        "price": "$62.59804654277346",
+        "price": 62.59804654277346,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0006",
-        "time": "2024-01-10T22:24:13.912Z",
+        "time": "2024-01-11T09:04:35.278Z",
         "customer": "Melvin Corwin",
-        "price": "$78.92710645126004",
+        "price": 78.92710645126004,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0007",
-        "time": "2024-01-11T03:57:44.192Z",
+        "time": "2024-01-11T09:10:20.165Z",
         "customer": "Colin Kuphal",
-        "price": "$24.949950072793413",
+        "price": 24.949950072793413,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0008",
-        "time": "2024-01-11T04:23:18.261Z",
+        "time": "2024-01-11T08:50:31.313Z",
         "customer": "Celia Davis",
-        "price": "$30.99056262480482",
+        "price": 30.99056262480482,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0009",
-        "time": "2024-01-10T21:08:54.666Z",
+        "time": "2024-01-11T09:18:44.824Z",
         "customer": "Ronald Trantow",
-        "price": "$50.57689495154267",
+        "price": 50.57689495154267,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0010",
-        "time": "2024-01-11T03:10:22.805Z",
+        "time": "2024-01-11T09:20:36.768Z",
         "customer": "Miss Karen Hamill",
-        "price": "$53.2396908708491",
+        "price": 53.2396908708491,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0011",
-        "time": "2024-01-11T03:49:31.728Z",
+        "time": "2024-01-11T09:22:36.456Z",
         "customer": "Rosemarie Fadel",
-        "price": "$14.498421389541939",
+        "price": 14.498421389541939,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0012",
-        "time": "2024-01-11T02:42:35.654Z",
+        "time": "2024-01-11T09:30:26.117Z",
         "customer": "Antonio Pouros-Rosenbaum",
-        "price": "$79.36610190406826",
+        "price": 79.36610190406826,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0013",
-        "time": "2024-01-11T00:35:32.530Z",
+        "time": "2024-01-11T09:00:54.887Z",
         "customer": "Rachel Wyman",
-        "price": "$46.35762058577151",
+        "price": 46.35762058577151,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0014",
-        "time": "2024-01-11T01:51:20.973Z",
+        "time": "2024-01-11T09:04:04.859Z",
         "customer": "Miss Tara Hahn",
-        "price": "$18.822793736003952",
+        "price": 18.822793736003952,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0015",
-        "time": "2024-01-11T04:23:25.096Z",
+        "time": "2024-01-11T09:02:26.360Z",
         "customer": "James Shields",
-        "price": "$52.682733465279874",
+        "price": 52.682733465279874,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0016",
-        "time": "2024-01-11T05:28:09.799Z",
+        "time": "2024-01-11T09:13:37.180Z",
         "customer": "Marion Franey",
-        "price": "$42.33141632907438",
+        "price": 42.33141632907438,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0017",
-        "time": "2024-01-11T02:19:41.012Z",
+        "time": "2024-01-11T09:04:17.958Z",
         "customer": "Gilbert Lockman IV",
-        "price": "$77.73864173588956",
+        "price": 77.73864173588956,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0018",
-        "time": "2024-01-11T02:35:26.972Z",
+        "time": "2024-01-11T08:57:33.777Z",
         "customer": "Myrtle Mann",
-        "price": "$9.182500986640264",
+        "price": 9.182500986640264,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0019",
-        "time": "2024-01-11T04:52:45.064Z",
+        "time": "2024-01-11T09:07:35.326Z",
         "customer": "Candice Rempel",
-        "price": "$74.11759724257749",
+        "price": 74.11759724257749,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0020",
-        "time": "2024-01-11T02:46:07.279Z",
+        "time": "2024-01-11T08:50:46.312Z",
         "customer": "Eula Jacobi",
-        "price": "$56.47813008519316",
+        "price": 56.47813008519316,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0021",
-        "time": "2024-01-11T05:27:05.923Z",
+        "time": "2024-01-11T08:55:03.072Z",
         "customer": "Conrad Douglas",
-        "price": "$53.46636690463731",
+        "price": 53.46636690463731,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0022",
-        "time": "2024-01-10T23:41:26.073Z",
+        "time": "2024-01-11T09:14:47.355Z",
         "customer": "Raul Schmitt",
-        "price": "$10.451916659181238",
+        "price": 10.451916659181238,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0023",
-        "time": "2024-01-11T01:26:27.437Z",
+        "time": "2024-01-11T09:19:58.264Z",
         "customer": "Ronnie Bins",
-        "price": "$54.71633030497345",
+        "price": 54.71633030497345,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0024",
-        "time": "2024-01-11T01:50:06.653Z",
+        "time": "2024-01-11T09:11:42.748Z",
         "customer": "Marty Hartmann",
-        "price": "$46.05761044479744",
+        "price": 46.05761044479744,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0025",
-        "time": "2024-01-10T23:36:37.180Z",
+        "time": "2024-01-11T09:06:27.202Z",
         "customer": "Cristina Russel",
-        "price": "$59.29109495971512",
+        "price": 59.29109495971512,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0026",
-        "time": "2024-01-10T23:55:14.362Z",
+        "time": "2024-01-11T09:12:57.369Z",
         "customer": "Abel Schimmel-Fritsch",
-        "price": "$55.256149791433565",
+        "price": 55.256149791433565,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0027",
-        "time": "2024-01-10T22:37:22.762Z",
+        "time": "2024-01-11T09:26:19.789Z",
         "customer": "Brian Pollich DDS",
-        "price": "$53.682843687630545",
+        "price": 53.682843687630545,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0028",
-        "time": "2024-01-10T21:52:58.468Z",
+        "time": "2024-01-11T09:12:22.092Z",
         "customer": "Kyle Schinner",
-        "price": "$65.81946135229772",
+        "price": 65.81946135229772,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0029",
-        "time": "2024-01-10T23:03:01.423Z",
+        "time": "2024-01-11T09:25:05.800Z",
         "customer": "Forrest Schimmel",
-        "price": "$83.40105612930029",
+        "price": 83.40105612930029,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0030",
-        "time": "2024-01-10T20:53:36.871Z",
+        "time": "2024-01-11T09:23:35.950Z",
         "customer": "Ms. Esther Wilderman",
-        "price": "$22.888459905497484",
+        "price": 22.888459905497484,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0031",
-        "time": "2024-01-11T05:37:17.343Z",
+        "time": "2024-01-11T08:51:48.044Z",
         "customer": "Mrs. Mindy Feeney",
-        "price": "$17.4754852392915",
+        "price": 17.4754852392915,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0032",
-        "time": "2024-01-11T03:13:27.597Z",
+        "time": "2024-01-11T09:25:41.151Z",
         "customer": "Tami Metz PhD",
-        "price": "$14.83220393530127",
+        "price": 14.83220393530127,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0033",
-        "time": "2024-01-11T02:11:57.885Z",
+        "time": "2024-01-11T08:53:00.441Z",
         "customer": "Ralph Rau",
-        "price": "$20.5986433820067",
+        "price": 20.5986433820067,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0034",
-        "time": "2024-01-10T23:47:00.491Z",
+        "time": "2024-01-11T08:51:50.211Z",
         "customer": "Dr. Cecil Russel",
-        "price": "$18.872401886623003",
+        "price": 18.872401886623003,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0035",
-        "time": "2024-01-11T01:44:52.919Z",
+        "time": "2024-01-11T09:00:27.563Z",
         "customer": "Angelica Balistreri",
-        "price": "$33.39361052345755",
+        "price": 33.39361052345755,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0036",
-        "time": "2024-01-11T02:53:19.410Z",
+        "time": "2024-01-11T09:32:47.943Z",
         "customer": "Levi Kuvalis-Donnelly",
-        "price": "$68.73962226023612",
+        "price": 68.73962226023612,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0037",
-        "time": "2024-01-11T03:49:32.023Z",
+        "time": "2024-01-11T09:24:13.575Z",
         "customer": "Pam Breitenberg",
-        "price": "$3.9859507866897967",
+        "price": 3.9859507866897967,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0038",
-        "time": "2024-01-10T22:43:41.198Z",
+        "time": "2024-01-11T09:17:25.218Z",
         "customer": "Miss Jessie Hintz",
-        "price": "$47.082716216621414",
+        "price": 47.082716216621414,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0039",
-        "time": "2024-01-10T22:04:44.803Z",
+        "time": "2024-01-11T09:13:50.036Z",
         "customer": "Brittany Mann DDS",
-        "price": "$27.59697950211202",
+        "price": 27.59697950211202,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0040",
-        "time": "2024-01-11T04:48:07.291Z",
+        "time": "2024-01-11T09:03:46.318Z",
         "customer": "Mrs. Beatrice Littel",
-        "price": "$13.077650452853185",
+        "price": 13.077650452853185,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0041",
-        "time": "2024-01-11T05:06:25.434Z",
+        "time": "2024-01-11T09:28:59.790Z",
         "customer": "Pat Gerhold",
-        "price": "$5.653217700502045",
+        "price": 5.653217700502045,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0042",
-        "time": "2024-01-11T01:21:38.137Z",
+        "time": "2024-01-11T09:00:31.794Z",
         "customer": "Vernon Champlin II",
-        "price": "$73.86328602590149",
+        "price": 73.86328602590149,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0043",
-        "time": "2024-01-10T23:34:01.426Z",
+        "time": "2024-01-11T08:51:53.437Z",
         "customer": "Ms. Inez Pagac-Dooley",
-        "price": "$68.32039577613534",
+        "price": 68.32039577613534,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0044",
-        "time": "2024-01-10T23:41:03.746Z",
+        "time": "2024-01-11T08:57:00.876Z",
         "customer": "Gail Ortiz",
-        "price": "$0.838140341406036",
+        "price": 0.838140341406036,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0045",
-        "time": "2024-01-10T21:08:03.536Z",
+        "time": "2024-01-11T09:12:02.351Z",
         "customer": "Herman Rodriguez II",
-        "price": "$84.40225886662553",
+        "price": 84.40225886662553,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0046",
-        "time": "2024-01-10T22:35:19.114Z",
+        "time": "2024-01-11T08:55:52.212Z",
         "customer": "Cindy Schinner",
-        "price": "$8.725485525509958",
+        "price": 8.725485525509958,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0047",
-        "time": "2024-01-11T01:38:31.349Z",
+        "time": "2024-01-11T09:08:21.988Z",
         "customer": "Ellis Huel V",
-        "price": "$6.029656456647726",
+        "price": 6.029656456647726,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0048",
-        "time": "2024-01-11T05:23:42.695Z",
+        "time": "2024-01-11T09:01:26.753Z",
         "customer": "Horace Kertzmann",
-        "price": "$18.317805866138627",
+        "price": 18.317805866138627,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0049",
-        "time": "2024-01-11T00:44:14.010Z",
+        "time": "2024-01-11T09:26:30.686Z",
         "customer": "Dallas Rempel",
-        "price": "$70.85094306713052",
+        "price": 70.85094306713052,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0050",
-        "time": "2024-01-10T20:55:00.823Z",
+        "time": "2024-01-11T08:57:14.273Z",
         "customer": "Jessica Kreiger",
-        "price": "$71.80305223177234",
+        "price": 71.80305223177234,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0051",
-        "time": "2024-01-10T21:12:59.329Z",
+        "time": "2024-01-11T09:21:29.500Z",
         "customer": "Ruby Gleichner PhD",
-        "price": "$19.38222473993663",
+        "price": 19.38222473993663,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0052",
-        "time": "2024-01-11T03:54:55.602Z",
+        "time": "2024-01-11T08:51:18.702Z",
         "customer": "Fredrick Anderson",
-        "price": "$86.63518465162714",
+        "price": 86.63518465162714,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0053",
-        "time": "2024-01-10T21:12:39.864Z",
+        "time": "2024-01-11T09:13:58.653Z",
         "customer": "Kimberly Breitenberg",
-        "price": "$51.98804071943471",
+        "price": 51.98804071943471,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0054",
-        "time": "2024-01-11T04:52:09.928Z",
+        "time": "2024-01-11T09:17:31.995Z",
         "customer": "Dr. Karen Williamson",
-        "price": "$21.011830215669015",
+        "price": 21.011830215669015,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0055",
-        "time": "2024-01-10T22:21:33.764Z",
+        "time": "2024-01-11T09:27:16.462Z",
         "customer": "Terrance Armstrong",
-        "price": "$19.031359575205208",
+        "price": 19.031359575205208,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0056",
-        "time": "2024-01-11T00:14:45.931Z",
+        "time": "2024-01-11T09:20:39.799Z",
         "customer": "Annie Medhurst",
-        "price": "$51.93429807970487",
+        "price": 51.93429807970487,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0057",
-        "time": "2024-01-11T01:26:48.462Z",
+        "time": "2024-01-11T08:53:01.393Z",
         "customer": "Geneva Yost III",
-        "price": "$43.759687658258485",
+        "price": 43.759687658258485,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0058",
-        "time": "2024-01-11T03:37:52.738Z",
+        "time": "2024-01-11T09:17:48.599Z",
         "customer": "Belinda Gutmann",
-        "price": "$56.6389769194017",
+        "price": 56.6389769194017,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0059",
-        "time": "2024-01-10T21:22:30.828Z",
+        "time": "2024-01-11T09:03:57.715Z",
         "customer": "Charles Aufderhar DVM",
-        "price": "$62.24938295388334",
+        "price": 62.24938295388334,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0060",
-        "time": "2024-01-11T05:18:18.055Z",
+        "time": "2024-01-11T09:05:06.356Z",
         "customer": "Cory Runolfsdottir",
-        "price": "$45.31095460467491",
+        "price": 45.31095460467491,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0061",
-        "time": "2024-01-10T22:17:17.113Z",
+        "time": "2024-01-11T09:20:16.582Z",
         "customer": "Ryan Christiansen",
-        "price": "$5.868918570861182",
+        "price": 5.868918570861182,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0062",
-        "time": "2024-01-10T22:41:37.729Z",
+        "time": "2024-01-11T09:28:35.999Z",
         "customer": "Josephine Stamm",
-        "price": "$3.765266864005535",
+        "price": 3.765266864005535,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0063",
-        "time": "2024-01-11T01:46:41.197Z",
+        "time": "2024-01-11T09:15:17.740Z",
         "customer": "Theresa Bosco",
-        "price": "$57.12269968994479",
+        "price": 57.12269968994479,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0064",
-        "time": "2024-01-10T23:19:52.422Z",
+        "time": "2024-01-11T09:22:55.268Z",
         "customer": "Randy Dare",
-        "price": "$74.11547581855838",
+        "price": 74.11547581855838,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0065",
-        "time": "2024-01-11T03:42:31.824Z",
+        "time": "2024-01-11T09:18:07.913Z",
         "customer": "Bernard Halvorson",
-        "price": "$88.41663823609971",
+        "price": 88.41663823609971,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0066",
-        "time": "2024-01-11T03:13:18.574Z",
+        "time": "2024-01-11T09:00:10.868Z",
         "customer": "Ms. Sandra Hilll",
-        "price": "$30.029840463542158",
+        "price": 30.029840463542158,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0067",
-        "time": "2024-01-11T05:35:01.762Z",
+        "time": "2024-01-11T09:20:43.098Z",
         "customer": "Marcos Rau",
-        "price": "$4.964462602329723",
+        "price": 4.964462602329723,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0068",
-        "time": "2024-01-11T00:15:25.276Z",
+        "time": "2024-01-11T09:23:22.187Z",
         "customer": "Angelica Bode",
-        "price": "$61.2921058517248",
+        "price": 61.2921058517248,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0069",
-        "time": "2024-01-10T20:55:11.562Z",
+        "time": "2024-01-11T09:28:21.709Z",
         "customer": "Maria Kuhn",
-        "price": "$87.10208121178835",
+        "price": 87.10208121178835,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0070",
-        "time": "2024-01-10T22:30:59.002Z",
+        "time": "2024-01-11T09:22:25.877Z",
         "customer": "Joey Gibson",
-        "price": "$35.77041974431432",
+        "price": 35.77041974431432,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0071",
-        "time": "2024-01-11T02:27:32.484Z",
+        "time": "2024-01-11T09:19:00.800Z",
         "customer": "Gerard Ferry",
-        "price": "$78.05111184394045",
+        "price": 78.05111184394045,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0072",
-        "time": "2024-01-10T23:10:22.340Z",
+        "time": "2024-01-11T09:10:17.176Z",
         "customer": "Eloise Conroy",
-        "price": "$25.491040907025432",
+        "price": 25.491040907025432,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0073",
-        "time": "2024-01-11T04:01:58.927Z",
+        "time": "2024-01-11T09:31:16.783Z",
         "customer": "Fernando Windler",
-        "price": "$89.05330656783532",
+        "price": 89.05330656783532,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0074",
-        "time": "2024-01-11T04:10:42.853Z",
+        "time": "2024-01-11T09:11:47.841Z",
         "customer": "Velma McClure DDS",
-        "price": "$91.86353296864695",
+        "price": 91.86353296864695,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0075",
-        "time": "2024-01-10T21:06:38.350Z",
+        "time": "2024-01-11T08:49:53.300Z",
         "customer": "Ira Gottlieb",
-        "price": "$66.64290787631873",
+        "price": 66.64290787631873,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0076",
-        "time": "2024-01-11T05:25:03.174Z",
+        "time": "2024-01-11T09:09:50.885Z",
         "customer": "Melinda Gulgowski",
-        "price": "$71.44222644105164",
+        "price": 71.44222644105164,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0077",
-        "time": "2024-01-11T01:23:40.180Z",
+        "time": "2024-01-11T08:56:21.915Z",
         "customer": "Jo Blick",
-        "price": "$20.139666420360403",
+        "price": 20.139666420360403,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0078",
-        "time": "2024-01-10T22:27:05.040Z",
+        "time": "2024-01-11T09:09:06.536Z",
         "customer": "Johanna Smitham",
-        "price": "$22.22852285678745",
+        "price": 22.22852285678745,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0079",
-        "time": "2024-01-11T01:18:27.041Z",
+        "time": "2024-01-11T09:26:59.495Z",
         "customer": "Latoya Ziemann",
-        "price": "$92.48665834481045",
+        "price": 92.48665834481045,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0080",
-        "time": "2024-01-11T04:04:55.799Z",
+        "time": "2024-01-11T08:52:21.204Z",
         "customer": "Homer Kunde V",
-        "price": "$3.988527516438457",
+        "price": 3.988527516438457,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0081",
-        "time": "2024-01-11T02:18:36.037Z",
+        "time": "2024-01-11T09:16:20.168Z",
         "customer": "Sandra Gottlieb-Lockman II",
-        "price": "$92.05515407467091",
+        "price": 92.05515407467091,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0082",
-        "time": "2024-01-10T22:52:17.007Z",
+        "time": "2024-01-11T09:12:10.912Z",
         "customer": "Dr. David Durgan",
-        "price": "$80.1070351802619",
+        "price": 80.1070351802619,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0083",
-        "time": "2024-01-11T01:28:08.302Z",
+        "time": "2024-01-11T09:16:08.068Z",
         "customer": "Ricky McCullough",
-        "price": "$3.7068332650386457",
+        "price": 3.7068332650386457,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0084",
-        "time": "2024-01-10T22:07:23.019Z",
+        "time": "2024-01-11T09:23:49.219Z",
         "customer": "Evan Harber",
-        "price": "$98.7514186184707",
+        "price": 98.7514186184707,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0085",
-        "time": "2024-01-11T01:42:00.274Z",
+        "time": "2024-01-11T09:04:32.312Z",
         "customer": "Jill Grimes",
-        "price": "$97.70427644079811",
+        "price": 97.70427644079811,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0086",
-        "time": "2024-01-11T03:23:38.292Z",
+        "time": "2024-01-11T08:53:04.031Z",
         "customer": "Muriel Koelpin II",
-        "price": "$63.24068646991155",
+        "price": 63.24068646991155,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0087",
-        "time": "2024-01-11T03:07:58.588Z",
+        "time": "2024-01-11T09:01:22.874Z",
         "customer": "Kirk Baumbach",
-        "price": "$60.61539094209123",
+        "price": 60.61539094209123,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0088",
-        "time": "2024-01-11T00:54:48.005Z",
+        "time": "2024-01-11T09:03:35.321Z",
         "customer": "Allison Schaden",
-        "price": "$27.972527948708148",
+        "price": 27.972527948708148,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0089",
-        "time": "2024-01-11T04:15:33.248Z",
+        "time": "2024-01-11T08:58:10.457Z",
         "customer": "Lydia Kessler",
-        "price": "$42.34847895876317",
+        "price": 42.34847895876317,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0090",
-        "time": "2024-01-11T00:19:47.007Z",
+        "time": "2024-01-11T09:23:09.426Z",
         "customer": "Nichole Abbott",
-        "price": "$56.713162831265244",
+        "price": 56.713162831265244,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0091",
-        "time": "2024-01-11T03:20:12.309Z",
+        "time": "2024-01-11T08:59:16.601Z",
         "customer": "Phillip Rau-Wehner",
-        "price": "$96.0518690351747",
+        "price": 96.0518690351747,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0092",
-        "time": "2024-01-10T22:42:03.025Z",
+        "time": "2024-01-11T09:03:49.214Z",
         "customer": "Gerald Toy",
-        "price": "$33.99362951758391",
+        "price": 33.99362951758391,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0093",
-        "time": "2024-01-10T21:04:15.423Z",
+        "time": "2024-01-11T08:50:29.387Z",
         "customer": "Jermaine Langworth",
-        "price": "$16.27830618754238",
+        "price": 16.27830618754238,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0094",
-        "time": "2024-01-11T04:51:12.192Z",
+        "time": "2024-01-11T09:28:04.324Z",
         "customer": "Mrs. Dawn Bode",
-        "price": "$16.75095253227179",
+        "price": 16.75095253227179,
         "payment": "Paid",
         "status": "No fulfilled"
     },
     {
         "id": "0095",
-        "time": "2024-01-10T22:31:59.024Z",
+        "time": "2024-01-11T08:53:45.304Z",
         "customer": "Mrs. Susan Abernathy",
-        "price": "$94.10911105124826",
+        "price": 94.10911105124826,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0096",
-        "time": "2024-01-11T03:26:04.258Z",
+        "time": "2024-01-11T08:52:56.926Z",
         "customer": "Joanna Schaden",
-        "price": "$37.42061927007858",
+        "price": 37.42061927007858,
         "payment": "Unpaid",
         "status": "Fulfilled"
     },
     {
         "id": "0097",
-        "time": "2024-01-11T05:00:40.531Z",
+        "time": "2024-01-11T08:50:06.150Z",
         "customer": "Angela Heaney-Maggio",
-        "price": "$97.93325729070499",
+        "price": 97.93325729070499,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0098",
-        "time": "2024-01-11T01:16:06.560Z",
+        "time": "2024-01-11T09:18:51.610Z",
         "customer": "Jesus Schmeler",
-        "price": "$75.84503139646664",
+        "price": 75.84503139646664,
         "payment": "Paid",
         "status": "Fulfilled"
     },
     {
         "id": "0099",
-        "time": "2024-01-11T00:41:43.285Z",
+        "time": "2024-01-11T09:00:25.269Z",
         "customer": "Leslie Cummerata",
-        "price": "$95.43030037587279",
+        "price": 95.43030037587279,
         "payment": "Unpaid",
         "status": "No fulfilled"
     },
     {
         "id": "0100",
-        "time": "2024-01-11T05:21:06.601Z",
+        "time": "2024-01-11T08:51:55.354Z",
         "customer": "Jo Gleichner Jr.",
-        "price": "$35.9700896971024",
+        "price": 35.9700896971024,
         "payment": "Paid",
         "status": "No fulfilled"
     }

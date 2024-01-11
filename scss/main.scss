@@ -278,6 +278,12 @@ body {
     }
 }
 
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 // for material icon
 .material-symbols-outlined {
     font-variation-settings:

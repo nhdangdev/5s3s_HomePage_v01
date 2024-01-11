@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/order-management.css">
     <script src="../js/main.js"></script>
     <script src="../js/sidebar.js"></script>
+    <script src="../js/infinity-fetch.js"></script>
     <title>Order Management</title>
 </head>
 
@@ -221,7 +222,7 @@
                             <span class="material-symbols-outlined" id="search-icon">
                                 search
                             </span>
-                            <input type="search" placeholder="Filter orders" class="title-2-text">
+                            <input type="search" name="search" placeholder="Filter orders" class="title-2-text">
                         </div>
                         <div class="filter-group">
                             <button type="button" class="filter-group__item">
@@ -540,6 +541,16 @@
                                         <div class="chip">Partially fulfilled</div>
                                     </td>
                                 </tr>
+                                <tr id="table-spinner">
+                                    <td colspan="7">
+                                        <div style="min-height: 2rem; text-align: center;">
+                                            <span class="material-symbols-outlined"
+                                                style="animation: rotate 1s infinite;">
+                                                progress_activity
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -557,8 +568,65 @@
             sortOrder: ''
         }
 
+        let orderCount = Infinity
+
+        const orderTable = document.querySelector('.order-table__table')
+        const loadingDock = orderTable.querySelector('#table-spinner')
+        const searchBox = document.querySelector('input[name="search"]')
+
+        searchBox.addEventListener('input', createDebounce(handleChangeSearchText))
+
+        const infinityFetch = new InfinityFetch({
+            onfetch: (page) => {
+                loadingDock.style.visibility = 'visible'
+                return getOrders(page, filterOfGetOrder)
+            },
+            onfetched: handleFetchedOrder,
+            onerror: (e) => {
+                console.log(e)
+            },
+            observedDock: loadingDock,
+            checkNextPage: checkNextPage
+        })
+
+        function checkNextPage(currentPage) {
+            if (Number.isSafeInteger(orderCount)) {
+                return Math.ceil(orderCount / filterOfGetOrder.limit) > currentPage
+            }
+
+            return true
+        }
+
+        async function handleFetchedOrder(result) {
+            loadingDock.style.visibility = 'hidden'
+            orderCount = result.total
+            const orders = result.data
+            for (let order of orders) {
+                loadingDock.insertAdjacentElement('beforebegin', createTableRow(order))
+            }
+        }
+
+        // get orders
+        async function getOrders(page = 1, filter = {}) {
+            const data = await getFakeData(page, filter)
+            return data
+        }
+
+        function makeChangeFilter() {
+            clearTableRows()
+            orderCount = Infinity
+            infinityFetch.resetPage()
+        }
+
+        function handleChangeSearchText(e) {
+            if (!e.target) { return }
+            const searchText = String(e.target.value || '')
+            filterOfGetOrder.search = searchText
+            makeChangeFilter()
+        }
+
         // get fake data
-        async function getData(page, filter = {}) {
+        async function getFakeData(page, filter = {}) {
             const res = await fetch('/db.json')
             const rawData = await res.json()
             let data = rawData
@@ -566,8 +634,10 @@
             if (!!filter.search) {
                 data = rawData.filter(item => item.customer.includes(filter.search))
             }
+
             const startIndex = (page - 1) * filter.limit
             const endIndex = startIndex + filter.limit
+            await delay(1000)
             return {
                 data: data.slice(startIndex, endIndex),
                 total: data.length,
@@ -575,6 +645,41 @@
             }
         }
 
+        function delay(ms) {
+            return new Promise((resolve => {
+                setTimeout(() => {
+                    resolve(true)
+                }, ms)
+            }))
+        }
+
+        function clearTableRows() {
+            const tableRows = document.querySelectorAll('.order-table__table tr.title-2-text')
+            for (let tableRow of tableRows) {
+                tableRow.remove()
+            }
+        }
+
+
+
+        function createTableRow(order) {
+            const relativeTime = getRelativeTime(order.time)
+            const priceFormatter = new Intl.NumberFormat('en', {
+                style: 'currency', currency: 'USD'
+            })
+            const row = document.createElement('tr')
+            row.classList.add('title-2-text')
+            row.innerHTML = `
+            <td><input type="checkbox" name="" id="${order.id}"></th>
+            <td class="id-cell"><a href="#${order.id}">#${order.id}</a></td>
+            <td title="${new Date(order.time).toString()}" >${relativeTime}</td>
+            <td>${order.customer}</td>
+            <td>${priceFormatter.format(order.price)}</td>
+            <td><div class="chip">${order.payment}</div></td>
+            <td><div class="chip">${order.status}</div></td>
+            `
+            return row
+        }
     </script>
 
 </body>
