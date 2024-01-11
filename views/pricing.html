@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="../css/pricing.css" />
   <script src="https://kit.fontawesome.com/70d145d8f0.js" crossorigin="anonymous"></script>
   <script src="../js/main.js"></script>
+  <style>
+    * {
+      --primary-color: #12424c;
+    }
+  </style>
   <title>Pricing</title>
 </head>
 
@@ -24,7 +29,7 @@
   <div class="wrapper">
     <!-- begin: header -->
     <div class="header">
-      <h4>Pricing</h4>
+      <h4 style="color: #1f7183;">Pricing</h4>
       <!-- [102327TIN] makeup -->
       <h1 style="color: var(--primary-color);">
         Simple and<br />
@@ -36,9 +41,9 @@
       </p>
     </div>
     <!-- end:header  -->
-
+    <!-- [012402TIN] update pricing content -->
     <div class="container">
-      <div class="price-item">
+      <div class="price-item price-item--popular">
         <h3 class="price-item__name">Free</h3>
         <p class="price-item__description">For starting
         </p>
@@ -53,37 +58,57 @@
         <div class="price-item__divider"></div>
         <ul class="price-item__feature">
           <li> <span class="check-icon">✓</span>
-            <p>Templates Menu to use</p><b>3</b>
+            <p>Menu Listing - Quanlity products</p><b>10</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Custom user permissions</p><b>1 user</b>
+            <p>Branding template</p><b>1</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Max file size upload</p><b>30MB</b>
+            <p>Media file size storage</p><b>100MB</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>On multiple display size</p><b>Limit</b>
+            <p>Display Device</p><b>1</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Upload image files</p>
+            <p>HD display</p><b>HD</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Free stock media library</p>
+            <p>Customer Support</p><b>Form</b>
+          </li>
+        </ul>
+      </div>
+      <!-- [022401TIN] add Basic package -->
+      <div class="price-item">
+        <h3 class="price-item__name">Basic</h3>
+        <p class="price-item__description">
+          <!-- For long-term growth -->
+        </p>
+        <div class="price-item__price">
+          <p>$15</p>
+        </div>
+        <button class="btn-two" onclick="window.location.href='/get-tips-earlier/'">
+          <span>Learn more</span> <i class="fa-solid fa-angle-right"></i>
+        </button>
+        <div class="price-item__divider"></div>
+        <ul class="price-item__feature">
+          <li> <span class="check-icon">✓</span>
+            <p>Menu Listing - Quanlity products</p><b>50</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>In-app Image Editor</p>
-          </li>
-          <!-- [102320TIN] comment unused code -->
-          <!-- <li> <span class="check-icon">✓</span>
-            <p>
-              Custom user permissions
-            </p>
+            <p>Branding template</p><b>3+</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>
-              Playlist, Schedule
-            </p>
-          </li> -->
+            <p>Media file size storage</p><b>500MB</b>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>Display Device</p><b>2</b>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>HD display</p><b>1080HD</b>
+          </li>
+          <li> <span class="check-icon">✓</span>
+            <p>Customer Support</p><b>48hours turn-around</b>
+          </li>
         </ul>
       </div>
       <div class="price-item ">
@@ -92,11 +117,12 @@
           For growing business
         </p>
         <div class="price-item__price">
-          <p>$25/monthly
+          <p>$35
+            <!-- /monthly
             <span class="price-item__sub-price">
               ($270/annual, discount 10%)
             </span>
-          </p>
+          </p> -->
         </div>
         <button class="btn-two"><span style="margin-right: 8px;">Go Pro</span> <i
             class="fa-solid fa-angle-right"></i></button>
@@ -105,65 +131,26 @@
         <div class="price-item__divider"></div>
         <ul class="price-item__feature">
           <li> <span class="check-icon">✓</span>
-            <p>Templates Menu to use</p><b>Up to 50</b>
+            <p>Menu Listing - Quanlity products</p><b>200</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Custom user permissions</p><b>Up to 3 user</b>
+            <p>Branding template</p><b>10+</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Max file size upload</p><b>Up to 300MB</b>
+            <p>Media file size storage</p><b>Upto 5GB</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>On multiple display size</p>
+            <p>Display Device</p><b>5</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Upload image and video files</p>
+            <p>HD display</p><b>4K</b>
           </li>
           <li> <span class="check-icon">✓</span>
-            <p>Free stock media library</p>
+            <p>Customer Support</p><b>24hours turn-around</b>
           </li>
-          <li> <span class="check-icon">✓</span>
-            <p>In-app Image Editor</p>
-          </li>
-          <li><span class="check-icon">✓</span>
-            <p>
-              Offline functionality
-            </p>
-          </li>
-          <li> <span class="check-icon">✓</span>
-            <p>
-              Canvas - content creator
-            </p>
-          </li>
-          <li> <span class="check-icon">✓</span>
-            <p>
-              Audit logs
-            </p>
-          </li>
-          <li> <span class="check-icon">✓</span>
-            <p>
-              Advanced reports
-            </p>
-          </li>
-          <li> <span class="check-icon">✓</span>
-            <p>
-              Custom user permissions
-            </p>
-          </li>
-          <li> <span class="check-icon">✓</span>
-            <p>
-              Playlist, Schedule
-            </p>
-          </li>
-          <!-- [102320TIN] comment unused code -->
-          <!-- <li> <span class="check-icon">✓</span>
-            <p>
-              Assign hierarchical access to content and screens
-            </p>
-          </li> -->
         </ul>
       </div>
-      <div class="price-item price-item--popular">
+      <!-- <div class="price-item price-item--popular">
         <h3 class="price-item__name">Enterprise</h3>
         <p class="price-item__description">
           For long-term growth
@@ -173,8 +160,6 @@
         </div>
         <button class="btn-two"><span style="margin-right: 8px;">Chat with us for a quote</span><i
             class="fa-solid fa-angle-right"></i></button>
-        <!-- 102327TIN replace hr by custom divider -->
-        <!-- <hr> -->
         <div class="price-item__divider"></div>
         <ul class="price-item__feature">
           <li> <span class="check-icon">✓</span>
@@ -230,14 +215,8 @@
               Playlist, Schedule
             </p>
           </li>
-          <!-- [102320TIN] comment unused code -->
-          <!-- <li> <span class="check-icon">✓</span>
-            <p>
-              Assign hierarchical access to content and screens
-            </p>
-          </li> -->
         </ul>
-      </div>
+      </div> -->
       <!-- <div class="price-item">
         <h3 class="price-item__name">Advanced</h3>
         <p class="price-item__description">

@@ -1,0 +1,266 @@
+.order-management {
+  color: var(--grey-10);
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.order-management ::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.order-management ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.order-management ::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: var(--border-radius-1);
+}
+.order-management ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.order-management__header {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.order-management__header-button {
+  border: none;
+  border-radius: var(--border-radius-1);
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: none;
+}
+.order-management__header-button--primary {
+  background-color: var(--blue-normal);
+  color: white;
+}
+.order-management__header-button--primary:active {
+  background-color: var(--blue-normal-active);
+}
+.order-management .analysis-bar {
+  display: flex;
+  gap: 0;
+  box-sizing: border-box;
+  padding: 0;
+  border-radius: var(--border-radius-4);
+  background-color: var(--grey-10);
+  color: white;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.order-management .analysis-bar__item {
+  padding: 1rem;
+  border-right: 1.5px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1 0 auto;
+}
+.order-management .analysis-bar__item:last-child {
+  border-right: none;
+}
+.order-management .analysis-bar__item-title {
+  opacity: 0.8;
+}
+.order-management .analysis-bar__item-value {
+  display: flex;
+  align-items: center;
+}
+.order-management .order-table {
+  padding: 0;
+  background-color: white;
+  border-radius: var(--border-radius-4);
+  border-bottom: 1px solid #eee;
+}
+.order-management .order-table__header {
+  display: flex;
+  padding: 0 1rem;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+.order-management .order-table__status-bar {
+  flex: 1 0 auto;
+  display: flex;
+}
+.order-management .order-table__status-bar-item {
+  display: block;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  transition: all 0.2s;
+  border-bottom: 3px solid transparent;
+  border-radius: -10px;
+}
+.order-management .order-table__status-bar-item:hover {
+  border-color: var(--grey-8);
+}
+.order-management .order-table__status-bar-item:has(input[type=radio]:checked) {
+  border-color: var(--blue-normal);
+}
+.order-management .order-table__status-bar-item input[type=radio] {
+  display: none;
+}
+.order-management .order-table__filter-bar {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  flex-wrap: wrap;
+}
+.order-management .order-table .search-box {
+  position: relative;
+  border: 1px solid var(--grey-3);
+  border-radius: var(--border-radius-2);
+  box-sizing: border-box;
+  padding: 0;
+  padding-left: 1.75rem;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+.order-management .order-table .search-box:has(input:focus) {
+  border-color: var(--blue-normal);
+  box-shadow: 0 0 0 1.5px var(--blue-light-active);
+}
+.order-management .order-table .search-box input {
+  padding: 0.65rem;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.order-management .order-table .search-box #search-icon {
+  position: absolute;
+  display: block;
+  left: 0.5rem;
+  top: 0.6rem;
+}
+.order-management .order-table .filter-group {
+  display: flex;
+  gap: 0;
+  overflow: hidden;
+  border-radius: var(--border-radius-2);
+  border: 1px solid var(--grey-3);
+}
+.order-management .order-table .filter-group__item {
+  display: flex;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  background-color: white;
+  border: none;
+  border-right: 1px solid var(--grey-3);
+  cursor: pointer;
+}
+.order-management .order-table .filter-group__item:last-child {
+  border-right: none;
+}
+.order-management .order-table .filter-group__item:active {
+  background-color: var(--grey-1);
+}
+.order-management .order-table #more-button {
+  display: flex;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  background-color: white;
+  border-radius: var(--border-radius-2);
+  border: 1px solid var(--grey-3);
+  cursor: pointer;
+}
+.order-management .order-table #more-button:active {
+  background-color: var(--grey-1);
+}
+.order-management .order-table__table-wrap {
+  overflow: auto;
+}
+.order-management .order-table__table {
+  overflow: auto;
+  position: relative;
+  width: 100%;
+  overflow: auto;
+}
+.order-management .order-table__table thead {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 1px 4px 1px var(--grey-1);
+  color: var(--grey-7);
+  font-weight: 400;
+}
+.order-management .order-table__table th,
+.order-management .order-table__table td {
+  padding: 1rem;
+  box-sizing: border-box;
+  display: table-cell;
+}
+.order-management .order-table__table td {
+  font-weight: 400;
+}
+.order-management .order-table__table td.id-cell {
+  font-weight: 600;
+}
+.order-management .order-table__table td.id-cell a {
+  text-decoration: none;
+  color: inherit;
+}
+.order-management .order-table__table .chip {
+  display: block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  background-color: var(--grey-3);
+  box-sizing: border-box;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  width: fit-content;
+  font-size: 14px;
+}
+.order-management .order-table__table .chip::before {
+  content: "";
+  display: block;
+  flex: 1 0 auto;
+  height: 6px;
+  width: 6px;
+  background-color: var(--grey-10);
+  border-radius: 1rem;
+}
+.order-management .order-table__table .chip--orange {
+  color: rgb(180, 83, 9);
+  background-color: rgb(254, 243, 199);
+}
+.order-management .order-table__table .chip--orange::before {
+  background-color: rgb(180, 83, 9);
+}
+.order-management .order-table__table .chip--blue {
+  color: var(--blue-darker);
+  background-color: var(--blue-light);
+}
+.order-management .order-table__table .chip--blue::before {
+  background-color: var(--blue-darker);
+}
+.order-management #location-filter {
+  border-left: 1px solid #eee;
+}
+.order-management .dropdown {
+  padding: 1rem;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+}
+.order-management .dropdown option {
+  background-color: white;
+  color: var(--grey-10);
+}
+
+/*# sourceMappingURL=order-management.css.map */

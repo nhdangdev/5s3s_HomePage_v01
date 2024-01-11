@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/account-form.css">
+    <script src="https://cdn.jsdelivr.net/npm/just-validate@4.3.0/dist/just-validate.production.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/account-form.js"></script>
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <header>
+        <div id="loading-screen">
+            <img src="../asset/img/foodiemenu-logo.png" height="32" alt="Logo">
+            <div class="loader"></div>
+        </div>
+    </header>
+    <div class="account-page">
+        <div class="logo-wrap">
+            <a href="#">
+                <div class="logo">
+                    <img src="../asset/img/foodiemenu-logo.png" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="illustration">
+            <img src="../asset/img/unlock illustration.png" alt="Illustration">
+        </div>
+        <div class="account-form">
+            <div class="account-form__left-side">
+                <div class="texts">
+                    <div class="h1-text-bold">Sign up to</div>
+                    <div class="h3-text-bold">Foodimenu is simply</div>
+                    <div class="title-2-text" style="margin-top: 2.75rem; margin-bottom: .4rem;">If you already have an
+                        account</div>
+                    <div class="title-2-text">You can
+                        &nbsp;
+                        <a href="#">
+                            Login here !
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="account-form__right-side">
+                <div class="h3-text-bold account-form__title">Sign up</div>
+                <form action="#" id="signup-form" class="account-form__form" novalidate="novalidate">
+                    <!-- Put error message when get a error after call api -->
+                    <div class="account-form__form-message title-2-text"
+                        style="color: var(--salmon-normal); margin-bottom: .5rem; display: none;">Some error
+                    </div>
+                    <fieldset class="account-form__fieldset">
+                        <div class="account-form__form-field">
+                            <input type="email" name="email" class="account-form__form-control title-1-text"
+                                placeholder="Enter email" oninvalid="" required autofocus>
+                            <div class="account-form__error-message caption-text" id="email-error-message"></div>
+                        </div>
+                        <div class="account-form__form-field" style="margin-top: 1rem;">
+                            <input type="text" name="username" class="account-form__form-control title-1-text"
+                                placeholder="Create user name" oninvalid="" required autofocus>
+                            <div class="account-form__error-message caption-text" id="username-error-message"></div>
+                        </div>
+                        <div class="account-form__form-field" style="margin-top: 1rem;">
+                            <input type="tel" name="contact-number" class="account-form__form-control title-1-text"
+                                placeholder="Contact number" oninvalid="" required autofocus>
+                            <div class="account-form__error-message caption-text" id="contact-number-error-message">
+                            </div>
+                        </div>
+                        <div class="account-form__form-field" style="margin-top: 1rem;">
+                            <input type="password" name="password" class="account-form__form-control title-1-text"
+                                placeholder="Password" required>
+                            <button class="account-form__field-button" id="toggle-password" type="button"
+                                onclick="togglePassword()">
+                                <span class="material-symbols-outlined" id="toggle-password-icon"
+                                    style="font-variation-settings:'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24">
+                                    visibility_off
+                                </span>
+                            </button>
+                            <div class="account-form__error-message caption-text" id="password-error-message"></div>
+                        </div>
+                        <div class="account-form__form-field" style="margin-top: 1rem;">
+                            <input type="password" name="confirm-password"
+                                class="account-form__form-control title-1-text" placeholder="Confirm password" required>
+                            <button class="account-form__field-button" id="toggle-confirm-password" type="button"
+                                onclick="toggleConfirmPassword()">
+                                <span class="material-symbols-outlined" id="toggle-password-icon"
+                                    style="font-variation-settings:'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24">
+                                    visibility_off
+                                </span>
+                            </button>
+                            <div class="account-form__error-message caption-text" id="confirm-password-error-message">
+                            </div>
+                        </div>
+                        <button type="submit" class="account-form__submit title-2-text" style="margin: 2rem 0 2.5rem;">
+                            <span class="material-symbols-outlined" id="spinner">
+                                progress_activity
+                            </span>
+                            Register
+                        </button>
+                    </fieldset>
+                    <div class="title-2-text"
+                        style="color: rgba(181, 181, 181, 1); text-align: center; margin-bottom: 2.5rem;">or continue
+                        with</div>
+                    <div class="third-party-authen">
+                        <div class="third-party-authen__item">
+                            <img src="../asset/img/icon/facebook.svg" alt="Facebook">
+                        </div>
+                        <div class="third-party-authen__item">
+                            <img src="../asset/img/icon/apple.svg" alt="Apple">
+                        </div>
+                        <div class="third-party-authen__item">
+                            <img src="../asset/img/icon/google.svg" alt="Google">
+                        </div>
+                    </div>
+                </form>
+                <div class="show-on-mobile">
+                    <p class="title-2-text" style="text-align: center; color: var(--grey-10);">If you
+                        already have an
+                        account
+                        <br>
+                        You can
+                        &nbsp;
+                        <a href="#" style="text-decoration: none; color: var(--blue-normal);">
+                            Login here !
+                        </a>
+                    </p>
+                </div>
+                <div style="margin: 2rem 0;"></div>
+            </div>
+        </div>
+    </div>
+    <div id="signup-notification"
+        style="display: none; justify-content: center; align-items: center; min-height: 100dvh; box-sizing: border-box; padding: 2rem 1rem;">
+        <style>
+            #resend-email-btn {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 1rem;
+                background-color: var(--blue-normal);
+                border-radius: 9px;
+                border: none;
+                color: white;
+                cursor: pointer;
+                transition: all 0.2s;
+                box-shadow: 0 4px 61px 0 rgba(72, 177, 236, 0.4);
+                display: flex;
+                gap: 0.5rem;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #resend-email-btn:focus {
+                outline: var(--blue-normal-active) solid 1.5px;
+            }
+
+            #resend-email-btn:active {
+                background-color: var(--blue-normal-active);
+            }
+
+            #resend-email-btn #spinner {
+                display: none;
+                font-size: 16px;
+            }
+
+            #resend-email-btn #spinner.show {
+                display: block;
+                animation: rotate 1.5s linear infinite;
+            }
+        </style>
+        <div
+            style="max-width: 516px; max-height: 700px; display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+            <img src="../asset/img/email-open.svg" alt="Email illustration"
+                style="display: block; width: 241px; height: auto;">
+            <div class="h3-text-bold" style="color: var(--grey-10);">You’re almost there!</div>
+            <div class="title-1-text"
+                style="color: var(--grey-7); text-align: center; margin-bottom: 2.25rem; text-wrap: pretty;">
+                We have sent an email to your registered email address with the access link and password. please check
+                your email and follow the instructions to complete your sign up process.
+                <br>
+                <br>
+                *if you don’t see the email in your inbox, please check your spam or junk folder. thank you fot choosing
+                our service.
+            </div>
+            <button id="resend-email-btn" class="title-2-text-bold" onclick="handleResendEmail()">
+                <span class="material-symbols-outlined" id="spinner">
+                    progress_activity
+                </span>
+                Resend email
+            </button>
+            <a href="#"
+                style="text-decoration: none; color: var(--grey-8); display: flex; gap: 1rem; align-items: center; margin-top: 1rem;"
+                class="title-2-text">
+                <svg width="23" height="17" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 8.5L1 8.5M1 8.5L9.75936 16M1 8.5L9.75936 0.999999" stroke="currentcolor"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Back to Home
+            </a>
+        </div>
+    </div>
+    <script>
+        function togglePassword() {
+            const passwordInput = document.querySelector('form#signup-form input[name="password"]')
+            const togglePasswordIcon = document.querySelector('#toggle-password-icon')
+
+            if (!passwordInput) { return }
+
+            if (passwordInput.getAttribute('type') === 'text') {
+                passwordInput.setAttribute('type', 'password')
+                togglePasswordIcon && (togglePasswordIcon.innerHTML = 'visibility_off');
+            } else {
+                passwordInput.setAttribute('type', 'text');
+                togglePasswordIcon && (togglePasswordIcon.innerHTML = 'visibility');
+            }
+        }
+
+        function toggleConfirmPassword() {
+            const passwordInput = document.querySelector('form#signup-form input[name="confirm-password"]')
+            const togglePasswordIcon = document.querySelector('#toggle-confirm-password-icon')
+
+            if (!passwordInput) { return }
+
+            if (passwordInput.getAttribute('type') === 'text') {
+                passwordInput.setAttribute('type', 'password')
+                togglePasswordIcon && (togglePasswordIcon.innerHTML = 'visibility_off');
+            } else {
+                passwordInput.setAttribute('type', 'text');
+                togglePasswordIcon && (togglePasswordIcon.innerHTML = 'visibility');
+            }
+        }
+        const signupForm = document.querySelector('#signup-form')
+
+        window.addEventListener('load', () => {
+            // handle form submit
+            if (signupForm) {
+                signupForm.addEventListener('submit', handleSubmitForm)
+            }
+        })
+
+        const emailInput = signupForm.querySelector('input[name="email"]')
+        const usernameInput = signupForm.querySelector('input[name="username"]')
+        const contactNumberInput = signupForm.querySelector('input[name="contact-number"]')
+        const confirmPasswordInput = signupForm.querySelector('input[name="confirm-password"]')
+        const passwordInput = signupForm.querySelector('input[name="password"]')
+
+        function handleSubmitForm(e) {
+            e.preventDefault()
+            const form = e.target
+            if (!validator.isValid) {
+                console.log('Invalid form')
+                return
+            }
+            if (!form) { return }
+            const submitButton = form.querySelector('button[type="submit"]');
+            disableForm(form)
+            submitButton.classList.add('account-form__submit--loading')
+            console.log('Do something')
+            // simulate api call
+            setTimeout(() => {
+                submitButton.classList.remove('account-form__submit--loading')
+                enableForm(form)
+
+                const signupNotification = document.querySelector('#signup-notification')
+                const signupScreen = document.querySelector('.account-page')
+                // hide signup screen
+                signupScreen.style.display = 'none'
+                // show signup notification
+                signupNotification.style.display = 'flex'
+            }, 2000)
+        }
+
+        // initValidInput('#signup-form input[name="email"]', '#email-error-message')
+        // initValidInput('#signup-form input[name="password"]', '#password-error-message')
+        // initValidInput('#signup-form input[name="username"]', '#username-error-message')
+        // initValidInput('#signup-form input[name="password"]', '#password-error-message')
+        // initValidInput('#signup-form input[name="contact-number"]', '#contact-number-error-message')
+        // initValidInput('#signup-form input[name="confirm-password"]', '#confirm-password-error-message')
+
+        // [012408TIN] use JustValidate to valid form
+        const validator = new JustValidate('#signup-form', {
+            // errorsContainer: '#email-error-message',
+            errorLabelStyle: { color: 'var(--salmon-normal)' },
+            errorLabelCssClass: ['account-form__error-message', 'caption-text'],
+        })
+
+        validator.addField('input[name="email"]', [
+            {
+                rule: 'required',
+                errorMessage: 'Email is required',
+            },
+            {
+                rule: 'email',
+                errorMessage: 'Email is invalid',
+            }
+        ])
+
+        validator.addField('input[name="username"]', [
+            {
+                rule: 'required',
+                errorMessage: 'Username is required',
+            },
+            {
+                rule: 'minLength',
+                value: 6,
+                errorMessage: 'Username is invalid',
+            },
+            {
+                rule: 'maxLength',
+                value: 30,
+                errorMessage: 'Username is invalid',
+            },
+            {
+                rule: 'customRegexp',
+                value: /^([a-z]|[0-9])+$/gi,
+                errorMessage: 'Username is invalid',
+            },
+        ])
+
+        validator.addField('input[name="contact-number"]', [
+            {
+                rule: 'required',
+                errorMessage: 'Contact number is required',
+            },
+            {
+                rule: 'integer',
+                errorMessage: 'Contact number is invalid',
+            },
+        ])
+
+        validator.addField('input[name="password"]', [
+            {
+                rule: 'required',
+                errorMessage: 'Password is required',
+            },
+            {
+                rule: 'customRegexp',
+                value: /\d+/,
+                errorMessage: 'Password must contain numbers',
+            },
+            {
+                rule: 'customRegexp',
+                value: /[a-z]+/i,
+                errorMessage: 'Password must contain alphabet characters',
+            },
+            {
+                rule: 'customRegexp',
+                value: /[/~`!@#$%^&*()\-_+={}\[\]|\;:"<>,./?]+/i,
+                errorMessage: 'Password must contain special characters',
+            },
+            {
+                rule: 'customRegexp',
+                value: /^(?=.*[a-z])(?=.*\d)(?=.*[/~`!@#$%^&*()\-_+={}\[\]|\;:"<>,./?])[A-Za-z\d/~`!@#$%^&*()\-_+={}\[\]|\;:"<>,./?]{6,30}$/,
+                errorMessage: 'Password is invalid',
+            }
+        ])
+
+        validator.addField('input[name="confirm-password"]', [
+            {
+                rule: 'required',
+                errorMessage: 'Confirm password is required',
+            },
+            {
+                validator: (value, fields) => {
+                    console.log(fields)
+                    const password = fields['input[name="password"]']?.elem?.value || ''
+                    const confirmPassword = fields['input[name="confirm-password"]']?.elem?.value || ''
+                    console.log({ password, confirmPassword })
+                    if (!password || !confirmPassword || password !== confirmPassword) {
+                        return false
+                    }
+
+                    return true
+                },
+                errorMessage: 'Confirm password does not match password',
+            }
+        ])
+
+        // [012405TIN] add handler for resend button
+        function handleResendEmail() {
+            const spinner = document.querySelector('#resend-email-btn #spinner')
+            if (spinner) {
+                spinner.classList.add('show')
+            }
+            // call resend email api
+            // simulate call api
+            setTimeout(() => {
+                spinner.classList.remove('show')
+            }, 2000)
+        }
+
+    </script>
+</body>
+
+</html>

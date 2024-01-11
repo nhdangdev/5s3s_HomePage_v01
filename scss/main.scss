@@ -54,6 +54,52 @@ body {
     --blue-dark-hover: #1f7183;
     --blue-dark-active: #175562;
     --blue-darker: #12424c;
+
+
+    --grey-1-rgb: 245 245 245;
+    --grey-2-rgb: 231 231 231;
+    --grey-3-rgb: 211 211 211;
+    --grey-4-rgb: 191 191 191;
+    --grey-5-rgb: 171 171 171;
+    --grey-6-rgb: 153 153 153;
+    --grey-7-rgb: 130 130 130;
+    --grey-8-rgb: 109 109 109;
+    --grey-9-rgb: 87 87 87;
+    --grey-10-rgb: 69 69 69;
+
+    --salmon-light-rgb: 254 242 241;
+    --salmon-light-hover-rgb: 253 235 234;
+    --salmon-light-active-rgb: 251 214 212;
+    --salmon-normal-rgb: 243 123 116;
+    --salmon-normal-hover-rgb: 219 111 104;
+    --salmon-normal-active-rgb: 194 98 93;
+    --salmon-dark-rgb: 182 92 87;
+    --salmon-dark-hover-rgb: 146 74 70;
+    --salmon-dark-active-rgb: 109 55 52;
+    --salmon-darker-rgb: 85 43 41;
+
+    --blue-light-rgb: 235 248 251;
+    --blue-light-hover-rgb: 224 245 249;
+    --blue-light-active-rgb: 192 234 244;
+    --blue-normal-rgb: 51 188 218;
+    --blue-normal-hover-rgb: 46 169 196;
+    --blue-normal-active-rgb: 41 150 174;
+    --blue-dark-rgb: 38 141 164;
+    --blue-dark-hover-rgb: 31 113 131;
+    --blue-dark-active-rgb: 23 85 98;
+    --blue-darker-rgb: 18 66 76;
+
+    --primary-color: #2196f3;
+    --darken-primary-color: #02315f;
+
+    /* [122328TIN] add border radius variables */
+    --border-radius-0: .1rem;
+    --border-radius-1: .2rem;
+    --border-radius-2: .3rem;
+    --border-radius-3: .4rem;
+    --border-radius-4: .5rem;
+    --border-round: 50%;
+    /* [122328TIN] add border radius variables - end */
 }
 
 // [112312TIN] add color palette - end
@@ -77,7 +123,7 @@ body {
     letter-spacing: 0em;
     text-align: left;
     // line-height: 100%;
-    color: #000;
+    color: inherit;
     font-style: normal;
 }
 
@@ -229,6 +275,12 @@ body {
 @keyframes l21 {
     100% {
         background-position: left
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
     }
 }
 
@@ -1259,7 +1311,7 @@ body {
         color: var(--salmon-normal);
 
         @include mobile {
-            font-size: 22px;
+            font-size: 16px;
             padding: .5rem 1rem;
         }
     }
@@ -1285,35 +1337,62 @@ body {
 }
 
 #landing-section-1 {
-    background: url(../asset/img/section-1-bg.webp);
-    background-size: contain, 100%;
-    background-repeat: no-repeat;
-    background-position: right top;
-    min-height: 923px;
+    // background: url(../asset/img/section-1-bg.webp);
+    // background-size: contain, 100%;
+    // background-repeat: no-repeat;
+    // background-position: right top;
+    // min-height: 923px;
+    position: relative;
 
-    @include mobile {
-        min-height: 800px;
-        background-position: right bottom;
-    }
+    // @include mobile {
+    //     // min-height: 800px;
+    //     background-position: right bottom;
+    // }
 
-    @include tablet {
-        min-height: 1000px;
-        background-position: right bottom;
+    // @include tablet {
+    //     min-height: 1000px;
+    //     background-position: right bottom;
+    // }
+
+    .bg-image {
+        position: static;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
     }
 
     .content-wrap {
         max-width: 40%;
         margin-left: 2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
 
         @include mobile {
             max-width: 100%;
-            margin: 0 1rem;
+            margin: 0 1rem 1rem;
+            position: static;
         }
 
         @include tablet {
+            position: static;
             max-width: 100%;
-            margin: 0 1rem;
-
+            margin: 0 1rem 1rem;
         }
     }
 
@@ -1564,11 +1643,17 @@ body {
             display: flex;
             gap: 2rem;
             overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
             // justify-content: space-between;
 
             &::-webkit-scrollbar {
                 display: none;
             }
+        }
+
+        &__item {
+            scroll-snap-align: center;
         }
     }
 
@@ -1723,22 +1808,38 @@ body {
             overflow-y: hidden;
             display: flex;
             gap: 1.5rem;
-            justify-content: center;
+            // justify-content: center;
             align-items: center;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
         }
 
         &__item {
+            // width: 190px;
+            // animation: fade .4s ease;
+            // scroll-snap-align: start;
+            flex: 1 0 auto;
+            width: 190px;
+            height: 340px;
+            position: relative;
+            display: none;
 
-            width: 0;
+
+            @include mobile {
+                width: 0;
+                flex-grow: 0;
+            }
+
+            @include tablet {
+                width: 0;
+                flex-grow: 0;
+            }
 
             &:nth-child(1),
             &:nth-child(3) {
-                flex: 1;
-                width: 190px;
-                height: 340px;
-                transition: all .4s;
-                position: relative;
+                display: block;
                 flex: none;
+                transition: width .4s ease-in-out;
 
                 &::after {
                     content: '';
@@ -1751,22 +1852,20 @@ body {
                     top: 0;
                     left: 0;
                 }
-
-                @include mobile {
-                    width: 0;
-                    flex-grow: 0;
-                }
-
-                @include tablet {
-                    width: 0;
-                    flex-grow: 0;
-                }
             }
+
+            // &--center {
+            //     // flex: 2;
+            //     flex: 1 0 60%;
+            //     height: 620px;
+            //     width: 618px;
+            // }
 
             &:nth-child(2) {
                 flex: 2;
                 height: 620px;
                 width: 618px;
+                display: block;
             }
 
             img {
@@ -1880,9 +1979,9 @@ body {
         }
 
         &__link {
-            @include text;
-            font-size: 11px;
-            font-weight: 600;
+            // @include text;
+            // font-size: 11px;
+            // font-weight: 600;
             text-align: center;
             color: inherit;
             text-decoration: underline;
@@ -2084,6 +2183,14 @@ body {
     &__row {
         display: flex;
         gap: 1rem;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        @include tablet {
+            flex-direction: column;
+        }
     }
 
     &__column {
@@ -2217,3 +2324,68 @@ body {
 }
 
 // [122307TIN] home page and landing page for payment - end
+// [122322TIN] add style for paginator
+.paginator {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-weight: 600;
+    font-size: 16px;
+
+    &__button {
+        font-weight: inherit;
+        font-size: initial;
+        border-radius: 1.5rem;
+        padding: .5rem 1rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // color: var(--salmon-darker);
+        color: #333;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 1px 5px 0 var(--grey-2);
+        transition: all .2s;
+
+        &:hover {
+            background-color: var(--grey-1);
+        }
+
+        &:active,
+        &--active {
+            background-color: $primary-color;
+            color: white;
+        }
+
+        &--active:hover {
+            background-color: $darken-primary-color;
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            box-shadow: none;
+            color: var(--grey-6);
+            background-color: transparent;
+        }
+    }
+
+    &__more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+// [122322TIN] add style for paginator - end

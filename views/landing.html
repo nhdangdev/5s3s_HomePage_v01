@@ -62,6 +62,9 @@
                 Get a demo
             </button>
         </div>
+        <div class="bg-image">
+            <img src="../asset/img/section-1-bg.webp" alt="">
+        </div>
     </section>
     <section id="landing-section-2">
         <div class="page-row">
@@ -96,11 +99,11 @@
                                     fill="currentcolor" />
                             </svg>
                         </button>
-                        <iframe class="video-player__embedded" style="width: 100%; min-height: 500px;"
+                        <iframe class="video-player__embedded" frameborder="0" allowfullscreen
+                            style="width: 100%; min-height: 500px;"
                             src="https://www.youtube.com/embed/LXb3EKWsInQ?si=WCA6D7Rl-CzNVSQp"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen">
                         </iframe>
                     </div>
                 </div>
@@ -155,36 +158,6 @@
                         <img src="../asset/img/client-logo-1.png" alt="">
                     </div>
                 </div>
-                <!-- <div class="carousel__item">
-                    <div class="client-image">
-                        <img src="../asset/img/client-logo-2.png" alt="">
-                    </div>
-                </div>
-                <div class="carousel__item">
-                    <div class="client-image">
-                        <img src="../asset/img/client-logo-3.png" alt="">
-                    </div>
-                </div>
-                <div class="carousel__item">
-                    <div class="client-image">
-                        <img src="../asset/img/client-logo-4.png" alt="">
-                    </div>
-                </div>
-                <div class="carousel__item">
-                    <div class="client-image">
-                        <img src="../asset/img/client-logo-5.png" alt="">
-                    </div>
-                </div>
-                <div class="carousel__item">
-                    <div class="client-image">
-                        <img src="../asset/img/client-logo-6.png" alt="">
-                    </div>
-                </div>
-                <div class="carousel__item">
-                    <div class="client-image">
-                        <img src="../asset/img/client-logo-1.png" alt="">
-                    </div>
-                </div> -->
             </div>
             <buttun class="carousel__next-btn" type="button">
                 <!-- <img src="../asset/img/icon/arrow-right.svg" alt=""> -->
@@ -264,14 +237,52 @@
             <div class="carousel">
                 <div class="carousel__item-list">
                     <div class="carousel__item"><img src="../asset/img/4.png" alt=""></div>
+                    <div class="carousel__item carousel__item--center"><img src="../asset/img/1.png" alt=""></div>
+                    <div class="carousel__item"><img src="../asset/img/2.png" alt=""></div>
+                    <!--  -->
+                    <div class="carousel__item"><img src="../asset/img/4.png" alt=""></div>
                     <div class="carousel__item"><img src="../asset/img/1.png" alt=""></div>
                     <div class="carousel__item"><img src="../asset/img/2.png" alt=""></div>
                 </div>
                 <button class="carousel__button carousel__button--prev">
-                    <img src="../asset/img/carousel-prev-btn.png" alt="">
+                    <svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M38.5 20.5C38.5 30.9934 29.9934 39.5 19.5 39.5C9.00659 39.5 0.5 30.9934 0.5 20.5V19.5C0.5 9.00659 9.00659 0.5 19.5 0.5C29.9934 0.5 38.5 9.00659 38.5 19.5V20.5Z"
+                            stroke="currentcolor" />
+                        <g clip-path="url(#clip0_293_868)">
+                            <path d="M26.2083 20H12.7916" stroke="currentcolor" stroke-width="1.5"
+                                stroke-linejoin="round" />
+                            <path d="M16.625 16L12.7917 20" stroke="currentcolor" stroke-width="1.5"
+                                stroke-linejoin="round" />
+                            <path d="M16.625 24L12.7917 20" stroke="currentcolor" stroke-width="1.5"
+                                stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_293_868">
+                                <rect width="23" height="24" fill="white" transform="matrix(-1 0 0 -1 31 32)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
                 </button>
                 <button class="carousel__button carousel__button--next">
-                    <img src="../asset/img/carousel-next-btn.png" alt="">
+                    <svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.5 19.5C0.5 9.00659 9.00659 0.5 19.5 0.5C29.9934 0.5 38.5 9.00659 38.5 19.5V20.5C38.5 30.9934 29.9934 39.5 19.5 39.5C9.00659 39.5 0.5 30.9934 0.5 20.5V19.5Z"
+                            stroke="currentcolor" />
+                        <g clip-path="url(#clip0_293_881)">
+                            <path d="M12.7917 20H26.2084" stroke="currentcolor" stroke-width="1.5"
+                                stroke-linejoin="round" />
+                            <path d="M22.375 24L26.2083 20" stroke="currentcolor" stroke-width="1.5"
+                                stroke-linejoin="round" />
+                            <path d="M22.375 16L26.2083 20" stroke="currentcolor" stroke-width="1.5"
+                                stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_293_881">
+                                <rect width="23" height="24" fill="white" transform="translate(8 8)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
                 </button>
             </div>
         </div>
@@ -292,7 +303,7 @@
                     <div class="title-1-text-bold step-card__title">
                         Log in
                     </div>
-                    <a href="#" class="step-card__link">
+                    <a href="#" class="title-2-text-bold step-card__link">
                         Learn more
                     </a>
                 </div>
@@ -342,7 +353,17 @@
                 <div class="advantage-column">
                     <div class="advantage-item">
                         <div class="advantage-item__checkmark">
-                            <img src="../asset/img/Checkmark.png" alt="">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 29.3334C23.3638 29.3334 29.3333 23.3639 29.3333 16.0001C29.3333 8.63628 23.3638 2.66675 16 2.66675C8.63619 2.66675 2.66666 8.63628 2.66666 16.0001C2.66666 23.3639 8.63619 29.3334 16 29.3334Z"
+                                    fill="#33BCDA" />
+                                <path
+                                    d="M26.0607 11.6767L23.3433 9.06934L15.1833 17.4887L11.1193 13.622L8.51199 16.3393L12.562 20.1927L15.28 22.786L15.284 22.782L15.288 22.786L17.9067 20.0793L26.0607 11.6767Z"
+                                    fill="white" />
+                                <path d="M15.284 22.7821L17.9067 20.0794L15.1833 17.4888L12.562 20.1928L15.284 22.7821Z"
+                                    fill="white" />
+                            </svg>
                         </div>
                         <div class="advantage-item__text-wrap">
                             <div class="title-1-text-bold advantage-item__title">
@@ -355,7 +376,17 @@
                     </div>
                     <div class="advantage-item">
                         <div class="advantage-item__checkmark">
-                            <img src="../asset/img/Checkmark.png" alt="">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 29.3334C23.3638 29.3334 29.3333 23.3639 29.3333 16.0001C29.3333 8.63628 23.3638 2.66675 16 2.66675C8.63619 2.66675 2.66666 8.63628 2.66666 16.0001C2.66666 23.3639 8.63619 29.3334 16 29.3334Z"
+                                    fill="#33BCDA" />
+                                <path
+                                    d="M26.0607 11.6767L23.3433 9.06934L15.1833 17.4887L11.1193 13.622L8.51199 16.3393L12.562 20.1927L15.28 22.786L15.284 22.782L15.288 22.786L17.9067 20.0793L26.0607 11.6767Z"
+                                    fill="white" />
+                                <path d="M15.284 22.7821L17.9067 20.0794L15.1833 17.4888L12.562 20.1928L15.284 22.7821Z"
+                                    fill="white" />
+                            </svg>
                         </div>
                         <div class="advantage-item__text-wrap">
                             <div class="title-1-text-bold advantage-item__title">
@@ -368,7 +399,17 @@
                     </div>
                     <div class="advantage-item">
                         <div class="advantage-item__checkmark">
-                            <img src="../asset/img/Checkmark.png" alt="">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 29.3334C23.3638 29.3334 29.3333 23.3639 29.3333 16.0001C29.3333 8.63628 23.3638 2.66675 16 2.66675C8.63619 2.66675 2.66666 8.63628 2.66666 16.0001C2.66666 23.3639 8.63619 29.3334 16 29.3334Z"
+                                    fill="#33BCDA" />
+                                <path
+                                    d="M26.0607 11.6767L23.3433 9.06934L15.1833 17.4887L11.1193 13.622L8.51199 16.3393L12.562 20.1927L15.28 22.786L15.284 22.782L15.288 22.786L17.9067 20.0793L26.0607 11.6767Z"
+                                    fill="white" />
+                                <path d="M15.284 22.7821L17.9067 20.0794L15.1833 17.4888L12.562 20.1928L15.284 22.7821Z"
+                                    fill="white" />
+                            </svg>
                         </div>
                         <div class="advantage-item__text-wrap">
                             <div class="title-1-text-bold advantage-item__title">
@@ -381,7 +422,17 @@
                     </div>
                     <div class="advantage-item">
                         <div class="advantage-item__checkmark">
-                            <img src="../asset/img/Checkmark.png" alt="">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 29.3334C23.3638 29.3334 29.3333 23.3639 29.3333 16.0001C29.3333 8.63628 23.3638 2.66675 16 2.66675C8.63619 2.66675 2.66666 8.63628 2.66666 16.0001C2.66666 23.3639 8.63619 29.3334 16 29.3334Z"
+                                    fill="#33BCDA" />
+                                <path
+                                    d="M26.0607 11.6767L23.3433 9.06934L15.1833 17.4887L11.1193 13.622L8.51199 16.3393L12.562 20.1927L15.28 22.786L15.284 22.782L15.288 22.786L17.9067 20.0793L26.0607 11.6767Z"
+                                    fill="white" />
+                                <path d="M15.284 22.7821L17.9067 20.0794L15.1833 17.4888L12.562 20.1928L15.284 22.7821Z"
+                                    fill="white" />
+                            </svg>
                         </div>
                         <div class="advantage-item__text-wrap">
                             <div class="title-1-text-bold advantage-item__title">
@@ -396,7 +447,17 @@
                 <div class="advantage-column">
                     <div class="advantage-item">
                         <div class="advantage-item__checkmark">
-                            <img src="../asset/img/Checkmark.png" alt="">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 29.3334C23.3638 29.3334 29.3333 23.3639 29.3333 16.0001C29.3333 8.63628 23.3638 2.66675 16 2.66675C8.63619 2.66675 2.66666 8.63628 2.66666 16.0001C2.66666 23.3639 8.63619 29.3334 16 29.3334Z"
+                                    fill="#33BCDA" />
+                                <path
+                                    d="M26.0607 11.6767L23.3433 9.06934L15.1833 17.4887L11.1193 13.622L8.51199 16.3393L12.562 20.1927L15.28 22.786L15.284 22.782L15.288 22.786L17.9067 20.0793L26.0607 11.6767Z"
+                                    fill="white" />
+                                <path d="M15.284 22.7821L17.9067 20.0794L15.1833 17.4888L12.562 20.1928L15.284 22.7821Z"
+                                    fill="white" />
+                            </svg>
                         </div>
                         <div class="advantage-item__text-wrap">
                             <div class="title-1-text-bold advantage-item__title">
@@ -409,7 +470,17 @@
                     </div>
                     <div class="advantage-item">
                         <div class="advantage-item__checkmark">
-                            <img src="../asset/img/Checkmark.png" alt="">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 29.3334C23.3638 29.3334 29.3333 23.3639 29.3333 16.0001C29.3333 8.63628 23.3638 2.66675 16 2.66675C8.63619 2.66675 2.66666 8.63628 2.66666 16.0001C2.66666 23.3639 8.63619 29.3334 16 29.3334Z"
+                                    fill="#33BCDA" />
+                                <path
+                                    d="M26.0607 11.6767L23.3433 9.06934L15.1833 17.4887L11.1193 13.622L8.51199 16.3393L12.562 20.1927L15.28 22.786L15.284 22.782L15.288 22.786L17.9067 20.0793L26.0607 11.6767Z"
+                                    fill="white" />
+                                <path d="M15.284 22.7821L17.9067 20.0794L15.1833 17.4888L12.562 20.1928L15.284 22.7821Z"
+                                    fill="white" />
+                            </svg>
                         </div>
                         <div class="advantage-item__text-wrap">
                             <div class="title-1-text-bold advantage-item__title">
@@ -422,7 +493,17 @@
                     </div>
                     <div class="advantage-item">
                         <div class="advantage-item__checkmark">
-                            <img src="../asset/img/Checkmark.png" alt="">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 29.3334C23.3638 29.3334 29.3333 23.3639 29.3333 16.0001C29.3333 8.63628 23.3638 2.66675 16 2.66675C8.63619 2.66675 2.66666 8.63628 2.66666 16.0001C2.66666 23.3639 8.63619 29.3334 16 29.3334Z"
+                                    fill="#33BCDA" />
+                                <path
+                                    d="M26.0607 11.6767L23.3433 9.06934L15.1833 17.4887L11.1193 13.622L8.51199 16.3393L12.562 20.1927L15.28 22.786L15.284 22.782L15.288 22.786L17.9067 20.0793L26.0607 11.6767Z"
+                                    fill="white" />
+                                <path d="M15.284 22.7821L17.9067 20.0794L15.1833 17.4888L12.562 20.1928L15.284 22.7821Z"
+                                    fill="white" />
+                            </svg>
                         </div>
                         <div class="advantage-item__text-wrap">
                             <div class="title-1-text-bold advantage-item__title">
@@ -435,7 +516,17 @@
                     </div>
                     <div class="advantage-item">
                         <div class="advantage-item__checkmark">
-                            <img src="../asset/img/Checkmark.png" alt="">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 29.3334C23.3638 29.3334 29.3333 23.3639 29.3333 16.0001C29.3333 8.63628 23.3638 2.66675 16 2.66675C8.63619 2.66675 2.66666 8.63628 2.66666 16.0001C2.66666 23.3639 8.63619 29.3334 16 29.3334Z"
+                                    fill="#33BCDA" />
+                                <path
+                                    d="M26.0607 11.6767L23.3433 9.06934L15.1833 17.4887L11.1193 13.622L8.51199 16.3393L12.562 20.1927L15.28 22.786L15.284 22.782L15.288 22.786L17.9067 20.0793L26.0607 11.6767Z"
+                                    fill="white" />
+                                <path d="M15.284 22.7821L17.9067 20.0794L15.1833 17.4888L12.562 20.1928L15.284 22.7821Z"
+                                    fill="white" />
+                            </svg>
                         </div>
                         <div class="advantage-item__text-wrap">
                             <div class="title-1-text-bold advantage-item__title">
@@ -536,7 +627,7 @@
     </div>
     <script>
         const videoPlayer = document.querySelector('.video-player')
-        initCustomVideoPlayer(videoPlayer)
+        initCustomVideoPlayer(videoPlayer, { fullScreenWhenPlay: true })
         initCarousel('.carousel', 150)
         initCarousel2('#landing-section-5 .carousel')
 
@@ -548,51 +639,20 @@
                 const PREV_BTN_CLASSNAME = 'carousel__prev-btn'
                 const carousel = document.querySelector(selector)
                 const carouselItemListWrap = carousel.querySelector(`.${CAROUSEL_ITEM_LIST_CLASSNAME}`)
-                // const carouselItems = carousel.querySelectorAll(`.${CAROUSEL_ITEM_CLASSNAME}`)
                 const nextBtn = carousel.querySelector(`.${NEXT_BTN_CLASSNAME}`)
                 const prevBtn = carousel.querySelector(`.${PREV_BTN_CLASSNAME}`)
-                // let currentScrollWidth = 0
-                // let carouselItemListWrapWidth = calculateWidthForCarouselItemWrap(carouselItemListWrap, carouselItems)
-                // carouselItemListWrap.style.maxWidth = carouselItemListWrapWidth + 'px'
 
                 nextBtn.addEventListener('click', () => {
-                    // if (currentScrollWidth + carouselItemListWrapWidth > carouselItemListWrap.scrollWidth) {
-                    //     return
-                    // }
-                    // currentScrollWidth += scrollAmount
                     scrollToLeft(carouselItemListWrap.scrollLeft + scrollAmount, '.' + CAROUSEL_ITEM_LIST_CLASSNAME)
                 })
 
                 prevBtn.addEventListener('click', () => {
-                    // if (currentScrollWidth <= 0) {
-                    //     return
-                    // }
-
-                    // currentScrollWidth -= scrollAmount
-                    // scrollToLeft(currentScrollWidth, '.' + CAROUSEL_ITEM_LIST_CLASSNAME)
                     scrollToLeft(carouselItemListWrap.scrollLeft - scrollAmount, '.' + CAROUSEL_ITEM_LIST_CLASSNAME)
 
                 })
             })
         }
 
-        // function calculateWidthForCarouselItemWrap(carouselItemListWrap, carouselItems) {
-        //     const carouselItemListWrapWidth = carouselItemListWrap.clientWidth
-        //     let currentItemWrapWidth = carouselItems?.[0]?.clientWidth || 0
-
-        //     for (let carouselItem of carouselItems) {
-        //         const carouselItemWidth = carouselItem.clientWidth
-        //         if (currentItemWrapWidth + carouselItemWidth > carouselItemListWrapWidth) {
-        //             return currentItemWrapWidth
-        //         } else {
-        //             currentItemWrapWidth += carouselItemWidth
-        //         }
-        //     }
-
-        //     return currentItemWrapWidth
-        // }
-
-        // if amount is negative num that scroll to right
         function scrollToLeft(amount, selector) {
             const element = document.querySelector(selector)
             if (!element) {
@@ -603,6 +663,12 @@
         }
 
         function handleNextCarouselItem(items) {
+            // const CENTER_ITEM_CLASSNAME = 'carousel__item--center'
+            // const indexOfCenterItem = getIndexOfCenterCarouselItem(items)
+            // if (items.length <= 1 || indexOfCenterItem >= items.length - 2) { return }
+            // scrollToLeft(-100, '#landing-section-5 .carousel__item-list')
+            // items[indexOfCenterItem].classList.remove(CENTER_ITEM_CLASSNAME)
+            // items[indexOfCenterItem + 1].classList.add(CENTER_ITEM_CLASSNAME)
             if (items.length <= 1) { return }
             const firstItem = items[0]
             const lastItem = items[items.length - 1]
@@ -612,12 +678,27 @@
         }
 
         function handlePrevCarouselItem(items) {
-            if (items.length <= 1) { return }
+            // const CENTER_ITEM_CLASSNAME = 'carousel__item--center'
+            // const indexOfCenterItem = getIndexOfCenterCarouselItem(items)
+            // if (items.length <= 1 || indexOfCenterItem <= 1) { return }
+            // scrollToLeft(100, '#landing-section-5 .carousel__item-list')
+            // items[indexOfCenterItem].classList.remove(CENTER_ITEM_CLASSNAME)
+            // items[indexOfCenterItem - 1].classList.add(CENTER_ITEM_CLASSNAME)
             const firstItem = items[0]
             const lastItem = items[items.length - 1]
             const clonedLastItem = lastItem.cloneNode(true)
             firstItem.insertAdjacentElement('beforebegin', clonedLastItem)
             lastItem.remove()
+        }
+
+        function getIndexOfCenterCarouselItem(items, centerClassName = 'carousel__item--center') {
+            let index = 0
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].classList.contains(centerClassName)) {
+                    index = i
+                }
+            }
+            return index;
         }
 
         function initCarousel2(selector) {
