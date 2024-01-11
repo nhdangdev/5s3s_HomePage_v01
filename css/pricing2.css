@@ -2084,5 +2084,192 @@ body {
     opacity: 1;
   }
 }
+.pricing-page {
+  padding: 1.5rem 1.5rem 6rem;
+  box-sizing: border-box;
+}
+@media (max-width: 479px) {
+  .pricing-page {
+    padding: 1rem;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .pricing-page {
+    padding: 1.5rem;
+  }
+}
+.pricing-page__title {
+  color: var(--grey-10);
+  text-align: center;
+  margin-top: 2rem;
+}
+@media (max-width: 479px) {
+  .pricing-page__title {
+    font-size: 34px;
+  }
+}
+.pricing-page__caption {
+  color: var(--grey-10);
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 5rem;
+}
+.pricing-page .price-package-wrap {
+  display: flex;
+  gap: 0;
+  width: 100%;
+}
+@media (max-width: 479px) {
+  .pricing-page .price-package-wrap {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .pricing-page .price-package-wrap {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+.pricing-page .price-package {
+  flex: 1;
+  min-height: 400px;
+  background-color: var(--blue-light);
+  border-radius: 44px;
+  padding: 72px 1.5rem;
+  box-sizing: border-box;
+  color: var(--blue-darker);
+}
+@media (max-width: 479px) {
+  .pricing-page .price-package {
+    padding: 72px 1.5rem !important;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .pricing-page .price-package {
+    padding: 72px 1.5rem !important;
+  }
+}
+.pricing-page .price-package__divider {
+  height: 2px;
+  width: 100%;
+  background-color: var(--blue-darker);
+  display: block;
+  margin: 1rem 0;
+}
+.pricing-page .price-package__caption {
+  color: var(--blue-dark-hover);
+  margin: 1rem 0;
+}
+.pricing-page .price-package__price {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.pricing-page .price-package__get-button {
+  border-radius: 32px;
+  padding: 15px 23px;
+  color: white;
+  background-color: var(--blue-normal);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 0 4.5px rgba(85, 188, 221, 0.4);
+  transition: all 0.2s;
+}
+.pricing-page .price-package__get-button:active {
+  background-color: var(--blue-normal-active);
+}
+.pricing-page .price-package__get-button--highlight {
+  background-color: var(--salmon-normal);
+  box-shadow: 0 0 0 4.5px rgba(221, 85, 101, 0.4);
+}
+.pricing-page .price-package__get-button--highlight:active {
+  background-color: var(--salmon-normal-active);
+}
+.pricing-page .price-package__feature-list {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+.pricing-page .price-package__feature-list li {
+  margin-bottom: 0.4rem;
+}
+.pricing-page .price-package__feature {
+  display: flex;
+  gap: 1rem;
+}
+.pricing-page .price-package__feature-name {
+  flex: 1;
+  list-style-type: disc;
+}
+.pricing-page .price-package__feature-value--highlight {
+  color: var(--salmon-normal);
+}
+.pricing-page .price-package--highlight {
+  position: relative;
+  z-index: 9;
+  background-color: white;
+  padding: 42px 1.5rem;
+}
+.pricing-page .price-package--highlight::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(white, white) padding-box, linear-gradient(180deg, #F58383 0%, rgba(111, 202, 241, 0.51) 100%) border-box;
+  border: 1px solid transparent;
+  box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.06);
+  transform: scale(1.05, 1.15);
+  border-radius: 44px;
+  box-sizing: border-box;
+  z-index: -1;
+}
+@media (max-width: 479px) {
+  .pricing-page .price-package--highlight::before {
+    transform: scale(1);
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .pricing-page .price-package--highlight::before {
+    transform: scale(1);
+  }
+}
+.pricing-page .price-package--highlight::after {
+  content: "Recommended";
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0em;
+  text-align: left;
+  color: inherit;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  bottom: -53px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 34px;
+  width: 50%;
+  max-width: 204px;
+  border-radius: 14px 14px 0px 0px;
+  background-color: var(--salmon-normal);
+}
+@media (max-width: 479px) {
+  .pricing-page .price-package--highlight::after {
+    bottom: 0;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .pricing-page .price-package--highlight::after {
+    bottom: 0;
+  }
+}
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=pricing2.css.map */

@@ -184,7 +184,7 @@ function scrollToElement(selector) {
 // [122305TIN] add below script - end
 
 // [122306TIN] add script for custome video player
-function initCustomVideoPlayer(videoPlayler) {
+function initCustomVideoPlayer(videoPlayler, { fullScreenWhenPlay = false }) {
     const THUMB_CLASSNAME = 'video-player__thumb'
     const PLAY_BTN_CLASSNAME = 'video-player__play-btn'
     const EMBEDDED_CLASSNAME = 'video-player__embedded'
@@ -201,7 +201,35 @@ function initCustomVideoPlayer(videoPlayler) {
         const videoUrl = new URL(embedded.src)
         videoUrl.searchParams.set('autoplay', '1')
         embedded.src = videoUrl.href
+        if (!!fullScreenWhenPlay) {
+            embedded.requestFullscreen().then(() => {
+                console.log('View video fullscreen')
+            }).catch(e => {
+                console.log(e)
+            })
+        }
     }
 
     playButton.addEventListener('click', handlePlayClick)
+}
+
+function setAndRouteToParam(param, value) {
+    const currentUrl = new URL(window.location.href)
+    currentUrl.searchParams.set(param, value)
+    window.location.href = currentUrl.href;
+}
+
+function createDebounce(func, delay = 400) {
+    let timeoutId = null
+    function debouncedFunc(...args) {
+        if (!!timeoutId) {
+            clearTimeout(timeoutId)
+        }
+
+        timeoutId = setTimeout(() => {
+            func(...args);
+        }, delay)
+    }
+
+    return debouncedFunc
 }
