@@ -1702,6 +1702,10 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.group:hover .group-hover\:block {
+  display: block;
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
