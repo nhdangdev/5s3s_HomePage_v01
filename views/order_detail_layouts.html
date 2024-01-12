@@ -16,12 +16,14 @@
     <link rel="stylesheet" href="../css/grid.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/dialog.css" />
+    <link rel="stylesheet" href="../css/order_notification.css" />
 
     <!-- Add TailwindCss -->
     <link rel="stylesheet" href="../css/tailwind_output.css" />
 
     <script src="../js/main.js"></script>
     <script src="../js/sidebar.js"></script>
+    <script src="../js/order_notification.js"></script>
     <script src="../js/user_template_list.js" type="module"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Order Detail Layout</title>
@@ -104,6 +106,7 @@
             >
               Hoàn tiền
             </button>
+
             <button
               class="title-1-text mr-4 bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 px-4 rounded-lg"
             >
@@ -131,7 +134,7 @@
                   </svg>
                 </button>
                 <div
-                  class="dropdown-content hidden absolute bg-white w-40 py-2 rounded-lg shadow-lg"
+                  class="dropdown-content absolute mt-2 left-0 bg-amber-500 w-40 py-2 rounded-lg shadow-lg"
                 >
                   <ul>
                     <li class="hover:bg-gray-100 py-1 px-4">Item 1</li>
@@ -179,6 +182,283 @@
                 </svg>
               </button>
             </div>
+            <!-- Order Notification  -->
+            <div class="relative">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 ml-4 cursor-pointer"
+                id="bell-icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+                />
+              </svg>
+
+              <div
+                class="inline-block absolute right-0 pt-4 w-72"
+                id="notification-panel"
+                onmouseenter="showNotificationPanel()"
+                onmouseleave="hideNotificationPanel()"
+              >
+                <div
+                  id="toast-notification"
+                  class="w-full drop-shadow-2xl max-w-xs p-4 text-gray-900 bg-white rounded-lg dark:bg-white dark:text-gray-600"
+                  role="alert"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="mb-1 text-sm font-semibold text-white dark:text-gray-900"
+                      >New notification</span
+                    >
+                    <button
+                      type="button"
+                      class="ms-auto -mx-1.5 -my-1.5 bg-white justify-center items-center flex-shrink-0 text-black rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 inline-flex h-8 w-8 dark:text-gray-800 dark:hover:text-white dark:bg-white dark:hover:bg-gray-700 border border-gray-800"
+                      data-dismiss-target="#toast-notification"
+                      aria-label="Close"
+                      onclick="closeNotificationPanel()"
+                    >
+                      <span class="sr-only">Close</span>
+                      <svg
+                        class="w-3 h-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 14"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- Notification 1 -->
+                  <div class="flex items-center mb-4">
+                    <div class="relative inline-block shrink-0">
+                      <img
+                        class="w-12 h-12 rounded-full border border-black"
+                        src="https://picsum.photos/id/1/200/300"
+                        alt="Alex image"
+                      />
+                      <span
+                        class="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full"
+                      >
+                        <svg
+                          class="w-3 h-3 text-white"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 18"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M18 4H16V9C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13H9L6.846 14.615C7.17993 14.8628 7.58418 14.9977 8 15H11.667L15.4 17.8C15.5731 17.9298 15.7836 18 16 18C16.2652 18 16.5196 17.8946 16.7071 17.7071C16.8946 17.5196 17 17.2652 17 17V15H18C18.5304 15 19.0391 14.7893 19.4142 14.4142C19.7893 14.0391 20 13.5304 20 13V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M12 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V9C0 9.53043 0.210714 10.0391 0.585786 10.4142C0.960859 10.7893 1.46957 11 2 11H3V13C3 13.1857 3.05171 13.3678 3.14935 13.5257C3.24698 13.6837 3.38668 13.8114 3.55279 13.8944C3.71889 13.9775 3.90484 14.0126 4.08981 13.996C4.27477 13.9793 4.45143 13.9114 4.6 13.8L8.333 11H12C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <span class="sr-only">Message icon</span>
+                      </span>
+                    </div>
+                    <div class="ms-3 text-sm font-normal flex-grow">
+                      <div
+                        class="text-sm font-semibold text-gray-900 dark:text-black"
+                      >
+                        Alex
+                      </div>
+                      <div class="text-sm font-normal">ordered product</div>
+                      <span
+                        class="text-xs font-medium text-blue-600 dark:text-blue-500"
+                        >a few seconds ago</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Notification 2 -->
+                  <div class="flex items-center mb-4">
+                    <div class="relative inline-block shrink-0">
+                      <img
+                        class="w-12 h-12 rounded-full"
+                        src="/"
+                        alt="Alex image"
+                      />
+                      <span
+                        class="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full"
+                      >
+                        <svg
+                          class="w-3 h-3 text-white"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 18"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M18 4H16V9C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13H9L6.846 14.615C7.17993 14.8628 7.58418 14.9977 8 15H11.667L15.4 17.8C15.5731 17.9298 15.7836 18 16 18C16.2652 18 16.5196 17.8946 16.7071 17.7071C16.8946 17.5196 17 17.2652 17 17V15H18C18.5304 15 19.0391 14.7893 19.4142 14.4142C19.7893 14.0391 20 13.5304 20 13V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M12 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V9C0 9.53043 0.210714 10.0391 0.585786 10.4142C0.960859 10.7893 1.46957 11 2 11H3V13C3 13.1857 3.05171 13.3678 3.14935 13.5257C3.24698 13.6837 3.38668 13.8114 3.55279 13.8944C3.71889 13.9775 3.90484 14.0126 4.08981 13.996C4.27477 13.9793 4.45143 13.9114 4.6 13.8L8.333 11H12C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <span class="sr-only">Message icon</span>
+                      </span>
+                    </div>
+                    <div class="ms-3 text-sm font-normal">
+                      <div
+                        class="text-sm font-semibold text-gray-900 dark:text-black"
+                      >
+                        Alex
+                      </div>
+                      <div class="text-sm font-normal">ordered product</div>
+                      <span
+                        class="text-xs font-medium text-blue-600 dark:text-blue-500"
+                        >a few seconds ago</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Notification 3 -->
+                  <div class="flex items-center mb-4">
+                    <div class="relative inline-block shrink-0">
+                      <img
+                        class="w-12 h-12 rounded-full"
+                        src="/"
+                        alt="Alex image"
+                      />
+                      <span
+                        class="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full"
+                      >
+                        <svg
+                          class="w-3 h-3 text-white"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 18"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M18 4H16V9C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13H9L6.846 14.615C7.17993 14.8628 7.58418 14.9977 8 15H11.667L15.4 17.8C15.5731 17.9298 15.7836 18 16 18C16.2652 18 16.5196 17.8946 16.7071 17.7071C16.8946 17.5196 17 17.2652 17 17V15H18C18.5304 15 19.0391 14.7893 19.4142 14.4142C19.7893 14.0391 20 13.5304 20 13V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M12 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V9C0 9.53043 0.210714 10.0391 0.585786 10.4142C0.960859 10.7893 1.46957 11 2 11H3V13C3 13.1857 3.05171 13.3678 3.14935 13.5257C3.24698 13.6837 3.38668 13.8114 3.55279 13.8944C3.71889 13.9775 3.90484 14.0126 4.08981 13.996C4.27477 13.9793 4.45143 13.9114 4.6 13.8L8.333 11H12C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <span class="sr-only">Message icon</span>
+                      </span>
+                    </div>
+                    <div class="ms-3 text-sm font-normal">
+                      <div
+                        class="text-sm font-semibold text-gray-900 dark:text-black"
+                      >
+                        Alex
+                      </div>
+                      <div class="text-sm font-normal">ordered product</div>
+                      <span
+                        class="text-xs font-medium text-blue-600 dark:text-blue-500"
+                        >a few seconds ago</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Notification 4 -->
+                  <div class="flex items-center mb-4">
+                    <div class="relative inline-block shrink-0">
+                      <img
+                        class="w-12 h-12 rounded-full"
+                        src="/"
+                        alt="Alex image"
+                      />
+                      <span
+                        class="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full"
+                      >
+                        <svg
+                          class="w-3 h-3 text-white"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 18"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M18 4H16V9C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13H9L6.846 14.615C7.17993 14.8628 7.58418 14.9977 8 15H11.667L15.4 17.8C15.5731 17.9298 15.7836 18 16 18C16.2652 18 16.5196 17.8946 16.7071 17.7071C16.8946 17.5196 17 17.2652 17 17V15H18C18.5304 15 19.0391 14.7893 19.4142 14.4142C19.7893 14.0391 20 13.5304 20 13V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M12 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V9C0 9.53043 0.210714 10.0391 0.585786 10.4142C0.960859 10.7893 1.46957 11 2 11H3V13C3 13.1857 3.05171 13.3678 3.14935 13.5257C3.24698 13.6837 3.38668 13.8114 3.55279 13.8944C3.71889 13.9775 3.90484 14.0126 4.08981 13.996C4.27477 13.9793 4.45143 13.9114 4.6 13.8L8.333 11H12C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <span class="sr-only">Message icon</span>
+                      </span>
+                    </div>
+                    <div class="ms-3 text-sm font-normal">
+                      <div
+                        class="text-sm font-semibold text-gray-900 dark:text-black"
+                      >
+                        Alex
+                      </div>
+                      <div class="text-sm font-normal">ordered product</div>
+                      <span
+                        class="text-xs font-medium text-blue-600 dark:text-blue-500"
+                        >a few seconds ago</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Notification 5 -->
+                  <div class="flex items-center mb-4">
+                    <div class="relative inline-block shrink-0">
+                      <img
+                        class="w-12 h-12 rounded-full"
+                        src="/"
+                        alt="Alex image"
+                      />
+                      <span
+                        class="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full"
+                      >
+                        <svg
+                          class="w-3 h-3 text-white"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 18"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M18 4H16V9C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13H9L6.846 14.615C7.17993 14.8628 7.58418 14.9977 8 15H11.667L15.4 17.8C15.5731 17.9298 15.7836 18 16 18C16.2652 18 16.5196 17.8946 16.7071 17.7071C16.8946 17.5196 17 17.2652 17 17V15H18C18.5304 15 19.0391 14.7893 19.4142 14.4142C19.7893 14.0391 20 13.5304 20 13V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M12 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V9C0 9.53043 0.210714 10.0391 0.585786 10.4142C0.960859 10.7893 1.46957 11 2 11H3V13C3 13.1857 3.05171 13.3678 3.14935 13.5257C3.24698 13.6837 3.38668 13.8114 3.55279 13.8944C3.71889 13.9775 3.90484 14.0126 4.08981 13.996C4.27477 13.9793 4.45143 13.9114 4.6 13.8L8.333 11H12C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <span class="sr-only">Message icon</span>
+                      </span>
+                    </div>
+                    <div class="ms-3 text-sm font-normal">
+                      <div
+                        class="text-sm font-semibold text-gray-900 dark:text-black"
+                      >
+                        Alex
+                      </div>
+                      <div class="text-sm font-normal">ordered product</div>
+                      <span
+                        class="text-xs font-medium text-blue-600 dark:text-blue-500"
+                        >a few seconds ago</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -195,7 +475,7 @@
 
     <!-- Main Container -->
     <div class="container_main">
-      <div class="grid grid-cols-3 grid-rows-6 gap-4">
+      <div class="grid grid-cols-3 grid-rows-4 gap-4">
         <div class="col-span-2 row-span-2 p-4">
           <div class="rounded-2xl border border-gray-300 bg-white p-5">
             <div class="col-span-2">
@@ -244,25 +524,25 @@
                     <div class="w-28 h-28">
                       <img
                         class="w-full h-full"
-                        src="https://lakbay.vn/cdn/images/y%201/balen%20full%20den/balen-rep-mau-den.jpg"
+                        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFRgWFhYYGBgaHBocGBwaGBoaHBwaGhwZGhgcGhocIS4lHB4rHxgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHzQrJSs0NDQ1NDY0NDQ0NDQ0NDQ0NDQ0NjQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIALwBDAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQIDBgEAB//EADkQAAEDAgQEAwgCAQMEAwAAAAEAAhEDIQQSMUEFUWFxIoGRBhMyobHB0fBC4VIUcvEVI2KSFkOC/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIDBAAF/8QAIxEAAgICAgMBAQEBAQAAAAAAAAECEQMhEjETQVEEImEUsf/aAAwDAQACEQMRAD8A2XEKcOQSbcUaIlKYJUZKmGL0B8Sph7CCs87gQfGZq14o81H3aWt2NbRmaXsxS3amWF4PTZGVgHknLGLrqScFjDAY1rQGm1ldiscwtsUtp0JVowYTcnQnEgK4foFwUkQymAqauIaNXBQnJeysU/RJrF7IEFW4jFm36oV+Le4i56QIlZ5fojHS2XjhkxsQBqvNqM0kT3SN7nE3mZ0PNScwtMHXkpP9UvSG8C+jsYhvVRbi2nTbXSyV0XvcTDmjm3T0bBn5Kpz9ttEJfpkkmFYUNXcRYD95t5rxxw5TGsGQOUwlloBmTuAD6yveE6S3nJ/CT/okHxRGzcY0jNBjn+6rrcS12hnrCTe7JEgEjzieygCRygwJcBE99tUV+mWrR3hXofioCYkT3Uis62s5pi3WBEx1H1RrcY5oDrlp5i4/KpH9KfaFlha6GhUSqMPi2v6HkiCtEZqStEnFrsivLq4iA4VwrpC5C44iVEqZCgV1nESoOCkQuOXHFTgoqxwUIXHDaoyUPlRDqyp94FaUkycYNHAxRcxd98Fx1cJOQ/BkmNVmVJ+IcRcxpfFheFTwr2iY8AaE6BLjyxm6TK/88+PJIfMe1puQPNW1MUwNkX7JbjgwghzQTpH3QzXyQJygRrcCNJ5pJ5+L4oEcKasvxGPcbC3YoV7/AAEwS2RnMiTewCli2eFz84dDvFHIxf8AeRQjjsscnLlsvFKtF7HTLCyHEgtM/wAT10mx9V1hLHEGRFjEF0HkdEvpVXe8AJMAQ3pcFMqxYWzDs+pMzpr8l2ntegu137K/etBlgIHXWdyonFE2JgHWAATz7qVWgRG8zboN/p6oNo5XjXoptSToK4sMqVW2yAuvebD/AJUazzAccomwaFWyrpEeSnXdTcH+AhziCHTpz0sL+q5pNP0d0zzKsAiAQecyOy4KxEgQQdiJ8xyKGYDlEm/2Xg6FPaGpBLwQA4E35Ei42XXWYIcDmkOaYPqOcIRz4dHO+vzXYHbqinXQGiwkGIAbAAjaRaVFrrzAMXjn3XQ2V0h7Id6SLEHYoJNuw36POqD+IgTIOjhzB5pngMZIhx6Apa68kCPt+lVsfBInwnUcjzHIqkZuMrQkoqSNMuFC8PrZmQdRr22RRW6MuSszNU6OLxXl4prFIlRKkVwrrOKyuFSKi5E4rcVCVNwUIQsYuq1BzQGIxLm6XXadZp3BXX0hqulJ9opGKXYGeJnSLq/D4ov12VlGiwGS2SrMHw6CfEYJmOXRSnO1T7KvjWkDYgte7IRI3V+GwFNviDB4b2jVE/6WmDcSV5rCbDT5Aclmwrf+nSk6pMhiSHOkTFrk8tVSWXV7mT81AtKq427YidIHxFITD7AGHdpH2U6jQbi247bKddksPZeNPwjsB9l1HWC4Wm10vm4MZQNO6LyqrB0CwPBucxNrzYQi3sQjHQzlsqqPhnhccxjbQefSVXw55D8jTlaRe036TvdTeF6jhS51rWko7bVCaSdiwk53gNIGZ3ncyZi/NTLZR2GpZtN/lzQ72w53+MhoMdrz3JCR43Vj8vRAEgFggZtTvpoOW/qqHMhHsa3MMwkfvJU4mlDiAczdZ77WQcW0cpKwJw+HvHqiqZg95CgKeYEaWJ9Lj5wvYWqSJjt3XRgCUi4UCWk8rFeZTJaTNhGs2k/ZdqNyZSDMzPdddisgJ0bBkTaYMT2VPHFdicn6K31Bo3m4GRBI6hDvaotxIIIBzPAaALCSZ+wK77ioWmYBA5zPpooyjZWKYy4LUlxE7ff+04hfNqWMeJdUa5uvhdaI7bonh/tA+k7bKY8J5XVIZHD+WtEppN2jfkLhC5QeXMa4iCQCRykTCktKd7JkYXCFJcKJxAhQKsIUCicQKhlVhUFxwmZgoENBCOo04+M7abKTcReyLosLr7Lz1KT0mapP6CVOIMbYfRQo1nv+BpA/yNh/aPeAP4j0VFTEnmpu72wWq0iyhh8pGZ0u+SJdRkRsltPEw9pOkx62TsNWz8yTTRHI2mCOp3tuNO3JcbTlFupyqQzKbaaLS4E1IGqUS45RaxJ7D8r1VsEWkffmia1oPUT23+q8YnbkkaSCpFLWZdBsfnuo+7V7iPsq3VADqhoNsocxca8iQLSL9lKtimjUi3VK8ZxekGxnAceUkjsBukbSemOk36D5gcrdlAMlsm7dhPW6Su9oGOswZpEiZiPTX+0HiuM1QJcGjbcgd4RVv0wuLNM5ggGbFC4isxgMuaBpJIAna6zFHGVqsNztgTveIsLfdB4zCOc4Bznhv8odaRoeiLhJ/EFR+s0eJx7GzJs3r+7fVK2+0jAMoMkAxG5mwnz+SUYrh7GmXOe8uvsALC9hH/CtwnCKb2eEmZ+KRNptH7ohxSdNjJRYUONVS2WsLoGpI1OsCZKXjidat4CMrTrzjcfVMqfDiwXLoVjQwWOuuZFKHwa+IXwfhvj948mbReTbtoLn5ptWxDQ4SAJmQdelln8JxB94aNOZGm55W2CBxnFcrg9zw4kxbYHoNtUk5p/zBEXNt2anGsFVjmxZwsQJI3B/eazWKwj6Zl2WNBa/SZ0Tvh/EGOaC10j92VOPxvibHW3Mc1jU58qaG7OYP2mqMy5i1zAIykS4RpDh6J032rpmDkeJudLDndZ172PPjaJ2cLH5a+aVGtkc7M60kAHcAmDJ0NtNFpxzclSGcYvs+hM49QcYzEdS0x6phSqsf8DmujXKQY5TC+UsxpN2N20vfWfhH5XgHOGfM5g2Jc5tzsIVk2uxHjXo+rkKDgvn3C+O4mi3xEubsHgEAEwLtIPVbPhHE24hmdoykGHNmYNjY7i/JMpehZQcdhZC5CmQowmEMVhsY87rTcFx/hyPNx8J5jksOzFZbOBCPwPE2giXLzYqUJWj1MuLktI3VQBLcTImBPZRwWLa+CHA+aMxlcBp0kiAum1KLfVGRRcXTFGFlzpdmblMjbTQrQ0+JMjxkN81lcRi8gmUjxWMzApcGTJF6LPCsh9DxPGaTBJeAO4Sqp7V0i6GkO7XPy0818+w1B1Qy4w0WHMruGaGVS0GQPtdbZZZO1e18FX5YR7ZtK/tG8SWU4GvicB52mEixvtLWkFoDSREXIPIpdVxTg8F0lgN2i0j79ipYqmKniafT9sUlvVmTlXQQ/j+Ie4ta8W5NjlJEnS6pfxKq4kOquMXgEDXaVTSwhabQP8Ay3jRGcPwGd+UQf8AKRIHK6NxJ+SX002AwlJzGFwDi64znNJjTxE/oVOK4O17TBa3kGNFvPdUcHApk0n3AJyEkWmx7H8rQ4DA5PA64K0YsinpLRRSkttmRwPDS12Vzk/p8OZlIMOP/lf0lEY/hzM0hsE3nkh8U/K1hF3EwROpPKFS6tMdtOmgR2Aawh8taT5Tpt5oSu8Z8ogi5PkNlZxevGVjoJAJcAJyzEX68u3NZt2PcHSYAi0xe8LPklK6iLzdjjEgZi46fIGDlA62KW4LFua+G+NuaOxJk33uULXx5e06hgJBc3LN7WEz5p7gamHwtAEf7iXQSXEdN+3JLDG+29iKTseveA0bucI0mJ18tEq4lRbRc2wJIDjPwjlbfeyU1vaEQfdTmJEAttJP/KbMeKjGuqsAfEGHEWGlucbJssko70wqT6QmrYsCcvnAgaX7JVgeHe8qe8fIYD4W6F3Mnk36rX8SqUX0jTayNPEWgZTI/EeaQVHFnKOY0/pZ4ZKT49sPFvsNe8TYRGkWS/FZmuzOcSP49L6K1j1ZiK7chDml06NGs852jmljaYyK3tzCQ6NwQCT2ACqoVWNbLS52oMmSDN5tY335Qp4PCPewlrYe2C2XOGa9xI3j6Kl+KDWSWnNOp5i0EH7aLTCGikWFUhN3yZNgADF7C0FRf0DzaHXlpk3kEpd/qXvMgEtvIaG9JHOPqpUsdq2IMQTqR5TqjxY3JDB5aGQ9w7Bsaxax5wnHsbhw2s6CRDCSCdTIF9uvosma4JkDSYN4035LYewTZzvOpgNG2WfER55V1VQsnpmwcuLpXFUzmZ4pgATOUEbhZ7GcNH8bdFuHgFLcZhxFgs7Rux5ZIyOAbUa8Nb4YvPQfVPv9e98gx4RqPsh6rA0q7hzw5xERHzWfKrLyfJcqFOPa51/khMLRcT4tOX5WixNK5SvFUiAS3VLCeuIYztURxOLawDn0CQ8PxRbVDomTEc81vumeAoe9c7NIgKVThxY9rmTmBEdLgT89Fox8YtxfbEyUosbPDTaRcaJfj6DWDMCWnkNT2hM3cPLmjNOsz/SkOFiLiT1ulWuzzHHZVwbjLKTWio1rg4EkwJB2117IvD4um5z3UwBedhOkEjbshn8PG7QfJecwN0EJpVJUBRoKw4cauQslr7NfEgHWcwtp9ltcNSygNBJAAF76dfJY7hnEHMI1Ld2/jktHh+MUz/MN6Ot/S04FCPXYHfsjxaocwY2J1PZCvoNZ43mMvw7gE2FgNfypcQ4nSZDpDi4WyidCRsIF5+aTYnjjyPAzKdiTPyTynFMO2qAOIuMHdxuT1WdfRJcDMxztr2805xJqPkuJLjuRryFholb8HU3LR0k6LLFPk3YVVE6FRjRESCLi0RpEJfjcNpDiW7NJ07E6hEswbWgl7j9Pmp++pR4cpPeTH0VIpxdo6rAmNAsnGA4gGANc6Y31AB2lUYbF0i0NdA6EHfkuvqU2iWtBHQE/VLKPLTR3FoMr4kDdUOrtIN5kEW5d0rrYkloc1oYHayBNvoeyjh6jiQ3Kd59JBBQj+dJdjJNbGFFjhoQeU2RmGoRJe9okyd/rt5pMasgw4z6fNQougyRmIE+Jw07/ANJvGOkzYUOLYdn8s7raD6ZRCWcXZTrv94xuXNAcDAzHTMRzuBPQJM7E+KfC2NgJ/oqOL4m4nLECbzr8lyxyT/kZUmGnDtZ4QCDrpHQH7eaiQzduYnQS71JBBHzVVPEucAc2YGIaTBjS+xhTMASNwY1+aNNdsNlWGp53AXE9481tvZ+gKL2NBkEGe5HyuAstw/D1C9ngflzCXBtgBzm0bLXYal/3GEaSL+alll/So71s0pUV0qK0mcTtxrSvPe1w1hSxuAa+92u5j7pRWZUpm4zN5j8LBkhlT7s2xUZddnsVg9SCD9UoqYwUnjNI2Ntk1ZjA5cq0mPBDgCoR09lotrTLKdVrwCDIhU1aCEp0jRnLJby5dkdh8SHIv/BWq66BKFHK4mIt90xwGHa9+Zw+HTuf0qNdgiUbwamCDO5Ajtfz1Ri3yEm7jYcKbTt2XH0gAiS0AcuSrqEQqOVGShZVpoGuyD1XOKcUYywqNk2t4yPJu/c2Wf8A/kjabi003ucZucs2vczY2+arCE5dIZpJWx+xhGl1xtCTewv356LPu9pKz5yU2sHMkvPIf4geYQlNtd7gKjnHctnK0DckCAfRWWKS7FUbNHVxVFhu4Fw2mTtqBp5pTX48S9xZTOUaNL8pM+tvwgKuGA0McuRH79EZTwQIaXPGlj1AGnlHqmUUtvZRRRVjeNVSQGsaC6wBk+QJI9SrKZqmpDpBgjKQ2NT4tLWSjHVB70EEw1waI2dHLldNcdj8pblALnC562H4sn46TSF4xujlSiM5NoJi1gOw9UNiMHLm5bEGY6cvqh3YuXQRAOw0naOqJxGUxlzNJIza7dtO4ugk09jNaKqpDGNcSM1wAOux6D7oH3rnOEkxNz03tv2XsTUzOcTGumnYWRGHpB8gugjQGAPMncDbdVSrbB/hVSYXkZn5W5txAEnZMuL4drC3KMoE6uNwNDyO5ugeIYDIMwdIImb3B20gXEeSBqOccoMgcpPnA2RcU2mKm1oLAFntJHQeXovPphxvoTtaesdVT73YkAToNQORjVQa55ccrREkjtz7aIJMLaCHiDlLpG+vrO0WsvMYH2uSTbUz6L1Dh1SpMXEgE7X5ndarhnBm0m3gu6fZTnkjHSexknVtCRmCe0/CByEkn6Jtw/APOsAcgmzMDLgSHRtEHvITTD0AABv2iVCU76E5M9haGVoCvY9rHsn+Tg0dzJ+ykRHp/wAFZ2nxf3uJFNg8IOVrpsTN3RH7Cm06tIaMZStpXRuJXEBRe9jmtd4mu0OsHujpV4zv1REINIEQgsRgZ0+aZT0UXPAF1sljixYzkjGcR4TeRLHfJLHl7PiEjmFv2MFSQRbZJ+IcOLZsCOo+6w5sFK6NmP8ARemZluJB0VdakQczddxzR9TBsO2U+iErYcsBh88gsXGmX5xPYfiDXeHQ6QU2weL920iJkyNvIlZWsJc12UghzTMciFo3s2XTXFpo6STVFXFOP1WtORrG2MEy4+Wg9QVk8BxmtUrf9+o57HDKQbAbghogAg9FoOJhuQrGUKkOgASD9Fr/AD1KMtEnGKpmhxvCskljxA8TCYgA3EHySb37oIcwPObwuFjBvlB9U/wWKIi8jYEA2T/DU6FSCWgETa0GZF+eqMcrjp7DOCWzKs4g17AwsNMxrHhk/T+lAYymXFjnZnEOAhuhEmx9d5st0z2epES0xYW1g+f7ZCYv2Upu+NsEfC5o57GNNVRZPqZFtdWYuljwxoZZ7rSHHSx06zEdkKeIPzeCbTcdbH6rQY32HyeNrwWic2YSZHzuhsPw0QC5hA0kXEoyywRyTatCfDUiX53sMAAwLyYib7zfyV+JyAgwQLcwbWOvP7p9SwgJsCRsRorn8NbBBgTz5pPPbOX8mRzNaQ/+Ug3HpHRHO4iHf/WDbdriPJalvB2OiTcanpGiubwdgMagiL/0m8qF5WfPiZNgST0jVSpCpLszIFgBF7aXX0AcEY24bFu/cIWthGN3nt+81KX6lHVFYw5dMxdenVf/AA0tJJ7q6hwV7rvcZ5HT5LWnCui0dJPP6LzMKCMzjbkbNOmm5Sv9belofwr2zOUuFsbOn1Mn7K2hw51V2UN8I1EkA/7nDTsmXvGNklomSAIH2XX8SeRlENHQXPml8s2x1CMehph6lOhAOsAFoCuZxFhvkGvJZzKTdxvzlWMfePwFPi17A4pmpw+KD5+SKa6yQ8NqJlia+VsA+I6dOqMLuiE470KPaDiZBNFh8TozkfxbHw9yo+zGFHvgf8AT9h9QfJD4rChr3OOpAn0+60Xs7hSynnI8TzP/AOf4/nzV1t0jXJxx4aXv/wBHgXVUCuyrI8wPe5DVDKLqNQpC3yVEIyLsKIV1VgcqaKIlc4pqg3TszfF8AW+INDm76yPPkkuKwMiWk9tR6rdubKS47hLSZAI7Ej6FYMuCn0a8eW9Mw+JY9qLrY8ESDtfn1sm2I4d38zI9YSurwhwOYAHsVlliNMZozHE+IPd4WmOuiTsY4XsFpMfgInMwjrEfNJ34E7AnzWnFKMY0tEclydhfDMXPhdtoU8bWII6fMLNUqDmkWgeSOZi3Nsbjl/ankhbuJSGWlUjV4XihG6Y4bizhMn90+yx9DFNdo6/I2PkimVXAypW0PxhJWjZ/69jhDhvJg6yjsM6i5uQARy8lhWY4TrCMp4mdDcJlNrbVk3h+OjV/9Oo6Na0R/cr3/TmD+LTuJGiTYTGmAZRbMUY1QuL9UTlCS9h3um6w2CNIUX1GNvYIF+JMR++SDrvkTOxJStfAqP0NrY9hm4HySLFYoB0tv2BVhpybXP6SVQ9oU+F9l41HoqZiXgki03ubeihiHvf8RMHYeSueADE+Y/eyreN0ygkGwb3YiY/dVAuaN59dVbUqEC3UeXNLGO8WqdKzg1h/e64G3/pRpPgiTbqj2YbP8H9I8W+gOSXZbhTl805wzA4+Nt+vJS4RwkNBc65PNN30QdlSGLjtmXJkTehbV4PSeQTmtFgbGNjI0TVtHkqm04VzCtCjElKcmkmz3uiue7KslelHigWGuQzgiCqnrdJWZos9QV8oekFa4oDM6VwhRLlIFBxTCpUC1aCBr4T/ABanBCqKzTw/C0coo/6eTqAg8X7NMcPD4Tzb+Foi1dDbKXjTK8j5nxLgFZnwjOOmvp+JScYYmcwIPLT1lfXXUwTcKBotn4W+gSODXQU4/D5CKAJsJ25p7hOD1WtzZm6SGSZ0+RW/OFZ/g3/1H4UHYRn+A9IQcZMKkk7R80e6TGh5GxB681bTrOb+6rc4ngdB5lzATzkg/IpRjeB4cWDXeT3/AJSPGy8c16Ytw2PGhsUzp40W9PX9+aV4nhLR8Ga3n9URh+D1nAlj2kj+L2kehlL45eguUatjEVR9/O9uiqqOEXOg2/eiV1MDjGmPdg/7SFxvDcY7Vgb3cP7Q8cgfz9Qe+pMnNGo9VQagHnr5KtvA8QR4nsHaT9laOAP/AJ1gB2P5TLFI5yivZBzwqnVWx/endMqPs4w3NV5HQgBEU/ZjDE+LOZ1l5+yZYJMm80UZnE42mBGZs8pSZ9bMTlW5xPsHRN2Pe3lMOH5SbEezT6LvFBZs8TAnmNQU3j4ei+OeKfTEeDY4vmfI3X0HhVDKySNgk3DeDOOUgC++9t42WmZhiAGievUpouRP9ModIvovgowFCikRtKtpujVPTXZieyZC4FOVEhd0A7K8uLyJwZKrIkrrXXU4W8zI4CoqcLhauoNkZXQuQvSuCSlRJXC5Ra+90Aom4clW4lXBRISuCYyk0U51wQrSyVU6mpyxJjqZIqJUDK9m6KbxsdSRyqLII4fzR4grxpwpSiPGQA6nbkpYYQ5p/bq+ozqp4ejeUYKmGUlR3GVAwSNUO586FV8Wfr3Crpkwrxptkq1Z15SfjeFe8tyXG4TuF4MRcbVBjk4u0A8Kw7mMDXG6KEypkKJS8aBKXJtsZUHSzsutdz3QuFqRI6KXvE7SeyXRaWgfCAJ5K5jVWxsK3ZBpI67OPKrcpOKrc5I0FHgYXC8c1ElVvYFNxodM6+sNlVnPNSNHkVH3RQOGDgdlU4vV7CpFa22iKoFFZwU24k7q9QqUGnUIc2NSIHFBRdiQgSutKfkdxQWa4UffqhQchYVFB7MQrxVCUqYeVykBxGRqL2ZANeVNjyjYtBLgq3MXgVILglLgQvNeVc8WVDksoJjJljBKqLwz4TJXKiFcp8KGTs5ifE0yqqD7KTtFXR1Qj2M+gmVIOVbl4KxMvBB1XsgVTVILgEvdxfZW4ZkC6jTRLUtHNk2LpK4F4pWBEHOVbnLtRUOSjEy5RL1AqKFHFrXruZUFdSNDJn//2Q=="
                       />
                     </div>
                     <div class="flex flex-col">
                       <p class="text-lg text-blue-600 font-semibold">
-                        Giày Balenciaga Triple S
+                        Hamburger with Meat
                       </p>
                     </div>
                   </div>
                   <!-- Price Information -->
                   <div class="self-center text-center">
                     <p class="text-gray-600 title-1-text">
-                      99.99
+                      50.00
                       <span class="ml-4">$</span>
                       <span class="ml-4">x</span>
                       <span class="ml-4">1</span>
                     </p>
                   </div>
-                  <p class="self-center mr-2 title-1-text">1.000 $</p>
+                  <p class="self-center mr-2 title-1-text">50 $</p>
                 </div>
 
                 <!-- Product -->
@@ -274,25 +554,25 @@
                     <div class="w-28 h-28">
                       <img
                         class="w-full h-full"
-                        src="https://lakbay.vn/cdn/images/y%201/balen%20full%20den/balen-rep-mau-den.jpg"
+                        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFRgWFhYYGBgaHBocGBwaGBoaHBwaGhwZGhgcGhocIS4lHB4rHxgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHzQrJSs0NDQ1NDY0NDQ0NDQ0NDQ0NDQ0NjQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIALwBDAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQIDBgEAB//EADkQAAEDAgQEAwgCAQMEAwAAAAEAAhEDIQQSMUEFUWFxIoGRBhMyobHB0fBC4VIUcvEVI2KSFkOC/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIDBAAF/8QAIxEAAgICAgMBAQEBAQAAAAAAAAECEQMhEjETQVEEImEUsf/aAAwDAQACEQMRAD8A2XEKcOQSbcUaIlKYJUZKmGL0B8Sph7CCs87gQfGZq14o81H3aWt2NbRmaXsxS3amWF4PTZGVgHknLGLrqScFjDAY1rQGm1ldiscwtsUtp0JVowYTcnQnEgK4foFwUkQymAqauIaNXBQnJeysU/RJrF7IEFW4jFm36oV+Le4i56QIlZ5fojHS2XjhkxsQBqvNqM0kT3SN7nE3mZ0PNScwtMHXkpP9UvSG8C+jsYhvVRbi2nTbXSyV0XvcTDmjm3T0bBn5Kpz9ttEJfpkkmFYUNXcRYD95t5rxxw5TGsGQOUwlloBmTuAD6yveE6S3nJ/CT/okHxRGzcY0jNBjn+6rrcS12hnrCTe7JEgEjzieygCRygwJcBE99tUV+mWrR3hXofioCYkT3Uis62s5pi3WBEx1H1RrcY5oDrlp5i4/KpH9KfaFlha6GhUSqMPi2v6HkiCtEZqStEnFrsivLq4iA4VwrpC5C44iVEqZCgV1nESoOCkQuOXHFTgoqxwUIXHDaoyUPlRDqyp94FaUkycYNHAxRcxd98Fx1cJOQ/BkmNVmVJ+IcRcxpfFheFTwr2iY8AaE6BLjyxm6TK/88+PJIfMe1puQPNW1MUwNkX7JbjgwghzQTpH3QzXyQJygRrcCNJ5pJ5+L4oEcKasvxGPcbC3YoV7/AAEwS2RnMiTewCli2eFz84dDvFHIxf8AeRQjjsscnLlsvFKtF7HTLCyHEgtM/wAT10mx9V1hLHEGRFjEF0HkdEvpVXe8AJMAQ3pcFMqxYWzDs+pMzpr8l2ntegu137K/etBlgIHXWdyonFE2JgHWAATz7qVWgRG8zboN/p6oNo5XjXoptSToK4sMqVW2yAuvebD/AJUazzAccomwaFWyrpEeSnXdTcH+AhziCHTpz0sL+q5pNP0d0zzKsAiAQecyOy4KxEgQQdiJ8xyKGYDlEm/2Xg6FPaGpBLwQA4E35Ei42XXWYIcDmkOaYPqOcIRz4dHO+vzXYHbqinXQGiwkGIAbAAjaRaVFrrzAMXjn3XQ2V0h7Id6SLEHYoJNuw36POqD+IgTIOjhzB5pngMZIhx6Apa68kCPt+lVsfBInwnUcjzHIqkZuMrQkoqSNMuFC8PrZmQdRr22RRW6MuSszNU6OLxXl4prFIlRKkVwrrOKyuFSKi5E4rcVCVNwUIQsYuq1BzQGIxLm6XXadZp3BXX0hqulJ9opGKXYGeJnSLq/D4ov12VlGiwGS2SrMHw6CfEYJmOXRSnO1T7KvjWkDYgte7IRI3V+GwFNviDB4b2jVE/6WmDcSV5rCbDT5Aclmwrf+nSk6pMhiSHOkTFrk8tVSWXV7mT81AtKq427YidIHxFITD7AGHdpH2U6jQbi247bKddksPZeNPwjsB9l1HWC4Wm10vm4MZQNO6LyqrB0CwPBucxNrzYQi3sQjHQzlsqqPhnhccxjbQefSVXw55D8jTlaRe036TvdTeF6jhS51rWko7bVCaSdiwk53gNIGZ3ncyZi/NTLZR2GpZtN/lzQ72w53+MhoMdrz3JCR43Vj8vRAEgFggZtTvpoOW/qqHMhHsa3MMwkfvJU4mlDiAczdZ77WQcW0cpKwJw+HvHqiqZg95CgKeYEaWJ9Lj5wvYWqSJjt3XRgCUi4UCWk8rFeZTJaTNhGs2k/ZdqNyZSDMzPdddisgJ0bBkTaYMT2VPHFdicn6K31Bo3m4GRBI6hDvaotxIIIBzPAaALCSZ+wK77ioWmYBA5zPpooyjZWKYy4LUlxE7ff+04hfNqWMeJdUa5uvhdaI7bonh/tA+k7bKY8J5XVIZHD+WtEppN2jfkLhC5QeXMa4iCQCRykTCktKd7JkYXCFJcKJxAhQKsIUCicQKhlVhUFxwmZgoENBCOo04+M7abKTcReyLosLr7Lz1KT0mapP6CVOIMbYfRQo1nv+BpA/yNh/aPeAP4j0VFTEnmpu72wWq0iyhh8pGZ0u+SJdRkRsltPEw9pOkx62TsNWz8yTTRHI2mCOp3tuNO3JcbTlFupyqQzKbaaLS4E1IGqUS45RaxJ7D8r1VsEWkffmia1oPUT23+q8YnbkkaSCpFLWZdBsfnuo+7V7iPsq3VADqhoNsocxca8iQLSL9lKtimjUi3VK8ZxekGxnAceUkjsBukbSemOk36D5gcrdlAMlsm7dhPW6Su9oGOswZpEiZiPTX+0HiuM1QJcGjbcgd4RVv0wuLNM5ggGbFC4isxgMuaBpJIAna6zFHGVqsNztgTveIsLfdB4zCOc4Bznhv8odaRoeiLhJ/EFR+s0eJx7GzJs3r+7fVK2+0jAMoMkAxG5mwnz+SUYrh7GmXOe8uvsALC9hH/CtwnCKb2eEmZ+KRNptH7ohxSdNjJRYUONVS2WsLoGpI1OsCZKXjidat4CMrTrzjcfVMqfDiwXLoVjQwWOuuZFKHwa+IXwfhvj948mbReTbtoLn5ptWxDQ4SAJmQdelln8JxB94aNOZGm55W2CBxnFcrg9zw4kxbYHoNtUk5p/zBEXNt2anGsFVjmxZwsQJI3B/eazWKwj6Zl2WNBa/SZ0Tvh/EGOaC10j92VOPxvibHW3Mc1jU58qaG7OYP2mqMy5i1zAIykS4RpDh6J032rpmDkeJudLDndZ172PPjaJ2cLH5a+aVGtkc7M60kAHcAmDJ0NtNFpxzclSGcYvs+hM49QcYzEdS0x6phSqsf8DmujXKQY5TC+UsxpN2N20vfWfhH5XgHOGfM5g2Jc5tzsIVk2uxHjXo+rkKDgvn3C+O4mi3xEubsHgEAEwLtIPVbPhHE24hmdoykGHNmYNjY7i/JMpehZQcdhZC5CmQowmEMVhsY87rTcFx/hyPNx8J5jksOzFZbOBCPwPE2giXLzYqUJWj1MuLktI3VQBLcTImBPZRwWLa+CHA+aMxlcBp0kiAum1KLfVGRRcXTFGFlzpdmblMjbTQrQ0+JMjxkN81lcRi8gmUjxWMzApcGTJF6LPCsh9DxPGaTBJeAO4Sqp7V0i6GkO7XPy0818+w1B1Qy4w0WHMruGaGVS0GQPtdbZZZO1e18FX5YR7ZtK/tG8SWU4GvicB52mEixvtLWkFoDSREXIPIpdVxTg8F0lgN2i0j79ipYqmKniafT9sUlvVmTlXQQ/j+Ie4ta8W5NjlJEnS6pfxKq4kOquMXgEDXaVTSwhabQP8Ay3jRGcPwGd+UQf8AKRIHK6NxJ+SX002AwlJzGFwDi64znNJjTxE/oVOK4O17TBa3kGNFvPdUcHApk0n3AJyEkWmx7H8rQ4DA5PA64K0YsinpLRRSkttmRwPDS12Vzk/p8OZlIMOP/lf0lEY/hzM0hsE3nkh8U/K1hF3EwROpPKFS6tMdtOmgR2Aawh8taT5Tpt5oSu8Z8ogi5PkNlZxevGVjoJAJcAJyzEX68u3NZt2PcHSYAi0xe8LPklK6iLzdjjEgZi46fIGDlA62KW4LFua+G+NuaOxJk33uULXx5e06hgJBc3LN7WEz5p7gamHwtAEf7iXQSXEdN+3JLDG+29iKTseveA0bucI0mJ18tEq4lRbRc2wJIDjPwjlbfeyU1vaEQfdTmJEAttJP/KbMeKjGuqsAfEGHEWGlucbJssko70wqT6QmrYsCcvnAgaX7JVgeHe8qe8fIYD4W6F3Mnk36rX8SqUX0jTayNPEWgZTI/EeaQVHFnKOY0/pZ4ZKT49sPFvsNe8TYRGkWS/FZmuzOcSP49L6K1j1ZiK7chDml06NGs852jmljaYyK3tzCQ6NwQCT2ACqoVWNbLS52oMmSDN5tY335Qp4PCPewlrYe2C2XOGa9xI3j6Kl+KDWSWnNOp5i0EH7aLTCGikWFUhN3yZNgADF7C0FRf0DzaHXlpk3kEpd/qXvMgEtvIaG9JHOPqpUsdq2IMQTqR5TqjxY3JDB5aGQ9w7Bsaxax5wnHsbhw2s6CRDCSCdTIF9uvosma4JkDSYN4035LYewTZzvOpgNG2WfER55V1VQsnpmwcuLpXFUzmZ4pgATOUEbhZ7GcNH8bdFuHgFLcZhxFgs7Rux5ZIyOAbUa8Nb4YvPQfVPv9e98gx4RqPsh6rA0q7hzw5xERHzWfKrLyfJcqFOPa51/khMLRcT4tOX5WixNK5SvFUiAS3VLCeuIYztURxOLawDn0CQ8PxRbVDomTEc81vumeAoe9c7NIgKVThxY9rmTmBEdLgT89Fox8YtxfbEyUosbPDTaRcaJfj6DWDMCWnkNT2hM3cPLmjNOsz/SkOFiLiT1ulWuzzHHZVwbjLKTWio1rg4EkwJB2117IvD4um5z3UwBedhOkEjbshn8PG7QfJecwN0EJpVJUBRoKw4cauQslr7NfEgHWcwtp9ltcNSygNBJAAF76dfJY7hnEHMI1Ld2/jktHh+MUz/MN6Ot/S04FCPXYHfsjxaocwY2J1PZCvoNZ43mMvw7gE2FgNfypcQ4nSZDpDi4WyidCRsIF5+aTYnjjyPAzKdiTPyTynFMO2qAOIuMHdxuT1WdfRJcDMxztr2805xJqPkuJLjuRryFholb8HU3LR0k6LLFPk3YVVE6FRjRESCLi0RpEJfjcNpDiW7NJ07E6hEswbWgl7j9Pmp++pR4cpPeTH0VIpxdo6rAmNAsnGA4gGANc6Y31AB2lUYbF0i0NdA6EHfkuvqU2iWtBHQE/VLKPLTR3FoMr4kDdUOrtIN5kEW5d0rrYkloc1oYHayBNvoeyjh6jiQ3Kd59JBBQj+dJdjJNbGFFjhoQeU2RmGoRJe9okyd/rt5pMasgw4z6fNQougyRmIE+Jw07/ANJvGOkzYUOLYdn8s7raD6ZRCWcXZTrv94xuXNAcDAzHTMRzuBPQJM7E+KfC2NgJ/oqOL4m4nLECbzr8lyxyT/kZUmGnDtZ4QCDrpHQH7eaiQzduYnQS71JBBHzVVPEucAc2YGIaTBjS+xhTMASNwY1+aNNdsNlWGp53AXE9481tvZ+gKL2NBkEGe5HyuAstw/D1C9ngflzCXBtgBzm0bLXYal/3GEaSL+alll/So71s0pUV0qK0mcTtxrSvPe1w1hSxuAa+92u5j7pRWZUpm4zN5j8LBkhlT7s2xUZddnsVg9SCD9UoqYwUnjNI2Ntk1ZjA5cq0mPBDgCoR09lotrTLKdVrwCDIhU1aCEp0jRnLJby5dkdh8SHIv/BWq66BKFHK4mIt90xwGHa9+Zw+HTuf0qNdgiUbwamCDO5Ajtfz1Ri3yEm7jYcKbTt2XH0gAiS0AcuSrqEQqOVGShZVpoGuyD1XOKcUYywqNk2t4yPJu/c2Wf8A/kjabi003ucZucs2vczY2+arCE5dIZpJWx+xhGl1xtCTewv356LPu9pKz5yU2sHMkvPIf4geYQlNtd7gKjnHctnK0DckCAfRWWKS7FUbNHVxVFhu4Fw2mTtqBp5pTX48S9xZTOUaNL8pM+tvwgKuGA0McuRH79EZTwQIaXPGlj1AGnlHqmUUtvZRRRVjeNVSQGsaC6wBk+QJI9SrKZqmpDpBgjKQ2NT4tLWSjHVB70EEw1waI2dHLldNcdj8pblALnC562H4sn46TSF4xujlSiM5NoJi1gOw9UNiMHLm5bEGY6cvqh3YuXQRAOw0naOqJxGUxlzNJIza7dtO4ugk09jNaKqpDGNcSM1wAOux6D7oH3rnOEkxNz03tv2XsTUzOcTGumnYWRGHpB8gugjQGAPMncDbdVSrbB/hVSYXkZn5W5txAEnZMuL4drC3KMoE6uNwNDyO5ugeIYDIMwdIImb3B20gXEeSBqOccoMgcpPnA2RcU2mKm1oLAFntJHQeXovPphxvoTtaesdVT73YkAToNQORjVQa55ccrREkjtz7aIJMLaCHiDlLpG+vrO0WsvMYH2uSTbUz6L1Dh1SpMXEgE7X5ndarhnBm0m3gu6fZTnkjHSexknVtCRmCe0/CByEkn6Jtw/APOsAcgmzMDLgSHRtEHvITTD0AABv2iVCU76E5M9haGVoCvY9rHsn+Tg0dzJ+ykRHp/wAFZ2nxf3uJFNg8IOVrpsTN3RH7Cm06tIaMZStpXRuJXEBRe9jmtd4mu0OsHujpV4zv1REINIEQgsRgZ0+aZT0UXPAF1sljixYzkjGcR4TeRLHfJLHl7PiEjmFv2MFSQRbZJ+IcOLZsCOo+6w5sFK6NmP8ARemZluJB0VdakQczddxzR9TBsO2U+iErYcsBh88gsXGmX5xPYfiDXeHQ6QU2weL920iJkyNvIlZWsJc12UghzTMciFo3s2XTXFpo6STVFXFOP1WtORrG2MEy4+Wg9QVk8BxmtUrf9+o57HDKQbAbghogAg9FoOJhuQrGUKkOgASD9Fr/AD1KMtEnGKpmhxvCskljxA8TCYgA3EHySb37oIcwPObwuFjBvlB9U/wWKIi8jYEA2T/DU6FSCWgETa0GZF+eqMcrjp7DOCWzKs4g17AwsNMxrHhk/T+lAYymXFjnZnEOAhuhEmx9d5st0z2epES0xYW1g+f7ZCYv2Upu+NsEfC5o57GNNVRZPqZFtdWYuljwxoZZ7rSHHSx06zEdkKeIPzeCbTcdbH6rQY32HyeNrwWic2YSZHzuhsPw0QC5hA0kXEoyywRyTatCfDUiX53sMAAwLyYib7zfyV+JyAgwQLcwbWOvP7p9SwgJsCRsRorn8NbBBgTz5pPPbOX8mRzNaQ/+Ug3HpHRHO4iHf/WDbdriPJalvB2OiTcanpGiubwdgMagiL/0m8qF5WfPiZNgST0jVSpCpLszIFgBF7aXX0AcEY24bFu/cIWthGN3nt+81KX6lHVFYw5dMxdenVf/AA0tJJ7q6hwV7rvcZ5HT5LWnCui0dJPP6LzMKCMzjbkbNOmm5Sv9belofwr2zOUuFsbOn1Mn7K2hw51V2UN8I1EkA/7nDTsmXvGNklomSAIH2XX8SeRlENHQXPml8s2x1CMehph6lOhAOsAFoCuZxFhvkGvJZzKTdxvzlWMfePwFPi17A4pmpw+KD5+SKa6yQ8NqJlia+VsA+I6dOqMLuiE470KPaDiZBNFh8TozkfxbHw9yo+zGFHvgf8AT9h9QfJD4rChr3OOpAn0+60Xs7hSynnI8TzP/AOf4/nzV1t0jXJxx4aXv/wBHgXVUCuyrI8wPe5DVDKLqNQpC3yVEIyLsKIV1VgcqaKIlc4pqg3TszfF8AW+INDm76yPPkkuKwMiWk9tR6rdubKS47hLSZAI7Ej6FYMuCn0a8eW9Mw+JY9qLrY8ESDtfn1sm2I4d38zI9YSurwhwOYAHsVlliNMZozHE+IPd4WmOuiTsY4XsFpMfgInMwjrEfNJ34E7AnzWnFKMY0tEclydhfDMXPhdtoU8bWII6fMLNUqDmkWgeSOZi3Nsbjl/ankhbuJSGWlUjV4XihG6Y4bizhMn90+yx9DFNdo6/I2PkimVXAypW0PxhJWjZ/69jhDhvJg6yjsM6i5uQARy8lhWY4TrCMp4mdDcJlNrbVk3h+OjV/9Oo6Na0R/cr3/TmD+LTuJGiTYTGmAZRbMUY1QuL9UTlCS9h3um6w2CNIUX1GNvYIF+JMR++SDrvkTOxJStfAqP0NrY9hm4HySLFYoB0tv2BVhpybXP6SVQ9oU+F9l41HoqZiXgki03ubeihiHvf8RMHYeSueADE+Y/eyreN0ygkGwb3YiY/dVAuaN59dVbUqEC3UeXNLGO8WqdKzg1h/e64G3/pRpPgiTbqj2YbP8H9I8W+gOSXZbhTl805wzA4+Nt+vJS4RwkNBc65PNN30QdlSGLjtmXJkTehbV4PSeQTmtFgbGNjI0TVtHkqm04VzCtCjElKcmkmz3uiue7KslelHigWGuQzgiCqnrdJWZos9QV8oekFa4oDM6VwhRLlIFBxTCpUC1aCBr4T/ABanBCqKzTw/C0coo/6eTqAg8X7NMcPD4Tzb+Foi1dDbKXjTK8j5nxLgFZnwjOOmvp+JScYYmcwIPLT1lfXXUwTcKBotn4W+gSODXQU4/D5CKAJsJ25p7hOD1WtzZm6SGSZ0+RW/OFZ/g3/1H4UHYRn+A9IQcZMKkk7R80e6TGh5GxB681bTrOb+6rc4ngdB5lzATzkg/IpRjeB4cWDXeT3/AJSPGy8c16Ytw2PGhsUzp40W9PX9+aV4nhLR8Ga3n9URh+D1nAlj2kj+L2kehlL45eguUatjEVR9/O9uiqqOEXOg2/eiV1MDjGmPdg/7SFxvDcY7Vgb3cP7Q8cgfz9Qe+pMnNGo9VQagHnr5KtvA8QR4nsHaT9laOAP/AJ1gB2P5TLFI5yivZBzwqnVWx/endMqPs4w3NV5HQgBEU/ZjDE+LOZ1l5+yZYJMm80UZnE42mBGZs8pSZ9bMTlW5xPsHRN2Pe3lMOH5SbEezT6LvFBZs8TAnmNQU3j4ei+OeKfTEeDY4vmfI3X0HhVDKySNgk3DeDOOUgC++9t42WmZhiAGievUpouRP9ModIvovgowFCikRtKtpujVPTXZieyZC4FOVEhd0A7K8uLyJwZKrIkrrXXU4W8zI4CoqcLhauoNkZXQuQvSuCSlRJXC5Ra+90Aom4clW4lXBRISuCYyk0U51wQrSyVU6mpyxJjqZIqJUDK9m6KbxsdSRyqLII4fzR4grxpwpSiPGQA6nbkpYYQ5p/bq+ozqp4ejeUYKmGUlR3GVAwSNUO586FV8Wfr3Crpkwrxptkq1Z15SfjeFe8tyXG4TuF4MRcbVBjk4u0A8Kw7mMDXG6KEypkKJS8aBKXJtsZUHSzsutdz3QuFqRI6KXvE7SeyXRaWgfCAJ5K5jVWxsK3ZBpI67OPKrcpOKrc5I0FHgYXC8c1ElVvYFNxodM6+sNlVnPNSNHkVH3RQOGDgdlU4vV7CpFa22iKoFFZwU24k7q9QqUGnUIc2NSIHFBRdiQgSutKfkdxQWa4UffqhQchYVFB7MQrxVCUqYeVykBxGRqL2ZANeVNjyjYtBLgq3MXgVILglLgQvNeVc8WVDksoJjJljBKqLwz4TJXKiFcp8KGTs5ifE0yqqD7KTtFXR1Qj2M+gmVIOVbl4KxMvBB1XsgVTVILgEvdxfZW4ZkC6jTRLUtHNk2LpK4F4pWBEHOVbnLtRUOSjEy5RL1AqKFHFrXruZUFdSNDJn//2Q=="
                       />
                     </div>
                     <div class="flex flex-col">
                       <p class="text-lg text-blue-600 font-semibold">
-                        Giày Balenciaga Triple S
+                        Hamburger with Meat
                       </p>
                     </div>
                   </div>
                   <!-- Price Information -->
                   <div class="self-center text-center">
                     <p class="text-gray-600 title-1-text">
-                      99.99
+                      50.00
                       <span class="ml-4">$</span>
                       <span class="ml-4">x</span>
                       <span class="ml-4">1</span>
                     </p>
                   </div>
-                  <p class="self-center mr-2 title-1-text">1.000 $</p>
+                  <p class="self-center mr-2 title-1-text">50 $</p>
                 </div>
 
                 <!-- Button Shipping -->
@@ -518,7 +798,7 @@
                         </div>
                         <div class="flex justify-between mt-4 title-1-text">
                           <p>Khách hàng đã thay toán</p>
-                          <p>100.000.000 vnđ</p>
+                          <p class="title-1-text-bold">100 $</p>
                         </div>
                       </div>
                     </div>
@@ -527,8 +807,8 @@
               </div>
             </div>
           </div>
-          <div class="flex justify-center items-center mt-14">
-            <h3 class="h3-text-bold pl-6">Dòng thời gian</h3>
+          <div class="flex items-center justify-center pt-12">
+            <h3 class="h3-text-bold">Dòng thời gian</h3>
           </div>
         </div>
 
@@ -645,7 +925,7 @@
         </div>
       </div>
       <!-- Timeline -->
-      <ol>
+      <ol class="pl-8">
         <li class="border-l-2 border-purple-600">
           <div class="md:flex flex-start">
             <div
@@ -740,9 +1020,10 @@
                 >
               </div>
               <p class="text-gray-700 mb-6">
-                Libero expedita explicabo eius fugiat quia aspernatur autem
-                laudantium error architecto recusandae natus sapiente sit nam
-                eaque, consectetur porro molestiae ipsam an deleniti.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                expedita, non sunt accusamus ducimus consequatur veritatis
+                dolor, provident distinctio quam eius aspernatur odio asperiores
+                ad soluta repudiandae mollitia perspiciatis. Laboriosam?
               </p>
               <button
                 type="button"
@@ -797,10 +1078,10 @@
                 >
               </div>
               <p class="text-gray-700 mb-6">
-                Voluptatibus temporibus esse illum eum aspernatur, fugiat
-                suscipit natus! Eum corporis illum nihil officiis tempore.
-                Excepturi illo natus libero sit doloremque, laborum molestias
-                rerum pariatur quam ipsam necessitatibus incidunt, explicabo.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At quo,
+                minima voluptate sit facere laudantium dolores dignissimos alias
+                ducimus iure quas deserunt accusantium, porro omnis, obcaecati
+                fugit et cum pariatur!
               </p>
               <button
                 type="button"
@@ -820,6 +1101,7 @@
           </div>
         </li>
       </ol>
+
       <!-- <div class="bg-amber-500">Item #05</div>
       <div class="bg-red-500">Item #06</div>
       <div class="col-span-2 bg-green-500">Item #07</div> -->

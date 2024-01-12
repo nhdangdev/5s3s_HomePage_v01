@@ -1,0 +1,3 @@
+#bell-icon:hover + #notification-panel {
+  display: block;
+}
