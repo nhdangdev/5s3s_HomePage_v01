@@ -87,7 +87,7 @@ function toast({
       viewBox="0 0 24 24"
       stroke-width="1.5"
       stroke="currentColor"
-      class="w-6 h-6 ${icon} rounded-full text-white"
+      class="w-6 h-6 ${icon} rounded-full text-black"
     >
     <path
       stroke-linecap="round"
@@ -126,8 +126,22 @@ function showSuccessToast() {
     title: "Success",
     message: "Order successfully",
     type: "success",
-    duration: 50000,
+    duration: 5000,
   });
+
+  // Change button Order to Payment and update quantity 
+  const orderButton = document.getElementById('order-button');
+  orderButton.textContent = 'Payment has been successful';
+  orderButton.style.backgroundColor = 'green';
+  orderButton.style.color = 'white';
+
+  // const productCount = document.querySelectorAll('.delete-button').length;
+  // document.getElementById('product-count').textContent = productCount;
+
+  // const paymentText = document.getElementById('payment-text');
+  // paymentText.textContent = 'Payment';
+  // paymentText.classList.remove('not-implemented-text');
+
 }
 function showErrorToast() {
   toast({
@@ -240,3 +254,104 @@ function getTimeAgo(timestamp) {
     return days + ' days ago';
   }
 }
+
+// Xóa sản phẩm và cập nhật số lượng sản phẩm
+function deleteProduct(button) {
+  const productContainer = button.parentNode;
+  productContainer.remove();
+}
+
+
+// // Test func khi lấy dữ liệu từ API
+// // Lấy dữ liệu từ API
+// fetch('your_api_endpoint')
+//   .then(response => response.json())
+//   .then(data => {
+//     // Render các sản phẩm từ dữ liệu nhận được
+//     data.forEach((product, index) => {
+//       const container = document.createElement('div');
+//       container.classList.add('flex', 'flex-col', 'md:flex-row', 'gap-3', 'justify-between', 'items-start', 'border', 'border-gray-300', 'p-4');
+//       container.setAttribute('data-product-index', index); // Lưu trữ chỉ số sản phẩm trong thuộc tính data
+
+//       const productInfo = document.createElement('div');
+//       productInfo.classList.add('flex', 'flex-row', 'gap-6', 'items-center');
+
+//       const imageContainer = document.createElement('div');
+//       imageContainer.classList.add('w-28', 'h-28');
+
+//       const image = document.createElement('img');
+//       image.classList.add('w-full', 'h-full');
+//       image.src = product.imageUrl;
+
+//       imageContainer.appendChild(image);
+
+//       const textContainer = document.createElement('div');
+//       textContainer.classList.add('flex', 'flex-col');
+
+//       const title = document.createElement('p');
+//       title.classList.add('text-lg', 'text-blue-600', 'font-semibold');
+//       title.textContent = product.title;
+
+//       textContainer.appendChild(title);
+
+//       productInfo.appendChild(imageContainer);
+//       productInfo.appendChild(textContainer);
+
+//       const priceInfo = document.createElement('div');
+//       priceInfo.classList.add('self-center', 'text-center');
+
+//       const price = document.createElement('p');
+//       price.classList.add('text-gray-600', 'title-1-text');
+//       price.innerHTML = `${product.price} <span class="ml-4">$</span> <span class="ml-4">x</span> <span class="ml-4">1</span>`;
+
+//       priceInfo.appendChild(price);
+
+//       const totalPrice = document.createElement('p');
+//       totalPrice.classList.add('self-center', 'lg:mr-2', 'title-1-text');
+//       totalPrice.textContent = `${product.price} $`;
+
+//       const deleteButton = document.createElement('button');
+//       deleteButton.classList.add('delete-button');
+//       deleteButton.textContent = 'Delete';
+//       deleteButton.addEventListener('click', function () {
+//         const productIndex = container.getAttribute('data-product-index');
+//         deleteProduct(productIndex);
+//       });
+
+//       const addButton = document.createElement('button');
+//       addButton.classList.add('add-button');
+//       addButton.textContent = 'Add';
+//       addButton.addEventListener('click', function () {
+//         addProduct(product);
+//       });
+
+//       container.appendChild(productInfo);
+//       container.appendChild(priceInfo);
+//       container.appendChild(totalPrice);
+//       container.appendChild(deleteButton);
+//       container.appendChild(addButton);
+
+//       // Thêm phần tử container vào DOM, ví dụ:
+//       const timeline = document.getElementById('timeline'); // Đây là ID của phần tử chứa timeline
+//       timeline.appendChild(container);
+//     });
+//   })
+//   .catch(error => {
+//     console.error('Error:', error);
+//   });
+
+// function deleteProduct(productIndex) {
+//   const container = document.querySelector(`[data-product-index="${productIndex}"]`);
+//   if (container) {
+//     container.remove();
+//   }
+// }
+
+// function addProduct(product) {
+//   // Tạo phần tử container và các phần tử con tương tự như trong đoạn mã trên
+//   // ...
+
+//   // Thêm phần tử container vào DOM, ví dụ:
+//   const timeline = document.getElementById('timeline'); // Đây là ID của phần tử chứa timeline
+//   timeline.appendChild(container);
+// }
