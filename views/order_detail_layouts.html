@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../css/grid.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/dialog.css" />
+    <link rel="stylesheet" href="../css/order_notification.css" />
 
     <!-- Add TailwindCss -->
     <link rel="stylesheet" href="../css/tailwind_output.css" />
@@ -29,13 +30,20 @@
 
   <body class="bg-[#f1f1f1]">
     <header>
+      <!--  Toast -->
+      <div class="absolute top-[90px] right-[32px] z-[99999]" id="toast"></div>
+      <!-- End Toast Notification  -->
+
       <div class="flex">
         <!-- Order left -->
-        <div class="order_detail_layout_page-left w-2/4 p-4">
-          <div class="p-4">
-            <div class="flex">
-              <div class="w-3/4">
-                <div class="flex items-center">
+        <div class="order_detail_layout_page-left w-4/5 lg:w-2/4 p-4">
+          <div class="lg:p-4">
+            <div class="w-3/4">
+              <div class="flex items-center text-base">
+                <a
+                  href="https://example.com"
+                  class="w-5 h-5 mr-2 cursor-pointer"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -50,71 +58,72 @@
                       d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
                     />
                   </svg>
-                  <h1 class="h1-text text-xl">#1004</h1>
-                  <p
-                    class="border rounded-xl bg-[#e3e6e7] ml-4 px-2 flex items-center"
+                </a>
+                <h1 class="h1-text text-xl">#1004</h1>
+                <p
+                  class="border rounded-xl bg-[#e3e6e7] ml-4 px-2 flex items-center"
+                >
+                  <svg
+                    class="w-4 h-4 mr-1 text-gray-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
                   >
-                    <svg
-                      class="w-4 h-4 mr-1 text-gray-500"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                      ></path>
-                    </svg>
-                    Đã thanh toán
-                  </p>
-                  <p
-                    class="border rounded-xl bg-[#ffd59c] ml-4 px-2 flex items-center"
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                    ></path>
+                  </svg>
+                  Paid
+                </p>
+                <p
+                  class="border rounded-xl bg-[#ffd59c] ml-2 px-2 flex items-center"
+                >
+                  <svg
+                    class="w-4 h-4 mr-1 text-gray-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
                   >
-                    <svg
-                      class="w-4 h-4 mr-1 text-gray-500"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                      ></path>
-                    </svg>
-                    Chưa thực hiện
-                  </p>
-                </div>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                    ></path>
+                  </svg>
+                  unfulfilled
+                </p>
               </div>
             </div>
-            <span class="text-sm text-gray-500 mt-2 ml-[30px]"
-              >23 tháng 12, 2023 lúc 10:20:10
+            <span class="text-base text-gray-500 lg:ml-[30px] lg:text-lg"
+              >December 23, 2023 at 10:20:10
             </span>
           </div>
         </div>
 
         <!-- Order right -->
-        <div class="order_detail_layout_page-right w-2/4 p-4">
-          <div class="flex items-center ml-5 p-4 justify-center">
+        <div class="order_detail_layout_page-right w-1/5 lg:w-2/4 p-4">
+          <div class="lg:flex items-center ml-5 p-4 justify-center hidden">
             <button
               class="title-1-text mr-4 bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 px-4 rounded-lg"
             >
-              Hoàn tiền
+              Refund
             </button>
+
             <button
               class="title-1-text mr-4 bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 px-4 rounded-lg"
             >
-              Sửa
+              Edit
             </button>
             <div class="relative inline-block text-left mr-4">
-              <div class="dropdown">
+              <div class="dropdown group">
                 <button
                   class="title-1-text dropdown-trigger bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 px-4 rounded-lg inline-flex items-center"
                 >
-                  <span>Thao tác khác</span>
+                  <span>Other operations</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -131,7 +140,7 @@
                   </svg>
                 </button>
                 <div
-                  class="dropdown-content hidden absolute bg-white w-40 py-2 rounded-lg shadow-lg"
+                  class="dropdown-content hidden absolute py-4 mt-2 left-0 bg-white w-40 rounded-lg shadow-lg group-hover:block"
                 >
                   <ul>
                     <li class="hover:bg-gray-100 py-1 px-4">Item 1</li>
@@ -179,30 +188,424 @@
                 </svg>
               </button>
             </div>
+            <!-- Order Notification  -->
+            <div class="relative">
+              <span id="notification_count">5</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 ml-4 cursor-pointer"
+                id="bell-icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+                />
+              </svg>
+
+              <div
+                class="hidden absolute right-0 pt-4 w-72"
+                id="notification-panel"
+                onmouseenter="showNotificationPanel()"
+                onmouseleave="hideNotificationPanel()"
+              >
+                <div
+                  id="toast-notification"
+                  class="w-full drop-shadow-2xl max-w-xs p-4 text-gray-900 bg-white rounded-lg dark:bg-white dark:text-gray-600"
+                  role="alert"
+                >
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="mb-1 text-sm font-semibold text-white dark:text-gray-900"
+                      >New notification</span
+                    >
+                    <button
+                      type="button"
+                      class="ms-auto -mx-1.5 -my-1.5 bg-white justify-center items-center flex-shrink-0 text-black rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 inline-flex h-8 w-8 dark:text-gray-800 dark:hover:text-white dark:bg-white dark:hover:bg-gray-700 border border-gray-800"
+                      data-dismiss-target="#toast-notification"
+                      aria-label="Close"
+                      onclick="closeNotificationPanel();"
+                    >
+                      <span class="sr-only">Close</span>
+                      <svg
+                        class="w-3 h-3"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 14"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- Notification 1 -->
+                  <div class="flex items-center mb-4">
+                    <div class="relative inline-block shrink-0">
+                      <img
+                        class="w-12 h-12 rounded-full border border-black"
+                        src="https://picsum.photos/id/1/200/300"
+                        alt="Alex image"
+                      />
+                      <span
+                        class="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full"
+                      >
+                        <svg
+                          class="w-3 h-3 text-white"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 18"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M18 4H16V9C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13H9L6.846 14.615C7.17993 14.8628 7.58418 14.9977 8 15H11.667L15.4 17.8C15.5731 17.9298 15.7836 18 16 18C16.2652 18 16.5196 17.8946 16.7071 17.7071C16.8946 17.5196 17 17.2652 17 17V15H18C18.5304 15 19.0391 14.7893 19.4142 14.4142C19.7893 14.0391 20 13.5304 20 13V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M12 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V9C0 9.53043 0.210714 10.0391 0.585786 10.4142C0.960859 10.7893 1.46957 11 2 11H3V13C3 13.1857 3.05171 13.3678 3.14935 13.5257C3.24698 13.6837 3.38668 13.8114 3.55279 13.8944C3.71889 13.9775 3.90484 14.0126 4.08981 13.996C4.27477 13.9793 4.45143 13.9114 4.6 13.8L8.333 11H12C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <span class="sr-only">Message icon</span>
+                      </span>
+                    </div>
+                    <div class="ms-3 text-sm font-normal flex-grow">
+                      <div
+                        class="text-sm font-semibold text-gray-900 dark:text-black"
+                      >
+                        Alex
+                      </div>
+                      <div class="text-sm font-normal">ordered product</div>
+                      <span
+                        class="text-xs font-medium text-blue-600 dark:text-blue-500"
+                        >a few seconds ago</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Notification 2 -->
+                  <div class="flex items-center mb-4">
+                    <div class="relative inline-block shrink-0">
+                      <img
+                        class="w-12 h-12 rounded-full border border-black"
+                        src="https://picsum.photos/id/1/200/300"
+                        alt="Alex image"
+                      />
+                      <span
+                        class="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full"
+                      >
+                        <svg
+                          class="w-3 h-3 text-white"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 18"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M18 4H16V9C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13H9L6.846 14.615C7.17993 14.8628 7.58418 14.9977 8 15H11.667L15.4 17.8C15.5731 17.9298 15.7836 18 16 18C16.2652 18 16.5196 17.8946 16.7071 17.7071C16.8946 17.5196 17 17.2652 17 17V15H18C18.5304 15 19.0391 14.7893 19.4142 14.4142C19.7893 14.0391 20 13.5304 20 13V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M12 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V9C0 9.53043 0.210714 10.0391 0.585786 10.4142C0.960859 10.7893 1.46957 11 2 11H3V13C3 13.1857 3.05171 13.3678 3.14935 13.5257C3.24698 13.6837 3.38668 13.8114 3.55279 13.8944C3.71889 13.9775 3.90484 14.0126 4.08981 13.996C4.27477 13.9793 4.45143 13.9114 4.6 13.8L8.333 11H12C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <span class="sr-only">Message icon</span>
+                      </span>
+                    </div>
+                    <div class="ms-3 text-sm font-normal flex-grow">
+                      <div
+                        class="text-sm font-semibold text-gray-900 dark:text-black"
+                      >
+                        Alex
+                      </div>
+                      <div class="text-sm font-normal">ordered product</div>
+                      <span
+                        class="text-xs font-medium text-blue-600 dark:text-blue-500"
+                        >a few seconds ago</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Notification 3 -->
+                  <div class="flex items-center mb-4">
+                    <div class="relative inline-block shrink-0">
+                      <img
+                        class="w-12 h-12 rounded-full border border-black"
+                        src="https://picsum.photos/id/1/200/300"
+                        alt="Alex image"
+                      />
+                      <span
+                        class="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full"
+                      >
+                        <svg
+                          class="w-3 h-3 text-white"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 18"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M18 4H16V9C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13H9L6.846 14.615C7.17993 14.8628 7.58418 14.9977 8 15H11.667L15.4 17.8C15.5731 17.9298 15.7836 18 16 18C16.2652 18 16.5196 17.8946 16.7071 17.7071C16.8946 17.5196 17 17.2652 17 17V15H18C18.5304 15 19.0391 14.7893 19.4142 14.4142C19.7893 14.0391 20 13.5304 20 13V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M12 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V9C0 9.53043 0.210714 10.0391 0.585786 10.4142C0.960859 10.7893 1.46957 11 2 11H3V13C3 13.1857 3.05171 13.3678 3.14935 13.5257C3.24698 13.6837 3.38668 13.8114 3.55279 13.8944C3.71889 13.9775 3.90484 14.0126 4.08981 13.996C4.27477 13.9793 4.45143 13.9114 4.6 13.8L8.333 11H12C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <span class="sr-only">Message icon</span>
+                      </span>
+                    </div>
+                    <div class="ms-3 text-sm font-normal flex-grow">
+                      <div
+                        class="text-sm font-semibold text-gray-900 dark:text-black"
+                      >
+                        Alex
+                      </div>
+                      <div class="text-sm font-normal">ordered product</div>
+                      <span
+                        class="text-xs font-medium text-blue-600 dark:text-blue-500"
+                        >a few seconds ago</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Notification 4 -->
+                  <div class="flex items-center mb-4">
+                    <div class="relative inline-block shrink-0">
+                      <img
+                        class="w-12 h-12 rounded-full border border-black"
+                        src="https://picsum.photos/id/1/200/300"
+                        alt="Alex image"
+                      />
+                      <span
+                        class="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full"
+                      >
+                        <svg
+                          class="w-3 h-3 text-white"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 18"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M18 4H16V9C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13H9L6.846 14.615C7.17993 14.8628 7.58418 14.9977 8 15H11.667L15.4 17.8C15.5731 17.9298 15.7836 18 16 18C16.2652 18 16.5196 17.8946 16.7071 17.7071C16.8946 17.5196 17 17.2652 17 17V15H18C18.5304 15 19.0391 14.7893 19.4142 14.4142C19.7893 14.0391 20 13.5304 20 13V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M12 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V9C0 9.53043 0.210714 10.0391 0.585786 10.4142C0.960859 10.7893 1.46957 11 2 11H3V13C3 13.1857 3.05171 13.3678 3.14935 13.5257C3.24698 13.6837 3.38668 13.8114 3.55279 13.8944C3.71889 13.9775 3.90484 14.0126 4.08981 13.996C4.27477 13.9793 4.45143 13.9114 4.6 13.8L8.333 11H12C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <span class="sr-only">Message icon</span>
+                      </span>
+                    </div>
+                    <div class="ms-3 text-sm font-normal flex-grow">
+                      <div
+                        class="text-sm font-semibold text-gray-900 dark:text-black"
+                      >
+                        Alex
+                      </div>
+                      <div class="text-sm font-normal">ordered product</div>
+                      <span
+                        class="text-xs font-medium text-blue-600 dark:text-blue-500"
+                        >a few seconds ago</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Notification 5 -->
+                  <div class="flex items-center mb-4">
+                    <div class="relative inline-block shrink-0">
+                      <img
+                        class="w-12 h-12 rounded-full border border-black"
+                        src="https://picsum.photos/id/1/200/300"
+                        alt="Alex image"
+                      />
+                      <span
+                        class="absolute bottom-0 right-0 inline-flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full"
+                      >
+                        <svg
+                          class="w-3 h-3 text-white"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 18"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M18 4H16V9C16 10.0609 15.5786 11.0783 14.8284 11.8284C14.0783 12.5786 13.0609 13 12 13H9L6.846 14.615C7.17993 14.8628 7.58418 14.9977 8 15H11.667L15.4 17.8C15.5731 17.9298 15.7836 18 16 18C16.2652 18 16.5196 17.8946 16.7071 17.7071C16.8946 17.5196 17 17.2652 17 17V15H18C18.5304 15 19.0391 14.7893 19.4142 14.4142C19.7893 14.0391 20 13.5304 20 13V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4Z"
+                            fill="currentColor"
+                          />
+                          <path
+                            d="M12 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V9C0 9.53043 0.210714 10.0391 0.585786 10.4142C0.960859 10.7893 1.46957 11 2 11H3V13C3 13.1857 3.05171 13.3678 3.14935 13.5257C3.24698 13.6837 3.38668 13.8114 3.55279 13.8944C3.71889 13.9775 3.90484 14.0126 4.08981 13.996C4.27477 13.9793 4.45143 13.9114 4.6 13.8L8.333 11H12C12.5304 11 13.0391 10.7893 13.4142 10.4142C13.7893 10.0391 14 9.53043 14 9V2C14 1.46957 13.7893 0.960859 13.4142 0.585786C13.0391 0.210714 12.5304 0 12 0Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <span class="sr-only">Message icon</span>
+                      </span>
+                    </div>
+                    <div class="ms-3 text-sm font-normal flex-grow">
+                      <div
+                        class="text-sm font-semibold text-gray-900 dark:text-black"
+                      >
+                        Alex
+                      </div>
+                      <div class="text-sm font-normal">ordered product</div>
+                      <span
+                        class="text-xs font-medium text-blue-600 dark:text-blue-500"
+                        >a few seconds ago</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          <!-- Mobile header -->
+          <!-- drawer init and show -->
+          <div class="text-right lg:hidden">
+            <button
+              class="text-white bg-[#3f3f3f] focus:ring-4 focus:ring-[#3f3f3f] font-medium rounded-lg text-sm py-1 px-2 dark:bg-[#3f3f3f] dark:hover:bg-[#5a5a5a] focus:outline-none"
+              type="button"
+              data-drawer-target="drawer-navigation"
+              data-drawer-show="drawer-navigation"
+              aria-controls="drawer-navigation"
+              onclick="toggleSidebar();"
+            >
+              <span class="material-symbols-outlined text-4xl">menu</span>
+            </button>
+          </div>
+
+          <!-- drawer component -->
+          <div
+            id="drawer-navigation"
+            class="fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform -translate-x-full dark:bg-gray-800"
+            tabindex="-1"
+            aria-labelledby="drawer-navigation-label"
+          >
+            <h5
+              id="drawer-navigation-label"
+              class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400"
+            >
+              Menu
+            </h5>
+            <button
+              type="button"
+              data-drawer-hide="drawer-navigation"
+              aria-controls="drawer-navigation"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="sr-only">Close menu</span>
+            </button>
+            <div class="py-4 overflow-y-auto block">
+              <ul class="space-y-2 font-medium">
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                  >
+                    <svg
+                      class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 22 21"
+                    >
+                      <path
+                        d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"
+                      />
+                      <path
+                        d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"
+                      />
+                    </svg>
+                    <span class="ms-3">Dashboard</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                  >
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 18 18"
+                    >
+                      <path
+                        d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"
+                      />
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
+                    <span
+                      class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300"
+                      >Pro</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                  >
+                    <svg
+                      class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z"
+                      />
+                    </svg>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Inbox</span>
+                    <span
+                      class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300"
+                      >3</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- end mobile header -->
         </div>
       </div>
     </header>
-    <!-- Mobile Header -->
-    <div class="mobile-header">
-      <button class="mobile-header__menu-btn" onclick="toggleSidebar()">
-        <span class="material-symbols-outlined"> menu </span>
-      </button>
-      <div class="mobile-header__logo">
-        <img src="../asset/img/logo.png" width="54" height="54" alt="Logo" />
-      </div>
-    </div>
 
     <!-- Main Container -->
     <div class="container_main">
-      <div class="grid grid-cols-3 grid-rows-6 gap-4">
+      <div class="lg:grid lg:grid-cols-3 lg:grid-rows-4 gap-4">
         <div class="col-span-2 row-span-2 p-4">
           <div class="rounded-2xl border border-gray-300 bg-white p-5">
             <div class="col-span-2">
               <div class="w-full flex flex-col">
                 <div class="flex justify-between items-center mb-4">
                   <p
-                    class="border rounded-xl bg-[#ffd59c] px-3 py-2 items-center flex"
+                    class="border rounded-xl bg-[#ffd59c] px-3 py-2 items-center flex not-implemented-text"
+                    id="payment-text"
                   >
                     <svg
                       class="w-4 h-4 mr-1 text-gray-500"
@@ -217,8 +620,22 @@
                         d="M12 6v6m0 0v6m0-6h6m-6 0H6"
                       ></path>
                     </svg>
-                    Chưa thực hiện (2)
+                    Not yet implemented (<span id="product-count">1</span>)
                   </p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 cursor-pointer border border-black rounded-full"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -235,77 +652,98 @@
                   </svg>
                 </div>
 
-                <!-- Product -->
-                <div
-                  class="flex flex-col md:flex-row gap-3 justify-between items-start border border-gray-300 rounded-t-lg p-4"
-                >
-                  <!-- Product Information -->
-                  <div class="flex flex-row gap-6 items-center">
-                    <div class="w-28 h-28">
-                      <img
-                        class="w-full h-full"
-                        src="https://lakbay.vn/cdn/images/y%201/balen%20full%20den/balen-rep-mau-den.jpg"
-                      />
+                <!-- All Product -->
+                <div class="border-2 border-gray-200 rounded-lg">
+                  <!-- Default hide image -->
+                  <div id="default-image" class="text-center hidden p-5">
+                    Empty Product
+                  </div>
+                  <!-- Product 1 -->
+                  <div
+                    class="flex flex-col md:flex-row gap-3 justify-between items-start border border-gray-300 p-4"
+                  >
+                    <!-- Product Information -->
+                    <div class="flex flex-row gap-6 items-center">
+                      <div class="w-28 h-28">
+                        <img
+                          class="w-full h-full"
+                          src="../asset/img/food/hamburger.jpg"
+                        />
+                      </div>
+                      <div class="flex flex-col">
+                        <p class="text-lg text-blue-600 font-semibold">
+                          Hamburger with Meat
+                        </p>
+                      </div>
                     </div>
-                    <div class="flex flex-col">
-                      <p class="text-lg text-blue-600 font-semibold">
-                        Giày Balenciaga Triple S
+                    <!-- Price Information -->
+                    <div class="self-center text-center">
+                      <p class="text-gray-600 title-1-text">
+                        50.00
+                        <span class="ml-4">$</span>
+                        <span class="ml-4">x</span>
+                        <span class="ml-4">1</span>
                       </p>
                     </div>
+                    <p class="self-center lg:mr-2 title-1-text">50 $</p>
+                    <button
+                      class="self-center text-black hover:opacity-80 delete-button text-sm"
+                      onclick="deleteProduct(this)"
+                    >
+                      Delete
+                    </button>
                   </div>
-                  <!-- Price Information -->
-                  <div class="self-center text-center">
-                    <p class="text-gray-600 title-1-text">
-                      99.99
-                      <span class="ml-4">$</span>
-                      <span class="ml-4">x</span>
-                      <span class="ml-4">1</span>
-                    </p>
-                  </div>
-                  <p class="self-center mr-2 title-1-text">1.000 $</p>
-                </div>
-
-                <!-- Product -->
-                <div
-                  class="flex flex-col md:flex-row gap-3 justify-between items-start border border-gray-300 rounded-b-lg p-4"
-                >
-                  <!-- Product Information -->
-                  <div class="flex flex-row gap-6 items-center">
-                    <div class="w-28 h-28">
-                      <img
-                        class="w-full h-full"
-                        src="https://lakbay.vn/cdn/images/y%201/balen%20full%20den/balen-rep-mau-den.jpg"
-                      />
+                  <!-- Product 2 -->
+                  <div
+                    class="flex flex-col md:flex-row gap-3 justify-between items-start border border-gray-300 p-4"
+                  >
+                    <!-- Product Information -->
+                    <div class="flex flex-row gap-6 items-center">
+                      <div class="w-28 h-28">
+                        <img
+                          class="w-full h-full"
+                          src="../asset/img/food/hamburger.jpg"
+                        />
+                      </div>
+                      <div class="flex flex-col">
+                        <p class="text-lg text-blue-600 font-semibold">
+                          Hamburger with Meat
+                        </p>
+                      </div>
                     </div>
-                    <div class="flex flex-col">
-                      <p class="text-lg text-blue-600 font-semibold">
-                        Giày Balenciaga Triple S
+                    <!-- Price Information -->
+                    <div class="self-center text-center">
+                      <p class="text-gray-600 title-1-text">
+                        50.00
+                        <span class="ml-4">$</span>
+                        <span class="ml-4">x</span>
+                        <span class="ml-4">1</span>
                       </p>
                     </div>
+                    <p class="self-center lg:mr-2 title-1-text">50 $</p>
+                    <button
+                      class="self-center text-black hover:opacity-80 delete-button text-sm"
+                      onclick="deleteProduct(this)"
+                    >
+                      Delete
+                    </button>
                   </div>
-                  <!-- Price Information -->
-                  <div class="self-center text-center">
-                    <p class="text-gray-600 title-1-text">
-                      99.99
-                      <span class="ml-4">$</span>
-                      <span class="ml-4">x</span>
-                      <span class="ml-4">1</span>
-                    </p>
-                  </div>
-                  <p class="self-center mr-2 title-1-text">1.000 $</p>
                 </div>
 
                 <!-- Button Shipping -->
                 <div class="flex justify-end mt-5">
                   <button
                     class="px-4 py-2 text-black border border-[#3f3f3f] hover:opacity-80 rounded-xl mr-2"
+                    onclick="showErrorToast();"
                   >
-                    Thực hiện các mặt hàng
+                    Cancel
                   </button>
                   <button
+                    id="order-button"
                     class="px-4 py-2 text-white border bg-[#3f3f3f] hover:opacity-80 rounded-xl"
+                    onclick="showSuccessToast();"
                   >
-                    Tạo nhãn vận chuyển
+                    Order
                   </button>
                 </div>
               </div>
@@ -314,12 +752,12 @@
         </div>
 
         <!-- Note -->
-        <div class="col-span-1 row-span-1 pt-4 pr-4">
+        <div class="col-span-1 row-span-1 p-4 lg:pt-4 lg:pr-4 lg:pl-0">
           <div
             class="col-span-1 rounded-2xl border border-gray-300 bg-white py-5"
           >
             <div class="flex justify-between mb-4 px-5">
-              <h4 class="h4-text-bold">Ghi chú</h4>
+              <h5 class="h5-text-bold">Note</h5>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -338,19 +776,19 @@
             <div class="px-5">
               <textarea
                 class="outline-none w-full h-[100px]"
-                placeholder="Không có ghi chú từ khách hàng"
+                placeholder="No notes from customers..."
               ></textarea>
             </div>
           </div>
         </div>
 
         <!-- Customer -->
-        <div class="customer col-span-1 row-span-3 pr-4">
+        <div class="customer col-span-1 row-span-3 p-4 lg:pr-4 lg:mt-5 lg:pl-0">
           <div
             class="col-span-1 rounded-2xl border border-gray-300 bg-white py-5"
           >
             <div class="flex justify-between p-5">
-              <h4 class="h4-text-bold">Khách hàng</h4>
+              <h5 class="h5-text-bold">Client</h5>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -367,14 +805,14 @@
               </svg>
             </div>
 
-            <div class="title-1-text px-5">
+            <div class="title-2-text px-5">
               <p class="text-blue-500">Mendoza Mia</p>
-              <p>1 đơn hàng</p>
+              <p>1 order</p>
 
               <!-- Infomation -->
               <div class="address-info">
                 <div class="flex justify-between py-2 mt-5">
-                  <h5 class="h5-text-bold">Thông tin liên hệ</h5>
+                  <h5 class="h5-text-bold">Contact Info</h5>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -391,7 +829,7 @@
                   </svg>
                 </div>
                 <div class="flex justify-between">
-                  <p class="text-blue-500">test12345@gmai.com</p>
+                  <p class="text-blue-500">Jason Statham</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -407,13 +845,13 @@
                     />
                   </svg>
                 </div>
-                <p class="text-gray-500">Không có số điện thoại</p>
+                <p class="text-gray-500">No phone number</p>
               </div>
 
               <!-- Address Shipping -->
               <div class="address-shipping">
                 <div class="flex justify-between py-2 mt-5">
-                  <h5 class="h5-text-bold">Địa chỉ giao hàng</h5>
+                  <h5 class="h5-text-bold">Delivery address</h5>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -448,16 +886,16 @@
                 </div>
                 <p class="text-gray-600">1700 Hoa Ky. St</p>
                 <p class="text-gray-600">Bang California</p>
-                <p class="text-gray-600">Hoa Kỳ</p>
+                <p class="text-gray-600">USA</p>
                 <p class="text-blue-600 underline mt-2 cursor-pointer">
-                  View map (Xem sơ đồ)
+                  View map
                 </p>
               </div>
 
               <!-- Address Payment -->
               <div class="address-payment">
-                <h5 class="h5-text-bold py-2 mt-5">Địa chỉ thanh toán</h5>
-                <p class="text-gray-500">Giống địa chỉ giao hàng</p>
+                <h5 class="h5-text-bold py-2 mt-5">Payment address</h5>
+                <p class="text-gray-500">Same as shipping address</p>
               </div>
             </div>
           </div>
@@ -487,8 +925,7 @@
                           d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 0 1 9 9v.375M10.125 2.25A3.375 3.375 0 0 1 13.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 0 1 3.375 3.375M9 15l2.25 2.25L15 12"
                         />
                       </svg>
-
-                      Đã thanh toán
+                      Paid
                     </p>
                   </div>
 
@@ -496,29 +933,29 @@
                     <div
                       class="col-span-1 rounded-2xl border border-gray-300 bg-white py-5"
                     >
-                      <div class="title-1-text px-5">
+                      <div class="title-2-text px-5">
                         <!-- Payment Infomation  -->
                         <div class="payment-info border-b border-gray-300 pb-2">
                           <div class="grid grid-cols-4">
-                            <p>Tổng phụ</p>
-                            <p>2 mặt hàng</p>
+                            <p>Subtotal</p>
+                            <p>2 items</p>
                             <p></p>
-                            <p class="text-right">Số lượng</p>
+                            <p class="text-right">Quantity</p>
                           </div>
                           <div class="grid grid-cols-4 py-1">
                             <p>Vận chuyển</p>
                             <p>Economy (29g)</p>
                             <p></p>
-                            <p class="text-right">Số lượng</p>
+                            <p class="text-right">Quantity</p>
                           </div>
                           <div class="flex justify-between mt-4 title-1-text">
-                            <p class="font-bold">Tổng:</p>
+                            <p class="font-bold">Total:</p>
                             <p>Giá</p>
                           </div>
                         </div>
                         <div class="flex justify-between mt-4 title-1-text">
-                          <p>Khách hàng đã thay toán</p>
-                          <p>100.000.000 vnđ</p>
+                          <p>The customer has paid</p>
+                          <p class="title-1-text-bold">100 $</p>
                         </div>
                       </div>
                     </div>
@@ -527,302 +964,226 @@
               </div>
             </div>
           </div>
-          <div class="flex justify-center items-center mt-14">
-            <h3 class="h3-text-bold pl-6">Dòng thời gian</h3>
-          </div>
-        </div>
-
-        <div class="col-span-2 row-span-2">
-          <!-- <h5 class="h5-text-bold pl-6">Dòng thời gian</h5> -->
-          <!-- comment form -->
-          <div class="flex drop-shadow-lg mt-2 px-4 mb-4 w-full">
-            <form class="w-full bg-white rounded-xl px-4 pt-2">
-              <div class="flex flex-wrap justify-start items-center mb-4">
-                <h5 class="h5-text ml-3">Dannie</h5>
-                <!-- img avt -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6 ml-2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"
-                  />
-                </svg>
-                <div class="w-full md:w-full px-3 mb-2 mt-2">
-                  <textarea
-                    class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-40 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"
-                    name="body"
-                    placeholder="Leave a comment ... (Để lại bình luận...)"
-                    required
-                  ></textarea>
-                </div>
-                <div class="w-full flex items-start md:w-full px-3 mt-2">
-                  <div class="flex items-start w-1/2 text-gray-700 mr-auto">
-                    <!-- smile -->
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-6 h-6 cursor-pointer mr-2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"
-                      />
-                    </svg>
-
-                    <!-- @ -->
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-6 h-6 cursor-pointer mr-2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"
-                      />
-                    </svg>
-
-                    <!-- hashtag -->
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-6 h-6 cursor-pointer mr-2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5"
-                      />
-                    </svg>
-
-                    <!-- paper clip -->
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-6 h-6 cursor-pointer"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13"
-                      />
-                    </svg>
-                  </div>
-                  <div class="-mr-1">
-                    <input
-                      type="submit"
-                      class="bg-white text-gray-700 font-medium py-1 px-4 border border-gray-400 rounded-lg tracking-wide mr-1 hover:bg-gray-100"
-                      value="Đăng"
-                    />
-                  </div>
-                </div>
-              </div>
-              <p class="text-right mb-4 text-gray-500">
-                Chỉ bạn và nhân viên khác mới được coi bình luận
-              </p>
-            </form>
-          </div>
         </div>
       </div>
+      <!-- <div class="col-span-2 row-span-2"> -->
+      <div>
+        <h2 class="text-center h2-text-bold pb-2">Timeline</h2>
+        <!-- comment form -->
+        <div class="flex drop-shadow-lg mt-2 px-4 mb-4 w-full">
+          <form class="w-full bg-white rounded-xl px-4 pt-2">
+            <div class="flex flex-wrap justify-start items-center mb-4">
+              <h5 class="h5-text ml-3">Dannie</h5>
+              <!-- img avt -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 ml-2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z"
+                />
+              </svg>
+              <div class="w-full md:w-full px-3 mb-2 mt-2">
+                <textarea
+                  class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-52 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"
+                  id="comment-input"
+                  name="body"
+                  placeholder="Leave a comment ... "
+                  required
+                ></textarea>
+              </div>
+              <div class="w-full flex items-start md:w-full px-3 mt-2">
+                <div class="flex items-start w-1/2 text-gray-700 mr-auto">
+                  <!-- smile -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 cursor-pointer mr-2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"
+                    />
+                  </svg>
+
+                  <!-- @ -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 cursor-pointer mr-2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"
+                    />
+                  </svg>
+
+                  <!-- hashtag -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 cursor-pointer mr-2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5"
+                    />
+                  </svg>
+
+                  <!-- paper clip -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 cursor-pointer"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13"
+                    />
+                  </svg>
+                </div>
+                <div class="-mr-1">
+                  <input
+                    type="submit"
+                    class="bg-white text-gray-700 font-medium py-1 px-4 border border-gray-400 rounded-lg tracking-wide mr-1 hover:bg-gray-100"
+                    id="submit-button"
+                    value="Submit"
+                  />
+                </div>
+              </div>
+            </div>
+            <p class="text-right mb-4 text-gray-500">
+              Only you and other employees can comment
+            </p>
+          </form>
+        </div>
+      </div>
+
       <!-- Timeline -->
-      <ol>
-        <li class="border-l-2 border-purple-600">
-          <div class="md:flex flex-start">
-            <div
-              class="bg-purple-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3.5"
-            >
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                data-prefix="fas"
-                class="text-white w-3 h-3"
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
-                <path
-                  fill="currentColor"
-                  d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-                ></path>
-              </svg>
+      <div class="flex-1 bg-white rounded-lg shadow-xl mt-4 p-8">
+        <h4 class="text-xl text-gray-900 font-bold">Activity log</h4>
+        <div class="relative px-4">
+          <div
+            class="absolute h-full border border-dashed border-opacity-20 border-secondary"
+          ></div>
+
+          <!-- start::Timeline item -->
+          <div class="flex items-center w-full my-6 -ml-1.5">
+            <div class="w-1/12 z-10">
+              <div class="w-3.5 h-3.5 bg-blue-600 rounded-full"></div>
             </div>
-            <div
-              class="block p-6 rounded-lg shadow-lg bg-gray-100 max-w-md ml-6 mb-10"
-            >
-              <div class="flex justify-between mb-4">
-                <a
-                  href="#!"
-                  class="font-medium text-purple-600 hover:text-purple-700 focus:text-purple-800 duration-300 transition ease-in-out text-sm"
-                  >New Web Design</a
-                >
-                <a
-                  href="#!"
-                  class="font-medium text-purple-600 hover:text-purple-700 focus:text-purple-800 duration-300 transition ease-in-out text-sm"
-                  >11 / 01 / 2024</a
-                >
-              </div>
-              <p class="text-gray-700 mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                scelerisque diam non nisi semper, et elementum lorem ornare.
-                Maecenas placerat facilisis mollis. Duis sagittis ligula in
-                sodales vehicula.
-              </p>
-              <button
-                type="button"
-                class="inline-block px-4 py-1.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
-                data-mdb-ripple="true"
-              >
-                Preview
-              </button>
-              <button
-                type="button"
-                class="inline-block px-3.5 py-1 border-2 border-purple-600 text-purple-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                data-mdb-ripple="true"
-              >
-                See email
-              </button>
+            <div class="w-11/12">
+              <p class="text-sm" id="timeline">Order has been created</p>
+              <p class="text-xs text-gray-500">3 min ago</p>
             </div>
           </div>
-        </li>
-        <li class="border-l-2 border-green-600">
-          <div class="md:flex flex-start">
-            <div
-              class="bg-green-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3.5"
-            >
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                data-prefix="fas"
-                class="text-white w-3 h-3"
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
-                <path
-                  fill="currentColor"
-                  d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-                ></path>
-              </svg>
+          <!-- end::Timeline item -->
+
+          <!-- start::Timeline item -->
+          <div class="flex items-center w-full my-6 -ml-1.5">
+            <div class="w-1/12 z-10">
+              <div class="w-3.5 h-3.5 bg-blue-600 rounded-full"></div>
             </div>
-            <div
-              class="block p-6 rounded-lg shadow-lg bg-gray-100 max-w-md ml-6 mb-10"
-            >
-              <div class="flex justify-between mb-4">
-                <a
-                  href="#!"
-                  class="font-medium text-purple-600 hover:text-purple-700 focus:text-purple-800 duration-300 transition ease-in-out text-sm"
-                  >21 000 Job Seekers</a
-                >
-                <a
-                  href="#!"
-                  class="font-medium text-purple-600 hover:text-purple-700 focus:text-purple-800 duration-300 transition ease-in-out text-sm"
-                  >11 / 01 / 2024</a
-                >
-              </div>
-              <p class="text-gray-700 mb-6">
-                Libero expedita explicabo eius fugiat quia aspernatur autem
-                laudantium error architecto recusandae natus sapiente sit nam
-                eaque, consectetur porro molestiae ipsam an deleniti.
+            <div class="w-11/12">
+              <p class="text-sm">
+                Connected with
+                <a href="#" class="text-blue-600 font-bold"
+                  >The order has been shipped successfully
+                </a>
               </p>
-              <button
-                type="button"
-                class="inline-block px-4 py-1.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
-                data-mdb-ripple="true"
-              >
-                Preview
-              </button>
-              <button
-                type="button"
-                class="inline-block px-3.5 py-1 border-2 border-purple-600 text-purple-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                data-mdb-ripple="true"
-              >
-                See email
-              </button>
+              <p class="text-xs text-gray-500">15 min ago</p>
             </div>
           </div>
-        </li>
-        <li class="border-l-2 border-green-600">
-          <div class="md:flex flex-start">
-            <div
-              class="bg-green-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3.5"
-            >
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                data-prefix="fas"
-                class="text-white w-3 h-3"
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
-                <path
-                  fill="currentColor"
-                  d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-                ></path>
-              </svg>
+          <!-- end::Timeline item -->
+
+          <!-- start::Timeline item -->
+          <div class="flex items-center w-full my-6 -ml-1.5">
+            <div class="w-1/12 z-10">
+              <div class="w-3.5 h-3.5 bg-blue-600 rounded-full"></div>
             </div>
-            <div
-              class="block p-6 rounded-lg shadow-lg bg-gray-100 max-w-md ml-6 mb-10"
-            >
-              <div class="flex justify-between mb-4">
-                <a
-                  href="#!"
-                  class="font-medium text-purple-600 hover:text-purple-700 focus:text-purple-800 duration-300 transition ease-in-out text-sm"
-                  >Awesome Employers</a
-                >
-                <a
-                  href="#!"
-                  class="font-medium text-purple-600 hover:text-purple-700 focus:text-purple-800 duration-300 transition ease-in-out text-sm"
-                  >11 / 01 / 2024</a
-                >
-              </div>
-              <p class="text-gray-700 mb-6">
-                Voluptatibus temporibus esse illum eum aspernatur, fugiat
-                suscipit natus! Eum corporis illum nihil officiis tempore.
-                Excepturi illo natus libero sit doloremque, laborum molestias
-                rerum pariatur quam ipsam necessitatibus incidunt, explicabo.
+            <div class="w-11/12">
+              <p class="text-sm">
+                Invoice
+                <a href="#" class="text-blue-600 font-bold">#4563</a> was
+                created.
               </p>
-              <button
-                type="button"
-                class="inline-block px-4 py-1.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
-                data-mdb-ripple="true"
-              >
-                Preview
-              </button>
-              <button
-                type="button"
-                class="inline-block px-3.5 py-1 border-2 border-purple-600 text-purple-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                data-mdb-ripple="true"
-              >
-                See email
-              </button>
+              <p class="text-xs text-gray-500">57 min ago</p>
             </div>
           </div>
-        </li>
-      </ol>
-      <!-- <div class="bg-amber-500">Item #05</div>
-      <div class="bg-red-500">Item #06</div>
-      <div class="col-span-2 bg-green-500">Item #07</div> -->
+          <!-- end::Timeline item -->
+
+          <!-- start::Timeline item -->
+          <div class="flex items-center w-full my-6 -ml-1.5">
+            <div class="w-1/12 z-10">
+              <div class="w-3.5 h-3.5 bg-blue-600 rounded-full"></div>
+            </div>
+            <div class="w-11/12">
+              <p class="text-sm">
+                Message received from
+                <a href="#" class="text-blue-600 font-bold"
+                  >The order has been shipped </a
+                >.
+              </p>
+              <p class="text-xs text-gray-500">1 hour ago</p>
+            </div>
+          </div>
+          <!-- end::Timeline item -->
+
+          <!-- start::Timeline item -->
+          <div class="flex items-center w-full my-6 -ml-1.5">
+            <div class="w-1/12 z-10">
+              <div class="w-3.5 h-3.5 bg-blue-600 rounded-full"></div>
+            </div>
+            <div class="w-11/12">
+              <p class="text-sm">
+                New order received
+                <a href="#" class="text-blue-600 font-bold">#OR9653</a>.
+              </p>
+              <p class="text-xs text-gray-500">2 hours ago</p>
+            </div>
+          </div>
+          <!-- end::Timeline item -->
+
+          <!-- start::Timeline item -->
+          <div class="flex items-center w-full my-6 -ml-1.5">
+            <div class="w-1/12 z-10">
+              <div class="w-3.5 h-3.5 bg-blue-600 rounded-full"></div>
+            </div>
+            <div class="w-11/12">
+              <p class="text-sm">
+                Message received from
+                <a href="#" class="text-blue-600 font-bold">Jane Stillman</a>.
+              </p>
+              <p class="text-xs text-gray-500">2 hours ago</p>
+            </div>
+          </div>
+          <!-- end::Timeline item -->
+        </div>
+      </div>
     </div>
   </body>
 </html>
+
+<script src="../js/order_notification.js"></script>
