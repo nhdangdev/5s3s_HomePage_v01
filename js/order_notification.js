@@ -70,7 +70,7 @@ function toast({
     const icons = {
       // success: 'bg-[#47d864]',
       // error: 'bg-[#ff623d]', 
-      success: 'bg-green-500',
+      success: 'text-green-500',
       error: 'bg-red-500',
     };
 
@@ -126,7 +126,7 @@ function showSuccessToast() {
     title: "Success",
     message: "Order successfully",
     type: "success",
-    duration: 5000,
+    duration: 50000,
   });
 
   // Change button Order to Payment and update quantity 
@@ -259,6 +259,17 @@ function getTimeAgo(timestamp) {
 function deleteProduct(button) {
   const productContainer = button.parentNode;
   productContainer.remove();
+
+  const remainingProducts = document.querySelectorAll('#product-container > div');
+  const defaultImage = document.getElementById('default-image');
+
+  if (remainingProducts.length === 0) {
+    // Nếu không còn sản phẩm, ẩn các sản phẩm còn lại và hiển thị hình ảnh mặc định
+    defaultImage.classList.remove('hidden');
+  } else {
+    // Nếu còn sản phẩm, ẩn hình ảnh mặc định và hiển thị các sản phẩm còn lại
+    defaultImage.classList.add('hidden');
+  }
 }
 
 
