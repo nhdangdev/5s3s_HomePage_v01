@@ -272,97 +272,68 @@ function deleteProduct(button) {
   }
 }
 
+// Render danh sách sản phẩm
+function renderProductList(products) {
+  const productListContainer = document.getElementById('product-list');
+  productListContainer.innerHTML = '';
 
-// // Test func khi lấy dữ liệu từ API
-// // Lấy dữ liệu từ API
-// fetch('your_api_endpoint')
-//   .then(response => response.json())
-//   .then(data => {
-//     // Render các sản phẩm từ dữ liệu nhận được
-//     data.forEach((product, index) => {
-//       const container = document.createElement('div');
-//       container.classList.add('flex', 'flex-col', 'md:flex-row', 'gap-3', 'justify-between', 'items-start', 'border', 'border-gray-300', 'p-4');
-//       container.setAttribute('data-product-index', index); // Lưu trữ chỉ số sản phẩm trong thuộc tính data
+  if (products.length === 0) {
+    // Nếu không có sản phẩm, hiển thị hình ảnh mặc định
+    const defaultImage = document.getElementById('default-image');
+    defaultImage.classList.remove('hidden');
+  } else {
+    // Nếu có sản phẩm, tạo các phần tử HTML tương ứng
+    const defaultImage = document.getElementById('default-image');
+    defaultImage.classList.add('hidden');
 
-//       const productInfo = document.createElement('div');
-//       productInfo.classList.add('flex', 'flex-row', 'gap-6', 'items-center');
+    products.forEach((product) => {
+      const totalPrice = parseFloat(product.price) * parseInt(product.quantity);
 
-//       const imageContainer = document.createElement('div');
-//       imageContainer.classList.add('w-28', 'h-28');
+      const productElement = `
+        <div class="flex flex-col md:flex-row gap-3 justify-between items-start border border-gray-300 p-4">
+          <div class="flex flex-row gap-6 items-center">
+            <div class="w-28 h-28">
+              <img class="w-full h-full" src="${product.image}" />
+            </div>
+            <div class="flex flex-col">
+              <p class="text-lg text-blue-600 font-semibold">${product.name}</p>
+            </div>
+          </div>
+          <div class="self-center text-center">
+            <p class="text-gray-600 title-1-text">
+              ${product.price}
+              <span class="ml-4">$</span>
+              <span class="ml-4">x</span>
+              <span class="ml-4">${product.quantity}</span>
+            </p>
+          </div>
+          <p class="self-center lg:mr-2 title-1-text">${product.totalPrice} $</p>
+          <button class="self-center text-black hover:opacity-80 delete-button text-sm" onclick="deleteProduct(this)">
+            Delete
+          </button>
+        </div>
+      `;
+      productListContainer.insertAdjacentHTML('beforeend', productElement);
+    });
+  }
+}
 
-//       const image = document.createElement('img');
-//       image.classList.add('w-full', 'h-full');
-//       image.src = product.imageUrl;
+const apiData = [
+  {
+    image: '../asset/img/food/hamburger.jpg',
+    name: 'Hamburger with Meat',
+    price: '50.00',
+    quantity: '1',
+    totalPrice: '50',
+  },
+  {
+    image: '../asset/img/food/hamburger.png',
+    name: 'Hamburger with Meat',
+    price: '60.00',
+    quantity: '2',
+    totalPrice: '50',
+  },
+];
 
-//       imageContainer.appendChild(image);
-
-//       const textContainer = document.createElement('div');
-//       textContainer.classList.add('flex', 'flex-col');
-
-//       const title = document.createElement('p');
-//       title.classList.add('text-lg', 'text-blue-600', 'font-semibold');
-//       title.textContent = product.title;
-
-//       textContainer.appendChild(title);
-
-//       productInfo.appendChild(imageContainer);
-//       productInfo.appendChild(textContainer);
-
-//       const priceInfo = document.createElement('div');
-//       priceInfo.classList.add('self-center', 'text-center');
-
-//       const price = document.createElement('p');
-//       price.classList.add('text-gray-600', 'title-1-text');
-//       price.innerHTML = `${product.price} <span class="ml-4">$</span> <span class="ml-4">x</span> <span class="ml-4">1</span>`;
-
-//       priceInfo.appendChild(price);
-
-//       const totalPrice = document.createElement('p');
-//       totalPrice.classList.add('self-center', 'lg:mr-2', 'title-1-text');
-//       totalPrice.textContent = `${product.price} $`;
-
-//       const deleteButton = document.createElement('button');
-//       deleteButton.classList.add('delete-button');
-//       deleteButton.textContent = 'Delete';
-//       deleteButton.addEventListener('click', function () {
-//         const productIndex = container.getAttribute('data-product-index');
-//         deleteProduct(productIndex);
-//       });
-
-//       const addButton = document.createElement('button');
-//       addButton.classList.add('add-button');
-//       addButton.textContent = 'Add';
-//       addButton.addEventListener('click', function () {
-//         addProduct(product);
-//       });
-
-//       container.appendChild(productInfo);
-//       container.appendChild(priceInfo);
-//       container.appendChild(totalPrice);
-//       container.appendChild(deleteButton);
-//       container.appendChild(addButton);
-
-//       // Thêm phần tử container vào DOM, ví dụ:
-//       const timeline = document.getElementById('timeline'); // Đây là ID của phần tử chứa timeline
-//       timeline.appendChild(container);
-//     });
-//   })
-//   .catch(error => {
-//     console.error('Error:', error);
-//   });
-
-// function deleteProduct(productIndex) {
-//   const container = document.querySelector(`[data-product-index="${productIndex}"]`);
-//   if (container) {
-//     container.remove();
-//   }
-// }
-
-// function addProduct(product) {
-//   // Tạo phần tử container và các phần tử con tương tự như trong đoạn mã trên
-//   // ...
-
-//   // Thêm phần tử container vào DOM, ví dụ:
-//   const timeline = document.getElementById('timeline'); // Đây là ID của phần tử chứa timeline
-//   timeline.appendChild(container);
-// }
+// Gọi hàm renderProductList với dữ liệu từ API
+renderProductList(apiData);
