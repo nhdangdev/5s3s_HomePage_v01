@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Paginator</title>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; min-height: 100dvh;">
+        <div class="paginator">
+            <button class="paginator__button" disabled>
+                <span class="material-symbols-outlined">
+                    chevron_left
+                </span>
+            </button>
+            <button class="paginator__button paginator__button--active">1</button>
+            <button class="paginator__button">2</button>
+            <button class="paginator__button">3</button>
+            <div class="paginator__more">
+                ...
+            </div>
+            <button class="paginator__button">15</button>
+            <button class="paginator__button">
+                <span class="material-symbols-outlined">
+                    chevron_right
+                </span>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

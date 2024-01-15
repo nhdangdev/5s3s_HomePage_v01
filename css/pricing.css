@@ -208,8 +208,11 @@ span.price-item__sub-price {
     position: relative;
     border-radius: 16px;
     border: 2px solid transparent;
+    /* [012402TIN] makeup */
     background: linear-gradient(white, white) padding-box,
-        linear-gradient(to right, blue, #53c7ed) border-box;
+        linear-gradient(to right, var(--blue-normal), var(--blue-light-active)) border-box;
+    /* background: linear-gradient(white, white) padding-box,
+        linear-gradient(to right, blue, #53c7ed) border-box; */
 }
 
 
@@ -223,7 +226,9 @@ span.price-item__sub-price {
     right: 16px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    background: linear-gradient(45deg, blue, #53c7ed);
+    /* [012402TIN] makeup */
+    /* background: linear-gradient(45deg, blue, #53c7ed); */
+    background: linear-gradient(45deg, var(--blue-normal), var(--blue-light-active));
     color: #fefefe;
     /* padding: 4px 8px; */
     padding: 5px 10px;
@@ -233,7 +238,9 @@ span.price-item__sub-price {
 }
 
 .price-item--popular button {
-    background-color: #2253f2;
+    /* background-color: #2253f2; */
+    /* [012402TIN] makeup */
+    background-color: var(--blue-normal);
     color: #fefefe;
     border: none;
     cursor: pointer;
@@ -248,7 +255,8 @@ span.price-item__sub-price {
     box-sizing: border-box;
 
     /* color: #2253f2; */
-    background: linear-gradient(45deg, blue, #53c7ed);
+    /* [012402TIN] makeup */
+    background: linear-gradient(45deg, var(--blue-normal), var(--blue-light-active));
     /* border: 1px solid #2253f2; */
     transform: translateY(-2px);
     transition-duration: 500ms;

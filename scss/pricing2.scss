@@ -1,0 +1,195 @@
+@import './main.scss';
+@import './responsive.scss';
+
+.pricing-page {
+    padding: 1.5rem 1.5rem 6rem;
+    box-sizing: border-box;
+
+    @include mobile {
+        padding: 1rem;
+    }
+
+    @include tablet {
+        padding: 1.5rem;
+    }
+
+    &__title {
+        color: var(--grey-10);
+        text-align: center;
+        margin-top: 2rem;
+
+        @include mobile {
+            font-size: 34px;
+        }
+    }
+
+    &__caption {
+        color: var(--grey-10);
+        text-align: center;
+        margin-top: .5rem;
+        margin-bottom: 5rem;
+    }
+
+    .price-package-wrap {
+        display: flex;
+        gap: 0;
+        width: 100%;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        @include tablet {
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+    }
+
+    .price-package {
+        flex: 1;
+        min-height: 400px;
+        background-color: var(--blue-light);
+        border-radius: 44px;
+        padding: 72px 1.5rem;
+        box-sizing: border-box;
+        color: var(--blue-darker);
+
+        @include mobile {
+            padding: 72px 1.5rem !important;
+        }
+
+        @include tablet {
+            padding: 72px 1.5rem !important;
+        }
+
+        &__divider {
+            height: 2px;
+            width: 100%;
+            background-color: var(--blue-darker);
+            display: block;
+            margin: 1rem 0;
+        }
+
+        &__caption {
+            color: var(--blue-dark-hover);
+            margin: 1rem 0;
+        }
+
+        &__price {
+            display: flex;
+            gap: .4rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        &__get-button {
+            border-radius: 32px;
+            padding: 15px 23px;
+            color: white;
+            background-color: var(--blue-normal);
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 0 0 4.5px rgba(85, 188, 221, 0.4);
+            transition: all .2s;
+
+            &:active {
+                background-color: var(--blue-normal-active);
+            }
+
+            &--highlight {
+                background-color: var(--salmon-normal);
+                box-shadow: 0 0 0 4.5px rgba(221, 85, 101, 0.4);
+
+                &:active {
+                    background-color: var(--salmon-normal-active);
+                }
+            }
+        }
+
+        &__feature-list {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+
+            li {
+                margin-bottom: .4rem;
+            }
+        }
+
+        &__feature {
+            display: flex;
+            gap: 1rem;
+
+            &-name {
+                flex: 1;
+                list-style-type: disc;
+            }
+
+            &-value--highlight {
+                color: var(--salmon-normal);
+            }
+        }
+
+        &--highlight {
+            position: relative;
+            z-index: 9;
+            background-color: white;
+            padding: 42px 1.5rem;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(white, white) padding-box,
+                    linear-gradient(180deg, #F58383 0%, rgba(111, 202, 241, 0.51) 100%) border-box;
+                border: 1px solid transparent;
+                box-shadow: 0 5px 18px 0 rgba($color: #000000, $alpha: 0.06);
+                transform: scale(1.05, 1.15);
+                border-radius: 44px;
+                box-sizing: border-box;
+                z-index: -1;
+
+                @include mobile {
+                    transform: scale(1);
+                }
+
+                @include tablet {
+                    transform: scale(1);
+                }
+            }
+
+            &::after {
+                content: 'Recommended';
+                @include text;
+                font-size: 16px;
+                font-weight: 500;
+                display: flex;
+                position: absolute;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                bottom: -53px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                height: 34px;
+                width: 50%;
+                max-width: 204px;
+                border-radius: 14px 14px 0px 0px;
+                background-color: var(--salmon-normal);
+
+                @include mobile {
+                    bottom: 0;
+                }
+
+                @include tablet {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
