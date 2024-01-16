@@ -868,12 +868,14 @@ body {
 // [122307TIN] home page and landing page for payment
 .page-row {
     margin: 0 auto;
-    width: 80%;
+    // [122306TIN] change with to 100% and set more padding for horizontal
+    // width: 80%;
+    width: 100%;
     // [122306TIN] change max with to 1280px
     max-width: 1280px;
     // max-width: 1080px;
     color: #333;
-    padding: 0;
+    padding: 0 1rem;
     box-sizing: border-box;
 
     @include tablet {
@@ -1458,7 +1460,9 @@ body {
     }
 
     .left-panel {
-        width: 40%;
+        // width: 40%;
+        // [162401TIN] change style
+        flex: 1 0 40%;
         padding: 0 3rem;
         box-sizing: border-box;
 
@@ -1510,7 +1514,9 @@ body {
     }
 
     .right-panel {
-        width: 60%;
+        // width: 60%;
+        // [162401TIN] change style
+        flex: 1 0 auto;
         height: 100%;
 
         @include tablet {
@@ -2028,10 +2034,16 @@ body {
 
     .left-panel {
         width: 40%;
+        // [162401TIN] change style
+        // flex: 1 0 auto;
 
         img {
             border-radius: 42px;
-            margin-left: 1.5rem;
+            // margin-left: 1.5rem;
+            max-width: 100%;
+            padding: 0 1rem;
+            display: block;
+            box-sizing: border-box;
         }
 
         @include tablet {
@@ -2055,8 +2067,10 @@ body {
     }
 
     .right-panel {
-        width: 60%;
-        padding: 6rem 0;
+        // width: 60%;
+        // [162401TIN] change style
+        flex: 1 0 60%;
+        padding: 6rem 1rem;
         box-sizing: border-box;
         max-width: 700px;
         margin-right: auto;
