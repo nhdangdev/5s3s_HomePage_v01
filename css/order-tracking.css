@@ -1,13 +1,28 @@
 .order-tracking {
   color: var(--grey-10);
   max-width: 640px;
-  margin: 1rem auto;
+  margin: 0 auto;
+  box-shadow: 2px 8px 8px 0 rgba(var(--salmon-normal-rgb)/0.1);
+}
+.order-tracking__header {
+  padding: 1rem 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.order-tracking__header .header-logo img {
+  display: block;
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+.order-tracking__body {
   box-sizing: border-box;
   background: url(../asset/img/order-tracking-bg.png);
   background-color: var(--salmon-light-active);
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover auto;
+  background-size: contain;
   padding: 1.5rem;
 }
 .order-tracking #order-status-message {
@@ -29,6 +44,7 @@
   box-sizing: border-box;
   border-radius: 0.5rem 0.5rem 0 0;
   margin-top: 1.5rem;
+  border-bottom: 4px solid var(--blue-dark);
 }
 .order-tracking .order-card__title {
   color: var(--blue-normal);
@@ -51,7 +67,7 @@
 }
 .order-tracking .order-card__table {
   width: 100%;
-  padding: 0.5rem 0.5rem 0.5rem 4rem;
+  padding: 2rem;
   box-sizing: border-box;
 }
 .order-tracking .order-card__table th {
@@ -78,10 +94,10 @@
   box-sizing: border-box;
 }
 .order-tracking__footer {
-  border-top: 4px solid var(--blue-dark);
-  padding: 2rem;
+  padding: 0.5rem 2rem 2.5rem;
   box-sizing: border-box;
   text-align: center;
+  background-color: var(--salmon-light-active);
 }
 
 /*# sourceMappingURL=order-tracking.css.map */
