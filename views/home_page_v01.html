@@ -23,14 +23,9 @@
       rel="stylesheet"
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
-    <!-- Swiper -->
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      href="https://unpkg.com/@splidejs/splide@3.0.9/dist/css/splide.min.css"
     />
 
     <!-- Add TailwindCss -->
@@ -40,11 +35,13 @@
     <script src="../js/sidebar.js"></script>
     <script src="../js/user_template_list.js" type="module"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <!-- Carousel -  Flickity -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <!-- Splide -->
-    <script src="path-to-the-script/splide-extension-auto-scroll.min.js"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js
+    "></script>
+    <script src="https://unpkg.com/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
     <script defer src="../js/home_page_v01.js"></script>
     <title>Home Page v01</title>
   </head>
@@ -381,16 +378,16 @@
 
           <!-- Splide main container -->
           <section
-            class="splideImg hidden tablet:block pl-[16.5rem] desktop:pl-4"
-            aria-label="Splide"
+            class="splide splideImg hidden tablet:block pl-[16.5rem] desktop:pl-4 mt-[25px]"
+            aria-label="splide"
           >
             <div class="splide__track !p-0 text-center">
               <ul class="splide__list gap-5">
                 <li
-                  class="splide__slide !w-[480px] !h-[500px] bg-gray-400 flex justify-center items-center text-2xl font-semibold rounded-2xl relative"
+                  class="splide__slide !w-[480px] !h-[500px] bg-gray-400 flex justify-center items-center text-2xl font-semibold relative"
                 >
                   <h4
-                    class="absolute top-0 left-0 pl-8 pt-6 h4-text-bold text-[#12424C] bg-white bg-opacity-50 w-full h-full"
+                    class="absolute top-0 left-0 pl-8 pt-6 h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-blue-100 to-transparent bg-no-repeat bg-center bg-cover"
                   >
                     Build customer satisfaction and loyalty with consistently
                     attractive and accurate menus
@@ -398,14 +395,15 @@
                   <img
                     src="../asset/img/homepage_v01/menuTemplate/menu1.png"
                     alt=""
-                    class="w-full h-full object-cover"
+                    class="w-full h-full block object-cover rounded-2xl"
                   />
                 </li>
+                <!-- Image 2  -->
                 <li
                   class="splide__slide !w-[480px] !h-[500px] bg-gray-400 flex justify-center items-center text-2xl font-semibold rounded-2xl relative"
                 >
                   <h4
-                    class="absolute top-0 left-0 pl-8 pt-6 h4-text-bold text-[#12424C] bg-white bg-opacity-50 w-full h-full"
+                    class="absolute top-0 left-0 pl-8 pt-6 h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-blue-100 to-transparent bg-no-repeat bg-center bg-cover"
                   >
                     Save time and money effortlessly by streamlining menu
                     creation and updates.
@@ -413,14 +411,14 @@
                   <img
                     src="../asset/img/homepage_v01/menuTemplate/menu2.png"
                     alt=""
-                    class="w-full h-full object-cover"
+                    class="w-full h-full block object-cover rounded-2xl"
                   />
                 </li>
                 <li
                   class="splide__slide !w-[480px] !h-[500px] bg-gray-400 flex justify-center items-center text-2xl font-semibold rounded-2xl relative"
                 >
                   <h4
-                    class="absolute top-0 left-0 pl-8 pt-6 h4-text-bold text-[#12424C] bg-white bg-opacity-50 w-full h-full"
+                    class="absolute top-0 left-0 pl-8 pt-6 h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-blue-100 to-transparent bg-no-repeat bg-center bg-cover"
                   >
                     Boost sales and profits through optimized menu layout, item
                     placement, and pricing.
@@ -428,7 +426,7 @@
                   <img
                     src="../asset/img/homepage_v01/menuTemplate/menu3.png"
                     alt=""
-                    class="w-full h-full object-cover"
+                    class="w-full h-full object-cover rounded-2xl"
                   />
                 </li>
               </ul>
@@ -457,7 +455,7 @@
               <h2 class="h1-text mb-4">Key Features</h2>
               <!-- Features 1 -->
               <div
-                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200"
+                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2"
               >
                 <div class="flex items-center mb-2">
                   <div
@@ -480,7 +478,7 @@
               </div>
               <!-- Features 2 -->
               <div
-                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200"
+                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2"
               >
                 <div class="flex items-center mb-2">
                   <div
@@ -503,7 +501,7 @@
               </div>
               <!-- Features 3 -->
               <div
-                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200"
+                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2"
               >
                 <div class="flex items-center mb-2">
                   <div
@@ -526,7 +524,7 @@
               </div>
               <!-- Features 4 -->
               <div
-                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200"
+                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2"
               >
                 <div class="flex items-center mb-2">
                   <div
@@ -579,96 +577,53 @@
           </p>
         </div>
         <div class="splideAutoScrollRight mt-5">
-          <div class="splide__track" id="splide-track">
+          <div class="splide__track" id="splide-track-right">
             <ul class="splide__list gap-5">
               <li class="splide__slide">
                 <img
-                  src="https://plchldr.co/i/600x340?bg=ff4136"
+                  src="../asset/img/homepage_v01/menu-library1.png"
                   alt="plchldr.co ff4136"
                   class="max-w-full rounded-2xl"
                 />
               </li>
               <li class="splide__slide">
                 <img
-                  src="https://plchldr.co/i/600x340?bg=fff400"
+                  src="../asset/img/homepage_v01/menu-library2.png"
                   alt="plchldr.co fff400"
                   class="max-w-full rounded-2xl"
                 />
               </li>
               <li class="splide__slide">
                 <img
-                  src="https://plchldr.co/i/600x340?bg=000"
+                  src="../asset/img/homepage_v01/menu-library3.png"
                   alt="plchldr.co Black"
-                  class="max-w-full rounded-2xl"
-                />
-              </li>
-              <li class="splide__slide">
-                <img
-                  src="https://plchldr.co/i/600x340?bg=f34123"
-                  alt="plchldr.co f34123"
-                  class="max-w-full rounded-2xl"
-                />
-              </li>
-              <li class="splide__slide">
-                <img
-                  src="https://plchldr.co/i/600x340?bg=456465"
-                  alt="plchldr.co 456465"
-                  class="max-w-full rounded-2xl"
-                />
-              </li>
-              <li class="splide__slide">
-                <img
-                  src="https://plchldr.co/i/600x340?bg=2ecc40"
-                  alt="plchldr.co 2ecc40"
                   class="max-w-full rounded-2xl"
                 />
               </li>
             </ul>
-            <!-- /.splide__list -->
           </div>
-          <!-- /.splide__track -->
         </div>
+
         <div class="splideAutoScrollLeft mt-5">
-          <div class="splide__track" id="splide-track">
+          <div class="splide__track" id="splide-track-left">
             <ul class="splide__list gap-5">
               <li class="splide__slide">
                 <img
-                  src="https://plchldr.co/i/600x340?bg=ff4136"
-                  alt="plchldr.co ff4136"
-                  class="max-w-full rounded-2xl"
-                />
-              </li>
-              <li class="splide__slide">
-                <img
-                  src="https://plchldr.co/i/600x340?bg=fff400"
-                  alt="plchldr.co fff400"
-                  class="max-w-full rounded-2xl"
-                />
-              </li>
-              <li class="splide__slide">
-                <img
-                  src="https://plchldr.co/i/600x340?bg=000"
-                  alt="plchldr.co Black"
-                  class="max-w-full rounded-2xl"
-                />
-              </li>
-              <li class="splide__slide">
-                <img
-                  src="https://plchldr.co/i/600x340?bg=f34123"
+                  src="../asset/img/homepage_v01/menu-library4.png"
                   alt="plchldr.co f34123"
                   class="max-w-full rounded-2xl"
                 />
               </li>
               <li class="splide__slide">
                 <img
-                  src="https://plchldr.co/i/600x340?bg=456465"
+                  src="../asset/img/homepage_v01/menu-library5.png"
                   alt="plchldr.co 456465"
                   class="max-w-full rounded-2xl"
                 />
               </li>
               <li class="splide__slide">
                 <img
-                  src="https://plchldr.co/i/600x340?bg=2ecc40"
+                  src="../asset/img/homepage_v01/menu-library6.png"
                   alt="plchldr.co 2ecc40"
                   class="max-w-full rounded-2xl"
                 />
@@ -822,13 +777,51 @@
       </section>
       <!-- Menu management -->
       <section class="mb-20 desktop:mx-[240px] tablet:px-20">
-        <div>
-          <img src="../asset/img/homepage_v01/menu-management.png" alt="" />
+        <div class="relative">
+          <div
+            class="w-full h-full bg-gradient-to-r from-blue-900 to-transparent absolute top-0 left-0 opacity-50"
+          ></div>
+          <div class="w-full bg-cover bg-center relative">
+            <div
+              class="pb-[55%] bg-gradient-to-r from-cyan-500 to-blue-500"
+            ></div>
+            <div
+              class="absolute top-0 left-0 w-full h-full rounded-md"
+              style="
+                background: linear-gradient(
+                    89deg,
+                    #33bcda 50.15%,
+                    rgba(169, 240, 255, 0) 101.52%
+                  ),
+                  url('../asset/img/homepage_v01/menu-management.png'),
+                  lightgray 539px -172.002px / 59.062% 252.95% no-repeat,
+                  url('../asset/img/homepage_v01/menu-management.png'),
+                  lightgray 618px -45.927px / 57.891% 166.912% no-repeat,
+                  url('../asset/img/homepage_v01/menu-management.png'),
+                  lightgray 50% / cover no-repeat;
+              "
+            ></div>
+            <div class="absolute inset-0">
+              <h2 class="text-white text-[36px] font-semibold mt-10">
+                Ready to revolutionize your menu management?
+              </h2>
+              <p class="text-white text-2xl font-semibold pt-4">
+                Experience the power of Foodiemenu Template today! Join us for a
+                live demo and simplify your menu editing, enhance customer
+                experience, and scale your business effortlessly.
+              </p>
+              <button
+                class="absolute bottom-0 left-0 bg-[#F37B74] text-white px-4 py-2 mb-10"
+              >
+                GET MENUTEMPLATE NOW
+              </button>
+            </div>
+          </div>
         </div>
       </section>
-      <!-- Ask Question -->
 
-      <section class="bg-amber-300">
+      <!-- Ask Question -->
+      <section class="mb-[17px]">
         <div>
           <div class="desktop:mx-[240px] tablet:px-20">
             <h5 class="h5-text text-[#454545] text-center">
@@ -836,21 +829,257 @@
             </h5>
             <h2 class="h2-text-bold text-center">Frequently Asked Questions</h2>
           </div>
+          <!-- Ask Question 1 -->
           <div class="desktop:mx-[240px] tablet:px-[298px]">
-            <div class="flex items-center mb-2">
+            <div class="flex justify-between items-center mt-[30px]">
               <div>
-                <h3 class="title-1-text-bold text-[#F37B74] ml-2">
-                  Menu Design Customization:
+                <h3 class="title-1-text-bold text-[#454545]">
+                  Does Foodiemenu Template require any special software or
+                  hardware to operate?
                 </h3>
               </div>
-              <img src="../asset/img/icon/lock-icon.svg" alt="" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              pariatur nesciunt ab magni maiores quod rerum et, doloremque
-              mollitia commodi nihil, incidunt, dolor accusamus quisquam
-              asperiores. A dolore maiores iusto.
+            <p class="title-1-text text-[#454545] mt-2">
+              Not at all! Foodiemenu Template is a web-based solution accessible
+              through standard web browsers, eliminating the need for any
+              specific software or hardware installations.
             </p>
+            <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
+          </div>
+          <!-- Ask Question 2 -->
+          <div class="desktop:mx-[240px] tablet:px-[298px]">
+            <div class="flex justify-between items-center mt-[30px]">
+              <div>
+                <h3 class="title-1-text-bold text-[#454545]">
+                  Can I preview changes made to the menu before they go live?
+                </h3>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </div>
+            <p class="title-1-text text-[#454545] mt-2">
+              Yes, absolutely! Foodiemenu Template offers a preview feature that
+              allows you to see how your edits will appear before finalizing and
+              publishing them, ensuring everything looks perfect.
+            </p>
+            <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
+          </div>
+          <!-- Ask Question 3 -->
+          <div class="desktop:mx-[240px] tablet:px-[298px]">
+            <div class="flex justify-between items-center mt-[30px]">
+              <div>
+                <h3 class="title-1-text-bold text-[#454545]">
+                  Is there a limit to the number of menus or items I can manage
+                  with Foodiemenu Template?
+                </h3>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </div>
+            <p class="title-1-text text-[#454545] mt-2">
+              Foodiemenu Template adapts to your growing needs without limiting
+              the number of menus or items you can manage. Explore our pricing
+              options for insights on managing different quantities effectively.
+            </p>
+            <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
+          </div>
+          <!-- Ask Question 4 -->
+          <div class="desktop:mx-[240px] tablet:px-[298px]">
+            <div class="flex justify-between items-center mt-[30px]">
+              <div>
+                <h3 class="title-1-text-bold text-[#454545]">
+                  How does Foodiemenu Template ensure compatibility with various
+                  TVs and picture formats?
+                </h3>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </div>
+            <p class="title-1-text text-[#454545] mt-2">
+              Foodiemenu Template is built with a focus on versatility. It
+              undergoes rigorous testing to ensure seamless performance across a
+              wide range of TVs and supports multiple picture formats,
+              guaranteeing an optimal viewing experience every time.
+            </p>
+            <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
+          </div>
+          <!-- Ask Question 5 -->
+          <div class="desktop:mx-[240px] tablet:px-[298px]">
+            <div class="flex justify-between items-center mt-[30px]">
+              <div>
+                <h3 class="title-1-text-bold text-[#454545]">
+                  Can I easily make changes to my menu content and details with
+                  Foodiemenu Template?
+                </h3>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </div>
+            <p class="title-1-text text-[#454545] mt-2">
+              Absolutely! Foodiemenu Template offers an intuitive interface that
+              allows for effortless editing. You can easily modify menu content,
+              adjust prices, and fine-tune product details with just a few
+              simple clicks, no technical expertise required.
+            </p>
+            <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
+          </div>
+          <!-- Ask Question 6 -->
+          <div class="desktop:mx-[240px] tablet:px-[298px]">
+            <div class="flex justify-between items-center mt-[30px]">
+              <div>
+                <h3 class="title-1-text-bold text-[#454545]">
+                  How much time and effort does it take to manage menus using
+                  Foodiemenu Template?
+                </h3>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </div>
+            <p class="title-1-text text-[#454545] mt-2">
+              We prioritize simplicity and efficiency. Foodiemenu Template
+              streamlines menu management, significantly reducing the time and
+              effort needed to update and control menus. This lets you focus
+              more on your business and less on administrative tasks.
+            </p>
+            <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
+          </div>
+          <!-- Ask Question 7 -->
+          <div class="desktop:mx-[240px] tablet:px-[298px]">
+            <div class="flex justify-between items-center mt-[30px]">
+              <div>
+                <h3 class="title-1-text-bold text-[#454545]">
+                  Is customer support available for users of Foodiemenu
+                  Template?
+                </h3>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </div>
+            <p class="title-1-text text-[#454545] mt-2">
+              Yes, indeed! We provide comprehensive support to our users.
+              Whether it's assistance with setup, troubleshooting, or guidance
+              on utilizing features, our dedicated support team is always here
+              to help ensure a smooth and successful experience.
+            </p>
+            <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
+          </div>
+          <!-- Ask Question 8 -->
+          <div class="desktop:mx-[240px] tablet:px-[298px]">
+            <div class="flex justify-between items-center mt-[30px]">
+              <div>
+                <h3 class="title-1-text-bold text-[#454545]">
+                  Can Foodiemenu Template adapt to the evolving needs of my
+                  business?
+                </h3>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </div>
+            <p class="title-1-text text-[#454545] mt-2">
+              Absolutely! Our template is designed with flexibility in mind.
+              It's equipped with adaptable features that can grow and evolve
+              along with your business requirements, ensuring it remains a
+              valuable asset in your journey.
+            </p>
+            <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
           </div>
         </div>
       </section>

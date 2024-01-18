@@ -1,3 +1,4 @@
+@import "main";
 @import "color";
 
 .user-form {
@@ -172,5 +173,38 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+.field_control {
+    padding: 20px 26px;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    background-color: var(--blue-light);
+    transition: all 0.2s;
+    border: none;
+    outline: none;
+
+    &:focus {
+        box-shadow: 0 0 0 1.5px var(--blue-normal);
+    }
+}
+
+.primary-button {
+    $box-shadow-1: 0 4px 61px 0 rgba(72, 177, 236, 0.4);
+    background-color: var(--blue-normal);
+    color: white;
+    // padding: ;
+    box-sizing: border-box;
+    box-shadow: $box-shadow-1;
+    transition: all .2s;
+    border-radius: 9px;
+    padding: 1rem;
+    text-align: center;
+    outline: none;
+    border: none;
+
+    &:focus {
+        box-shadow: $box-shadow-1, 0 0 0 1.5px var(--blue-normal-active);
     }
 }

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/order-tracking.css">
+    <title>Order Tracking</title>
+</head>
+
+<body>
+    <div id="loading" style="display: none; justify-content: center; align-items: center; min-height: 100dvh;">
+        <span class="material-symbols-outlined" style="animation: rotate 1.5s infinite;">
+            progress_activity
+        </span>
+    </div>
+    <div class="order-tracking">
+        <div class="order-tracking__header">
+            <div class="header-logo">
+                <img src="../asset/img/foodiemenu-logo.png" alt="">
+            </div>
+            <div style="color: var(--blue-normal); display: flex; align-items: center; gap: .5rem;">
+                <span class="title-2-text-bold">Store</span>
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+            </div>
+        </div>
+        <div class="order-tracking__body">
+            <div class="h5-text" id="order-status-message">Your order #0001 has shipped.</div>
+            <div class="title-2-text" id="under-status-message">Are you smiling? You're totally smiling.</div>
+            <div
+                style="display: flex; justify-content: center; align-items: center; max-width: 200px; margin: 1rem auto 2rem;">
+                <div class="divider"></div>
+                <span class="material-symbols-outlined" style="margin: 0 1.5rem; color: white;">
+                    local_shipping
+                </span>
+                <div class="divider"></div>
+            </div>
+            <div class="title-2-text" style="text-align: center;">No need to camp out by the mailbox!</div>
+            <div class="body-text" style="text-align: center; margin: .5rem 0 .75rem;">This is where you can track your
+                order</div>
+            <!-- Below section for email -->
+            <!-- <div class="body-text" style="text-align: center; margin: .5rem 0 .75rem;">Use this number to track your
+                package:</div>
+            <div class="title-1-text-bold" style="text-align: center;">
+                <a href="#" style="text-decoration: underline; color: var(--blue-normal);">
+                    12345678901234567890
+                </a>
+            </div> -->
+            <div class="order-card">
+                <div class="order-card__title">Here's what you ordered:</div>
+                <div class="order-card__short-info">
+                    <div class="title-2-text">Order #: <span id="order-id"> 0001</span></div>
+                    <div class="title-2-text">Order Date: <span id="order-date">16/1/24</span></div>
+                </div>
+                <div class="order-card__divider"></div>
+                <table class="order-card__table">
+                    <thead>
+                        <tr>
+                            <th>ITEM</th>
+                            <th>QTY</th>
+                            <th>PRICE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="title-2-text">
+                                    Rare Beef Pho
+                                </span>
+                                <br>
+                                <span class="body-text unit-price">$10.00</span>
+                            </td>
+                            <td>
+                                <span class="title-2-text">
+                                    1
+                                </span>
+                            </td>
+                            </td>
+                            <td>
+                                <span class="title-2-text">
+                                    $10.00
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="title-2-text">
+                                    Chicken Pho
+                                </span>
+                                <br>
+                                <span class="body-text unit-price">$8.00</span>
+                            </td>
+                            <td>
+                                <span class="title-2-text">
+                                    2
+                                </span>
+                            </td>
+                            </td>
+                            <td>
+                                <span class="title-2-text">
+                                    $16.00
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="order-card__divider"></div>
+                <div class="order-card__shipping-method">
+                    <span class="title-1-text" style="color: var(--grey-5);">PAYMENT METHOD: </span>
+                    <span class="title-2-text">Cash</span>
+                    <br>
+                    <span class="body-text">*Some note at here if any</span>
+                </div>
+                <div class="order-card__dashed-divider"></div>
+                <div class="order-card__address">
+                    <div>
+                        <span class="title-1-text" style="color: var(--blue-normal);">
+                            Sent to:
+                        </span>
+                        <br>
+                        <br>
+                        <span class="title-2-text" id="order-address">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="order-tracking__footer">
+            <span class="body-text">
+                If you have any questions about your order, please
+                <a href="#" style="text-decoration: underline; color: var(--blue-dark);">
+                    contact us
+                </a>
+            </span>
+        </div>
+    </div>
+    <script>
+        async function getOrderDetail(orderId) {
+            // simulate api
+
+            function delay(ms) {
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve(true)
+                    }, ms)
+                })
+            }
+
+            await delay(1000)
+            return {
+                sussess: true,
+                data: {
+                    id: '0001',
+                    status: 'processing',
+                    payment: 'Cash',
+                    note: 'Some note at here if any',
+                    createdDate: new Date('2024-01-17T04:24:28.190Z'),
+                    address: '1881 Steeles Ave W Unit 05, North York, ON M3H 5Y4, Canada',
+                    items: [
+                        {
+                            name: 'Rare Beef Pho',
+                            quantity: 1,
+                            price: 10,
+                        },
+                        {
+                            name: 'Chicken Pho',
+                            quantity: 2,
+                            price: 8,
+                        }
+                    ]
+                },
+                message: 'Get order detail success',
+            }
+        }
+
+        function updateOrderDetail(orderDetail) {
+            const dateFormatter = new Intl.DateTimeFormat('en', { dateStyle: 'short' })
+            const priceFormatter = new Intl.NumberFormat('en', { style: 'currency', currency: 'USD' })
+            const orderStatusMessageElement = document.querySelector('#order-status-message')
+            const orderIdElement = document.querySelector('#order-id')
+            const orderDateElement = document.querySelector('#order-date')
+            const orderTableBody = document.querySelector('table.order-card__table tbody')
+            const orderAddressElement = document.querySelector('#order-address')
+
+            const orderStatusMessages = {
+                'on-hold': `Your order #${orderDetail['id'] || ''} is on hold`,
+                'pending': `Your order #${orderDetail['id'] || ''} is pending`,
+                'processing': `Your order #${orderDetail['id'] || ''} being processed`,
+                'completed': `Your order #${orderDetail['id'] || ''} has been completed`,
+                'failed': `Your order #${orderDetail['id'] || ''} has been failed`,
+                'cancelled': `Your order #${orderDetail['id'] || ''} has been cancelled`,
+                'refunded': `Your order #${orderDetail['id'] || ''} has been refunded`,
+            }
+            orderStatusMessageElement.innerHTML = orderStatusMessages[orderDetail['status']] || `Opp! something wrong with order #${orderDetail['id']}`
+
+            orderIdElement.innerHTML = orderDetail['id']
+            orderDateElement.innerHTML = dateFormatter.format(new Date(orderDetail['createdDate']))
+            orderAddressElement.innerHTML = orderDetail['address']
+
+            orderTableBody.innerHTML = ''
+            for (let item of orderDetail.items) {
+                orderTableBody.innerHTML += `
+                <tr>
+                    <td>
+                        <span class="title-2-text">
+                            ${item['name'] || ''}
+                        </span>
+                        <br>
+                        <span class="body-text unit-price">${priceFormatter.format(Number(item['price']))}</span>
+                    </td>
+                    <td>
+                        <span class="title-2-text">
+                            ${item['quantity']}
+                        </span>
+                    </td>
+                    </td>
+                    <td>
+                        <span class="title-2-text">
+                            ${priceFormatter.format(item['price'] * item['quantity'])}
+                        </span>
+                    </td>
+                </tr>
+                `
+            }
+        }
+
+        window.addEventListener('load', async () => {
+            const loadingScreen = document.querySelector('#loading')
+            const orderTrackingScreen = document.querySelector('.order-tracking')
+
+            orderTrackingScreen.style.display = 'none'
+            loadingScreen.style.display = 'flex'
+
+            const orderId = (new URLSearchParams(window.location.search)).get('orderId') || ''
+            const result = await getOrderDetail(orderId)
+            updateOrderDetail(result.data)
+
+            orderTrackingScreen.style.display = 'block'
+            loadingScreen.style.display = 'none'
+        })
+
+    </script>
+</body>
+
+</html>

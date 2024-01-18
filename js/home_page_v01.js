@@ -12,7 +12,7 @@ closeMenuBtn.addEventListener('click', function () {
 });
 
 // Splide
-var splide = new Splide(".splideImg", {
+var splideImg = new Splide(".splideImg", {
   direction: "ltr",
   height: "20rem",
   wheel: true,
@@ -30,29 +30,54 @@ var splide = new Splide(".splideImg", {
   },
 });
 
-splide.mount();
+splideImg.mount();
 
 // Splide AutoScroll
-document.addEventListener('DOMContentLoaded', function () {
-  new Splide('.splideAutoScrollRight', {
-    type: 'loop',
-    drag: 'free',
-    focus: 'center',
+  const splideAutoScrollRight = new Splide('.splideAutoScrollRight', {
+    type   : 'loop',
+    drag   : 'free',
+    focus  : 'center',
     perPage: 3,
     autoScroll: {
       speed: 1,
     },
-  }).mount(window.splide.Extensions);
-});
+  });
+  splideAutoScrollRight.mount( );
 
-document.addEventListener('DOMContentLoaded', function () {
-  new splide('.splideAutoScrollLeft', {
-    type: 'loop',
-    drag: 'free',
-    focus: 'center',
+  const splideAutoScrollLeft = new Splide('.splideAutoScrollLeft', {
+    type   : 'loop',
+    drag   : 'free',
+    focus  : 'center',
     perPage: 3,
     autoScroll: {
-      speed: 1,
+      speed: -1,
     },
-  }).mount(window.splide.Extensions);
-});
+  });
+  splideAutoScrollLeft.mount( );
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   // Right to Left
+//   new Splide('.splideAutoScrollRight', {
+//     type: 'loop',
+//     drag: 'free',
+//     focus: 'center',
+//     perPage: 3,
+//     autoScroll: {
+//       speed: 1,
+//     },
+//   }).mount(window.splide.Extensions);
+  
+
+//   // Left to Right
+//   const splideAutoScrollLeft = new Splide('.splideAutoScrollLeft', {
+//     type: 'loop',
+//     drag: 'free',
+//     focus: 'center',
+//     perPage: 3,
+//     autoScroll: {
+//       speed: -1,
+//     },
+//   });
+
+//   splideAutoScrollLeft.mount();
+// });

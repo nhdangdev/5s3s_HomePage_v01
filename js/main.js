@@ -182,9 +182,9 @@ function scrollToElement(selector) {
     selectedElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 // [122305TIN] add below script - end
-
+// [022405TIN] update this function
 // [122306TIN] add script for custome video player
-function initCustomVideoPlayer(videoPlayler, { fullScreenWhenPlay = false }) {
+function initCustomVideoPlayer(videoPlayler, playCallback = null) {
     const THUMB_CLASSNAME = 'video-player__thumb'
     const PLAY_BTN_CLASSNAME = 'video-player__play-btn'
     const EMBEDDED_CLASSNAME = 'video-player__embedded'
@@ -201,12 +201,8 @@ function initCustomVideoPlayer(videoPlayler, { fullScreenWhenPlay = false }) {
         const videoUrl = new URL(embedded.src)
         videoUrl.searchParams.set('autoplay', '1')
         embedded.src = videoUrl.href
-        if (!!fullScreenWhenPlay) {
-            embedded.requestFullscreen().then(() => {
-                console.log('View video fullscreen')
-            }).catch(e => {
-                console.log(e)
-            })
+        if (typeof playCallback === 'function') {
+            playCallback()
         }
     }
 

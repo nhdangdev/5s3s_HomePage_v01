@@ -793,10 +793,10 @@ body {
 
 .page-row {
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
   max-width: 1280px;
   color: #333;
-  padding: 0;
+  padding: 0 1rem;
   box-sizing: border-box;
 }
 @media (min-width: 740px) and (max-width: 1023px) {
@@ -1320,7 +1320,7 @@ body {
   }
 }
 #landing-section-2 .left-panel {
-  width: 40%;
+  flex: 1 0 40%;
   padding: 0 3rem;
   box-sizing: border-box;
 }
@@ -1369,7 +1369,7 @@ body {
   object-fit: contain;
 }
 #landing-section-2 .right-panel {
-  width: 60%;
+  flex: 1 0 auto;
   height: 100%;
 }
 @media (min-width: 740px) and (max-width: 1023px) {
@@ -1805,7 +1805,10 @@ body {
 }
 #landing-section-7 .left-panel img {
   border-radius: 42px;
-  margin-left: 1.5rem;
+  max-width: 100%;
+  padding: 0 1rem;
+  display: block;
+  box-sizing: border-box;
 }
 @media (min-width: 740px) and (max-width: 1023px) {
   #landing-section-7 .left-panel {
@@ -1827,8 +1830,8 @@ body {
   }
 }
 #landing-section-7 .right-panel {
-  width: 60%;
-  padding: 6rem 0;
+  flex: 1 0 60%;
+  padding: 6rem 1rem;
   box-sizing: border-box;
   max-width: 700px;
   margin-right: auto;
