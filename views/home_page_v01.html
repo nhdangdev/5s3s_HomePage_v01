@@ -118,7 +118,7 @@
           </div>
         </div>
         <div
-          class="menu hidden mobile:fixed top-0 left-0 bg-white w-full z-50"
+          class="absolute menu hidden mobile:fixed top-0 left-0 bg-white w-full z-50"
           id="menu"
         >
           <button
@@ -203,16 +203,18 @@
 
       <!-- About Section -->
       <section
-        class="grid grid-cols-2 tablet:flex tablet:justify-between desktop:justify-evenly tablet:items-center mt-11 tablet:mt-[105px] tablet:px-[149.5px]"
+        class="grid grid-cols-2 tablet:flex flex-wrap tablet:flex-nowrap tablet:justify-between desktop:justify-evenly tablet:items-center mt-11 tablet:mt-[105px] tablet:px-[149.5px] px-11"
       >
-        <div class="flex items-center tablet:w-[205px] text-center">
-          <div class="flex flex-col justify-center items-center">
+        <div class="flex items-center w-full tablet:w-[50%] text-center">
+          <div
+            class="flex flex-col justify-center items-center gap-[15px] max-w-[210px]"
+          >
             <img
               src="../asset/img/homepage_v01/icon/Customer.svg"
               alt="Icon 1"
-              class="max-w-full mb-[17px]"
+              class="max-w-[44px] tablet:max-w-full mb-[2px]"
             />
-            <h4 class="h4-text-bold text-center leading-[120%] mb-[10px]">
+            <h4 class="h4-text-bold text-center leading-[120%]">
               Attracting Customers
             </h4>
             <p class="body-text text-center leading-[140%] text-[#1D1D1F]">
@@ -222,14 +224,16 @@
           </div>
         </div>
 
-        <div class="flex items-center tablet:w-[205px] break-words text-center">
-          <div class="flex flex-col justify-center items-center">
+        <div class="flex items-center w-full tablet:w-[50%] text-center">
+          <div
+            class="flex flex-col justify-center items-center gap-[15px] max-w-[210px]"
+          >
             <img
               src="../asset/img/homepage_v01/icon/Time.svg"
               alt="Icon 1"
-              class="max-w-full mb-[17px]"
+              class="max-w-[68px] tablet:max-w-full mb-[2px]"
             />
-            <h4 class="h4-text-bold text-center leading-[120%] mb-[10px]">
+            <h4 class="h4-text-bold text-center leading-[120%]">
               Time and Cost Efficiency
             </h4>
             <p class="body-text text-center leading-[140%] text-[#1D1D1F]">
@@ -239,14 +243,16 @@
           </div>
         </div>
 
-        <div class="flex items-center tablet:w-[205px] break-words text-center">
-          <div class="flex flex-col justify-center items-center">
+        <div class="flex items-center w-full tablet:w-[50%] text-center">
+          <div
+            class="flex flex-col justify-center items-center gap-[15px] max-w-[210px]"
+          >
             <img
               src="../asset/img/homepage_v01/icon/Revenue.svg"
               alt="Icon 1"
-              class="max-w-full mb-[17px]"
+              class="max-w-[70px] tablet:max-w-full mb-[2px]"
             />
-            <h4 class="h4-text-bold text-center leading-[120%] mb-[10px]">
+            <h4 class="h4-text-bold text-center leading-[120%]">
               Revenue Generation
             </h4>
             <p class="body-text text-center leading-[140%] text-[#1D1D1F]">
@@ -256,14 +262,16 @@
           </div>
         </div>
 
-        <div class="flex items-center tablet:w-[205px] break-words text-center">
-          <div class="flex flex-col justify-center items-center">
+        <div class="flex items-center w-full tablet:w-[50%] text-center">
+          <div
+            class="flex flex-col justify-center items-center gap-[15px] max-w-[210px]"
+          >
             <img
               src="../asset/img/homepage_v01/icon/Brand.svg"
               alt="Icon 1"
-              class="max-w-full mb-[17px]"
+              class="max-w-[38px] tablet:max-w-full mb-[2px]"
             />
-            <h4 class="h4-text-bold text-center leading-[120%] mb-[10px]">
+            <h4 class="h4-text-bold text-center leading-[120%]">
               Brand Enhancement
             </h4>
             <p class="body-text text-center leading-[140%] text-[#1D1D1F]">
@@ -460,12 +468,18 @@
       <section class="mx-0 desktop:ml-[240px] mb-[108px]">
         <!-- Menu Heading -->
         <div class="desktop:pl-[230px]">
+          <span
+            class="inline-block tablet:hidden w-full h-[1px] bg-black"
+          ></span>
           <h5
-            class="h5-text-bold text-[#6D6D6D] text-center desktop:pr-[273px] desktop:mr-[240px]"
+            class="h5-text-bold text-[#6D6D6D] text-center desktop:pr-[273px] desktop:mr-[240px] mb-5 tablet:mb-0"
           >
             Simplify Your Success with FoodieMenu
-            <span class="inline-block w-48 h-[1px] bg-black"></span>
-            <span class="text-[#F37B74] cursor-pointer"
+            <span
+              class="hidden tablet:inline-block w-48 h-[1px] bg-black"
+            ></span>
+            <span
+              class="hidden tablet:inline-block text-[#F37B74] cursor-pointer"
               >USE MENU TEMPLATE NOW</span
             >
           </h5>
@@ -668,8 +682,7 @@
           >
         </div>
         <span
-          class="inline-block tablet:hidden w-full h-[1px] bg-black mx-auto my-5"
-          style="margin-left: 30px; margin-right: 30px"
+          class="inline-block tablet:hidden w-full h-[1px] bg-black my-5"
         ></span>
       </section>
 
@@ -964,15 +977,30 @@
       </section>
 
       <!-- Menu management -->
-      <section class="mb-20 desktop:mx-[240px] tablet:px-20">
-        <div class="p-10 w-full h-full">
+      <section class="tablet:mb-20 desktop:mx-[240px] tablet:px-20">
+        <div class="tablet:p-10 w-full h-full">
           <div class="relative">
             <img
               src="../asset/img/homepage_v01/menu-management(1).png"
               alt=""
+              class="hidden tablet:inline-block"
             />
+            <div
+              class="inline-block tablet:hidden bg-top w-full h-[460px] bg-contain rounded-md"
+              style="
+                background: linear-gradient(
+                    180deg,
+                    #33bcda 50.95%,
+                    rgba(169, 240, 255, 0) 93.44%
+                  ),
+                  url('../asset/img/homepage_v01/menu-management.png') top,
+                  lightgray -113.391px 197.558px / 152.74% 94.242% no-repeat;
+              "
+            ></div>
             <div class="absolute top-0 left-0 pl-[48px]">
-              <h2 class="h2-text mt-10 text-white text-[36px] font-extrabold">
+              <h2
+                class="h2-text mt-10 text-white text-2xl tablet:text-[36px] font-extrabold"
+              >
                 Ready to revolutionize your menu management?
               </h2>
               <span
@@ -990,6 +1018,10 @@
             </div>
           </div>
         </div>
+        <span
+          class="inline-block tablet:hidden w-full h-[1px] bg-black my-5"
+          style="padding: 0 30px"
+        ></span>
       </section>
 
       <!-- Ask Question -->
