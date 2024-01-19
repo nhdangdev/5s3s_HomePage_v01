@@ -53,16 +53,26 @@
       >
         <div class="flex items-center gap-5">
           <img
-            class="h-10 w-10"
+            class="h-10 w-10 mr-[18x] ml-[9px] mr-"
             src="../asset/img/homepage_v01/logo.png"
             alt="Logo"
           />
-          <ul class="hidden tablet:flex items-center gap-6">
-            <li class="text-gray-700 mr-2">Home</li>
-            <li class="text-gray-700 mr-2">About</li>
-            <li class="text-gray-700 mr-2">Product</li>
-            <li class="text-gray-700 mr-2">Pricing</li>
-            <li class="text-gray-700 mr-2">Contact</li>
+          <ul class="hidden tablet:flex items-center gap-6 cursor-pointer">
+            <li class="text-gray-700 px-[10px] leading-3 hover:text-red-500">
+              Home
+            </li>
+            <li class="text-gray-700 px-[10px] leading-3 hover:text-red-500">
+              About
+            </li>
+            <li class="text-gray-700 px-[10px] leading-3 hover:text-red-500">
+              Product
+            </li>
+            <li class="text-gray-700 px-[10px] leading-3 hover:text-red-500">
+              Pricing
+            </li>
+            <li class="text-gray-700 px-[10px] leading-3 hover:text-red-500">
+              Contact
+            </li>
           </ul>
         </div>
         <div
@@ -155,7 +165,7 @@
     <div class="container__main">
       <!-- Hero Section -->
       <div
-        class="flex flex-col justify-center mt-8 tablet::mt-[100px] mx-0 desktop:mx-[240px]"
+        class="flex flex-col justify-center mt-8 tablet:mt-[100px] mx-0 desktop:mx-[240px]"
       >
         <section class="section__content">
           <div class="content__logo flex items-center justify-center">
@@ -166,18 +176,18 @@
             />
           </div>
           <h2
-            class="content__heading h3-text tablet:h2-text text-[#F37B74] tablet:text-[58px] text-center my-2 tablet:mt-4 tablet:mb-[26px] font-anton"
+            class="content__heading text-[#F37B74] tablet:text-[64px] font-normal text-center my-2 tablet:mt-10 tablet:mb-[26px] font-anton leading-[100%]"
           >
             Explore FoodieMenu's ultimate solution!
           </h2>
           <h3
-            class="section__desc title-1-text tablet:text-[33px] text-[#12424C] font-semibold text-center"
+            class="section__desc title-1-text tablet:text-[33px] text-[#12424C] font-semibold text-center leading-[120%]"
           >
             Let FoodieMenu Make Things Simple
           </h3>
         </section>
         <section
-          class="hero__image relative mt-2 tablet:mt-[26px] mx-0 tablet:mx-[221px] px-10 tablet:p-0 shadow-lg"
+          class="hero__image relative mt-2 tablet:mt-[26px] mx-0 tablet:mx-[221px] px-10 tablet:p-0 shadow-2xl"
         >
           <img
             src="../asset/img/homepage_v01/logo.png"
@@ -187,7 +197,7 @@
           <img
             src="../asset/img/homepage_v01/hero_img.png"
             alt="hero__img"
-            class="border-2 border-black"
+            class="border-2 border-black shadow-2xl"
           />
           <div
             class="flex justify-center items-center my-4 tablet:my-0 tablet:absolute tablet:right-0 tablet:left-0 tablet:-bottom-[25px]"
@@ -366,64 +376,62 @@
 
       <!-- Youtube Section -->
       <section
-        class="flex justify-center items-center px-4 tablet:p-[80px] tablet:flex-row flex-col-reverse mx-0 desktop:mx-[240px] mt-10"
+        class="flex justify-center items-center px-4 tablet:px-[80px] tablet:pt-[80px] tablet:pb-[78px] tablet:flex-row flex-col-reverse mx-0 desktop:mx-[240px] mt-9"
       >
         <!-- Left youtube -->
-        <div class="tablet:w-1/2 tablet:p-8 tablet:pr-[42px]">
-          <h2 class="h4-text-bold tablet:text-[40px] mb-4 text-[#454545]">
+        <div class="tablet:w-1/2 tablet:p-8 tablet:pr-[50px]">
+          <h4
+            class="h4-text-bold tablet:text-[40px] mb-4 text-[#454545] font-medium leading-[140%]"
+          >
             Experience Foodiemenu Template in action with our live demo!
-          </h2>
-          <p class="hidden tablet:block title-1-text text-[#F37B74]">
-            Join us and transform your menu management today!
-          </p>
-          <p class="tablet:hidden title-1-text text-[#F37B74]">
-            Join us today!
-          </p>
-        </div>
-        <!-- Right youtube -->
-        <div class="tablet:w-1/2 flex tablet:flex-col py-[34px] relative">
-          <!-- <img
-            src="../asset/img/video-thumb.png"
-            alt=""
-            class="max-w-[640px] rounded-[32px]"
-          />
-          <button class="video-player__play-btn">
+          </h4>
+          <div class="flex justify-start items-center cursor-pointer">
+            <p
+              class="hidden tablet:block title-1-text text-[#F37B74] leading-[120%] font-semibold"
+            >
+              Join us and transform your menu management today!
+            </p>
+            <p class="tablet:hidden title-1-text text-[#F37B74]">
+              Join us today!
+            </p>
             <svg
-              width="23"
-              height="28"
-              viewBox="0 0 23 28"
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M3.98881 1.30256C2.46609 0.359923 0.5 1.45515 0.5 3.24602V24.7539C0.5 26.5448 2.46609 27.64 3.98881 26.6974L21.3606 15.9434C22.8041 15.0498 22.8041 12.9501 21.3606 12.0565L3.98881 1.30256Z"
-                fill="currentcolor"
-              />
+              <g id="Icon/arrow-right">
+                <path
+                  id="Vector"
+                  d="M5 12.1094H19"
+                  stroke="#F37B74"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector_2"
+                  d="M13 18.1094L19 12.1094"
+                  stroke="#F37B74"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Vector_3"
+                  d="M13 6.10938L19 12.1094"
+                  stroke="#F37B74"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
             </svg>
-          </button> -->
-          <!-- <div
-            class="flex justify-center items-center max-w-390 tablet:w-[630px] tablet:h-[430px] tablet:max-w-[630px] tablet:max-h-[430px] rounded-[32px] bg-gray-200"
-          >
-            <video controls class="w-full h-full rounded-[32px]">
-              <source
-                src="../asset/img/homepage_v01/video.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video> -->
-          <!-- <iframe
-              class="video-player__embedded"
-              frameborder="0"
-              allowfullscreen
-              style="width: 100%; min-height: 500px"
-              src="https://www.youtube.com/embed/bEerT4yEsn4"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-            ></iframe> -->
-          <!-- </div> -->
-
+          </div>
+        </div>
+        <!-- Right youtube -->
+        <div class="tablet:w-1/2 flex tablet:flex-col py-[34px] relative">
           <!-- Start Video -->
           <div class="video-player">
             <div class="video-player__thumb">
@@ -448,7 +456,6 @@
                 ></path>
               </svg>
             </button>
-            <!-- 						[122318TIN] update video link -->
             <iframe
               class="video-player__embedded"
               style="width: 100%; min-height: 500px"
@@ -472,7 +479,7 @@
             class="inline-block tablet:hidden w-full h-[1px] bg-black"
           ></span>
           <h5
-            class="h5-text-bold text-[#6D6D6D] text-center desktop:pr-[273px] desktop:mr-[240px] mb-5 tablet:mb-0"
+            class="h5-text-bold text-[#6D6D6D] text-center desktop:pr-[273px] desktop:mr-[240px] mb-5 tablet:mb-0 leading-[120%]"
           >
             Simplify Your Success with FoodieMenu
             <span
@@ -493,10 +500,10 @@
               <ul class="splide__list gap-5">
                 <!-- Image 1  -->
                 <li
-                  class="splide__slide !w-[530px] !h-[580px] bg-gray-400 flex justify-center items-center text-2xl font-semibold relative"
+                  class="splide__slide !w-[480px] !h-[500px] flex justify-center items-center text-2xl font-semibold relative shadow-2xl"
                 >
                   <h4
-                    class="absolute top-0 left-0 pl-8 pt-[3rem] pr-[50px] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-blue-100 to-transparent bg-no-repeat bg-center bg-cover"
+                    class="absolute top-0 left-0 pl-8 pt-[2.5rem] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-blue-100 to-transparent rounded-2xl leading-[120%]"
                   >
                     Build customer satisfaction and loyalty with consistently
                     attractive and accurate menus
@@ -504,16 +511,16 @@
                   <img
                     src="../asset/img/homepage_v01/menuTemplate/menu1.png"
                     alt=""
-                    class="w-full h-full block object-cover rounded-2xl"
+                    class="w-full h-full block rounded-[2rem]"
                   />
                 </li>
 
                 <!-- Image 2  -->
                 <li
-                  class="splide__slide !w-[530px] !h-[580px] bg-gray-400 flex justify-center items-center text-2xl font-semibold rounded-2xl relative"
+                  class="splide__slide !w-[480px] !h-[500px] flex justify-center items-center text-2xl font-semibold relative shadow-2xl"
                 >
                   <h4
-                    class="absolute top-0 left-0 pl-8 pt-[3rem] pr-[65px] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-blue-100 to-transparent bg-no-repeat bg-center bg-cover"
+                    class="absolute top-0 left-0 pl-8 pt-[2.5rem] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-red-50 to-transparent rounded-2xl leading-[120%] pr-[1.5rem]"
                   >
                     Save time and money effortlessly by streamlining menu
                     creation and updates.
@@ -521,16 +528,16 @@
                   <img
                     src="../asset/img/homepage_v01/menuTemplate/menu2.png"
                     alt=""
-                    class="w-full h-full block object-cover rounded-2xl"
+                    class="w-full h-full block rounded-[2rem]"
                   />
                 </li>
 
                 <!-- Image 3  -->
                 <li
-                  class="splide__slide !w-[530px] !h-[580px] bg-gray-400 flex justify-center items-center text-2xl font-semibold rounded-2xl relative"
+                  class="splide__slide !w-[480px] !h-[500px] flex justify-center items-center text-2xl font-semibold relative shadow-2xl"
                 >
                   <h4
-                    class="absolute top-0 left-0 pl-8 pt-[3rem] pr-[50px] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-blue-100 to-transparent bg-no-repeat bg-center bg-cover"
+                    class="absolute top-0 left-0 pl-8 pt-[2.5rem] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-blue-100 to-transparent rounded-2xl leading-[120%]"
                   >
                     Boost sales and profits through optimized menu layout, item
                     placement, and pricing.
@@ -538,16 +545,16 @@
                   <img
                     src="../asset/img/homepage_v01/menuTemplate/menu3.png"
                     alt=""
-                    class="w-full h-full object-cover rounded-2xl"
+                    class="w-full h-full block rounded-[2rem]"
                   />
                 </li>
 
                 <!-- Image 4  -->
                 <li
-                  class="splide__slide !w-[530px] !h-[580px] bg-gray-400 flex justify-center items-center text-2xl font-semibold rounded-2xl relative"
+                  class="splide__slide !w-[480px] !h-[500px] flex justify-center items-center text-2xl font-semibold relative shadow-2xl"
                 >
                   <h4
-                    class="absolute top-0 left-0 pl-8 pt-[3rem] pr-[50px] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-blue-100 to-transparent bg-no-repeat bg-center bg-cover"
+                    class="absolute top-0 left-0 pl-8 pt-[2.5rem] h4-text-bold text-[#454545] bg-opacity-50 w-full h-full bg-gradient-to-b from-red-300 to-transparent rounded-2xl leading-[120%]"
                   >
                     Elevate operational efficiency, minimize errors, waste, and
                     inventory issues for improved compliance
@@ -555,7 +562,23 @@
                   <img
                     src="../asset/img/homepage_v01/menuTemplate/menu4.png"
                     alt=""
-                    class="w-full h-full object-cover rounded-2xl"
+                    class="w-full h-full block rounded-[2rem]"
+                  />
+                </li>
+                <!-- Image 5 Test  -->
+                <li
+                  class="splide__slide !w-[480px] !h-[500px] flex justify-center items-center text-2xl font-semibold relative shadow-2xl"
+                >
+                  <h4
+                    class="absolute top-0 left-0 pl-8 pt-[2.5rem] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-blue-100 to-transparent rounded-2xl leading-[120%]"
+                  >
+                    Build customer satisfaction and loyalty with consistently
+                    attractive and accurate menus
+                  </h4>
+                  <img
+                    src="../asset/img/homepage_v01/menuTemplate/menu1.png"
+                    alt=""
+                    class="w-full h-full block rounded-[2rem]"
                   />
                 </li>
               </ul>
@@ -572,103 +595,109 @@
       <section class="px-4 mt-[10rem] tablet:px-[180px] desktop:mx-[240px]">
         <div class="flex flex-col">
           <div
-            class="relative flex justify-center items-center w-full mx-auto mb-5 tablet:mb-[96px] flex-col-reverse tablet:flex-row"
+            class="relative flex justify-center items-center w-full mx-auto mb-5 tablet:mb-[60px] flex-col-reverse tablet:flex-row gap-14"
           >
             <div class="flex justify-center items-center">
               <img src="../asset/img/homepage_v01/features/g1.png" alt="tv" />
             </div>
-            <div class="flex flex-col justify-center items-center tablet:pl-10">
-              <h2 class="h1-text mb-4">Key Features</h2>
-              <!-- Features 1 -->
+            <div class="pl-10">
+              <h2 class="h1-text mb-4 tablet:pl-16 leading-[120%]">
+                Key Features
+              </h2>
               <div
-                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2 show-description max-w-[550px]"
+                class="flex flex-col justify-center items-center tablet:pl-10"
               >
-                <div class="flex items-center mb-2">
-                  <div
-                    class="bg-[#F37B74] rounded-full active:bg-[#F37B74] focus:outline-none focus:ring focus:ring-[#F37B74] cursor-pointer"
-                  >
-                    <img src="../asset/img/icon/lock-icon.svg" alt="" />
+                <!-- Features 1 -->
+                <div
+                  class="bg-features mb-2 max-w-[550px] w-[550px] leading-[120%] cursor-pointer active"
+                >
+                  <div class="flex items-center mb-2">
+                    <div
+                      class="bg-[#F37B74] rounded-full active:bg-[#F37B74] focus:outline-none focus:ring focus:ring-[#F37B74] cursor-pointer"
+                    >
+                      <img src="../asset/img/icon/lock-icon.svg" alt="" />
+                    </div>
+                    <h3 class="title-1-text-bold text-[#F37B74] ml-2">
+                      Menu Design Customization:
+                    </h3>
                   </div>
-                  <h3 class="title-1-text-bold text-[#F37B74] ml-2">
-                    Menu Design Customization:
-                  </h3>
-                </div>
-                <div class="ml-10">
-                  <ul class="body-text text-[#454545] list-disc">
-                    <li>
-                       Create and personalize menus using templates and a
-                      variety of design options.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- Features 2 -->
-              <div
-                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2 max-w-[550px]"
-              >
-                <div class="flex items-center mb-2">
-                  <div
-                    class="bg-black rounded-full hover:bg-[#F37B74] active:bg-[#F37B74] focus:outline-none focus:ring focus:ring-[#F37B74] cursor-pointer"
-                  >
-                    <img src="../asset/img/icon/lock-icon.svg" alt="" />
+                  <div class="ml-10">
+                    <ul class="bg-features body-text text-[#454545] list-disc">
+                      <li>
+                        Create and personalize menus using templates and a
+                        variety of design options.
+                      </li>
+                    </ul>
                   </div>
-                  <h3 class="title-1-text-bold text-[#F37B74] ml-2">
-                    Integration with POS and Online Ordering:
-                  </h3>
                 </div>
-                <div class="ml-10">
-                  <ul class="body-text text-[#454545] list-disc">
-                    <li>
-                       Create and personalize menus using templates and a
-                      variety of design options.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- Features 3 -->
-              <div
-                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2 max-w-[550px]"
-              >
-                <div class="flex items-center mb-2">
-                  <div
-                    class="bg-black rounded-full hover:bg-[#F37B74] active:bg-[#F37B74] focus:outline-none focus:ring focus:ring-[#F37B74] cursor-pointer"
-                  >
-                    <img src="../asset/img/icon/lock-icon.svg" alt="" />
+                <!-- Features 2  -->
+                <div
+                  class="bg-features mb-2 max-w-[550px] w-[550px] leading-[120%] cursor-pointer"
+                >
+                  <div class="flex items-center mb-2">
+                    <div
+                      class="bg-black rounded-full focus:outline-none focus:ring focus:ring-[#F37B74] cursor-pointer"
+                    >
+                      <img src="../asset/img/icon/lock-icon.svg" alt="" />
+                    </div>
+                    <h3 class="title-1-text-bold text-black ml-2">
+                      Integration with POS and Online Ordering:
+                    </h3>
                   </div>
-                  <h3 class="title-1-text-bold text-[#F37B74] ml-2">
-                    QR Code Access for Menu Display:
-                  </h3>
-                </div>
-                <div class="ml-10">
-                  <ul class="body-text text-[#454545] list-disc">
-                    <li>
-                       Create and personalize menus using templates and a
-                      variety of design options.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- Features 4 -->
-              <div
-                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2 max-w-[550px]"
-              >
-                <div class="flex items-center mb-2">
-                  <div
-                    class="bg-black rounded-full hover:bg-[#F37B74] active:bg-[#F37B74] focus:outline-none focus:ring focus:ring-[#F37B74] cursor-pointer"
-                  >
-                    <img src="../asset/img/icon/lock-icon.svg" alt="" />
+                  <div class="ml-10">
+                    <ul class="body-text text-[#454545] list-disc">
+                      <li>
+                         Create and personalize menus using templates and a
+                        variety of design options.
+                      </li>
+                    </ul>
                   </div>
-                  <h3 class="title-1-text-bold text-[#F37B74] ml-2">
-                    User-Friendly Interface for Template Adjustments:
-                  </h3>
                 </div>
-                <div class="ml-10">
-                  <ul class="body-text text-[#454545] list-disc">
-                    <li>
-                       Create and personalize menus using templates and a
-                      variety of design options.
-                    </li>
-                  </ul>
+                <!-- Features 3  -->
+                <div
+                  class="bg-features mb-2 max-w-[550px] w-[550px] leading-[120%] cursor-pointer"
+                >
+                  <div class="flex items-center mb-2">
+                    <div
+                      class="bg-black rounded-full focus:outline-none focus:ring focus:ring-[#F37B74] cursor-pointer"
+                    >
+                      <img src="../asset/img/icon/lock-icon.svg" alt="" />
+                    </div>
+                    <h3 class="title-1-text-bold text-black ml-2">
+                      QR Code Access for Menu Display:
+                    </h3>
+                  </div>
+                  <div class="ml-10">
+                    <ul class="body-text text-[#454545] list-disc">
+                      <li>
+                         Create and personalize menus using templates and a
+                        variety of design options.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Features 4  -->
+                <div
+                  class="bg-features mb-2 max-w-[550px] w-[550px] leading-[120%] cursor-pointer"
+                >
+                  <div class="flex items-center mb-2">
+                    <div
+                      class="bg-black rounded-full focus:outline-none focus:ring focus:ring-[#F37B74] cursor-pointer"
+                    >
+                      <img src="../asset/img/icon/lock-icon.svg" alt="" />
+                    </div>
+                    <h3 class="title-1-text-bold text-black ml-2">
+                      User-Friendly Interface for Template Adjustments:
+                    </h3>
+                  </div>
+                  <div class="ml-10">
+                    <ul class="body-text text-[#454545] list-disc">
+                      <li>
+                         Create and personalize menus using templates and a
+                        variety of design options.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -688,18 +717,20 @@
 
       <!-- Menu Library -->
       <section class="menu__library">
-        <div class="menu__library-header mb-[70px]">
+        <div class="menu__library-header mb-[70px] mt-10">
           <h4
-            class="h4-text-bold text-[#454545] tablet:text-[84px] text-center"
+            class="h4-text-bold text-[#454545] tablet:text-[84px] text-center leading-[120%] mb-5"
           >
             Menu Library
           </h4>
-          <h3 class="tablet:h3-text-bold title-1-text-bold text-center">
+          <h3
+            class="tablet:h3-text-bold title-1-text-bold text-center leading-[120%]"
+          >
             Access a range of resources to simplify your menu management
             journey.
           </h3>
           <p
-            class="title-1-text-bold tablet:font-normal text-[#454545] tablet:text-[#6D6D6D] text-center"
+            class="title-1-text-bold tablet:font-normal text-[#454545] tablet:text-[#6D6D6D] text-center leading-[140%]"
           >
             Explore the Foodiemenu Template Library – your hub for seamless
             compatibility, interactive editing, and user-friendly design.
@@ -1060,7 +1091,10 @@
                 />
               </svg>
             </div>
-            <p id="hidden-text" class="title-1-text text-[#454545] mt-2">
+            <p
+              id="hidden-text"
+              class="desc-features title-1-text text-[#454545] mt-2"
+            >
               Not at all! Foodiemenu Template is a web-based solution accessible
               through standard web browsers, eliminating the need for any
               specific software or hardware installations.
