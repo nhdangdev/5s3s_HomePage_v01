@@ -137,3 +137,34 @@
 .feature-section:nth-of-type(5) .feature-image {
   max-width: 755px;
 }
+
+/* Hover menu library */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container:hover .overlay {
+  display: flex;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.overlay button {
+  background-color: #f37b74;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 980px;
+  font-weight: bold;
+}
