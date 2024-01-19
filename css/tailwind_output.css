@@ -794,6 +794,11 @@ video {
   margin-right: 34.5px;
 }
 
+.mx-12{
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
 .-ml-1{
   margin-left: -0.25rem;
 }
@@ -978,6 +983,10 @@ video {
   margin-bottom: 2rem;
 }
 
+.mt-auto{
+  margin-top: auto;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -1080,6 +1089,10 @@ video {
 
 .max-h-11{
   max-height: 2.75rem;
+}
+
+.max-h-\[500px\]{
+  max-height: 500px;
 }
 
 .min-h-\[500px\]{
@@ -1267,8 +1280,16 @@ video {
   list-style-type: disc;
 }
 
+.grid-flow-row{
+  grid-auto-flow: row;
+}
+
 .grid-flow-col{
   grid-auto-flow: column;
+}
+
+.grid-flow-row-dense{
+  grid-auto-flow: row dense;
 }
 
 .grid-cols-4{
@@ -1745,6 +1766,11 @@ video {
 .px-\[34\.5px\]{
   padding-left: 34.5px;
   padding-right: 34.5px;
+}
+
+.px-14{
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 .pb-2{
@@ -2244,6 +2270,11 @@ video {
     margin-bottom: 0px;
   }
 
+  .tablet\:mx-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .tablet\:mb-\[26px\]{
     margin-bottom: 26px;
   }
@@ -2324,6 +2355,14 @@ video {
     max-width: 630px;
   }
 
+  .tablet\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tablet\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .tablet\:flex-row{
     flex-direction: row;
   }
@@ -2381,6 +2420,16 @@ video {
     padding-right: 180px;
   }
 
+  .tablet\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .tablet\:px-\[30px\]{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   .tablet\:pr-\[42px\]{
     padding-right: 42px;
   }
@@ -2428,6 +2477,16 @@ video {
   }
 }
 
+@media (min-width: 1280px){
+  .laptop\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .laptop\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 1536px){
   .desktop\:right-\[240px\]{
     right: 240px;
@@ -2444,6 +2503,10 @@ video {
 
   .desktop\:mr-\[240px\]{
     margin-right: 240px;
+  }
+
+  .desktop\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .desktop\:justify-center{
