@@ -38,11 +38,11 @@
     <!-- Carousel -  Flickity -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <!-- Splide -->
-    <script src="
+    <!-- <script src="
     https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js
     "></script>
-    <script src="https://unpkg.com/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
-    <script defer src="../js/home_page_v01.js"></script>
+    <script src="https://unpkg.com/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script> -->
+    <script type="module" defer src="../js/home_page_v01.js"></script>
     <title>Home Page v01</title>
   </head>
 
@@ -203,9 +203,9 @@
 
       <!-- About Section -->
       <section
-        class="about__section flex items-center justify-between mt-11 tablet:mt-[105px] desktop:mx-[240px] tablet:px-[149.5px]"
+        class="grid grid-cols-2 tablet:flex tablet:justify-between desktop:justify-evenly tablet:items-center mt-11 tablet:mt-[105px] tablet:px-[149.5px]"
       >
-        <div class="flex items-center tablet:w-[210px] break-words text-center">
+        <div class="flex items-center tablet:w-[205px] text-center">
           <div class="flex flex-col justify-center items-center">
             <img
               src="../asset/img/homepage_v01/icon/Customer.svg"
@@ -221,7 +221,8 @@
             </p>
           </div>
         </div>
-        <div class="flex items-center tablet:w-[210px] break-words text-center">
+
+        <div class="flex items-center tablet:w-[205px] break-words text-center">
           <div class="flex flex-col justify-center items-center">
             <img
               src="../asset/img/homepage_v01/icon/Time.svg"
@@ -237,7 +238,8 @@
             </p>
           </div>
         </div>
-        <div class="flex items-center tablet:w-[210px] break-words text-center">
+
+        <div class="flex items-center tablet:w-[205px] break-words text-center">
           <div class="flex flex-col justify-center items-center">
             <img
               src="../asset/img/homepage_v01/icon/Revenue.svg"
@@ -253,7 +255,8 @@
             </p>
           </div>
         </div>
-        <div class="flex items-center tablet:w-[210px] break-words text-center">
+
+        <div class="flex items-center tablet:w-[205px] break-words text-center">
           <div class="flex flex-col justify-center items-center">
             <img
               src="../asset/img/homepage_v01/icon/Brand.svg"
@@ -275,6 +278,7 @@
       <!-- Flickity -->
       <div class="mt-[55px] relative" data-flickity='{ "wrapAround": true }'>
         >
+        <!-- Hình 1 -->
         <div class="relative">
           <div
             class="absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
@@ -289,14 +293,11 @@
             </p>
           </div>
           <img
-            src="../asset/img/homepage_v01/carousel/caro1.png"
+            src="../asset/img/homepage_v01/carousel/carousel-1.png"
             alt="carousel"
           />
         </div>
-        <img
-          src="../asset/img/homepage_v01/carousel/carousel-3.png"
-          alt="carousel"
-        />
+        <!-- Hình 2 -->
         <div class="relative">
           <div
             class="absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
@@ -311,14 +312,48 @@
             </p>
           </div>
           <img
-            src="../asset/img/homepage_v01/carousel/caro1.png"
+            src="../asset/img/homepage_v01/carousel/carousel-2.png"
             alt="carousel"
           />
         </div>
-        <img
-          src="../asset/img/homepage_v01/carousel/carousel-2.png"
-          alt="carousel"
-        />
+        <!-- Hình 3 -->
+        <div class="relative">
+          <div
+            class="absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
+          >
+            <button
+              class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer"
+            >
+              Try now
+            </button>
+            <p class="text-white title-1-text-bold">
+              Elevate your menu presentation with FoodieMenu Template
+            </p>
+          </div>
+          <img
+            src="../asset/img/homepage_v01/carousel/carousel-3.png"
+            alt="carousel"
+          />
+        </div>
+        <!-- Hình 4 -->
+        <div class="relative">
+          <div
+            class="absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
+          >
+            <button
+              class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer"
+            >
+              Try now
+            </button>
+            <p class="text-white title-1-text-bold">
+              Elevate your menu presentation with FoodieMenu Template
+            </p>
+          </div>
+          <img
+            src="../asset/img/homepage_v01/carousel/carousel-4.png"
+            alt="carousel"
+          />
+        </div>
       </div>
 
       <!-- Youtube Section -->
@@ -436,7 +471,7 @@
           </h5>
 
           <!-- Splide main container -->
-          <section
+          <div
             class="splide splideImg hidden tablet:block pl-[16.5rem] desktop:pl-4 mt-[25px]"
             aria-label="splide"
           >
@@ -511,30 +546,32 @@
                 </li>
               </ul>
             </div>
-          </section>
-          <!-- Simplify Msg -->
-          <div class="tablet:hidden">
-            <img src="../asset/img/homepage_v01/simplify-msg.png" alt="" />
           </div>
+        </div>
+        <!-- Simplify Msg -->
+        <div class="flex justify-center items-center tablet:hidden">
+          <img src="../asset/img/homepage_v01/simplify-msg.png" alt="" />
         </div>
       </section>
 
       <!-- Feature -->
-      <section class="px-4 mt-[10rem]">
-        <div class="feature-main">
-          <div class="feature-section relative mb-[96px]">
-            <div class="feature-image w-1/2 p-4 tablet:pl-36">
-              <img
-                src="../asset/img/homepage_v01/features/g1.png"
-                alt="tv"
-                class="absolute -top-[100px] left-[260px]"
-              />
+      <section class="px-4 mt-[10rem] tablet:px-[180px] desktop:mx-[240px]">
+        <div class="flex flex-col">
+          <div
+            class="relative flex justify-center items-center w-full mx-auto mb-5 tablet:mb-[96px] flex-col-reverse tablet:flex-row"
+          >
+            <div class="flex justify-center items-center">
+              <img src="../asset/img/homepage_v01/features/g1.png" alt="tv" />
+              <!-- class="tablet:absolute -top-[100px] left-[260px]" -->
             </div>
-            <div class="w-1/2">
+            <div class="flex flex-col justify-center items-center tablet:pl-10">
               <h2 class="h1-text mb-4">Key Features</h2>
+              <!-- Test -->
+
+              <!-- End Test -->
               <!-- Features 1 -->
               <div
-                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2"
+                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2 show-description max-w-[550px]"
               >
                 <div class="flex items-center mb-2">
                   <div
@@ -557,7 +594,7 @@
               </div>
               <!-- Features 2 -->
               <div
-                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2"
+                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2 max-w-[550px]"
               >
                 <div class="flex items-center mb-2">
                   <div
@@ -580,7 +617,7 @@
               </div>
               <!-- Features 3 -->
               <div
-                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2"
+                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2 max-w-[550px]"
               >
                 <div class="flex items-center mb-2">
                   <div
@@ -603,7 +640,7 @@
               </div>
               <!-- Features 4 -->
               <div
-                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2"
+                class="bg-white p-4 rounded-3xl shadow-2xl border border-gray-200 mb-2 max-w-[550px]"
               >
                 <div class="flex items-center mb-2">
                   <div
@@ -634,6 +671,10 @@
             >USE MENU TEMPLATE NOW</a
           >
         </div>
+        <span
+          class="inline-block tablet:hidden w-full h-[1px] bg-black mx-auto my-5"
+          style="margin-left: 30px; margin-right: 30px"
+        ></span>
       </section>
 
       <!-- Menu Library -->
@@ -655,7 +696,7 @@
             compatibility, interactive editing, and user-friendly design.
           </p>
         </div>
-        <div class="splideAutoScrollRight">
+        <div class="splideAutoScrollRight splide">
           <div class="splide__track" id="splide-track-right">
             <ul class="splide__list gap-5">
               <li class="splide__slide">
@@ -704,7 +745,7 @@
           </div>
         </div>
 
-        <div class="splideAutoScrollLeft mt-5">
+        <div class="splideAutoScrollLeft splide mt-5">
           <div class="splide__track" id="splide-track-left">
             <ul class="splide__list gap-5">
               <li class="splide__slide">
