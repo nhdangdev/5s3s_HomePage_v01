@@ -1,5 +1,18 @@
+.title-3-text-bold {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0em;
+  text-align: left;
+  color: inherit;
+  font-style: normal;
+  font-size: 15.6px;
+  font-weight: 600;
+}
+
 .flickity-page-dots .dot.is-selected {
   background-color: #f37b74;
+}
+.flickity-button-icon {
+  display: none;
 }
 
 .carousel-cell {
@@ -36,8 +49,12 @@
   display: none;
 }
 
-/* Slider */
+/* Scroll hide */
+.show-on-scroll {
+  background-color: red;
+}
 
+/* Slider */
 .slide {
   flex: 0 0 auto;
 }
@@ -46,6 +63,7 @@
 .active {
   background: white;
   padding: 16px;
+  padding-right: 0;
   border-radius: 1.5rem /* 24px */;
   box-shadow: -4px 3px 12px 0px rgba(0, 0, 0, 0.25);
   border-width: 1px;
@@ -60,9 +78,9 @@
 .active h3 {
   color: #f37b74;
 }
-
-.hiddene {
-  display: hidden;
+/* Seclect button Pricing */
+.is-selected {
+  color: white !important;
 }
 
 /* Hover menu library */
@@ -94,4 +112,25 @@
   padding: 12px 24px;
   border-radius: 980px;
   font-weight: bold;
+}
+
+/* Id Menu */
+#menu {
+  backdrop-filter: blur(8.65px);
+}
+
+// Tesst
+.carousel {
+  background: #eee;
+}
+
+.carousel img {
+  display: block;
+  height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel img {
+    height: 400px;
+  }
 }
