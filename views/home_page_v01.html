@@ -743,7 +743,7 @@
               >
                 <!-- Features 1 -->
                 <div
-                  class="bg-features mb-5 max-w-[403px] tablet:max-w-[540px] w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] active-features transition-all animate-fade-in duration-500"
+                  class="bg-features mb-5 max-w-[403px] tablet:max-w-[540px] w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] active-features transition-all animate-fade-in duration-300"
                   onclick="showHideDescFeatures(1)"
                 >
                   <div class="flex items-center mb-2">
@@ -775,7 +775,7 @@
                 </div>
                 <!-- Features 2  -->
                 <div
-                  class="bg-features mb-5 max-w-[403px] tablet:max-w-[540px] w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] transition-all animate-fade-in duration-500"
+                  class="bg-features mb-5 max-w-[403px] tablet:max-w-[540px] w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] transition-all animate-fade-in duration-300"
                   onclick="showHideDescFeatures(2)"
                 >
                   <div class="flex items-center mb-2">
@@ -807,7 +807,7 @@
                 </div>
                 <!-- Features 3  -->
                 <div
-                  class="bg-features mb-5 max-w-[403px] tablet:max-w-[540px] w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] transition-all animate-fade-in duration-500"
+                  class="bg-features mb-5 max-w-[403px] tablet:max-w-[540px] w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] transition-all animate-fade-in duration-300"
                   onclick="showHideDescFeatures(3)"
                 >
                   <div class="flex items-center mb-2">
@@ -839,7 +839,7 @@
                 </div>
                 <!-- Features 4  -->
                 <div
-                  class="bg-features mb-5 max-w-[403px] tablet:max-w-[540px] w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] transition-all animate-fade-in duration-500"
+                  class="bg-features mb-5 max-w-[403px] tablet:max-w-[540px] w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] transition-all animate-fade-in duration-300"
                   onclick="showHideDescFeatures(4)"
                 >
                   <div class="flex items-center mb-2">
@@ -1168,7 +1168,7 @@
           </div>
 
           <!-- Change Pricing -->
-          <div class="min-h-full flex tablet:hidden items-center mt-[46px]">
+          <div class="flex tablet:hidden items-center mt-[46px]">
             <div>
               <div
                 role="tablist"
@@ -1260,7 +1260,7 @@
                         </ul>
                       </div>
                       <button
-                        class="w-full py-3 px-[75px] leading-[140%] bg-[#33BCDA] mt-[70px] rounded-3xl text-center bg-opacity-50 mb-[60px] title-2-text text-[#454545]"
+                        class="w-full py-3 px-[75px] leading-[140%] bg-[#33BCDA] mt-[110px] rounded-3xl text-center bg-opacity-50 mb-[20px] title-2-text text-[#454545]"
                       >
                         Learn more
                       </button>
@@ -1308,7 +1308,7 @@
                         </ul>
                       </div>
                       <button
-                        class="w-full py-3 px-[75px] leading-[140%] bg-[#33BCDA] mt-[70px] rounded-3xl text-center bg-opacity-50 mb-[60px] title-2-text text-[#454545]"
+                        class="w-full py-3 px-[75px] leading-[140%] bg-[#33BCDA] mt-[70px] rounded-3xl text-center bg-opacity-50 mb-[55px] title-2-text text-[#454545]"
                       >
                         Learn more
                       </button>
@@ -1351,7 +1351,7 @@
                         </ul>
                       </div>
                       <button
-                        class="w-full py-4 leading-[140%] bg-[#33BCDA] rounded-3xl text-center bg-opacity-50 mt-[70px]"
+                        class="w-full py-3 leading-[140%] bg-[#33BCDA] rounded-3xl text-center bg-opacity-50 mt-[140px]"
                       >
                         Learn more
                       </button>
@@ -1551,7 +1551,7 @@
             />
 
             <div
-              class="inline-block tablet:hidden bg-center w-full h-[470px] tablet:h-[460px] bg-contain rounded-md"
+              class="inline-block tablet:hidden bg-center w-full h-[687px] tablet:h-[460px] bg-contain rounded-md"
             >
               <img
                 src="../asset/img/homepage_v01/menu-management(2).png"
@@ -2132,7 +2132,7 @@
 
       // Click btn animation
       const button = document.querySelector(".btn-animation");
-      button.addEventListener("click", (e) => {
+      button?.addEventListener("click", (e) => {
         e.preventDefault;
         button.classList.add("animate");
         setTimeout(() => {

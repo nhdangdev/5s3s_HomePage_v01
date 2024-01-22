@@ -1358,6 +1358,46 @@ video {
   margin-top: auto;
 }
 
+.mb-\[20px\]{
+  margin-bottom: 20px;
+}
+
+.mb-\[104px\]{
+  margin-bottom: 104px;
+}
+
+.mb-\[px\]{
+  margin-bottom: px;
+}
+
+.mt-\[110px\]{
+  margin-top: 110px;
+}
+
+.mb-\[\]{
+  margin-bottom: ;
+}
+
+.mt-\[px\]{
+  margin-top: px;
+}
+
+.mt-\[145ppx\]{
+  margin-top: 145ppx;
+}
+
+.mt-\[145px\]{
+  margin-top: 145px;
+}
+
+.mt-\[140px\]{
+  margin-top: 140px;
+}
+
+.mb-\[55px\]{
+  margin-bottom: 55px;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -1600,6 +1640,10 @@ video {
 
 .h-screen{
   height: 100vh;
+}
+
+.h-\[687px\]{
+  height: 687px;
 }
 
 .max-h-11{
@@ -2002,6 +2046,10 @@ video {
 
 .basis-auto{
   flex-basis: auto;
+}
+
+.border-collapse{
+  border-collapse: collapse;
 }
 
 .origin-\[0_0\]{
@@ -4126,6 +4174,10 @@ video {
   transition-duration: 300ms;
 }
 
+.duration-500{
+  transition-duration: 500ms;
+}
+
 .duration-75{
   transition-duration: 75ms;
 }
@@ -4152,10 +4204,6 @@ video {
 
 .duration-\[400ms\]{
   transition-duration: 400ms;
-}
-
-.duration-500{
-  transition-duration: 500ms;
 }
 
 .ease-\[cubic-bezier\(0\2c 0\2c 0\.15\2c 1\)\2c _cubic-bezier\(0\2c 0\2c 0\.15\2c 1\)\]{

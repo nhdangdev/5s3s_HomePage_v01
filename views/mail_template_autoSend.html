@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Form đặt hàng</title>
+        <style>
+          /* CSS để trang trí form trong Gmail */
+          body {
+            font-family: Arial, sans-serif;
+          }
+          label {
+            font-weight: bold;
+          }
+          .container {
+            width: 500px;
+            margin: 20px auto;
+          }
+          .submit-button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <h2>Form đặt hàng</h2>
+          <form action="send_email.php" method="post">
+            <label for="name">Họ và tên:</label>
+            <input type="text" name="name" id="name" required /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required /><br />
+
+            <label for="address">Địa chỉ:</label>
+            <input type="text" name="address" id="address" required /><br />
+
+            <input type="submit" value="Đặt hàng" class="submit-button" />
+          </form>
+        </div>
+      </body>
+    </html>
+  </body>
+</html>
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Password Template</title>
+    <style>
+      table,
+      tr,
+      td {
+        /* border: 1px solid; */
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
+
+      * {
+        font-family: "Istok Web", sans-serif;
+      }
+    </style>
+    <table
+      style="width: 100%; min-height: 100vh"
+      cellspacing="0"
+      cellpadding="0"
+    >
+      <tr>
+        <td
+          style="
+            width: 100%;
+            background-color: #eef0fa;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 1rem;
+          "
+        >
+          <table
+            style="
+              border-collapse: collapse;
+              border-spacing: 0;
+              width: 760px;
+              margin: 0px auto 0;
+            "
+            cellspacing="0"
+            cellpadding="0"
+          >
+            <tr>
+              <td
+                colspan="2"
+                style="
+                  border-radius: 55px;
+                  background-color: white;
+                  text-align: center;
+                  box-sizing: border-box;
+                  padding: 50px;
+                "
+              >
+                <div
+                  style="font-size: 48px; font-weight: 700; text-align: center"
+                >
+                  Hello,
+                </div>
+                <div
+                  style="
+                    font-size: 24px;
+                    font-weight: 400;
+                    text-align: center;
+                    margin-bottom: 28px;
+                  "
+                >
+                  Thank you for signing up for Foodiemenu. You are one step away
+                  from accessing thousands of template on any topic.<br />
+                  To complete your sign up process, please login your email
+                  address by clicking on the link below
+                </div>
+                <table style="margin: 0 auto">
+                  <tr>
+                    <td
+                      style="
+                        border-radius: 46px;
+                        overflow: hidden;
+                        border: 1px solid #9672fa;
+                        background-color: #9672fa;
+                        text-align: center;
+                        vertical-align: middle;
+                        padding: 8px 48px;
+                      "
+                    >
+                      <!- put link at here -->
+<!-- <a
+                        href="#"
+                        style="
+                          display: inline-block;
+                          background-color: inherit;
+                          text-decoration-line: none;
+                        "
+                      >
+                        <span
+                          style="
+                            color: white;
+                            font-size: 24px;
+                            font-weight: 700;
+                            text-decoration-line: none;
+                          "
+                        >
+                          Complete Register
+                        </span>
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+                <div
+                  style="
+                    margin: 32px auto;
+                    font-size: 24px;
+                    font-family: 'Istok Web', sans-serif;
+                  "
+                >
+                  And your login information:
+                  <br />
+                  [user email] <br />
+                  [password]
+                  <br /><br />
+                  If you have any questions or issues, please contact our
+                  support team at:
+                  <br />
+                  <br />
+                  We hope you enjoy foodiemenu from 5s3s.
+                  <br />
+                  <br />
+                  Sincerely,
+                  <br />
+                  Foodiemenu team.
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html> -->
