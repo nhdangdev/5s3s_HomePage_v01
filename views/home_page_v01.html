@@ -47,31 +47,31 @@
   </head>
 
   <body>
-    <header class="bg-[#EBF8FB]">
+    <header class="bg-[#EBF8FB] animate-fade-down">
       <div
-        class="flex items-center justify-between max-w-[1440px] desktop:mx-[240px] px-16 tablet:px-[221px] mx-0 py-[10px]"
+        class="flex items-center justify-between max-w-[1440px] desktop:mx-[240px] pl-6 pr-16 tablet:px-[221px] mx-0 py-[10px]"
       >
         <div class="flex items-center gap-5">
           <img
-            class="h-10 w-10 mr-[18x] ml-[9px] mr-"
+            class="h-10 w-10"
             src="../asset/img/homepage_v01/logo.png"
             alt="Logo"
           />
           <ul class="hidden tablet:flex items-center gap-6 cursor-pointer">
-            <li class="text-gray-700 px-[10px] leading-3 hover:text-red-500">
-              Home
+            <li class="px-[10px] leading-3">
+              <a href="#" class="menu-link">Home</a>
             </li>
-            <li class="text-gray-700 px-[10px] leading-3 hover:text-red-500">
-              About
+            <li class="px-[10px] leading-3">
+              <a href="#" class="menu-link">About</a>
             </li>
-            <li class="text-gray-700 px-[10px] leading-3 hover:text-red-500">
-              Product
+            <li class="px-[10px] leading-3">
+              <a href="#" class="menu-link">Product</a>
             </li>
-            <li class="text-gray-700 px-[10px] leading-3 hover:text-red-500">
-              Pricing
+            <li class="px-[10px] leading-3">
+              <a href="#" class="menu-link">Pricing</a>
             </li>
-            <li class="text-gray-700 px-[10px] leading-3 hover:text-red-500">
-              Contact
+            <li class="px-[10px] leading-3">
+              <a href="#" class="menu-link">Contact</a>
             </li>
           </ul>
         </div>
@@ -153,29 +153,29 @@
             class="w-full h-full border-2 border-gray-200 shadow-2xl rounded-2xl p-4 cursor-pointer"
           >
             <li
-              class="text-black text-2xl font-semibold not-italic hover:text-red-500 p-[10px] leading-[12px] mt-6 mb-[23px]"
+              class="text-black text-2xl font-semibold not-italic p-[10px] leading-[12px] mt-6 mb-[23px]"
             >
-              Home
+              <a href="#" class="menu-link">Home</a>
             </li>
             <li
-              class="text-black text-2xl font-semibold not-italic hover:text-red-500 p-[10px] leading-[12px] mb-[23px]"
+              class="text-black text-2xl font-semibold not-italic p-[10px] leading-[12px] mb-[23px]"
             >
-              About
+              <a href="#" class="menu-link">About</a>
             </li>
             <li
-              class="text-black text-2xl font-semibold not-italic hover:text-red-500 p-[10px] leading-[12px] mb-[23px]"
+              class="text-black text-2xl font-semibold not-italic p-[10px] leading-[12px] mb-[23px]"
             >
-              Product
+              <a href="#" class="menu-link">Product</a>
             </li>
             <li
-              class="text-black text-2xl font-semibold not-italic hover:text-red-500 p-[10px] leading-[12px] mb-[23px]"
+              class="text-black text-2xl font-semibold not-italic p-[10px] leading-[12px] mb-[23px]"
             >
-              Pricing
+              <a href="#" class="menu-link">Pricing</a>
             </li>
             <li
-              class="text-black text-2xl font-semibold not-italic hover:text-red-500 p-[10px] leading-[12px]"
+              class="text-black text-2xl font-semibold not-italic p-[10px] leading-[12px]"
             >
-              Contact
+              <a href="#" class="menu-link">Contact</a>
             </li>
           </ul>
         </div>
@@ -187,7 +187,7 @@
       <section
         class="flex flex-col justify-center mt-8 tablet:mt-[100px] mx-0 desktop:mx-[240px]"
       >
-        <section class="section__content">
+        <div class="section__content animate-fade-up">
           <div class="content__logo flex items-center justify-center">
             <img
               src="../asset/img/homepage_v01/foodiemenu.png"
@@ -195,19 +195,19 @@
               class="max-h-11"
             />
           </div>
-          <h2
-            class="content__heading text-[#F37B74] tablet:text-[64px] font-normal text-center my-2 tablet:mt-10 tablet:mb-[26px] font-anton leading-[100%]"
+          <h5
+            class="content__heading text-[#F37B74] tablet:text-[64px] font-normal text-center my-2 tablet:mt-10 tablet:mb-[26px] font-anton leading-[100%] h5-text"
           >
             Explore FoodieMenu's ultimate solution!
-          </h2>
-          <h3
+          </h5>
+          <p
             class="section__desc title-1-text tablet:text-[33px] text-[#12424C] font-semibold text-center leading-[120%]"
           >
             Let FoodieMenu Make Things Simple
-          </h3>
-        </section>
-        <section
-          class="hero__image relative mt-2 tablet:mt-[26px] mx-0 tablet:mx-[221px] px-10 tablet:p-0"
+          </p>
+        </div>
+        <div
+          class="hero__image relative mt-2 tablet:mt-[26px] mx-0 tablet:mx-[221px] px-10 tablet:p-0 animate-fade-up"
         >
           <img
             src="../asset/img/homepage_v01/logo.png"
@@ -223,22 +223,25 @@
             class="flex justify-center items-center my-4 tablet:my-0 tablet:absolute tablet:right-0 tablet:left-0 tablet:-bottom-[25px]"
           >
             <button
-              class="py-3 px-6 text-center bg-[#F37B74] text-white h5-text rounded-full"
+              class="py-3 px-6 text-center bg-[#F37B74] text-white h5-text rounded-full btn-animation hover:scale-105"
               style="box-shadow: -5px 9px 12.5px 0px rgba(0, 0, 0, 0.25)"
             >
               Start crafting your menu now
             </button>
           </div>
-        </section>
+        </div>
       </section>
 
       <!-- About Section -->
-      <section
-        class="grid grid-cols-2 tablet:flex flex-wrap tablet:flex-nowrap tablet:justify-between desktop:justify-evenly tablet:items-center mt-11 tablet:mt-[105px] tablet:px-[149.5px] px-11"
-      >
-        <div class="flex items-center w-full tablet:w-[50%] text-center">
+      <!-- <section
+        class="grid grid-cols-2 tablet:flex flex-wrap tablet:flex-nowrap tablet:justify-between desktop:justify-around tablet:items-center mt-11 tablet:mt-[105px] tablet:px-[149.5px] px-11 animate-fade-up desktop:mx-[240px]"
+      > -->
+      <section>
+        <div
+          class="grid grid-cols-2 tablet:flex flex-wrap tablet:flex-nowrap tablet:justify-between desktop:justify-around tablet:items-center mt-11 tablet:mt-[105px] tablet:px-[149.5px] px-11 animate-fade-up"
+        >
           <div
-            class="flex flex-col justify-center items-center gap-[15px] max-w-[210px]"
+            class="flex items-center w-full tablet:w-[50%] text-center flex-col justify-center gap-[15px] max-w-[210px]"
           >
             <img
               src="../asset/img/homepage_v01/icon/Customer.svg"
@@ -257,11 +260,9 @@
               product showcases, creating a lasting impression.
             </p>
           </div>
-        </div>
 
-        <div class="flex items-center w-full tablet:w-[50%] text-center">
           <div
-            class="flex flex-col justify-center items-center gap-[15px] max-w-[210px]"
+            class="flex items-center w-full tablet:w-[50%] text-center flex-col justify-center gap-[15px] max-w-[210px]"
           >
             <img
               src="../asset/img/homepage_v01/icon/Time.svg"
@@ -280,13 +281,9 @@
               quick adjustments based on demand.
             </p>
           </div>
-        </div>
 
-        <div
-          class="flex items-center w-full tablet:w-[50%] text-center mt-[33px] tablet:mt-0"
-        >
           <div
-            class="flex flex-col justify-center items-center gap-[15px] max-w-[210px]"
+            class="flex items-center w-full tablet:w-[50%] text-center flex-col justify-center gap-[15px] max-w-[210px] mt-[11px] tablet:mt-0"
           >
             <img
               src="../asset/img/homepage_v01/icon/Revenue.svg"
@@ -305,13 +302,9 @@
               broader audience to boost sales.
             </p>
           </div>
-        </div>
 
-        <div
-          class="flex items-center w-full tablet:w-[50%] text-center mt-[33px] tablet:mt-0"
-        >
           <div
-            class="flex flex-col justify-center items-center gap-[15px] max-w-[210px]"
+            class="flex items-center w-full tablet:w-[50%] text-center flex-col justify-center gap-[15px] max-w-[210px] mt-[11px] tablet:mt-0"
           >
             <img
               src="../asset/img/homepage_v01/icon/Brand.svg"
@@ -345,12 +338,12 @@
         data-flickity='{ "wrapAround": true }'
       >
         <!-- Hình 1 -->
-        <div class="relative">
+        <div class="relative mr-[15px]">
           <div
-            class="show-on-scroll absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
+            class="absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
           >
             <button
-              class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer"
+              class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer transition-all"
             >
               Try now
             </button>
@@ -364,12 +357,12 @@
           />
         </div>
         <!-- Hình 2 -->
-        <div class="relative">
+        <div class="relative mr-[15px]">
           <div
-            class="show-on-scroll absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
+            class="absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
           >
             <button
-              class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer"
+              class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer transition-all"
             >
               Try now
             </button>
@@ -383,12 +376,12 @@
           />
         </div>
         <!-- Hình 3 -->
-        <div class="relative">
+        <div class="relative mr-[15px]">
           <div
-            class="show-on-scroll absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
+            class="absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
           >
             <button
-              class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer"
+              class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer transition-all"
             >
               Try now
             </button>
@@ -402,12 +395,12 @@
           />
         </div>
         <!-- Hình 4 -->
-        <div class="relative">
+        <div class="relative mr-[15px]">
           <div
-            class="show-on-scroll absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
+            class="absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
           >
             <button
-              class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer"
+              class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer transition-all"
             >
               Try now
             </button>
@@ -620,22 +613,6 @@
                     class="w-full h-full block rounded-[2rem]"
                   />
                 </li>
-                <!-- Image 5 Test  -->
-                <li
-                  class="splide__slide !w-[480px] !h-[500px] flex justify-center items-center text-2xl font-semibold relative shadow-2xl"
-                >
-                  <h4
-                    class="absolute top-0 left-0 pl-8 pt-[2.5rem] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-blue-100 to-transparent rounded-2xl leading-[120%]"
-                  >
-                    Build customer satisfaction and loyalty with consistently
-                    attractive and accurate menus
-                  </h4>
-                  <img
-                    src="../asset/img/homepage_v01/menuTemplate/menu1.png"
-                    alt=""
-                    class="w-full h-full block rounded-[2rem]"
-                  />
-                </li>
               </ul>
             </div>
           </div>
@@ -673,7 +650,7 @@
               >
                 <!-- Features 1 -->
                 <div
-                  class="bg-features mb-5 max-w-[403px] tablet:max-w-[540px] w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] active"
+                  class="bg-features mb-5 max-w-[403px] tablet:max-w-[540px] w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] active-features animate-fade-down"
                   onclick="showHideDescFeatures(1)"
                 >
                   <div class="flex items-center mb-2">
@@ -806,7 +783,7 @@
         <div class="w-full h-full flex justify-center items-center">
           <a
             href="#"
-            class="btn bg-[#F37B74] border border-current py-4 px-8 text-white rounded-3xl"
+            class="btn bg-[#F37B74] border border-current py-4 px-10 text-white rounded-3xl transition-all shadow-lg hover:shadow-xl hover:scale-105"
             >USE MENU TEMPLATE NOW</a
           >
         </div>
@@ -1034,7 +1011,7 @@
       </div>
 
       <!-- Pricing -->
-      <section class="pricing desktop:mx-[240px] tablet:px-20">
+      <section class="pricing desktop:mx-[240px] tablet:px-20 animate-fade-up">
         <div class="pricing__heading">
           <h2
             class="h4-text-bold tablet:h2-text-bold tablet:text-4xl tablet:font-black text-[#454545] text-center tablet:mt-20 leading-[120%] tablet:leading-10"
@@ -1042,8 +1019,11 @@
             Simple & Transparent Pricing
           </h2>
         </div>
-        <div
+        <!-- <div
           class="pricing__main grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-11 mt-9"
+        > -->
+        <div
+          class="pricing__main grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 mt-9"
         >
           <!-- Free in mobile -->
           <div
@@ -1075,7 +1055,7 @@
                   needs.
                 </p>
                 <div
-                  class="pricing__items-desc leading-[140%] title-2-text text-white"
+                  class="pricing__items-desc leading-[140%] title-2-text text-[15.6px] text-white"
                 >
                   <ul class="pl-5 list-disc">
                     <li class="mb-[7px]">Menu Listing - Quanlity products</li>
@@ -1096,7 +1076,7 @@
           </div>
 
           <!-- Change Pricing -->
-          <div class="min-h-full flex tablet:hidden items-center">
+          <div class="min-h-full flex tablet:hidden items-center mt-[46px]">
             <div>
               <div
                 role="tablist"
@@ -1291,7 +1271,7 @@
           </div>
           <!-- Item 1 -->
           <div
-            class="hidden tablet:flex flex-col justify-between min-h-[500px]"
+            class="hidden tablet:flex flex-col justify-between min-h-[500px] mr-11 transition-all hover:scale-105"
           >
             <div class="pricing__item px-[74px] tablet:px-0 flex-grow">
               <div class="flex flex-col justify-center h-full">
@@ -1325,7 +1305,7 @@
                   </ul>
                 </div>
                 <button
-                  class="w-full py-4 leading-[140%] bg-[#33BCDA] mt-auto rounded-3xl text-center bg-opacity-50"
+                  class="w-full py-4 leading-[140%] bg-[#33BCDA] mt-auto rounded-3xl text-center bg-opacity-50 mb-[30px]"
                 >
                   Learn more
                 </button>
@@ -1334,7 +1314,7 @@
           </div>
           <!-- Item 2 -->
           <div
-            class="hidden tablet:flex flex-col justify-between min-h-[500px]"
+            class="hidden tablet:flex flex-col justify-between min-h-[500px] mr-11 transition-all hover:scale-105"
           >
             <div class="pricing__item px-[74px] tablet:px-0 flex-grow">
               <div class="flex flex-col justify-center h-full">
@@ -1367,7 +1347,7 @@
                   </ul>
                 </div>
                 <button
-                  class="w-full py-4 leading-[140%] bg-[#33BCDA] mt-auto rounded-3xl text-center bg-opacity-50"
+                  class="w-full py-4 leading-[140%] bg-[#33BCDA] mt-auto rounded-3xl text-center bg-opacity-50 mb-[30px]"
                 >
                   Learn more
                 </button>
@@ -1375,9 +1355,9 @@
             </div>
           </div>
           <!-- Item 3 -->
-          <div class="max-h-[540px]">
+          <div class="transition-all hover:scale-105">
             <div
-              class="mx-12 tablet:mx-0 hidden tablet:flex flex-col justify-between min-h-[500px]"
+              class="mx-12 tablet:mx-0 hidden tablet:flex flex-col justify-between min-h-[520px]"
             >
               <div
                 class="pricing__item relative px-14 bg-[#F37B74] rounded-3xl shadow-2xl flex flex-col justify-between cursor-pointer tablet:px-[30px] mx-auto flex-grow"
@@ -1417,7 +1397,7 @@
                     </ul>
                   </div>
                   <button
-                    class="w-full py-4 leading-[140%] bg-white text-[#454545] mt-[72px] rounded-3xl text-center mb-[30px]"
+                    class="w-full py-4 leading-[140%] bg-white text-[#454545] mt-[112px] mb-[30px] rounded-3xl text-center"
                   >
                     Sign up now
                   </button>
@@ -1427,7 +1407,7 @@
           </div>
           <!-- Item 4 -->
           <div
-            class="hidden tablet:flex flex-col justify-between min-h-[500px]"
+            class="hidden tablet:flex flex-col justify-between min-h-[500px] ml-11 transition-all hover:scale-105"
           >
             <div class="pricing__item px-[74px] tablet:px-0 flex-grow">
               <div class="flex flex-col justify-center h-full">
@@ -1458,7 +1438,7 @@
                   </ul>
                 </div>
                 <button
-                  class="w-full py-4 leading-[140%] bg-[#33BCDA] mt-auto rounded-3xl text-center bg-opacity-50"
+                  class="w-full py-4 leading-[140%] bg-[#33BCDA] mt-auto rounded-3xl text-center bg-opacity-50 mb-[30px]"
                 >
                   Learn more
                 </button>
@@ -1556,7 +1536,7 @@
                   class="toggle-path"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
             </div>
@@ -1586,13 +1566,13 @@
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
-                onclick="showHideDescAsk(1)"
+                onclick="showHideDescAsk(2)"
               >
                 <path
                   class="toggle-path"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
             </div>
@@ -1623,13 +1603,13 @@
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
-                onclick="showHideDescAsk(1)"
+                onclick="showHideDescAsk(3)"
               >
                 <path
                   class="toggle-path"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
             </div>
@@ -1660,13 +1640,13 @@
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
-                onclick="showHideDescAsk(1)"
+                onclick="showHideDescAsk(4)"
               >
                 <path
                   class="toggle-path"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
             </div>
@@ -1698,13 +1678,13 @@
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
-                onclick="showHideDescAsk(1)"
+                onclick="showHideDescAsk(5)"
               >
                 <path
                   class="toggle-path"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
             </div>
@@ -1736,13 +1716,13 @@
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
-                onclick="showHideDescAsk(1)"
+                onclick="showHideDescAsk(6)"
               >
                 <path
                   class="toggle-path"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
             </div>
@@ -1774,13 +1754,13 @@
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
-                onclick="showHideDescAsk(1)"
+                onclick="showHideDescAsk(7)"
               >
                 <path
                   class="toggle-path"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
             </div>
@@ -1812,13 +1792,13 @@
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="w-[30px] h-[30px] cursor-pointer text-[#D3D3D3]"
-                onclick="showHideDescAsk(1)"
+                onclick="showHideDescAsk(8)"
               >
                 <path
                   class="toggle-path"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
             </div>
@@ -1961,14 +1941,39 @@
       // Show/ hide AskQuestion
       function showHideDescAsk(questionNumber) {
         const descElements = document.querySelectorAll(".desc-ask-question");
+        const togglePaths = document.querySelectorAll(".toggle-path");
+
         descElements.forEach((element, index) => {
           if (index === questionNumber - 1) {
-            element.classList.toggle("hidden");
+            const isHidden = element.classList.contains("hidden");
+
+            // Kiểm tra trạng thái hiện tại của SVG
+            if (isHidden) {
+              // Nếu SVG đang ở trạng thái "-" (ẩn), chuyển thành trạng thái "+" (hiển thị)
+              element.classList.remove("hidden");
+              togglePaths[index].setAttribute(
+                "d",
+                "M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              );
+            } else {
+              // Nếu SVG đang ở trạng thái "+" (hiển thị), chuyển thành trạng thái "-" (ẩn)
+              element.classList.add("hidden");
+              togglePaths[index].setAttribute(
+                "d",
+                "M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              );
+            }
           } else {
+            // Ẩn các SVG khác và đặt lại trạng thái thành "-"
             element.classList.add("hidden");
+            togglePaths[index].setAttribute(
+              "d",
+              "M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            );
           }
         });
       }
+
       // Show/ hide Features Desc
       function showHideDescFeatures(questionNumber) {
         const bgFeatures = document.querySelectorAll(".bg-features");
@@ -1983,9 +1988,9 @@
         });
         bgFeatures.forEach((element, index) => {
           if (index === questionNumber - 1) {
-            element.classList.add("active");
+            element.classList.add("active-features");
           } else {
-            element.classList.remove("active");
+            element.classList.remove("active-features");
           }
         });
       }
@@ -2035,49 +2040,20 @@
         });
       });
 
-      // // Lấy phần tử section chứa các hình ảnh
-      // const section = document.querySelector("section");
-
-      // // Tạo một phần tử <div> mới
-      // const showOnScrollDiv = document.createElement("div");
-      // showOnScrollDiv.classList.add("show-on-scroll");
-      // showOnScrollDiv.innerHTML = `<div
-      //       class=" absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
-      //     >
-      //       <button
-      //         class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer"
-      //       >
-      //         Try now
-      //       </button>
-      //       <p class="text-white title-1-text-bold">
-      //         Elevate your menu presentation with FoodieMenu Template
-      //       </p>
-      //     </div>`;
-
-      // // Lưu trữ trạng thái cuộn trước đó
-      // let lastScrollLeft = section.scrollLeft;
-
-      // // Kiểm tra sự kiện cuộn
-      // section.addEventListener("scroll", function () {
-      //   // Lấy vị trí cuộn ngang hiện tại
-      //   const scrollLeft = section.scrollLeft;
-
-      //   // Kiểm tra hướng cuộn (qua trái hoặc qua phải)
-      //   if (scrollLeft > lastScrollLeft) {
-      //     // Cuộn qua phải
-      //     if (showOnScrollDiv.parentNode === section) {
-      //       section.removeChild(showOnScrollDiv);
-      //     }
-      //   } else if (scrollLeft < lastScrollLeft) {
-      //     // Cuộn qua trái
-      //     if (showOnScrollDiv.parentNode !== section) {
-      //       section.appendChild(showOnScrollDiv);
-      //     }
-      //   }
-
-      //   // Lưu trữ vị trí cuộn trước đó
-      //   lastScrollLeft = scrollLeft;
-      // });
+      // Click btn animation
+      const button = document.querySelector(".btn-animation");
+      button.addEventListener("click", (e) => {
+        e.preventDefault;
+        button.classList.add("animate");
+        setTimeout(() => {
+          button.classList.remove("animate");
+        }, 600);
+      });
     </script>
+
+    <script
+      type="text/javascript"
+      src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"
+    ></script>
   </body>
 </html>

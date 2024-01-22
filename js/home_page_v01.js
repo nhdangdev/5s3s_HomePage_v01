@@ -18,7 +18,7 @@ closeMenuBtn.addEventListener('click', function () {
 // Splide Image
 var splideImg = new Splide(".splideImg", {
   direction: "ltr",
-  wheel: true,
+  wheel: false,
   waitForTransition: true,
   arrows: false,
   pagination: false,
@@ -26,9 +26,8 @@ var splideImg = new Splide(".splideImg", {
   perPage: 3,
   perMove: 1,
   prevNextButtons: false,
-  pagination: false,
   padding: {
-    left: "50vw",
+    left: "49vw",
   },
 });
 
@@ -70,3 +69,16 @@ splideAutoScrollLeft.mount({ AutoScroll });
 // Video
 const videoPlayer = document.querySelector('.video-player')
 initCustomVideoPlayer(videoPlayer)
+
+// Hero button
+document
+  .querySelector(".hero-btn")
+  .addEventListener("click", function () {
+    var parent = this.parentElement;
+    if (!parent.classList.contains("active")) {
+      parent.classList.add("active");
+      setTimeout(function () {
+        parent.classList.remove("active");
+      }, 2000);
+    }
+  });
