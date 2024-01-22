@@ -49,6 +49,19 @@
 .splide__pagination__page.is-active {
   background-color: #f37b74 !important;
 }
+.splide__pagination__page {
+  background-color: #ababab !important;
+  margin-right: 14px;
+}
+
+.splide__pagination.splide__pagination--ltr {
+  position: absolute;
+  bottom: -28px !important;
+  justify-content: center;
+  right: 0;
+  left: 0;
+  transition: all 0.5s;
+}
 
 /* cell number */
 .carousel-cell {
