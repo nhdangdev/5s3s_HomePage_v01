@@ -29,10 +29,6 @@
   right: auto;
 }
 
-.flin-remove-bg {
-  background-color: #f53838 !important;
-}
-
 .title-3-text-bold {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0em;
@@ -43,21 +39,24 @@
   font-weight: 600;
 }
 
-.flickity-page-dots .dot.is-selected {
+/* .flickity-page-dots .dot.is-selected {
   background-color: #f37b74;
 }
 .flickity-button-icon {
   display: none;
+} */
+
+.splide__pagination__page.is-active {
+  background-color: #f37b74 !important;
 }
 
+/* cell number */
 .carousel-cell {
   width: 66%;
   height: 200px;
   margin-right: 10px;
   border-radius: 5px;
 }
-
-/* cell number */
 .carousel-cell:before {
   display: block;
   text-align: center;
@@ -112,6 +111,7 @@
 /* Seclect button Pricing */
 .is-selected {
   color: white !important;
+  transition: all 0.4s ease-in-out;
 }
 
 /* Hover menu library */
@@ -166,7 +166,9 @@
   }
 }
 
-.btn-animation {
+/* Aimation */
+/* Btn Animation */
+/* .btn-animation {
   position: relative;
   border: none;
   transition: all 0.2s ease;
@@ -247,4 +249,5 @@
       110% 10%;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
-}
+} */
+/* End Btn Animation */

@@ -73,7 +73,7 @@ initCustomVideoPlayer(videoPlayer)
 // Hero button
 document
   .querySelector(".hero-btn")
-  .addEventListener("click", function () {
+  ?.addEventListener("click", function () {
     var parent = this.parentElement;
     if (!parent.classList.contains("active")) {
       parent.classList.add("active");
@@ -82,3 +82,17 @@ document
       }, 2000);
     }
   });
+
+
+// Tesst 
+var spliderrr = new Splide('#splide', {
+
+  type: 'loop',
+  padding: '10rem',
+  height: '524px',
+  focus: 'center',
+  arrows: false,
+  autoWidth: true,
+});
+
+spliderrr.mount();

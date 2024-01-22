@@ -11,8 +11,8 @@ module.exports = {
 
       animation: {
         'fade-up': 'fadeUp 0.5s 0.3s backwards',
-        'fade-down': 'fadeDown 0.5s 0.4s backwards',
-        'fade-variants': 'fadeVariants 0.5s'
+        'fade-down': 'fadeDown 0.1s backwards',
+        'fade-in': 'fadeIn 1s'
       },
       keyframes: {
         fadeUp: {
@@ -35,14 +35,14 @@ module.exports = {
             transform: 'translateY(0) scale(1)',
           },
         },
-        fadeVariants: {
-          'initial': {
+        fadeIn: {
+          from: {
             opacity: '0',
-            y: '100',
+            transform: 'translate3d(0, -20%, 0)',
           },
-          'aniamte': {
+          to: {
             opacity: '1',
-            y: '0',
+            transform: 'translate3d(0, 0, 0)',
           }
         }
       },
