@@ -38,45 +38,61 @@
     <!-- Carousel -  Flickity -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <!-- Splide -->
-    <!-- <script src="
-    https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js
-    "></script>
-    <script src="https://unpkg.com/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script> -->
     <script type="module" defer src="../js/home_page_v01.js"></script>
     <title>Home Page v01</title>
   </head>
 
   <body>
-    <header class="bg-[#EBF8FB] animate-fade-down">
+    <header class="bg-[#EBF8FB] animate-fade-down w-full">
       <div
-        class="flex items-center justify-between max-w-[1440px] desktop:mx-[240px] pl-6 pr-16 tablet:px-[221px] mx-0 py-[10px]"
+        class="flex items-center justify-between max-w-full mobile360:pl-8 mobile360:pr-12 mobile430:pl-6 mobile430:pr-16 laptop1440:px-[221px] mx-0 mobile430:py-[10px] desktop:mx-[240px] mobile360:h-[55px] mobile430:h-full"
       >
         <div class="flex items-center gap-5">
           <img
-            class="h-10 w-10"
+            class="mobile360:w-8 mobile360:h-8 mobile430:h-10 mobile430:w-10"
             src="../asset/img/homepage_v01/logo.png"
             alt="Logo"
           />
-          <ul class="hidden tablet:flex items-center gap-6 cursor-pointer">
+          <ul class="hidden laptop1440:flex items-center gap-6 cursor-pointer">
             <li class="px-[10px] leading-3">
-              <a href="#" class="menu-link">Home</a>
+              <a
+                href="#"
+                class="menu-link title-1-text-bold text-[15px] leading-[12px] text-black"
+                >Home</a
+              >
             </li>
             <li class="px-[10px] leading-3">
-              <a href="#" class="menu-link">About</a>
+              <a
+                href="#"
+                class="menu-link title-1-text-bold text-[15px] leading-[12px] text-black"
+                >About</a
+              >
             </li>
             <li class="px-[10px] leading-3">
-              <a href="#" class="menu-link">Product</a>
+              <a
+                href="#"
+                class="menu-link title-1-text-bold text-[15px] leading-[12px] text-black"
+                >Product</a
+              >
             </li>
             <li class="px-[10px] leading-3">
-              <a href="#" class="menu-link">Pricing</a>
+              <a
+                href="#"
+                class="menu-link title-1-text-bold text-[15px] leading-[12px] text-black"
+                >Pricing</a
+              >
             </li>
             <li class="px-[10px] leading-3">
-              <a href="#" class="menu-link">Contact</a>
+              <a
+                href="#"
+                class="menu-link title-1-text-bold text-[15px] leading-[12px] text-black"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
         <div
-          class="flex relative justify-center items-center w-12 h-12 rounded-full bg-white"
+          class="flex relative justify-center items-center mobile360:w-10 mobile360:h-10 laptop1440:w-12 laptop1440:h-12 rounded-full bg-white"
         >
           <svg
             width="22"
@@ -106,10 +122,10 @@
           </svg>
 
           <!-- Mobile Menu Bar -->
-          <div class="relative tablet:hidden">
+          <div class="relative laptop1440:hidden">
             <div
               id="menu-toggle"
-              class="absolute -top-[20px] -right-16 text-black cursor-pointer w-10 h-10 hover:text-red-500"
+              class="absolute -top-[20px] mobile360:-right-14 mobile430:-right-16 text-black cursor-pointer w-10 h-10 hover:text-red-500"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +144,7 @@
           </div>
         </div>
         <div
-          class="absolute menu hidden mobile:fixed top-0 left-0 w-full h-full bg-opacity-70 z-50"
+          class="absolute menu hidden ipad:fixed top-0 left-0 w-full h-full bg-opacity-70 z-50"
           id="menu"
         >
           <button
@@ -185,34 +201,34 @@
     <div class="container__main">
       <!-- Hero Section -->
       <section
-        class="flex flex-col justify-center mt-8 tablet:mt-[100px] mx-0 desktop:mx-[240px]"
+        class="flex flex-col justify-center mt-8 laptop1440:mt-[100px] mx-0 desktop:mx-[240px]"
       >
         <div class="section__content animate-fade-up">
           <div class="content__logo flex items-center justify-center">
             <img
               src="../asset/img/homepage_v01/foodiemenu.png"
               alt="foodieMenu__img"
-              class="max-h-11"
+              class="max-h-10 moblie:max-h-11"
             />
           </div>
           <h5
-            class="content__heading text-[#F37B74] tablet:text-[64px] font-normal text-center my-2 tablet:mt-10 tablet:mb-[26px] font-anton leading-[100%] h5-text"
+            class="content__heading text-[#F37B74] laptop1440:text-[64px] font-normal text-center my-2 laptop1440:mt-10 laptop1440:mb-[26px] font-anton leading-[100%] mobile360:text-[20px] mobile430:h5-text ipadPro:text-[38px]"
           >
             Explore FoodieMenu's ultimate solution!
           </h5>
           <p
-            class="section__desc title-1-text tablet:text-[33px] text-[#12424C] font-semibold text-center leading-[120%]"
+            class="section__desc mobile430:title-1-text laptop1440:text-[33px] text-[#12424C] font-semibold text-center leading-[120%] ipadPro:text-[24px]"
           >
             Let FoodieMenu Make Things Simple
           </p>
         </div>
         <div
-          class="hero__image relative mt-2 tablet:mt-[26px] mx-0 tablet:mx-[221px] px-10 tablet:p-0 animate-fade-up"
+          class="hero__image relative mt-2 laptop1440:mt-[26px] mx-0 laptop1440:mx-[221px] mobile430:px-10 laptop1440:p-0 animate-fade-up mobile360:px-4"
         >
           <img
             src="../asset/img/homepage_v01/logo.png"
             alt="Logo"
-            class="h-10 w-10 absolute top-[20px] right-[65px] tablet:top-[30px] tablet:right-[30px]"
+            class="mobile360:w-4 mobile360:h-4 mobile430:h-10 mobile430:w-10 absolute mobile360:top-[5px] mobile360:right-[20px] mobile430:top-[20px] mobile430:right-[65px] laptop1440:top-[30px] laptop1440:right-[30px]"
           />
           <img
             src="../asset/img/homepage_v01/hero_img.png"
@@ -220,10 +236,10 @@
             class="border-2 border-black shadow-2xl"
           />
           <div
-            class="flex justify-center items-center my-4 tablet:my-0 tablet:absolute tablet:right-0 tablet:left-0 tablet:-bottom-[25px]"
+            class="flex justify-center items-center my-4 laptop1440:my-0 laptop1440:absolute laptop1440:right-0 laptop1440:left-0 laptop1440:-bottom-[25px]"
           >
             <button
-              class="py-3 px-6 text-center bg-[#F37B74] text-white h5-text rounded-full transition-all hover:scale-105"
+              class="mobile360:py-3 mobile360:px-6 laptop1440:px-[66px] laptop1440:py-[15px] text-center bg-[#F37B74] text-white h5-text rounded-full transition-all hover:scale-105 leading-[120%] font-semibold"
               style="box-shadow: -5px 9px 12.5px 0px rgba(0, 0, 0, 0.25)"
             >
               Start crafting your menu now
@@ -233,28 +249,25 @@
       </section>
 
       <!-- About Section -->
-      <!-- <section
-        class="grid grid-cols-2 tablet:flex flex-wrap tablet:flex-nowrap tablet:justify-between desktop:justify-around tablet:items-center mt-11 tablet:mt-[105px] tablet:px-[149.5px] px-11 animate-fade-up desktop:mx-[240px]"
-      > -->
       <section>
         <div
-          class="grid grid-cols-2 tablet:flex flex-wrap tablet:flex-nowrap tablet:justify-between desktop:justify-around tablet:items-center mt-11 tablet:mt-[105px] tablet:px-[149.5px] px-11 animate-fade-up"
+          class="grid mobile360:justify-center mobile360:items-center mobile430:grid-cols-2 ipadPro:grid-cols-4 laptop1440:flex flex-wrap laptop1440:flex-nowrap laptop1440:justify-between desktop:justify-around laptop1440:items-center mobile360:mt-2 mobile430:mt-11 laptop1440:mt-[105px] laptop1440:px-[149.5px] mobile360:px-4 mobile430:px-11 animate-fade-up"
         >
           <div
-            class="flex items-center w-full tablet:w-[50%] text-center flex-col justify-center gap-[15px] max-w-[210px]"
+            class="flex items-center w-full laptop1440:w-[50%] text-center flex-col justify-center gap-[15px] mobile360:max-w-[190px] mobile430:max-w-[210px] mobile360:mt-2 mobile430:mt-0"
           >
             <img
               src="../asset/img/homepage_v01/icon/Customer.svg"
               alt="Icon 1"
-              class="max-w-[44px] tablet:max-w-full mb-[2px]"
+              class="max-w-[44px] laptop1440:max-w-full mb-[2px]"
             />
             <h4
-              class="title-1-text-bold tablet:text-[28px] text-center leading-[140%] tablet:leading-[120%]"
+              class="title-1-text-bold laptop1440:text-[28px] text-center leading-[140%] laptop1440:leading-[120%]"
             >
               Attracting Customers
             </h4>
             <p
-              class="caption-text tablet:text-[13px] text-center leading-[140%] text-[#1D1D1F] px-2 tablet:px-0"
+              class="caption-text laptop1440:text-[13px] text-center leading-[140%] text-[#1D1D1F] px-2 laptop1440:px-0"
             >
               Presents vibrant, high-quality images and videos for impressive
               product showcases, creating a lasting impression.
@@ -262,20 +275,20 @@
           </div>
 
           <div
-            class="flex items-center w-full tablet:w-[50%] text-center flex-col justify-center gap-[15px] max-w-[210px]"
+            class="flex items-center w-full laptop1440:w-[50%] text-center flex-col justify-center gap-[15px] mobile360:max-w-[190px] mobile430:max-w-[210px] mobile360:mt-2 mobile430:mt-0"
           >
             <img
               src="../asset/img/homepage_v01/icon/Time.svg"
               alt="Icon 1"
-              class="max-w-[70px] tablet:max-w-full mb-[2px]"
+              class="max-w-[70px] laptop1440:max-w-full mb-[2px]"
             />
             <h4
-              class="title-1-text-bold tablet:text-[28px] text-center leading-[140%] tablet:leading-[120%]"
+              class="title-1-text-bold laptop1440:text-[28px] text-center leading-[140%] laptop1440:leading-[120%]"
             >
               Time and Cost Efficiency
             </h4>
             <p
-              class="caption-text tablet:text-[13px] text-center leading-[140%] text-[#1D1D1F] px-2 tablet:px-0"
+              class="caption-text laptop1440:text-[13px] text-center leading-[140%] text-[#1D1D1F] px-2 laptop1440:p-1"
             >
               Effortlessly updates menus without printed versions, enabling
               quick adjustments based on demand.
@@ -283,20 +296,20 @@
           </div>
 
           <div
-            class="flex items-center w-full tablet:w-[50%] text-center flex-col justify-center gap-[15px] max-w-[210px] mt-[11px] tablet:mt-0"
+            class="flex items-center w-full laptop1440:w-[50%] text-center flex-col justify-center gap-[15px] mobile360:max-w-[190px] mobile430:max-w-[210px] mt-[11px] laptop1440:mt-0"
           >
             <img
               src="../asset/img/homepage_v01/icon/Revenue.svg"
               alt="Icon 1"
-              class="max-w-[70px] tablet:max-w-full mb-[2px]"
+              class="max-w-[70px] laptop1440:max-w-full mb-[2px]"
             />
             <h4
-              class="title-1-text-bold tablet:text-[28px] text-center leading-[140%] tablet:leading-[120%]"
+              class="title-1-text-bold laptop1440:text-[28px] text-center leading-[140%] laptop1440:leading-[120%]"
             >
               Revenue Generation
             </h4>
             <p
-              class="caption-text tablet:text-[13px] text-center leading-[140%] text-[#1D1D1F] px-2 tablet:px-0"
+              class="caption-text laptop1440:text-[13px] text-center leading-[140%] text-[#1D1D1F] px-2 laptop1440:px-[0.2rem]"
             >
               Effectively advertises new products and promotions, reaching a
               broader audience to boost sales.
@@ -304,20 +317,20 @@
           </div>
 
           <div
-            class="flex items-center w-full tablet:w-[50%] text-center flex-col justify-center gap-[15px] max-w-[210px] mt-[11px] tablet:mt-0"
+            class="flex items-center w-full laptop1440:w-[50%] text-center flex-col justify-center gap-[15px] mobile360:max-w-[190px] mobile430:max-w-[210px] mt-[11px] laptop1440:mt-0"
           >
             <img
               src="../asset/img/homepage_v01/icon/Brand.svg"
               alt="Icon 1"
-              class="max-w-[37px] tablet:max-w-full mb-[2px]"
+              class="max-w-[37px] laptop1440:max-w-full mb-[2px]"
             />
             <h4
-              class="title-1-text-bold tablet:text-[28px] text-center leading-[140%] tablet:leading-[120%]"
+              class="title-1-text-bold laptop1440:text-[28px] text-center leading-[140%] laptop1440:leading-[120%]"
             >
               Brand Enhancement
             </h4>
             <p
-              class="caption-text tablet:text-[13px] text-center leading-[140%] text-[#1D1D1F] px-[0.3rem] tablet:px-0"
+              class="caption-text laptop1440:text-[13px] text-center leading-[140%] text-[#1D1D1F] px-[0.3rem] laptop1440:px-0"
             >
               Showcases logos and styles on TV, enhancing brand recognition and
               providing valuable informational content.
@@ -327,98 +340,16 @@
       </section>
 
       <!-- div span underline -->
-      <div class="my-5 px-[34.5px]">
-        <span class="inline-block tablet:hidden w-full h-[1px] bg-black"></span>
+      <div class="my-5 laptop1440:my-0 px-[34.5px]">
+        <span
+          class="inline-block laptop1440:hidden w-full h-[1px] bg-black"
+        ></span>
       </div>
 
-      <!-- Carousel Section -->
-      <!-- Flickity -->
-      <!-- <section
-        class="hidden tablet:block mt-[55px] relative"
-        data-flickity='{ "wrapAround": true }'
-      > -->
-      <!-- Hình 1 -->
-      <!-- <div class="relative mr-[15px]">
-          <div
-            class="absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
-          >
-            <button
-              class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer transition-all"
-            >
-              Try now
-            </button>
-            <p class="text-white title-1-text-bold">
-              Elevate your menu presentation with FoodieMenu Template
-            </p>
-          </div>
-          <img
-            src="../asset/img/homepage_v01/carousel/carousel-1.png"
-            alt="carousel"
-          />
-        </div> -->
-      <!-- Hình 2 -->
-      <!-- <div class="relative mr-[15px]">
-          <div
-            class="absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
-          >
-            <button
-              class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer transition-all"
-            >
-              Try now
-            </button>
-            <p class="text-white title-1-text-bold">
-              Elevate your menu presentation with FoodieMenu Template
-            </p>
-          </div>
-          <img
-            src="../asset/img/homepage_v01/carousel/carousel-2.png"
-            alt="carousel"
-          />
-        </div> -->
-      <!-- Hình 3 -->
-      <!-- <div class="relative mr-[15px]">
-          <div
-            class="absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
-          >
-            <button
-              class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer transition-all"
-            >
-              Try now
-            </button>
-            <p class="text-white title-1-text-bold">
-              Elevate your menu presentation with FoodieMenu Template
-            </p>
-          </div>
-          <img
-            src="../asset/img/homepage_v01/carousel/carousel-3.png"
-            alt="carousel"
-          />
-        </div> -->
-      <!-- Hình 4 -->
-      <!-- <div class="relative mr-[15px]">
-          <div
-            class="absolute bottom-0 left-0 flex justify-center items-center bg-black bg-opacity-50 w-full py-5"
-          >
-            <button
-              class="bg-[#F37B74] title-2-text-bold text-white py-2 px-10 rounded-3xl mr-10 cursor-pointer transition-all"
-            >
-              Try now
-            </button>
-            <p class="text-white title-1-text-bold">
-              Elevate your menu presentation with FoodieMenu Template
-            </p>
-          </div>
-          <img
-            src="../asset/img/homepage_v01/carousel/carousel-4.png"
-            alt="carousel"
-          />
-        </div> -->
-      <!-- </section> -->
-
-      <!-- Start Tesst -->
+      <!--Start Splide -->
       <section
         id="splide"
-        class="splide animate-fade-in hidden tablet:block"
+        class="splide animate-fade-in hidden laptop1440:block laptop1440:mt-[55px]"
         aria-label="Splide Basic HTML Example"
       >
         <div class="splide__track">
@@ -506,28 +437,28 @@
           </ul>
         </div>
       </section>
-      <!-- End Tesst Splide -->
+      <!-- End Splide -->
 
       <!-- Youtube Section -->
       <section
-        class="flex justify-center items-center px-4 tablet:px-[80px] tablet:pt-[80px] tablet:pb-[78px] tablet:flex-row flex-col-reverse mx-0 desktop:mx-[240px] mt-9"
+        class="flex justify-center items-center px-4 laptop1440:px-[80px] laptop1440:pt-[80px] laptop1440:pb-[78px] laptop1440:flex-row flex-col-reverse mx-0 desktop:mx-[240px] mt-9"
       >
         <!-- Left youtube -->
         <div
-          class="tablet:w-1/2 tablet:p-8 tablet:pr-[50px] mt-[30px] tablet:mt-0"
+          class="laptop1440:w-1/2 laptop1440:p-8 laptop1440:pr-[50px] mt-[30px] laptop1440:mt-0"
         >
           <h4
-            class="h4-text-bold tablet:text-[40px] mb-9 tablet:mb-4 text-[#454545] font-medium leading-[140%]"
+            class="h4-text-bold laptop1440:text-[40px] mb-9 laptop1440:mb-4 text-[#454545] font-medium leading-[140%]"
           >
             Experience Foodiemenu Template in action with our live demo!
           </h4>
           <div class="flex justify-start items-center cursor-pointer">
             <p
-              class="hidden tablet:block title-1-text text-[#F37B74] leading-[120%] font-semibold"
+              class="hidden laptop1440:block title-1-text text-[#F37B74] leading-[120%] font-semibold"
             >
               Join us and transform your menu management today!
             </p>
-            <p class="tablet:hidden title-1-text text-[#F37B74]">
+            <p class="laptop1440:hidden title-1-text text-[#F37B74]">
               Join us today!
             </p>
             <svg
@@ -568,7 +499,7 @@
         </div>
         <!-- Right youtube -->
         <div
-          class="tablet:w-1/2 flex tablet:flex-col py-0 tablet:py-[34px] relative"
+          class="laptop1440:w-1/2 flex laptop1440:flex-col py-0 laptop1440:py-[34px] relative"
         >
           <!-- Start Video -->
           <div class="video-player">
@@ -611,148 +542,172 @@
       </section>
 
       <!-- Menu Template Section -->
-      <section class="mx-0 desktop:ml-[240px] mb-0 tablet:mb-[108px]">
+      <section class="mx-0 desktop:ml-[240px] mb-0 laptop1440:mb-[108px]">
         <!-- Menu Heading -->
-        <div class="desktop:pl-[230px] mb-[10px] tablet:mb-0">
+        <div class="desktop:pl-[230px] mb-[10px] laptop1440:mb-0">
           <div class="my-5 px-[34.5px]">
             <span
-              class="inline-block tablet:hidden w-full h-[1px] bg-black"
+              class="inline-block laptop1440:hidden w-full h-[1px] bg-black"
             ></span>
           </div>
           <h5
-            class="hidden tablet:block h5-text-bold text-[#6D6D6D] text-center desktop:pr-[273px] desktop:mr-[240px] mb-5 tablet:mb-0 leading-[120%]"
+            class="hidden laptop1440:block h5-text-bold text-[#6D6D6D] text-center desktop:pr-[273px] desktop:mr-[240px] mb-5 laptop1440:mb-0 leading-[120%]"
           >
             Simplify Your Success with FoodieMenu
             <span
-              class="hidden tablet:inline-block w-48 h-[1px] bg-black"
+              class="hidden laptop1440:inline-block w-48 h-[1px] bg-black"
             ></span>
             <span
-              class="hidden tablet:inline-block text-[#F37B74] cursor-pointer"
+              class="hidden laptop1440:inline-block text-[#F37B74] cursor-pointer"
               >USE MENU TEMPLATE NOW</span
             >
           </h5>
 
           <!-- Splide main container -->
           <div
-            class="splide splideImg hidden tablet:block pl-[16.5rem] desktop:pl-4 mt-[25px]"
+            class="splide splideImg hidden laptop1440:block pl-[16.5rem] desktop:pl-4 mt-[25px]"
             aria-label="splide"
           >
             <div class="splide__track !p-0 text-center">
-              <ul class="splide__list gap-5">
+              <ul class="splide__list bg-transparent">
                 <!-- Image 1  -->
                 <li
-                  class="splide__slide !w-[480px] !h-[500px] flex justify-center items-center text-2xl font-semibold relative shadow-2xl"
+                  class="splide__slide !w-[480px] h-[500px] flex justify-center items-center text-2xl font-semibold relative rounded-xl mr-5"
+                  style="
+                    background: linear-gradient(
+                        180deg,
+                        rgba(224, 245, 249, 0.94) 29%,
+                        rgba(224, 245, 249, 0.17) 84.4%
+                      ),
+                      url('../asset/img/homepage_v01/menuTemplate/menu1.png'),
+                      lightgray -134.996px 74px / 156.25% 100% no-repeat;
+                    background-size: cover !important;
+                  "
                 >
                   <h4
-                    class="absolute top-0 left-0 pl-8 pt-[2.5rem] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-blue-100 to-transparent rounded-2xl leading-[120%]"
+                    class="absolute top-0 left-0 pl-[30px] pt-[2.5rem] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full rounded-2xl leading-[120%]"
                   >
                     Build customer satisfaction and loyalty with consistently
                     attractive and accurate menus
                   </h4>
-                  <img
-                    src="../asset/img/homepage_v01/menuTemplate/menu1.png"
-                    alt=""
-                    class="w-full h-full block rounded-[2rem]"
-                  />
                 </li>
 
                 <!-- Image 2  -->
                 <li
-                  class="splide__slide !w-[480px] !h-[500px] flex justify-center items-center text-2xl font-semibold relative shadow-2xl"
+                  class="splide__slide !w-[480px] !h-[500px] flex justify-center items-center text-2xl font-semibold relative rounded-xl mr-5"
+                  style="
+                    background: linear-gradient(
+                        180deg,
+                        rgba(253, 235, 234, 0.91) 32.8%,
+                        rgba(253, 235, 234, 0) 60.6%
+                      ),
+                      url('../asset/img/homepage_v01/menuTemplate/menu2.png'),
+                      lightgray -364.114px 0px / 178.8% 114.604% no-repeat;
+                    background-size: cover !important;
+                  "
                 >
                   <h4
-                    class="absolute top-0 left-0 pl-8 pt-[2.5rem] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-red-50 to-transparent rounded-2xl leading-[120%] pr-[1.5rem]"
+                    class="absolute top-0 left-0 pl-8 pt-[2.5rem] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full rounded-2xl leading-[120%]"
                   >
                     Save time and money effortlessly by streamlining menu
                     creation and updates.
                   </h4>
-                  <img
-                    src="../asset/img/homepage_v01/menuTemplate/menu2.png"
-                    alt=""
-                    class="w-full h-full block rounded-[2rem]"
-                  />
                 </li>
 
                 <!-- Image 3  -->
                 <li
-                  class="splide__slide !w-[480px] !h-[500px] flex justify-center items-center text-2xl font-semibold relative shadow-2xl"
+                  class="splide__slide !w-[480px] !h-[500px] flex justify-center items-center text-2xl font-semibold relative rounded-xl mr-5"
+                  style="
+                    background: linear-gradient(
+                        180deg,
+                        rgba(235, 248, 251, 0.88) 27%,
+                        rgba(235, 248, 251, 0) 100%
+                      ),
+                      url('../asset/img/homepage_v01/menuTemplate/menu3.png'),
+                      lightgray -209.246px -5px / 185.939% 119.001% no-repeat;
+                    background-size: cover !important;
+                  "
                 >
                   <h4
-                    class="absolute top-0 left-0 pl-8 pt-[2.5rem] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full bg-gradient-to-b from-blue-100 to-transparent rounded-2xl leading-[120%]"
+                    class="absolute top-0 left-0 pl-8 pt-[2.5rem] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full rounded-2xl leading-[120%]"
                   >
                     Boost sales and profits through optimized menu layout, item
                     placement, and pricing.
                   </h4>
-                  <img
-                    src="../asset/img/homepage_v01/menuTemplate/menu3.png"
-                    alt=""
-                    class="w-full h-full block rounded-[2rem]"
-                  />
                 </li>
 
                 <!-- Image 4  -->
                 <li
-                  class="splide__slide !w-[480px] !h-[500px] flex justify-center items-center text-2xl font-semibold relative shadow-2xl"
+                  class="splide__slide !w-[480px] !h-[500px] flex justify-center items-center text-2xl font-semibold relative rounded-xl mr-5"
+                  style="
+                    background: linear-gradient(
+                        180deg,
+                        rgba(251, 214, 212, 0.88) 26.92%,
+                        rgba(251, 214, 212, 0) 79.84%
+                      ),
+                      url('../asset/img/homepage_v01/menuTemplate/menu4.png'),
+                      lightgray 50% / cover no-repeat;
+                    background-size: cover !important;
+                  "
                 >
                   <h4
-                    class="absolute top-0 left-0 pl-8 pt-[2.5rem] h4-text-bold text-[#454545] bg-opacity-50 w-full h-full bg-gradient-to-b from-red-300 to-transparent rounded-2xl leading-[120%]"
+                    class="absolute top-0 left-0 pl-8 pt-[2.5rem] h4-text-bold text-[#12424C] bg-opacity-50 w-full h-full rounded-2xl leading-[120%]"
                   >
                     Elevate operational efficiency, minimize errors, waste, and
                     inventory issues for improved compliance
                   </h4>
-                  <img
-                    src="../asset/img/homepage_v01/menuTemplate/menu4.png"
-                    alt=""
-                    class="w-full h-full block rounded-[2rem]"
-                  />
                 </li>
               </ul>
             </div>
           </div>
         </div>
         <!-- Simplify Msg -->
-        <div class="flex justify-center items-center tablet:hidden">
+        <div class="flex justify-center items-center laptop1440:hidden">
           <img src="../asset/img/homepage_v01/simplify-msg.png" alt="" />
         </div>
       </section>
       <div
-        class="w-full h-full flex tablet:hidden justify-center items-center mt-12"
+        class="w-full h-full flex laptop1440:hidden justify-center items-center mt-12"
       >
         <a
           href="#"
-          class="btn bg-[#F37B74] border border-current py-4 px-10 text-white rounded-3xl transition-all shadow-lg hover:shadow-xl hover:scale-105"
+          class="btn bg-[#F37B74] border border-current mobile360:py-2 mobile360:px-5 mobile430:py-[12px] laptop1440:py-[14px] mobile430:px-10 text-white rounded-3xl transition-all shadow-lg hover:shadow-xl hover:scale-105 mobile360:text-[19px] mobile430:text-[16px] laptop1440:title-2-bold"
           >USE MENU TEMPLATE NOW</a
         >
       </div>
 
       <!-- div span underline -->
       <div class="my-5 px-[34.5px]">
-        <span class="inline-block tablet:hidden w-full h-[1px] bg-black"></span>
+        <span
+          class="inline-block laptop1440:hidden w-full h-[1px] bg-black"
+        ></span>
       </div>
 
       <!-- Feature -->
       <section
-        class="px-4 mt-5 tablet:mt-[10rem] tablet:px-[180px] desktop:mx-[240px]"
+        class="mobile430:px-4 mobile430:mt-5 laptop1440:mt-[107px] laptop1440:px-[180px] desktop:mx-[240px]"
       >
         <div class="flex flex-col">
           <div
-            class="relative flex justify-center items-center w-full mx-auto mb-5 tablet:mb-[60px] flex-col-reverse tablet:flex-row tablet:gap-14"
+            class="relative flex justify-center items-center w-full mx-auto mobile360:mb-5 ipadPro:mb-0 laptop1440:mb-0 flex-col-reverse laptop1440:flex-row"
           >
             <div class="flex justify-center items-center">
-              <img src="../asset/img/homepage_v01/features/g1.png" alt="tv" />
+              <img
+                src="../asset/img/homepage_v01/features/g2.png"
+                alt="tv"
+                class="laptop1440:max-w-[558px] laptop1440:max-h-[672px]"
+              />
             </div>
-            <div class="p-[15px] pb-0 tablet:pl-10">
+            <div class="laptop1440:pl-10">
               <h2
-                class="h4-text-bold tablet:text-[48px] tablet:font-medium mb-[25px] tablet:pl-16 leading-[120%] text-[#454545] pl-[10px]"
+                class="h4-text-bold laptop1440:text-[48px] laptop1440:font-medium mb-[25px] leading-[120%] text-[#454545] pl-[10px]"
               >
                 Key Features
               </h2>
-              <div
-                class="flex flex-col justify-center items-center tablet:pl-10"
-              >
+              <div class="flex flex-col justify-center items-center">
                 <!-- Features 1 -->
                 <div
-                  class="bg-features mb-5 max-w-[403px] tablet:max-w-[540px] w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] active-features transition-all animate-fade-in duration-300"
+                  class="bg-features mb-5 max-w-[403px] laptop1440:max-w-[540px] mobile360:w-[330px] mobile430:w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] active-features transition-all animate-fade-in duration-300"
                   onclick="showHideDescFeatures(1)"
                 >
                   <div class="flex items-center mb-2">
@@ -762,11 +717,11 @@
                       <img
                         src="../asset/img/icon/lock-icon.svg"
                         alt=""
-                        class="w-[27px] h-[27px] tablet:w-8 tablet:h-8"
+                        class="w-[27px] h-[27px] laptop1440:w-8 laptop1440:h-8"
                       />
                     </div>
                     <h3
-                      class="title-2-text-bold tablet:text-[19px] text-[#454545] ml-2 leading-[140%]"
+                      class="title-2-text-bold laptop1440:text-[19px] text-[#454545] ml-2 leading-[140%]"
                     >
                       Menu Design Customization:
                     </h3>
@@ -784,7 +739,7 @@
                 </div>
                 <!-- Features 2  -->
                 <div
-                  class="bg-features mb-5 max-w-[403px] tablet:max-w-[540px] w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] transition-all animate-fade-in duration-300"
+                  class="bg-features mb-5 max-w-[403px] laptop1440:max-w-[540px] mobile360:w-[330px] mobile430:w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] transition-all animate-fade-in duration-300"
                   onclick="showHideDescFeatures(2)"
                 >
                   <div class="flex items-center mb-2">
@@ -794,11 +749,11 @@
                       <img
                         src="../asset/img/icon/lock-icon.svg"
                         alt=""
-                        class="w-[27px] h-[27px] tablet:w-8 tablet:h-8"
+                        class="w-[27px] h-[27px] laptop1440:w-8 laptop1440:h-8"
                       />
                     </div>
                     <h3
-                      class="title-2-text-bold tablet:text-[19px] text-[#454545] ml-2 leading-[140%]"
+                      class="title-2-text-bold laptop1440:text-[19px] text-[#454545] ml-2 leading-[140%]"
                     >
                       Integration with POS and Online Ordering:
                     </h3>
@@ -816,7 +771,7 @@
                 </div>
                 <!-- Features 3  -->
                 <div
-                  class="bg-features mb-5 max-w-[403px] tablet:max-w-[540px] w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] transition-all animate-fade-in duration-300"
+                  class="bg-features mb-5 max-w-[403px] laptop1440:max-w-[540px] mobile360:w-[330px] mobile430:w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] transition-all animate-fade-in duration-300"
                   onclick="showHideDescFeatures(3)"
                 >
                   <div class="flex items-center mb-2">
@@ -826,11 +781,11 @@
                       <img
                         src="../asset/img/icon/lock-icon.svg"
                         alt=""
-                        class="w-[27px] h-[27px] tablet:w-8 tablet:h-8"
+                        class="w-[27px] h-[27px] laptop1440:w-8 laptop1440:h-8"
                       />
                     </div>
                     <h3
-                      class="title-2-text-bold tablet:text-[19px] text-[#454545] ml-2 leading-[140%]"
+                      class="title-2-text-bold laptop1440:text-[19px] text-[#454545] ml-2 leading-[140%]"
                     >
                       QR Code Access for Menu Display:
                     </h3>
@@ -848,7 +803,7 @@
                 </div>
                 <!-- Features 4  -->
                 <div
-                  class="bg-features mb-5 max-w-[403px] tablet:max-w-[540px] w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] transition-all animate-fade-in duration-300"
+                  class="bg-features mb-5 max-w-[403px] laptop1440:max-w-[540px] mobile360:w-[330px] mobile430:w-[550px] leading-[120%] cursor-pointer pl-[0.8rem] transition-all animate-fade-in duration-300"
                   onclick="showHideDescFeatures(4)"
                 >
                   <div class="flex items-center mb-2">
@@ -858,11 +813,11 @@
                       <img
                         src="../asset/img/icon/lock-icon.svg"
                         alt=""
-                        class="w-[27px] h-[27px] tablet:w-8 tablet:h-8"
+                        class="w-[27px] h-[27px] laptop1440:w-8 laptop1440:h-8"
                       />
                     </div>
                     <h3
-                      class="title-3-text-bold tablet:text-[19px] text-[#454545] ml-2 leading-[140%]"
+                      class="title-3-text-bold laptop1440:text-[19px] text-[#454545] ml-2 leading-[140%]"
                     >
                       User-Friendly Interface for Template Adjustments:
                     </h3>
@@ -882,10 +837,10 @@
             </div>
           </div>
         </div>
-        <div class="w-full h-full flex justify-center items-center">
+        <div class="w-full h-full flex justify-center items-center mt-12">
           <a
             href="#"
-            class="btn bg-[#F37B74] border border-current py-4 px-10 text-white rounded-3xl transition-all shadow-lg hover:shadow-xl hover:scale-105"
+            class="btn bg-[#F37B74] border border-current mobile360:py-2 mobile360:px-5 mobile430:py-[12px] laptop1440:py-[14px] mobile430:px-10 text-white rounded-3xl transition-all shadow-lg hover:shadow-xl hover:scale-105 mobile360:text-[19px] mobile430:text-[16px] title-2-text-bold leading-[140%]"
             >USE MENU TEMPLATE NOW</a
           >
         </div>
@@ -893,19 +848,21 @@
 
       <!-- div span underline -->
       <div class="my-5 px-[34.5px]">
-        <span class="inline-block tablet:hidden w-full h-[1px] bg-black"></span>
+        <span
+          class="inline-block laptop1440:hidden w-full h-[1px] bg-black"
+        ></span>
       </div>
 
       <!-- Menu Library -->
       <section class="menu__library">
-        <div class="menu__library-header mb-[22px] tablet:mb-[70px] mt-10">
+        <div class="menu__library-header mb-[22px] laptop1440:mb-[70px] mt-10">
           <h4
-            class="h4-text-bold text-[#454545] tablet:text-[84px] text-center leading-[120%] mb-[10px] tablet:mb-5"
+            class="h4-text-bold text-[#454545] laptop1440:text-[84px] text-center leading-[120%] mb-[10px] laptop1440:mb-5"
           >
             Menu Library
           </h4>
           <h3
-            class="tablet:h3-text-bold title-1-text-bold text-center leading-[140%] tablet:leading-[120%] text-[#454545]"
+            class="laptop1440:h3-text-bold title-1-text-bold text-center leading-[140%] laptop1440:leading-[120%] text-[#454545]"
           >
             Access a range of resources to simplify your menu management
             journey.
@@ -913,11 +870,13 @@
 
           <!-- Flickity HTML init -->
           <div
-            class="carousel black tablet:hidden mt-[25px]"
+            class="carousel black laptop1440:hidden mt-[25px]"
             data-flickity='{ "imagesLoaded": true, "percentPosition": false }'
           >
             <div class="relative">
-              <div class="image-container mr-5">
+              <div
+                class="image-container mobile360:px-2 mobile430:mr-5 mobile360:mr-0"
+              >
                 <div class="overlay">
                   <button>Try now</button>
                 </div>
@@ -929,7 +888,9 @@
               </div>
             </div>
             <div class="relative">
-              <div class="image-container mr-5">
+              <div
+                class="image-container mobile360:px-2 mobile430:mr-5 mobile360:mr-0"
+              >
                 <div class="overlay">
                   <button>Try now</button>
                 </div>
@@ -941,7 +902,9 @@
               </div>
             </div>
             <div class="relative">
-              <div class="image-container mr-5">
+              <div
+                class="image-container mobile360:px-2 mobile430:mr-5 mobile360:mr-0"
+              >
                 <div class="overlay">
                   <button>Try now</button>
                 </div>
@@ -953,7 +916,9 @@
               </div>
             </div>
             <div class="relative">
-              <div class="image-container mr-5">
+              <div
+                class="image-container mobile360:px-2 mobile430:mr-5 mobile360:mr-0"
+              >
                 <div class="overlay">
                   <button>Try now</button>
                 </div>
@@ -965,7 +930,9 @@
               </div>
             </div>
             <div class="relative">
-              <div class="image-container mr-5">
+              <div
+                class="image-container mobile360:px-2 mobile430:mr-5 mobile360:mr-0"
+              >
                 <div class="overlay">
                   <button>Try now</button>
                 </div>
@@ -991,16 +958,16 @@
           </div>
 
           <p
-            class="title-1-text-bold tablet:font-normal text-[#454545] tablet:text-[#6D6D6D] text-center leading-[140%] mt-[66px] tablet:mt-2 px-[9px] tablet:px-0"
+            class="title-1-text-bold laptop1440:font-normal text-[#454545] laptop1440:text-[#6D6D6D] text-center leading-[140%] mt-[66px] laptop1440:mt-2 px-[9px] laptop1440:px-0"
           >
             Explore the Foodiemenu Template Library
-            <span class="hidden tablet:inline-block">-</span> your hub for
+            <span class="hidden laptop1440:inline-block">-</span> your hub for
             seamless compatibility, interactive editing, and user-friendly
             design.
           </p>
         </div>
 
-        <div class="splideAutoScrollRight splide hidden tablet:block">
+        <div class="splideAutoScrollRight splide hidden laptop1440:block">
           <div class="splide__track" id="splide-track-right">
             <ul class="splide__list gap-5">
               <li class="splide__slide">
@@ -1049,7 +1016,7 @@
           </div>
         </div>
 
-        <div class="splideAutoScrollLeft splide hidden tablet:block mt-5">
+        <div class="splideAutoScrollLeft splide hidden laptop1440:block mt-5">
           <div class="splide__track" id="splide-track-left">
             <ul class="splide__list gap-5">
               <li class="splide__slide">
@@ -1099,39 +1066,45 @@
         </div>
       </section>
       <!-- USE MENU TEMPLATE NOW -->
-      <div class="flex tablet:hidden justify-center items-center w-full h-full">
+      <div
+        class="w-full h-full flex laptop1440:hidden justify-center items-center mt-12"
+      >
         <a
           href="#"
-          class="btn bg-[#F37B74] border border-current py-4 px-10 text-white rounded-3xl transition-all shadow-lg hover:shadow-xl hover:scale-105"
+          class="btn bg-[#F37B74] border border-current mobile360:py-2 mobile360:px-5 mobile430:py-[12px] laptop1440:py-[14px] mobile430:px-10 text-white rounded-3xl transition-all shadow-lg hover:shadow-xl hover:scale-105 mobile360:text-[19px] mobile430:text-[16px] title-2-text-bold leading-[140%]"
           >USE MENU TEMPLATE NOW</a
         >
       </div>
       <!-- div span underline -->
       <div class="my-5 px-[34.5px]">
-        <span class="inline-block tablet:hidden w-full h-[1px] bg-black"></span>
+        <span
+          class="inline-block laptop1440:hidden w-full h-[1px] bg-black"
+        ></span>
       </div>
 
       <!-- Pricing -->
-      <section class="pricing desktop:mx-[240px] tablet:px-20 animate-fade-up">
+      <section
+        class="pricing laptop1440:px-5 laptop:px-20 desktop:mx-[240px] animate-fade-up"
+      >
         <div class="pricing__heading">
           <h2
-            class="h4-text-bold tablet:h2-text-bold tablet:text-4xl tablet:font-black text-[#454545] text-center tablet:mt-20 leading-[120%] tablet:leading-10"
+            class="h4-text-bold laptop1440:h2-text-bold laptop1440:text-4xl laptop1440:font-black text-[#454545] text-center laptop1440:mt-20 leading-[120%] laptop1440:leading-10"
           >
             Simple & Transparent Pricing
           </h2>
         </div>
         <!-- <div
-          class="pricing__main grid grid-cols-1 tablet:grid-cols-2 laptop:grid-co1ls-4 gap-11 mt-9"
-        > -->
+            class="pricing__main grid grid-cols-1 laptop1440:grid-cols-2 laptop:grid-co1ls-4 gap-11 mt-9"
+          > -->
         <div
-          class="pricing__main grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 mt-9"
+          class="pricing__main grid grid-cols-1 laptop1440:grid-cols-2 laptop:grid-cols-4 mt-9"
         >
           <!-- Free in mobile -->
           <div
-            class="mx-[55.5px] tablet:mx-0 flex tablet:hidden flex-col justify-between min-h-[530px] transition-all active:scale-105"
+            class="mobile360:mx-5 moblie430:mx-[55.5px] laptop1440:mx-0 flex laptop1440:hidden flex-col justify-between min-h-[530px] transition-all active:scale-105"
           >
             <div
-              class="pricing__item relative px-[30px] bg-[#F37B74] rounded-3xl shadow-2xl flex flex-col justify-between cursor-pointer tablet:px-[30px] mx-auto flex-grow"
+              class="pricing__item relative px-[30px] bg-[#F37B74] rounded-3xl shadow-2xl flex flex-col justify-between cursor-pointer laptop1440:px-[30px] mx-auto flex-grow"
             >
               <div
                 class="absolute top-0 left-0 right-0 flex justify-center items-center"
@@ -1168,7 +1141,7 @@
                   </ul>
                 </div>
                 <button
-                  class="w-full py-4 leading-[140%] bg-white text-[#454545] mt-[43px] rounded-3xl text-center"
+                  class="w-full py-4 leading-[140%] bg-white text-[#454545] mt-[43px] rounded-3xl text-center title-2-text"
                 >
                   Sign up now
                 </button>
@@ -1177,7 +1150,9 @@
           </div>
 
           <!-- Change Pricing -->
-          <div class="flex tablet:hidden items-center mt-[46px]">
+          <div
+            class="flex laptop1440:hidden items-center justify-center mt-[46px]"
+          >
             <div>
               <div
                 role="tablist"
@@ -1197,7 +1172,7 @@
                   onclick="handleClick(1)"
                 >
                   <span
-                    class="toggle-pricing text-[#6D6D6D] title-2-text-bold is-selected"
+                    class="toggle-pricing text-[#6D6D6D] title-2-text-bold is-selected leading-[140%]"
                     >Basic</span
                   >
                 </button>
@@ -1210,7 +1185,8 @@
                   class="relative block px-[22px] py-[10px] tab rounded-[28px]"
                   onclick="handleClick(2)"
                 >
-                  <span class="toggle-pricing text-[#6D6D6D] title-2-text-bold"
+                  <span
+                    class="toggle-pricing text-[#6D6D6D] title-2-text-bold leading-[140%]"
                     >Pro</span
                   >
                 </button>
@@ -1223,7 +1199,8 @@
                   class="relative block px-[22px] py-[10px] tab rounded-[28px]"
                   onclick="handleClick(3)"
                 >
-                  <span class="toggle-pricing text-[#6D6D6D] title-2-text-bold"
+                  <span
+                    class="toggle-pricing text-[#6D6D6D] title-2-text-bold leading-[140%]"
                     >Enterprise</span
                   >
                 </button>
@@ -1234,7 +1211,9 @@
                   id="panel-1"
                   class="tab-panel transition duration-300 active:scale-95"
                 >
-                  <div class="pricing__item px-[74px] tablet:px-0 flex-grow">
+                  <div
+                    class="pricing__item mobile360:px-12 mobile430:px-[74px] laptop1440:px-0 flex-grow"
+                  >
                     <div class="flex flex-col justify-center h-full">
                       <h1
                         class="pricing__items-price text-[#F37B74] h3-text font-normal text-4xl mb-7 leading-[46px] font-anton"
@@ -1269,7 +1248,7 @@
                         </ul>
                       </div>
                       <button
-                        class="w-full py-3 px-[75px] leading-[140%] bg-[#33BCDA] mt-[110px] rounded-3xl text-center bg-opacity-50 mb-[20px] title-2-text text-[#454545]"
+                        class="w-full py-3 mobile360:px-5 mobile430:px-[75px] leading-[140%] bg-[#33BCDA] mt-[110px] rounded-3xl text-center bg-opacity-50 mb-[20px] title-2-text text-[#454545]"
                       >
                         Learn more
                       </button>
@@ -1281,7 +1260,9 @@
                   id="panel-2"
                   class="absolute top-0 invisible opacity-0 tab-panel transition duration-300 active:scale-95"
                 >
-                  <div class="pricing__item px-[74px] tablet:px-0 flex-grow">
+                  <div
+                    class="pricing__item mobile360:px-12 mobile430:px-[74px] laptop1440:px-0 flex-grow"
+                  >
                     <div class="flex flex-col justify-center h-full">
                       <h1
                         class="pricing__items-price text-[#F37B74] h3-text font-normal text-4xl mb-7 leading-[46px] font-anton"
@@ -1329,7 +1310,9 @@
                   id="panel-3"
                   class="absolute top-0 invisible opacity-0 tab-panel transition duration-300 active:scale-95"
                 >
-                  <div class="pricing__item px-[74px] tablet:px-0 flex-grow">
+                  <div
+                    class="pricing__item mobile360:px-12 mobile430:px-[74px] laptop1440:px-0 flex-grow"
+                  >
                     <div class="flex flex-col justify-center h-full">
                       <h1
                         class="pricing__items-price text-[#33BCDA] title-1-text font-semibold mb-7 leading-[140%]"
@@ -1372,15 +1355,15 @@
           </div>
           <!-- Item 1 -->
           <div
-            class="hidden tablet:flex flex-col justify-between min-h-[500px] mr-11 transition-all hover:scale-105"
+            class="hidden laptop1440:flex flex-col justify-between min-h-[500px] mr-11 transition-all hover:scale-105"
           >
-            <div class="pricing__item px-[74px] tablet:px-0 flex-grow">
+            <div class="pricing__item px-[74px] laptop1440:px-0 flex-grow">
               <div class="flex flex-col justify-center h-full">
                 <h1
                   class="pricing__items-price text-[#F37B74] h3-text font-normal text-4xl mb-7 leading-[46px] font-anton"
                 >
                   $15<span
-                    class="text-[#6D6D6D] title-1-text-bold leading-[140%] tablet:ml-[17px]"
+                    class="text-[#6D6D6D] title-1-text-bold leading-[140%] laptop1440:ml-[17px]"
                     >/month</span
                   >
                 </h1>
@@ -1406,7 +1389,7 @@
                   </ul>
                 </div>
                 <button
-                  class="w-full py-4 leading-[140%] bg-[#33BCDA] mt-auto rounded-3xl text-center bg-opacity-50 mb-[30px]"
+                  class="w-full py-4 leading-[140%] bg-[#33BCDA] mt-auto rounded-3xl text-center bg-opacity-50 mb-[30px] title-2-text"
                 >
                   Learn more
                 </button>
@@ -1415,15 +1398,15 @@
           </div>
           <!-- Item 2 -->
           <div
-            class="hidden tablet:flex flex-col justify-between min-h-[500px] mr-11 transition-all hover:scale-105"
+            class="hidden laptop1440:flex flex-col justify-between min-h-[500px] mr-11 transition-all hover:scale-105"
           >
-            <div class="pricing__item px-[74px] tablet:px-0 flex-grow">
+            <div class="pricing__item px-[74px] laptop1440:px-0 flex-grow">
               <div class="flex flex-col justify-center h-full">
                 <h1
                   class="pricing__items-price text-[#F37B74] h3-text font-normal text-4xl mb-7 leading-[46px] font-anton"
                 >
                   $35<span
-                    class="text-[#6D6D6D] title-1-text-bold leading-[140%] tablet:ml-[17px]"
+                    class="text-[#6D6D6D] title-1-text-bold leading-[140%] laptop1440:ml-[17px]"
                     >/month</span
                   >
                 </h1>
@@ -1448,7 +1431,7 @@
                   </ul>
                 </div>
                 <button
-                  class="w-full py-4 leading-[140%] bg-[#33BCDA] mt-auto rounded-3xl text-center bg-opacity-50 mb-[30px]"
+                  class="w-full py-4 leading-[140%] bg-[#33BCDA] mt-auto rounded-3xl text-center bg-opacity-50 mb-[30px] title-2-text"
                 >
                   Learn more
                 </button>
@@ -1458,10 +1441,10 @@
           <!-- Item 3 -->
           <div class="transition-all hover:scale-105">
             <div
-              class="mx-12 tablet:mx-0 hidden tablet:flex flex-col justify-between min-h-[520px]"
+              class="mx-12 laptop1440:mx-0 hidden laptop1440:flex flex-col justify-between min-h-[520px]"
             >
               <div
-                class="pricing__item relative px-14 bg-[#F37B74] rounded-3xl shadow-2xl flex flex-col justify-between cursor-pointer tablet:px-[30px] mx-auto flex-grow"
+                class="pricing__item relative px-14 bg-[#F37B74] rounded-3xl shadow-2xl flex flex-col justify-between cursor-pointer laptop1440:px-[30px] mx-auto flex-grow"
               >
                 <div
                   class="absolute top-0 left-0 right-0 flex justify-center items-center"
@@ -1475,7 +1458,7 @@
                 </div>
                 <div class="flex flex-col justify-center h-full">
                   <h4
-                    class="pricing__items-title h2-text font-black text-[#58EBFF] pt-10 tablet:pt-[67px] leading-[100%]"
+                    class="pricing__items-title h2-text font-black text-[#58EBFF] pt-10 laptop1440:pt-[67px] leading-[100%]"
                   >
                     Free
                   </h4>
@@ -1498,7 +1481,7 @@
                     </ul>
                   </div>
                   <button
-                    class="w-full py-4 leading-[140%] bg-white text-[#454545] mt-[112px] mb-[30px] rounded-3xl text-center"
+                    class="w-full py-4 leading-[140%] bg-white text-[#454545] mt-[112px] mb-[30px] rounded-3xl text-center title-2-text"
                   >
                     Sign up now
                   </button>
@@ -1508,9 +1491,9 @@
           </div>
           <!-- Item 4 -->
           <div
-            class="hidden tablet:flex flex-col justify-between min-h-[500px] ml-11 transition-all hover:scale-105"
+            class="hidden laptop1440:flex flex-col justify-between min-h-[500px] ml-11 transition-all hover:scale-105"
           >
-            <div class="pricing__item px-[74px] tablet:px-0 flex-grow">
+            <div class="pricing__item px-[74px] laptop1440:px-0 flex-grow">
               <div class="flex flex-col justify-center h-full">
                 <h1
                   class="pricing__items-price text-[#33BCDA] title-1-text font-semibold mb-7 leading-[140%]"
@@ -1539,7 +1522,7 @@
                   </ul>
                 </div>
                 <button
-                  class="w-full py-4 leading-[140%] bg-[#33BCDA] mt-auto rounded-3xl text-center bg-opacity-50 mb-[30px]"
+                  class="w-full py-4 leading-[140%] bg-[#33BCDA] mt-auto rounded-3xl text-center bg-opacity-50 mb-[30px] title-2-text"
                 >
                   Learn more
                 </button>
@@ -1550,17 +1533,17 @@
       </section>
 
       <!-- Menu management -->
-      <section class="tablet:mb-20 desktop:mx-[240px] tablet:px-20">
+      <section class="laptop1440:mb-20 desktop:mx-[240px] laptop1440:px-20">
         <div class="mt-16 w-full h-full">
           <div class="relative">
             <img
               src="../asset/img/homepage_v01/menu-management(1).png"
               alt=""
-              class="hidden tablet:inline-block"
+              class="hidden ipad:inline-block ipad:h-[260px]"
             />
 
             <div
-              class="inline-block tablet:hidden bg-center w-full h-[687px] tablet:h-[460px] bg-contain rounded-md"
+              class="ipad:hidden bg-center w-full h-[687px] laptop1440:h-[460px] bg-contain rounded-md flex justify-center items-center"
             >
               <img
                 src="../asset/img/homepage_v01/menu-management(2).png"
@@ -1568,14 +1551,16 @@
               />
             </div>
 
-            <div class="absolute top-0 left-0 pl-5 tablet:pl-[48px] pt-12">
+            <div
+              class="absolute top-0 left-0 mobile430:pl-5 ipad:pl-8 laptop1440:pl-[48px] mobile360:pt-12"
+            >
               <h2
-                class="text-white h4-text-bold tablet:text-[40px] leading-[120%] max-w-[333px] tablet:max-w-full"
+                class="text-white h4-text-bold laptop1440:text-[40px] leading-[120%] max-w-[333px] ipad:max-w-full"
               >
                 Ready to revolutionize your menu management?
               </h2>
               <span
-                class="block max-w-[310px] tablet:max-w-[800px] text-white title-2-text tablet:text-[19px] pt-4 leading-[140%]"
+                class="block max-w-[310px] ipad:max-w-[800px] text-white title-2-text laptop1440:text-[19px] pt-4 leading-[140%]"
               >
                 Experience the power of Foodiemenu Template today! Join us for a
                 live demo and simplify your menu editing, enhance customer
@@ -1591,32 +1576,34 @@
         </div>
         <div class="my-5 px-[34.5px]">
           <span
-            class="inline-block tablet:hidden w-full h-[1px] bg-black"
+            class="inline-block laptop1440:hidden w-full h-[1px] bg-black"
           ></span>
         </div>
       </section>
 
       <!-- Ask Question -->
-      <section class="mb-[17px]">
-        <div>
-          <div class="desktop:mx-[240px] tablet:px-20">
+      <section
+        class="mobile430:min-h-[980px] ipad:min-h-[820px] laptop1440:min-h-[900px]"
+      >
+        <div class="ipad:px-10">
+          <div class="desktop:mx-[240px] laptop1440:px-20">
             <p
-              class="title-2-text tablet:text-[23px] text-[#454545] text-center leading-[120%]"
+              class="title-2-text laptop1440:text-[23px] text-[#454545] text-center leading-[120%]"
             >
               Star with the basics
             </p>
             <h4
-              class="h4-text-bold tablet:text-[40px] text-center text-[#454545] leading-[120%]"
+              class="h4-text-bold laptop1440:text-[40px] text-center text-[#454545] leading-[120%]"
             >
               Frequently Asked Questions
             </h4>
           </div>
           <!-- Ask Question 1 -->
-          <div class="px-5 desktop:mx-[240px] tablet:px-[298px]">
+          <div class="px-5 desktop:mx-[240px] laptop1440:px-[298px]">
             <div class="flex justify-between items-center mt-[34px]">
               <div>
                 <p
-                  class="title-2-text-bold tablet:text-[19px] text-[#454545] leading-[140%]"
+                  class="title-2-text-bold laptop1440:text-[19px] text-[#454545] leading-[140%]"
                 >
                   Does Foodiemenu Template require any special software or
                   hardware to operate?
@@ -1640,7 +1627,7 @@
               </svg>
             </div>
             <p
-              class="desc-ask-question body-text tablet:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down"
+              class="desc-ask-question body-text laptop1440:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down font-normal"
             >
               Not at all! Foodiemenu Template is a web-based solution accessible
               through standard web browsers, eliminating the need for any
@@ -1649,11 +1636,11 @@
             <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
           </div>
           <!-- Ask Question 2 -->
-          <div class="px-5 desktop:mx-[240px] tablet:px-[298px]">
+          <div class="px-5 desktop:mx-[240px] laptop1440:px-[298px]">
             <div class="flex justify-between items-center mt-[34px]">
               <div>
                 <p
-                  class="title-2-text-bold tablet:text-[19px] text-[#454545] leading-[140%]"
+                  class="title-2-text-bold laptop1440:text-[19px] text-[#454545] leading-[140%]"
                 >
                   Can I preview changes made to the menu before they go live?
                 </p>
@@ -1676,7 +1663,7 @@
               </svg>
             </div>
             <p
-              class="desc-ask-question body-text tablet:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down"
+              class="desc-ask-question body-text laptop1440:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down font-normal"
             >
               Yes, absolutely! Foodiemenu Template offers a preview feature that
               allows you to see how your edits will appear before finalizing and
@@ -1685,11 +1672,11 @@
             <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
           </div>
           <!-- Ask Question 3 -->
-          <div class="px-5 desktop:mx-[240px] tablet:px-[298px]">
+          <div class="px-5 desktop:mx-[240px] laptop1440:px-[298px]">
             <div class="flex justify-between items-center mt-[34px]">
               <div>
                 <p
-                  class="title-2-text-bold tablet:text-[19px] text-[#454545] leading-[140%]"
+                  class="title-2-text-bold laptop1440:text-[19px] text-[#454545] leading-[140%]"
                 >
                   Is there a limit to the number of menus or items I can manage
                   with Foodiemenu Template?
@@ -1713,7 +1700,7 @@
               </svg>
             </div>
             <p
-              class="desc-ask-question body-text tablet:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down"
+              class="desc-ask-question body-text laptop1440:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down font-normal"
             >
               Foodiemenu Template adapts to your growing needs without limiting
               the number of menus or items you can manage. Explore our pricing
@@ -1722,11 +1709,11 @@
             <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
           </div>
           <!-- Ask Question 4 -->
-          <div class="px-5 desktop:mx-[240px] tablet:px-[298px]">
+          <div class="px-5 desktop:mx-[240px] laptop1440:px-[298px]">
             <div class="flex justify-between items-center mt-[34px]">
               <div>
                 <p
-                  class="title-2-text-bold tablet:text-[19px] text-[#454545] leading-[140%]"
+                  class="title-2-text-bold laptop1440:text-[19px] text-[#454545] leading-[140%]"
                 >
                   How does Foodiemenu Template ensure compatibility with various
                   TVs and picture formats?
@@ -1750,7 +1737,7 @@
               </svg>
             </div>
             <p
-              class="desc-ask-question body-text tablet:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down"
+              class="desc-ask-question body-text laptop1440:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down font-normal"
             >
               Foodiemenu Template is built with a focus on versatility. It
               undergoes rigorous testing to ensure seamless performance across a
@@ -1760,11 +1747,11 @@
             <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
           </div>
           <!-- Ask Question 5 -->
-          <div class="px-5 desktop:mx-[240px] tablet:px-[298px]">
+          <div class="px-5 desktop:mx-[240px] laptop1440:px-[298px]">
             <div class="flex justify-between items-center mt-[34px]">
               <div>
                 <p
-                  class="title-2-text-bold tablet:text-[19px] text-[#454545] leading-[140%]"
+                  class="title-2-text-bold laptop1440:text-[19px] text-[#454545] leading-[140%]"
                 >
                   Can I easily make changes to my menu content and details with
                   Foodiemenu Template?
@@ -1788,7 +1775,7 @@
               </svg>
             </div>
             <p
-              class="desc-ask-question body-text tablet:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down"
+              class="desc-ask-question body-text laptop1440:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down font-normal"
             >
               Absolutely! Foodiemenu Template offers an intuitive interface that
               allows for effortless editing. You can easily modify menu content,
@@ -1798,11 +1785,11 @@
             <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
           </div>
           <!-- Ask Question 6 -->
-          <div class="px-5 desktop:mx-[240px] tablet:px-[298px]">
+          <div class="px-5 desktop:mx-[240px] laptop1440:px-[298px]">
             <div class="flex justify-between items-center mt-[34px]">
               <div>
                 <p
-                  class="title-2-text-bold tablet:text-[19px] text-[#454545] leading-[140%]"
+                  class="title-2-text-bold laptop1440:text-[19px] text-[#454545] leading-[140%]"
                 >
                   How much time and effort does it take to manage menus using
                   Foodiemenu Template?
@@ -1826,7 +1813,7 @@
               </svg>
             </div>
             <p
-              class="desc-ask-question body-text tablet:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down"
+              class="desc-ask-question body-text laptop1440:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down font-normal"
             >
               We prioritize simplicity and efficiency. Foodiemenu Template
               streamlines menu management, significantly reducing the time and
@@ -1836,11 +1823,11 @@
             <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
           </div>
           <!-- Ask Question 7 -->
-          <div class="px-5 desktop:mx-[240px] tablet:px-[298px]">
+          <div class="px-5 desktop:mx-[240px] laptop1440:px-[298px]">
             <div class="flex justify-between items-center mt-[34px]">
               <div>
                 <p
-                  class="title-2-text-bold tablet:text-[19px] text-[#454545] leading-[140%]"
+                  class="title-2-text-bold laptop1440:text-[19px] text-[#454545] leading-[140%]"
                 >
                   Is customer support available for users of Foodiemenu
                   Template?
@@ -1864,7 +1851,7 @@
               </svg>
             </div>
             <p
-              class="desc-ask-question body-text tablet:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down"
+              class="desc-ask-question body-text laptop1440:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down font-normal"
             >
               Yes, indeed! We provide comprehensive support to our users.
               Whether it's assistance with setup, troubleshooting, or guidance
@@ -1874,11 +1861,11 @@
             <span class="inline-block w-full h-[1px] bg-[#D3D3D3]"></span>
           </div>
           <!-- Ask Question 8 -->
-          <div class="px-5 desktop:mx-[240px] tablet:px-[298px]">
+          <div class="px-5 desktop:mx-[240px] laptop1440:px-[298px]">
             <div class="flex justify-between items-center mt-[34px]">
               <div>
                 <p
-                  class="title-2-text-bold tablet:text-[19px] text-[#454545] leading-[140%]"
+                  class="title-2-text-bold laptop1440:text-[19px] text-[#454545] leading-[140%]"
                 >
                   Can Foodiemenu Template adapt to the evolving needs of my
                   business?
@@ -1902,7 +1889,7 @@
               </svg>
             </div>
             <p
-              class="desc-ask-question body-text tablet:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down"
+              class="desc-ask-question body-text laptop1440:text-[19px] text-[#6D6D6D] mt-[15px] hidden leading-[140%] animate-fade-down font-normal"
             >
               Absolutely! Our template is designed with flexibility in mind.
               It's equipped with adaptable features that can grow and evolve
@@ -1917,13 +1904,15 @@
     <!-- Footer -->
     <section class="page-footer">
       <div class="page-row px-0">
-        <div class="page-footer__content">
-          <div class="footer-menu px-10 tablet:px-0">
+        <div class="page-footer__content ipad:justify-center">
+          <div
+            class="footer-menu ipad:justify-around mobile360:px-4 mobile430:px-10 laptop1440:px-0"
+          >
             <div class="footer-menu__column">
               <div class="footer-menu__item">
                 <a
                   href="#"
-                  class="title-1-text footer-menu__link extend-line-height-1"
+                  class="title-1-text footer-menu__link extend-line-height-1 menu-link"
                 >
                   Products
                 </a>
@@ -1931,7 +1920,7 @@
               <div class="footer-menu__item">
                 <a
                   href="#"
-                  class="title-1-text footer-menu__link extend-line-height-1"
+                  class="title-1-text footer-menu__link extend-line-height-1 menu-link"
                 >
                   Solutions
                 </a>
@@ -1939,7 +1928,7 @@
               <div class="footer-menu__item">
                 <a
                   href="#"
-                  class="title-1-text footer-menu__link extend-line-height-1"
+                  class="title-1-text footer-menu__link extend-line-height-1 menu-link"
                 >
                   Blog
                 </a>
@@ -1947,7 +1936,7 @@
               <div class="footer-menu__item">
                 <a
                   href="#"
-                  class="title-1-text footer-menu__link extend-line-height-1"
+                  class="title-1-text footer-menu__link extend-line-height-1 menu-link"
                 >
                   Trust
                 </a>
@@ -1955,7 +1944,7 @@
               <div class="footer-menu__item">
                 <a
                   href="#"
-                  class="title-1-text footer-menu__link extend-line-height-1"
+                  class="title-1-text footer-menu__link extend-line-height-1 menu-link"
                 >
                   Pricing
                 </a>
@@ -1965,7 +1954,7 @@
               <div class="footer-menu__item">
                 <a
                   href="#"
-                  class="title-1-text footer-menu__link extend-line-height-1"
+                  class="title-1-text footer-menu__link extend-line-height-1 menu-link"
                 >
                   Terms and conditions
                 </a>
@@ -1973,7 +1962,7 @@
               <div class="footer-menu__item">
                 <a
                   href="#"
-                  class="title-1-text footer-menu__link extend-line-height-1"
+                  class="title-1-text footer-menu__link extend-line-height-1 menu-link"
                 >
                   Privacy policy
                 </a>
@@ -1982,25 +1971,25 @@
           </div>
           <div class="footer-form" style="max-width: 545px">
             <div
-              class="h1-text footer-form__label text-center h4-text-bold tablet:text-[48px] tablet:text-left"
+              class="h1-text footer-form__label text-center h4-text-bold laptop1440:text-[48px] laptop1440:text-left"
             >
               Trying to reach out?
             </div>
             <span
-              class="title-1-text footer-form__content extend-line-height-1 text-center tablet:text-left"
+              class="title-1-text footer-form__content extend-line-height-1 text-center laptop1440:text-left"
             >
               Get in touch today, and let's create a seamless experience
               together.
             </span>
             <form class="footer-form__form" action="#">
-              <div class="footer-form__control">
+              <div class="footer-form__control pl-2">
                 <input
                   type="email"
                   name="email"
                   placeholder="Your Email Address"
                 />
               </div>
-              <div class="footer-form__submit">
+              <div class="footer-form__submit pr-5">
                 <button type="submit" class="title-1-text-bold">Get</button>
               </div>
             </form>
@@ -2009,7 +1998,7 @@
         <!-- div span underline -->
         <div class="my-[51px]">
           <span
-            class="inline-block tablet:hidden w-full h-[1px] bg-white"
+            class="inline-block laptop1440:hidden w-full h-[1px] bg-white"
           ></span>
         </div>
         <div class="page-row pl-0">
@@ -2149,10 +2138,5 @@
         }, 600);
       });
     </script>
-
-    <script
-      type="text/javascript"
-      src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js"
-    ></script>
   </body>
 </html>
