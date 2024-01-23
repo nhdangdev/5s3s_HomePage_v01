@@ -5707,6 +5707,22 @@ video {
     max-width: 100%;
   }
 
+  .ipad\:max-w-\[200px\]{
+    max-width: 200px;
+  }
+
+  .ipad\:max-w-\[280px\]{
+    max-width: 280px;
+  }
+
+  .ipad\:max-w-\[330px\]{
+    max-width: 330px;
+  }
+
+  .ipad\:max-w-\[292px\]{
+    max-width: 292px;
+  }
+
   .ipad\:justify-center{
     justify-content: center;
   }
@@ -5907,6 +5923,10 @@ video {
 
   .tablet\:max-w-full{
     max-width: 100%;
+  }
+
+  .tablet\:max-w-\[210px\]{
+    max-width: 210px;
   }
 
   .tablet\:grid-cols-2{
@@ -6190,6 +6210,10 @@ video {
 
   .ipadPro\:max-w-\[800px\]{
     max-width: 800px;
+  }
+
+  .ipadPro\:max-w-\[210px\]{
+    max-width: 210px;
   }
 
   .ipadPro\:grid-cols-4{
